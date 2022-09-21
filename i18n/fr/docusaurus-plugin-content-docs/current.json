@@ -1,0 +1,138 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Ternoa Fundamentals": {
+    "message": "Ternoa FondamentaUx",
+    "description": "The label for category Ternoa Fundamentals in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ternoa Fundamentals.link.generated-index.description": {
+    "message": "Tout ce que vous devez savoir",
+    "description": "The generated-index page description for category Ternoa Fundamentals in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Core Blockchain": {
+    "message": "Core Blockchain",
+    "description": "The label for category Core Blockchain in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Core Blockchain.link.generated-index.description": {
+    "message": "Ajouter une description",
+    "description": "The generated-index page description for category Core Blockchain in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Offchain Components": {
+    "message": "Offchain Components",
+    "description": "The label for category Offchain Components in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Offchain Components.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category Offchain Components in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Builder Tools": {
+    "message": "Builder Tools",
+    "description": "The label for category Builder Tools in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Builder Tools.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category Builder Tools in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Applications": {
+    "message": "Applications",
+    "description": "The label for category Applications in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Applications.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category Applications in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.TEE Enlaves": {
+    "message": "TEE Enlaves",
+    "description": "The label for category TEE Enlaves in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.TEE Enlaves.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category TEE Enlaves in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ternoa NFT Primitives": {
+    "message": "Ternoa NFT Primitives",
+    "description": "The label for category Ternoa NFT Primitives in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ternoa NFT Primitives.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category Ternoa NFT Primitives in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.NFT Types": {
+    "message": "NFT Types",
+    "description": "The label for category NFT Types in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.NFT Types.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category NFT Types in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.NFT Features": {
+    "message": "NFT Features",
+    "description": "The label for category NFT Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.NFT Features.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category NFT Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.NFT Specifications": {
+    "message": "NFT Specifications",
+    "description": "The label for category NFT Specifications in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.NFT Specifications.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category NFT Specifications in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers": {
+    "message": "Pour les Developpeurs",
+    "description": "The label for category For Developers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category For Developers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.cookbooks": {
+    "message": "cookbooks",
+    "description": "The label for category cookbooks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.quick-start": {
+    "message": "quick-start",
+    "description": "The label for category quick-start in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.reference-docs": {
+    "message": "reference-docs",
+    "description": "The label for category reference-docs in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.tutorials": {
+    "message": "tutoriels",
+    "description": "The label for category tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.text": {
+    "message": "text",
+    "description": "The label for category text in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.video": {
+    "message": "video",
+    "description": "The label for category video in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Node Operators": {
+    "message": "For Node Operators",
+    "description": "The label for category For Node Operators in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Node Operators.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category For Node Operators in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics": {
+    "message": "Tutoriel - Basique",
+    "description": "The label for category Tutorial - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Basics.link.generated-index.description": {
+    "message": "All you need to know to build dApps, interact with the Ternoa Blockchain and deploy your own Marketplace.",
+    "description": "The generated-index page description for category Tutorial - Basics in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorial - Extras": {
+    "message": "Tutorial - Extras",
+    "description": "The label for category Tutorial - Extras in sidebar tutorialSidebar"
+  }
+}
