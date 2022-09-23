@@ -76,15 +76,15 @@ const config = {
         contextualSearch: true,
       },*/
       announcementBar: {
-        id: 'support_us',
+        id: 'annoucementBar-0',
         content:
           'FR version WIP <a target="_blank" rel="noopener noreferrer" href="#">english version</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
-        isCloseable: false,
+        isCloseable: true,
       },
       navbar: {
-        hideOnScroll: true, 
+        hideOnScroll: false, 
         title: 'Ternoa',
         logo: {
           alt: 'Ternoa Logo',
