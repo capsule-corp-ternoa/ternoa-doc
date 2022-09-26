@@ -11,7 +11,7 @@ const config = {
   tagline: 'All resources you\'ll need to build the future on Ternoa',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn', // If Routes duplicates
   favicon: 'img/favicon.ico',
@@ -147,10 +147,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',
