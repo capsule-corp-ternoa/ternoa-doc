@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Highlight from '@site/src/components/GlobalTemplate/Highlight';
+import Layout from '@theme/Layout';
+
 
 # 🔎 How to Start your Doc
 
@@ -42,15 +45,4 @@ Here, an sample Markdown usage to create your doc.
 </details>
 
 ## Component JSX in React WIP
-export const Highlight = ({children, color}) => (
-  <span
-    style={{
-      backgroundColor: color,
-      color: '#fff',
-      padding: '0.3rem',
-    }}>
-    {children}
-  </span>
-);
-
-<Highlight color="#25c2a0">Lorem Ipsum</Highlight> dolor sit amet.
+<Highlight>Surlign text</Highlight>

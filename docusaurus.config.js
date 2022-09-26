@@ -84,7 +84,7 @@ const config = {
         isCloseable: false,
       },
       navbar: {
-        hideOnScroll: true, 
+        hideOnScroll: false, 
         title: 'Ternoa',
         logo: {
           alt: 'Ternoa Logo',
@@ -113,6 +113,11 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true, 
+        }
       },
       footer: {
         style: 'light',
