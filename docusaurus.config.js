@@ -13,9 +13,10 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+  onDuplicateRoutes: 'warn', // If Routes duplicates
   favicon: 'img/favicon.ico',
   noIndex: true, //
-  staticDirectories: ['static'],
+  staticDirectories: ['public', 'static'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
