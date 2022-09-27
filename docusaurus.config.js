@@ -89,9 +89,8 @@ const config = {
         title: 'Ternoa',
         logo: {
           alt: 'Ternoa Logo',
-          src: 'img/Ternoa-logo.png',
-          width: 34,
-          height: 32,
+          src: '/img/ternoa_logo.svg',
+          width: 40,
         },
         items: [
           {

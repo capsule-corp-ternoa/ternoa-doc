@@ -1,8 +1,9 @@
 ---
+sidebar_label: "👋 Welcome"
 sidebar_position: 1
 ---
 
-# 👋 Welcome 
+# 👋 Welcome  
 
 **All resources you'll need to build the future on Ternoa**
 
