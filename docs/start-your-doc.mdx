@@ -1,9 +1,10 @@
 ---
+sidebar_label: "🔎 How to Start your Doc"
 sidebar_position: 2
 ---
 
 
-# 🔎 How to Start your Doc
+# 🔎 How to Start your Doc 
 
 Here, an sample Markdown usage to create your doc.
 
