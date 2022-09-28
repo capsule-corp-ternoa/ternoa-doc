@@ -1,5 +1,7 @@
 import React from 'react';
 
+// Add ternary operation to swith color ? : 
+
 export default function Highlight({children}) {
   return (
     <span

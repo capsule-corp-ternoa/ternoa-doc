@@ -7,16 +7,27 @@ import Avatar from '@site/src/components/global/Avatar';
 import TabChoice from '@site/src/components/global/TabChoice';
 
 
+
 # 🔎 How to Start your Doc
 
 :::info
- ## Please read steps before begin 
+ ## Please read steps before start
 
-#### 1. change your file `.md` in `.mdx` file.
+#### 1. Clone depot git on your local env : 
+```
+git clone https://github.com/capsule-corp-ternoa/ternoa-doc.git
+```
+
+#### 2. Please use yarn start to open in your Localhost : 
+```
+yarn start
+```
+
+#### 3. change your file `.md` in `.mdx` file.
 **For exemple** : I want to add infos in `for-developers/cookbooks/create-a-capsule.md`
 I should to change file in `for-developers/cookbooks/create-a-capsule.mdx`
 
-#### 2. Copy/Past common template
+#### 4. Copy/Past common template
 - Copy all are in  `start-your-doc.mdx`
 - 🔥 **Be careful** don't touch metadatas in top of all docs. It's already done. 
 ```jsx title="for-developers/cookbooks/create-a-capsule.mdx"
@@ -26,11 +37,15 @@ sidebar_position: 2
 ---
 ```
 - Past directly in your `docname.mdx`
+- Bring modifications in your `docname.mdx`
+
+#### 5. Create a new branch from `update/mdxDocs@NET-` 
+**example** : update/create-a-capsule@
 :::
 
 ______________________________________
 
-### 3. Common template to copy/past directly from `start-your-docs.mdx` : 
+### Common template to copy/past directly from `start-your-docs.mdx` : 
 Sample Markdown usage to create your doc.
 **You can start COPY here.**
 
@@ -56,12 +71,7 @@ Sample Markdown usage to create your doc.
 <details>
   <summary>Toggle me!</summary>
   <div>
-    <div>This is the detailed content</div>
-    <br/>
     <details>
-      <summary>
-        Nested toggle! Some surprise inside...
-      </summary>
       <div>
         🛸 Bi Bi Bop 🛸
       </div>
@@ -94,6 +104,40 @@ import { generateSeed, getKeyringFromSeed } from "ternoa-js/account";
   console.log(e)
 })
 ```
+
+_____________
+
+### Admonitions 
+
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::caution
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
 _____________
 
 ### Who's working on this doc ? 

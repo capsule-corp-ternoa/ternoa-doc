@@ -3,6 +3,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 // Insert TS config
+// Insert copy/past possibility
 
 const TabChoice = ( {npmconsole, yarnconsole}) => {
   return (
