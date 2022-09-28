@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Avatar = ( {img, name, role} ) => {
+// here add TS config 
+
+const Avatar = ( {imgSrc, name, role} ) => {
   return (
     <div class="avatar">
        <img
           class="avatar__photo avatar__photo--xl"
-          src={img}
+          src={imgSrc}
+          alt={name}
         />
       <div class="avatar__intro">
         <div class="avatar__name">{name}</div>

@@ -2,31 +2,56 @@
 sidebar_position: 2
 ---
 
-import Highlight from '@site/src/components/Globals/Highlight';
-import Avatar from '@site/src/components/Globals/Avatar';
+import Highlight from '@site/src/components/global/Highlight';
+import Avatar from '@site/src/components/global/Avatar';
+import TabChoice from '@site/src/components/global/TabChoice';
 
 
 # 🔎 How to Start your Doc
 
-Here, an sample Markdown usage to create your doc.
+:::info
+ ## Please read steps before begin 
+
+#### 1. change your file `.md` in `.mdx` file.
+**For exemple** : I want to add infos in `for-developers/cookbooks/create-a-capsule.md`
+I should to change file in `for-developers/cookbooks/create-a-capsule.mdx`
+
+#### 2. Copy/Past common template
+- Copy all are in  `start-your-doc.mdx`
+- 🔥 **Be careful** don't touch metadatas in top of all docs. It's already done. 
+```jsx title="for-developers/cookbooks/create-a-capsule.mdx"
+//Don't touch this section in all docs.
+---
+sidebar_position: 2
+---
+```
+- Past directly in your `docname.mdx`
+:::
+
+______________________________________
+
+### 3. Common template to copy/past directly from `start-your-docs.mdx` : 
+Sample Markdown usage to create your doc.
+**You can start COPY here.**
+
 
 - ## Subtitle H2
 - ### Subtitle H3
 - #### Subtitle H4 
 
-## Add image
+### Add image directly in `.mdx` file.
 ![img alt](/img/docusaurus.png)
 
-## Add text
+### Add text
 - Normal : Hello 
 - Font-weight : **Hello**, 
 - Italic :  _Hello_ 
 
-## Add Links
+### Add Links
 - You can try and [go to the external link](https://www.ternoa.com/)
 - You can try and [go to the internal link](/docs/category/core-blockchain)
 
-## Markdown can embed HTML elements and details
+### Markdown can embed HTML elements and details WIP
 
 <details>
   <summary>Toggle me!</summary>
@@ -44,11 +69,38 @@ Here, an sample Markdown usage to create your doc.
   </div>
 </details>
 
+### Here you can insert info console :
+
+<TabChoice
+npmconsole="npm install ternoa-js"
+yarnconsole="yarn install ternoa-js"
+/>
+
+_____________
+
+### Here you can add a part of code with path
+Use ` ``` your code ``` ` to generate sample of code with color synthax.
+
+```jsx title="ternoa-js/account"
+// Example
+import { generateSeed, getKeyringFromSeed } from "ternoa-js/account";
+
+(async () => {
+  const account = await generateSeed()
+  const keyring = await getKeyringFromSeed(account.seed)
+  const address = keyring.address
+  console.log("Your fresh public address is: ", address)
+})().catch((e) => {
+  console.log(e)
+})
+```
+_____________
+
 ### Who's working on this doc ? 
 Please, enter your name instead of Dr Brief and your role.
 
 <Avatar 
-  img="https://picsum.photos/200"
+  imgSrc="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrLgWn4mtJTM6ItWW8qIvaih1wJHffuvMu7Q&usqp=CAU"
   name="Dr Brief"
   role="Founder of Capsule Corporation"
  />
