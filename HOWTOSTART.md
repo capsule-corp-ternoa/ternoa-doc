@@ -97,7 +97,7 @@ import Avatar from '@site/src/components/global/Avatar';
 
 <Avatar 
   imgSrc={require('../static/img/ternoa_test.jpg').default}
-  name="Lautaro"
+  name="Dr Brief"
   role="Founder of Capsule Corporation"
  />
 
