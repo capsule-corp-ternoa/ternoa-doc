@@ -8,6 +8,7 @@ sidebar_position: 1
 **All resources you'll need to build the future on Ternoa**
 
 
+
 > **Description  :** **[Ternoa](https://www.ternoa.network/)** is an NFT-focused chain based on Substrate that aims to provide the best experience for developers and users of NFT-driven dApps.
 > 
 >Ternoa’s unique innovation include the ability for users to store private data within NFTs, user-specified conditions for automated transfers of the secret NFTs to other wallets, lending or sharing NFTs with others while retaining full-rights and NFT ownership, combining multiple NFTs into a new NFT, and sharing of NFT ownership through fractionalization.

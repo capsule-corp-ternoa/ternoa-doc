@@ -1,12 +1,14 @@
 # How to start your doc ? 
 
+### Use `.mdx` instead of `.md`  file if you integer MDX Components with React
+
 ### Use Standard features Markdown**
 
 - ## Subtitle H2
 - ### Subtitle H3
 - #### Subtitle H4 
 
-### Add image directly in `.mdx` file.
+### Add image directly in `.md` or `.mdx` file.
 ![img alt](/img/docusaurus.png)
 
 ### Add text
@@ -18,17 +20,6 @@
 - You can try and [go to the external link](https://www.ternoa.com/)
 - You can try and [go to the internal link](/docs/category/core-blockchain)
 
-### Insert info console with MDX component :
-
-```
-import TabChoice from '@site/src/components/global/TabChoice';
-
-<TabChoice
-npmconsole="npm install ternoa-js"
-yarnconsole="yarn install ternoa-js"
-/>
-
-```
 
 ### Add a part of code with path 
 
@@ -90,7 +81,10 @@ sidebar_position: 2
 ```
 ________
 
-### Add MDX Components
+### Add MDX Components Avatar
+
+![img alt](/img/avatar_section.JPG)
+
 
 ```
 import Avatar from '@site/src/components/global/Avatar';
@@ -102,4 +96,19 @@ import Avatar from '@site/src/components/global/Avatar';
  />
 
  ```
+
+ ### Add info console with MDX component :
+
+ ![img alt](/img/console-section.JPG)
+
+```
+import TabChoice from '@site/src/components/global/TabChoice';
+
+<TabChoice
+npmconsole="npm install ternoa-js"
+yarnconsole="yarn install ternoa-js"
+/>
+
+```
+
  [All doc Docusaurus here](https://docusaurus.io/docs)
