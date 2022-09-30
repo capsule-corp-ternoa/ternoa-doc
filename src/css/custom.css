@@ -4,10 +4,10 @@
  * work well for content-centric websites.
  */
 
-* {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 25px;
- }
+body {
+  font-family: 'Airbnb Cereal App Book', sans-serif !important;
+ } 
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #840cc6;
@@ -27,8 +27,35 @@
   --ifm-color-primary-dark: #9f9fff;
   --ifm-color-primary-darker: #9f9fff;
   --ifm-color-primary-darkest: #9f9fff;
-  --ifm-color-primary-light: #9f9fff;
-  --ifm-color-primary-lighter: #9f9fff;
+  --ifm-color-primary-light: #9f9fff;  --ifm-color-primary-lighter: #9f9fff;
   --ifm-color-primary-lightest: #9f9fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+
+.theme-doc-sidebar-container {
+  
+  background-color: #f5f5f5;
+  line-height: 2rem;
+  font-size: 15px;
+  
+}
+
+
+.theme-doc-sidebar-menu {
+  margin: 1rem;
+}
+
+.theme-doc-sidebar-item-category-level-1 {
+  font-weight: 600;
+}
+
+.theme-doc-sidebar-item-category-level-2 {
+  font-weight: 400;
+}
+
+
+.theme-doc-sidebar-item-link {
+  font-weight: 400;
+
 }
