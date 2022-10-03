@@ -33,18 +33,26 @@ body {
 }
 
 
-.theme-doc-sidebar-container {
-  
-  background-color: #f5f5f5;
-  line-height: 2rem;
-  font-size: 15px;
-  
-}
 
+.theme-doc-sidebar-container {
+  background-color: #f5f5f5;
+  font-size: 15px;
+}
 
 .theme-doc-sidebar-menu {
-  margin: 1rem;
+  margin: .5rem;
 }
+
+.menu__list-item .menu__link {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.menu__list-item:not(:first-child) {
+  margin-top: 0.25rem;
+}
+
 
 .theme-doc-sidebar-item-category-level-1 {
   font-weight: 600;
@@ -53,9 +61,16 @@ body {
 .theme-doc-sidebar-item-category-level-2 {
   font-weight: 400;
 }
-
+.theme-doc-sidebar-item-category {
+  font-weight: 600;
+}
 
 .theme-doc-sidebar-item-link {
   font-weight: 400;
 
 }
+
+.theme-doc-sidebar-item-link-level-2 {
+  font-weight: 600;
+}
+
