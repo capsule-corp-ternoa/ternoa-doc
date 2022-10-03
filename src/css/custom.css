@@ -4,9 +4,9 @@
  * work well for content-centric websites.
  */
 
-body {
+/*body {
   font-family: 'Airbnb Cereal App Book', sans-serif !important;
- } 
+ } */
 
 /* You can override the default Infima variables here. */
 :root {
@@ -36,25 +36,50 @@ body {
 
 .theme-doc-sidebar-container {
   background-color: #f5f5f5;
-  font-size: 15px;
 }
 
 .theme-doc-sidebar-menu {
-  margin: .5rem;
+  margin: .2rem;
 }
 
+/*Here 3 globals sections*/
 .menu__list-item .menu__link {
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 25px;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 30px;
+  text-transform: uppercase;
 }
 
 .menu__list-item:not(:first-child) {
-  margin-top: 0.25rem;
+  margin-top: 0.1rem;
 }
 
+.menu>.menu__list .menu__list {
+  border-left: 1px solid rgb(209, 209, 209); 
+  margin-left: 20px;
+}
 
-.theme-doc-sidebar-item-category-level-1 {
+.menu__list {
+  list-style: none;
+}
+
+/*Here seconds globals sections*/
+.menu__list-item .menu__list-item .menu__link {
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 0.6rem;
+  text-transform: none;
+}
+
+/*Here last globals sections*/
+.menu__list-item .menu__list-item .menu__list-item .menu__link {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 0.6rem;
+  text-transform: none;
+}
+
+/*.theme-doc-sidebar-item-category-level-1 {
   font-weight: 600;
 }
 
@@ -62,7 +87,7 @@ body {
   font-weight: 400;
 }
 .theme-doc-sidebar-item-category {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .theme-doc-sidebar-item-link {
@@ -72,5 +97,5 @@ body {
 
 .theme-doc-sidebar-item-link-level-2 {
   font-weight: 600;
-}
+}*/
 
