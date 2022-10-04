@@ -8,6 +8,7 @@
   font-family: 'Airbnb Cereal App Book', sans-serif !important;
  } */
 
+
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #840cc6;
@@ -39,16 +40,17 @@
 }
 
 .theme-doc-sidebar-menu {
-  margin: .2rem;
+  margin: 1rem;
 }
 
 /*Here 3 globals sections*/
 .menu__list-item .menu__link {
   font-size: 14px;
-  font-weight: 650;
+  font-weight: 700;
   line-height: 30px;
-  text-transform: uppercase;
+  color: #4b4b4b;
 }
+
 
 .menu__list-item:not(:first-child) {
   margin-top: 0.1rem;
@@ -59,16 +61,29 @@
   margin-left: 20px;
 }
 
+li.menu>.menu__list .menu__list:hover {
+  border-left: 1px solid rgb(218, 53, 53); 
+}
+
+
 .menu__list {
   list-style: none;
 }
 
 /*Here seconds globals sections*/
 .menu__list-item .menu__list-item .menu__link {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   padding-left: 0.6rem;
   text-transform: none;
+}
+
+
+.menu__list-item-collapsible {
+  border-radius: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 /*Here last globals sections*/
@@ -79,23 +94,4 @@
   text-transform: none;
 }
 
-/*.theme-doc-sidebar-item-category-level-1 {
-  font-weight: 600;
-}
-
-.theme-doc-sidebar-item-category-level-2 {
-  font-weight: 400;
-}
-.theme-doc-sidebar-item-category {
-  font-weight: 400;
-}
-
-.theme-doc-sidebar-item-link {
-  font-weight: 400;
-
-}
-
-.theme-doc-sidebar-item-link-level-2 {
-  font-weight: 600;
-}*/
 
