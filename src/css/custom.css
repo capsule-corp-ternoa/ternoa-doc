@@ -6,7 +6,7 @@
 
 /*body {
   font-family: 'Airbnb Cereal App Book', sans-serif !important;
- } */
+ }*/
 
 
 /* You can override the default Infima variables here. */
@@ -20,6 +20,9 @@
   --ifm-color-primary-lightest: #840cc6;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --dropdown-icon-width: 1.3rem;
+  --dropdown-icon-height: 1.3rem;
+  --dropdown-icon-gap: 0.5rem;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -35,22 +38,28 @@
 
 
 
-.theme-doc-sidebar-container {
-  background-color: #f5f5f5;
-}
+/*.theme-doc-sidebar-container {
+}*/
 
 .theme-doc-sidebar-menu {
-  margin: 1rem;
+  margin: 0.2rem;
 }
 
 /*Here 3 globals sections*/
 .menu__list-item .menu__link {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 30px;
-  color: #4b4b4b;
 }
 
+.menu__caret:before, 
+.menu__link--sublist-caret:after {
+  background: var(--ifm-menu-link-sublist-icon) center/var(--dropdown-icon-width) var(--dropdown-icon-height);
+  background-repeat: no-repeat;
+  height: var(--dropdown-icon-height);
+  min-width: auto;
+  width: var(--dropdown-icon-width);
+}
 
 .menu__list-item:not(:first-child) {
   margin-top: 0.1rem;
@@ -61,11 +70,6 @@
   margin-left: 20px;
 }
 
-li.menu>.menu__list .menu__list:hover {
-  border-left: 1px solid rgb(218, 53, 53); 
-}
-
-
 .menu__list {
   list-style: none;
 }
@@ -73,7 +77,7 @@ li.menu>.menu__list .menu__list:hover {
 /*Here seconds globals sections*/
 .menu__list-item .menu__list-item .menu__link {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   padding-left: 0.6rem;
   text-transform: none;
 }
