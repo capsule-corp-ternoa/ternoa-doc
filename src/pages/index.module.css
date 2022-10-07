@@ -4,11 +4,15 @@
  */
 
 .heroBanner {
-  padding: 20rem 0;
-  margin: 0;
-  position: relative;
-  overflow: hidden;
-  height: auto; 
+  margin: 0.8rem;
+  font-weight: 200;
+  letter-spacing: .10px;
+  width: 100%;
+}
+
+.intro_section {
+  margin: 0.6rem; 
+  max-width: 25rem;
 }
 
 @media screen and (max-width: 996px) {
@@ -18,5 +22,14 @@
 }
 
 .buttons {
-border-radius: 80%;
+display: flex;
+flex-wrap: wrap;
+gap: 1rem; 
+padding-bottom: 0.75rem;
+padding-top: 0.75rem;
+border: var(--ifm-button-border-width) solid var(--ifm-button-border-color);
+background-color: var(--ifm-button-background-color);
+border-radius: var(--ifm-button-border-radius);
+font-size: calc(.875rem*var(--ifm-button-size-multiplier));
+text-align: center;
 }
