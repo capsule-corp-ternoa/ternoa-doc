@@ -41,7 +41,7 @@ _____________________________________________________
 Use ` ``` your code ``` ` to generate sample of code with color synthax.
 
 ``` 
-jsx title="ternoa-js/account"
+``` jsx title="ternoa-js/account"
 // Example
 import { generateSeed, getKeyringFromSeed } from "ternoa-js/account";
 
@@ -52,7 +52,7 @@ import { generateSeed, getKeyringFromSeed } from "ternoa-js/account";
   console.log("Your fresh public address is: ", address)
 })().catch((e) => {
   console.log(e)
-})
+})``` 
 ```
 
 result: 
