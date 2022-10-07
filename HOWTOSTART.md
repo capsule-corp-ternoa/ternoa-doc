@@ -55,7 +55,6 @@ import { generateSeed, getKeyringFromSeed } from "ternoa-js/account";
 })``` 
 ```
 
-result: 
 ![image](https://user-images.githubusercontent.com/98469515/194532419-54ea44e4-e99a-4500-acb3-04f00e9c0a0f.png)
 
 ________________________________________________________
