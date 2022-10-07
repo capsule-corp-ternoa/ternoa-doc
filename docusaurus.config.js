@@ -11,11 +11,12 @@ const config = {
   tagline: 'All resources you\'ll need to build the future on Ternoa',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn', // If Routes duplicates
   favicon: 'img/favicon.ico',
   noIndex: true, //
+  staticDirectories: ['public', 'static'],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -76,21 +77,20 @@ const config = {
         contextualSearch: true,
       },*/
       announcementBar: {
-        id: 'support_us',
+        id: 'annoucementBar-0',
         content:
           'FR version WIP <a target="_blank" rel="noopener noreferrer" href="#">english version</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
-        isCloseable: false,
+        isCloseable: true,
       },
       navbar: {
-        hideOnScroll: true, 
+        hideOnScroll: false, 
         title: 'Ternoa',
         logo: {
           alt: 'Ternoa Logo',
-          src: 'img/Ternoa-logo.png',
-          width: 34,
-          height: 32,
+          src: '/img/ternoa_logo.svg',
+          width: 40,
         },
         items: [
           {
@@ -113,6 +113,11 @@ const config = {
             position: 'right',
           },
         ],
+      },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true, 
+        }
       },
       footer: {
         style: 'light',
@@ -142,10 +147,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: 'GitHub',
                 href: 'https://github.com/facebook/docusaurus',

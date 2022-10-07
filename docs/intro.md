@@ -1,10 +1,12 @@
 ---
+sidebar_label: "👋 Welcome"
 sidebar_position: 1
 ---
 
-# 👋 Welcome 
+# 👋 Welcome  
 
 **All resources you'll need to build the future on Ternoa**
+
 
 
 > **Description  :** **[Ternoa](https://www.ternoa.network/)** is an NFT-focused chain based on Substrate that aims to provide the best experience for developers and users of NFT-driven dApps.
@@ -39,7 +41,7 @@ All you need to know to build dApps, interact with the Ternoa Blockchain and dep
 #### 3. Cookbooks
 - Edit [Cookbooks](category/cookbooks) docs.
 #### 4. Reference docs
-- Edit [Reference docs](reference-docs) docs.
+- Edit [Reference docs](category/reference-docs) docs.
 
 ## 🌌 For Node operators 
 
