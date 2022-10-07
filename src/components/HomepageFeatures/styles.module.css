@@ -3,9 +3,17 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  
 }
 
-.featureSvg {
+.featureIcon {
   height: 200px;
   width: 200px;
+}
+
+.cards {
+border: solid 1px;
+display: grid;
+gap: 12px;
+grid-template-columns: repeat(3,minmax(0,1fr));
 }
