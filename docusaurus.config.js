@@ -9,11 +9,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Ternoa',
   tagline: 'All resources you\'ll need to build the future on Ternoa',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://ternoa-docs-fzygq3gum-ternoa.vercel.app/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  onDuplicateRoutes: 'warn', // If Routes duplicates
+  onDuplicateRoutes: 'warn', 
   favicon: 'img/favicon.ico',
   noIndex: true, //
   staticDirectories: ['public', 'static'],
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Ternoa', // Usually your GitHub org/user name.
-  projectName: 'Ternoa-Docs', // Usually your repo name.
+  projectName: 'Ternoa-doc', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -58,7 +58,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -161,7 +161,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Ternoa, Inc. Built with Docusaurus.`,
       },
       colorMode: {
-          defaultMode: 'light', 
+          defaultMode: 'dark', 
           disableSwitch: false, 
           respectPrefersColorScheme: false,
         },
