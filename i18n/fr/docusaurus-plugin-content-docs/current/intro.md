@@ -39,7 +39,7 @@ Ajouter une description.
 #### 3. Cookbooks
 - Edit [Cookbooks](category/cookbooks) docs.
 #### 4. Reference docs
-- Edit [Reference docs](reference-docs) docs.
+- Edit [Reference docs](category/reference-docs) docs.
 
 ## 🌌 For Node operators 
 
