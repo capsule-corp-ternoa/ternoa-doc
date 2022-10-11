@@ -4,14 +4,10 @@
  */
 
 .heroBanner {
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: .10px;
   width: 100%;
-}
-
-.intro_section {
-  margin: 0.6rem; 
-  max-width: 25rem;
+  height: 500px;
 }
 
 @media screen and (max-width: 996px) {
@@ -20,15 +16,17 @@
   }
 }
 
-.buttons {
-display: flex;
-flex-wrap: wrap;
-gap: 1rem; 
-padding-bottom: 0.75rem;
-padding-top: 0.75rem;
-border: var(--ifm-button-border-width) solid var(--ifm-button-border-color);
-background-color: var(--ifm-button-background-color);
-border-radius: var(--ifm-button-border-radius);
-font-size: calc(.875rem*var(--ifm-button-size-multiplier));
-text-align: center;
+.linkButton {
+  border-radius: 10px; 
+  text-align: center;
+  border: solid 1px;
 }
+
+.linkButton:hover {
+background-color: var(--ifm-color-primary-button);
+border: solid 1px var(--ifm-color-primary-button);
+color:  var(--ifm-color-primary-text-button);
+}
+
+ 
+  

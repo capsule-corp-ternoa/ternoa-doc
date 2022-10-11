@@ -9,7 +9,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Ternoa',
   tagline: 'All resources you\'ll need to build the future on Ternoa',
-  url: 'https://ternoa-docs-fzygq3gum-ternoa.vercel.app/',
+  url: 'https://docs.ternoa.network/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
@@ -136,11 +136,11 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/mQeEWQj46a',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/ternoa_',
               },
             ],
           },
@@ -153,7 +153,7 @@ const config = {
               // },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/capsule-corp-ternoa',
               },
             ],
           },
