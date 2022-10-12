@@ -4,12 +4,10 @@
  */
 
 .heroBanner {
-  padding: 20rem 0;
-  margin: 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  height: auto; 
+  font-weight: 400;
+  letter-spacing: .10px;
+  width: 100%;
+  height: 500px;
 }
 
 @media screen and (max-width: 996px) {
@@ -18,6 +16,17 @@
   }
 }
 
-.buttons {
-border-radius: 80%;
+.linkButton {
+  border-radius: 10px; 
+  text-align: center;
+  border: solid 1px;
 }
+
+.linkButton:hover {
+background-color: var(--ifm-color-primary-button);
+border: solid 1px var(--ifm-color-primary-button);
+color:  var(--ifm-color-primary-text-button);
+}
+
+ 
+  
