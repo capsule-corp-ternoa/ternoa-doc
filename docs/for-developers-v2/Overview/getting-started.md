@@ -4,9 +4,9 @@ sidebar_position: 2
 
 # Getting Started
 
-______________________________
+___
 
-# INSTALLATION ⌨️
+## INSTALLATION ⌨️
 
 We recommand to install ternoa-js in your project with Node.js using npm: 
 
@@ -14,7 +14,7 @@ We recommand to install ternoa-js in your project with Node.js using npm:
 
 And there you go! You're ready to use the latest stable version of the Ternoa-js SDK.
 
-______________________________
+___
 
 ## Fancy trying the upcoming features ? 
 
@@ -24,7 +24,7 @@ You can check directly on [NPM](https://www.npmjs.com/package/ternoa-js) the ver
 
 exemple to specify a version : `npm i ternoa-js@1.2.0-rc0` 
 
-______________________________
+___
 
 ## Let's get started !
 

@@ -7,14 +7,14 @@ sidebar_position: 3
 This section will go through the main workflow process to execute a transaction. 
 In just a few steps you will be able to init the Ternoa SDK API and start using it. 
 
-_________________________________
+___
 
-## Init the API
+## INIT THE API
 
 It's not strictly necessary but it's good practice to initialize the API as soon as possible.
 If this call is omitted then the first SDK call will return an exception. The default chain endpoint is: `DEFAULT_CHAIN_ENDPOINT = "wss://alphanet.ternoa.com"`. It can be modified by passing a new endpoint as the first argument to the _initializeApi()_ function.
  
-```Javascript
+``` jsx
 // Import
 import { initializeApi } from "ternoa-js"
 
@@ -28,11 +28,11 @@ async function main() {
 }
 ```
 
-### How to customize the API endpoint ?
+## How to customize the API endpoint ?
 
 Simply pass the required endpoint to the _initializeApi()_ function.
 
-```Javascript
+``` jsx
   ...
    //enpoint here will make the init API on the Ternoa mainnet network
    await initializeApi('wss://mainnet.ternoa.io');
@@ -45,7 +45,7 @@ Simply pass the required endpoint to the _initializeApi()_ function.
 
 **Note:** Ternoa SDK provides **a very useful** `getRawApi()` function to interact with the API. If the API is connected, it will be directly returned
 
-```Javascript
+``` jsx 
   ...
    //we asume that API has been inited before
    const api = await getRawApi()
@@ -57,13 +57,13 @@ Simply pass the required endpoint to the _initializeApi()_ function.
 }
 ```
 
-_________________________________
+___
 
-## Let's Create!
+## LET'S CREATE !
 
 Now we know how to init our SDK API, let's get directly into a feature exemple. The Ternoa-js provides _the most friendly way to build_ on the chain and execute a transaction. Let's go into detail and see an exemple of **how to create an NFT**.  
 
-### The most automated and easiest way
+## The most automated and easiest way
 
 For most of the main chain features (we consider here our extrinsics) the SDK provides two functions. One of this is an all-in-one function that allows to go to the entire transaction workflow process:  It **Creates** a tx, **Signs** the tx and **Submits** the tx for you in a single line function. 
 
@@ -72,7 +72,7 @@ This single line `createNft()` function, requires a few parameters : some offcha
 
 _*In most cases this will be an IPFS hash that points to a JSON file which contains fields as "name", "description" or "image". In other cases this can be a link to a either a static or a dynamic file, plain text or a small JSON string._ In the exemple below, we just pass a string.
 
-```Javascript
+``` jsx
 // Imports
 import { initializeApi } from "ternoa-js"
 import { createNft } from "ternoa-js/nft"
@@ -97,17 +97,18 @@ const createMyFirstNFT = async () => {
 }
 ```
 
-### The versatile but more complex way
+## The versatile but more complex way
 
 Now we have seen the most friendly way to create an NFT in a signle line, with the automation of the workflow (**Create => Sign => Send**), we can dig a bit more. For some reasons, **_you will need to go manually into the whole process_**. This way is more complex but offers more versatilty : ex if you split the process and execute it by your self, _you will be able for exemple to make a batch of transactions_ (this concept is covered in the [exemple](#) section) instead of doing it one by one. It's very usefull if you want to create a large amount of NFT and avoid to sign and send them one by one. 
 
 Let's go into the detail of each steps to create an NFT manually. 
 
-#### STEP 1 - Create an NFT transaction 
+### STEP 1 - Create an NFT transaction 
 
 First of all, instead of using the `createNft()` function, you will use the `createNftTx()`. And instead of creating, signing and submiting, the transaction and get the returned events, it will just create an unsigned and unsubmitted Create-NFT **Transaction Hash** ready to be used and valid for 5 minutes.
 
-```Javascript
+
+``` jsx
 // Imports
 import { initializeApi } from "ternoa-js"
 import { createNftTx } from "ternoa-js/nft"
@@ -129,12 +130,12 @@ const create createNFTManually = async () => {
 ```
 
 
-#### STEP 2 - Sign a transaction hash
+### STEP 2 - Sign a transaction hash
 
 Now we have the txHash, we can move to the signing step. But before detailing it, it's good to know that _"signing"_ can be directely embed in the submit function. It means that depending on the submit function you are using (see the last step [below](#)), _signing your tx hash before submit might not be necessary_. In case you sign manually the tx hash, you will receive a hex value of the signed transaction ready to be send. The `signTxHex()` function expect **a keyring** that will sign the transaction and the **transaction hash to be signed**. 
 
-```Javascript
 
+``` jsx
 const create createNFTManually = async () => {
   try {
     ...
@@ -151,14 +152,13 @@ const create createNFTManually = async () => {
 }
 ```
 
-#### STEP 3 - Submit a transaction
+### STEP 3 - Submit a transaction
 
 Submiting a transaction is generally the last step of the transaction execussion process. Ternoa-js provide up to 3 ways to submit a transaction. From the raw and native way to the fully handled and most easy to use. Depending of the result format you are expecting and the specific case you want to handle (simple submit, batching some transaction (...)) you will need to go with **one of the following function** : 
 
 * `submitTxHex()` - The most versatile and customizable way to submit your txHash. You can manage your self the callback function. It obvioulsy requires the hex value to be submited but also an optionnal callback. This function require the transaction hash to be signed before being sent. 
 
-```Javascript
-
+``` jsx
 const create createNFTManually = async () => {
   try {
     ...
@@ -181,8 +181,8 @@ const create createNFTManually = async () => {
 
 Note: Here you do not need to necessarily pass a signed txHash. If you pass the Keyring as a parameter and an unsigned tx hash as the signing process will be done here for you. 
 
-```Javascript
 
+``` jsx
 const create createNFTManually = async () => {
   try {
     ...
@@ -203,8 +203,8 @@ const create createNFTManually = async () => {
 
 * `submitTxNonBlocking()`: This one works as the `submitTxBlocking` but in a non blocking way. It returns a pair of objects that are used to track the progress of the transaction execution. The first returned object is a conditional variable which can yield the information if the operation is finished. The second returned objects is an array of events which gets populated automatically once the operation is finished.
 
-```Javascript
 
+``` jsx 
 const create createNFTManually = async () => {
   try {
     ...

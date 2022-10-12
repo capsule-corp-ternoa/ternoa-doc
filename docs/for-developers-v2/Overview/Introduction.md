@@ -4,9 +4,9 @@ sidebar_position: 1
 
 # Introduction
 
-_______________________________________
+___
 
-# OVERVIEW ⚙️
+## OVERVIEW ⚙️
 
 Welcome to the Ternoa-js documentation.
 If you look for more global information about Ternoa, check our website [here](https://www.ternoa.com/).
@@ -17,7 +17,7 @@ _Ternoa-js has been thought with one intention_: it aims to be **one of the easi
 Ternoa-js is an open-source project. Feel free to interact and move forward with us. 
 If you have questions about anything related to Ternoa-js, we will be please to help you. Open a discussion on our [GitHub Discussions](https://github.com/capsule-corp-ternoa/ternoa-js/discussions). And if you find an issue, lets us know about it here in our [GitHub Issues](https://github.com/capsule-corp-ternoa/ternoa-js/issues) section. 
 
-_______________________________________
+___
 
 
 ## API ARCHITECTURE
@@ -46,7 +46,7 @@ For those who are familiar with Polkadot, you will quickly recognize the design 
 
 As it makes senses for us to provide the easiest tools to build on the Ternoa chain, **we also tried to simplify when ever we could the response format of our functions**. Depending if you want to get things done for you or if you go with the full customizable way and handle your self your callback, we invite you to choose the right function : _Events and features datas will be provided directly on some function while only transaction hash hex will be returned on others._ We will cover this topic later in the doc.
 
-_______________________________________
+___
 
 ## WANT MORE? 
 
