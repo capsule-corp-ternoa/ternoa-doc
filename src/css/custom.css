@@ -104,4 +104,37 @@
   text-transform: none;
 }
 
+/*Footer*/
+.footer .container {
+  padding-left: 3rem; 
+  padding-top: 2rem;
+}
 
+.footer__title {
+  font-size: 1rem;
+}
+
+.footer__item {
+  font-size: 0.9rem; 
+  border-left: solid 0.8px var(--ifm-color-primary);
+  padding-left: 10px;
+  margin-left: 2px;
+}
+
+.footer__link-item:hover {
+  text-decoration: none;
+}
+
+
+.footer__bottom {
+  margin-top: 1.5rem;
+  align-items: center;
+  justify-content: start;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer__copyright {
+  margin-left: 20px;
+  font-size: 0.9rem;
+}
