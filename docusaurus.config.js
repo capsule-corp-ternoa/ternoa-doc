@@ -100,7 +100,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/capsule-corp-ternoa',
+            href: 'https://github.com/capsule-corp-ternoa/ternoa-js',
             label: 'GitHub',
             position: 'left',
           },
@@ -121,13 +121,31 @@ const config = {
       },
       footer: {
         style: 'light',
+        logo: {
+          href: 'https://www.ternoa.com/',
+          src: '/img/ternoa_logo.svg',
+          alt: 'Ternoa Doc',
+          height: '38px',
+        },
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Welcome',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Ternoa Fundamentals',
+                to: '/docs/category/ternoa-fundamentals',
+              },
+              {
+                label: 'For Developers',
+                to: '/docs/category/for-developers',
+              },
+              {
+                label: 'For Node Operators',
+                to: '/docs/category/for-node-operators',
               },
             ],
           },
@@ -142,18 +160,22 @@ const config = {
                 label: 'Twitter',
                 href: 'https://twitter.com/ternoa_',
               },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/capsule-corp-ternoa/ternoa-js',
+              },
             ],
           },
           {
-            title: 'More',
+            title: 'About Ternoa',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
               {
-                label: 'GitHub',
-                href: 'https://github.com/capsule-corp-ternoa',
+                label: 'Ternoa',
+                href: 'https://www.ternoa.com/',
+              },
+              {
+                label: 'Wiki Ternoa',
+                href: 'https://wiki.ternoa.network/',
               },
             ],
           },
