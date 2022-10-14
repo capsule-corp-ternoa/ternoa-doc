@@ -86,7 +86,7 @@
 /*Here seconds globals sections*/
 .menu__list-item .menu__list-item .menu__link {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: bold; 
   padding-left: 0.6rem;
   text-transform: none;
 }
