@@ -9,11 +9,11 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Ternoa',
   tagline: 'All resources you\'ll need to build the future on Ternoa',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.ternoa.network/',
   baseUrl: '/',
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  onDuplicateRoutes: 'warn', // If Routes duplicates
+  onDuplicateRoutes: 'warn', 
   favicon: 'img/favicon.ico',
   noIndex: true, //
   staticDirectories: ['public', 'static'],
@@ -21,7 +21,7 @@ const config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Ternoa', // Usually your GitHub org/user name.
-  projectName: 'Ternoa-Docs', // Usually your repo name.
+  projectName: 'Ternoa-doc', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -58,7 +58,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -100,7 +100,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/capsule-corp-ternoa',
+            href: 'https://github.com/capsule-corp-ternoa/ternoa-js',
             label: 'GitHub',
             position: 'left',
           },
@@ -121,13 +121,31 @@ const config = {
       },
       footer: {
         style: 'light',
+        logo: {
+          href: 'https://www.ternoa.com/',
+          src: '/img/ternoa_logo.svg',
+          alt: 'Ternoa Doc',
+          height: '38px',
+        },
         links: [
           {
-            title: 'Docs',
+            title: 'Documentation',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Welcome',
                 to: '/docs/intro',
+              },
+              {
+                label: 'Ternoa Fundamentals',
+                to: '/docs/category/ternoa-fundamentals',
+              },
+              {
+                label: 'For Developers',
+                to: '/docs/category/for-developers',
+              },
+              {
+                label: 'For Node Operators',
+                to: '/docs/category/for-node-operators',
               },
             ],
           },
@@ -136,24 +154,28 @@ const config = {
             items: [
               {
                 label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                href: 'https://discord.com/invite/mQeEWQj46a',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/ternoa_',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/capsule-corp-ternoa/ternoa-js',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'About Ternoa',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Ternoa',
+                href: 'https://www.ternoa.com/',
+              },
+              {
+                label: 'Wiki Ternoa',
+                href: 'https://wiki.ternoa.network/',
               },
             ],
           },
@@ -161,7 +183,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Ternoa, Inc. Built with Docusaurus.`,
       },
       colorMode: {
-          defaultMode: 'light', 
+          defaultMode: 'dark', 
           disableSwitch: false, 
           respectPrefersColorScheme: false,
         },

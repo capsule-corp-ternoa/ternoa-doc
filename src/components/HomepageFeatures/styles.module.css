@@ -1,11 +1,66 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  padding: 2rem;
+  text-decoration: none;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+
+.featureIcon {
+font-size: 25px;
+margin-bottom: 20px;
+}
+
+.cards {
+border: solid 0.4px rgb(227, 227, 227);
+border-radius: 8x;
+padding : 25px; 
+height: 270px; 
+width: 100%;
+margin: 10px;
+}
+
+@media screen and (max-width: 1450px) {
+  .cards {
+    height: 290px;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .cards {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 994px) {
+  .cards {
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cards {
+    height: 270px;
+  }
+}
+
+
+
+.cards:hover {
+  border: solid 0.4px var(--ifm-color-primary);
+  text-decoration: none;
+  color: var(--ifm-color-classic) ;
+  background-color:  var(--docusaurus-highlighted-code-line-bg);
+}
+
+
+.linkUrl {
+  text-decoration: none;
+  text-decoration-line: inherit;
+  color: var(--ifm-color-classic);
+}
+
+.linkUrl:hover {
+  text-decoration: none;
+  color: var(--ifm-color-classic);
 }

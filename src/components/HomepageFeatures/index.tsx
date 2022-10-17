@@ -1,69 +1,85 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
+  icon: string // Todo: add UI Kit Icon
   description: JSX.Element;
+  url: string; 
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'Ternoa fundamentals',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    icon: '🔎',
     description: (
       <>
-        Lorem ipsum dolor sit amet. Aut modi voluptas nam perferendis
-        labore aut facilis facere.
+        A step by step tutorial to start with Ternoa.
+        Here you will learn everything with token CAPS management
+        and get new experience with creation, minting and trading NFTs.
       </>
     ),
+    url: '/docs/category/ternoa-fundamentals'
   },
+  
   {
     title: 'For developers',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    icon: '🛸',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        All you need to know to build dApps, interact with the
+        Ternoa Blockchain and deploy your own Marketplace.
       </>
     ),
+    url: '/docs/category/for-developers'
   },
+
   {
     title: 'For Node operators',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    icon: '🌌',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        This guide will explain the basic principles on how to run a validator
+        node and how to stake CAPS. A more detailed approach will be available
+        later in the form of a workshop and/or gitbook documentation.
       </>
     ),
+    url: '/docs/category/for-node-operators'
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({icon, url, title, description}: FeatureItem) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <Link to={url} className={clsx('col col--4', styles.linkUrl)}>
+      <div className="card-demo">
+        <div className={clsx('card', styles.cards)}>
+          <div className="card_header">
+            <div className={(styles.featureIcon)}>{icon}</div>
+            <h3>{title}</h3>
+          </div>
+          <div>
+            <p>{description}</p>
+          </div>
+          <div className="card_footer">
+          </div>
+        </div>
       </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
+    </Link>
+
   );
 }
 
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-        {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+      <div  className="container">
+          <div className="row">
+          {FeatureList.map((props, idx) => (
+              <Feature key={idx} {...props} />
+            ))}
+          </div>
       </div>
     </section>
   );
