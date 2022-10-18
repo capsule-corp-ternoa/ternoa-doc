@@ -29,6 +29,7 @@
   --dropdown-icon-width: 1.3rem;
   --dropdown-icon-height: 1.3rem;
   --dropdown-icon-gap: 0.5rem;
+  --navbar-icon-color: rgb(48, 48, 48); 
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -38,11 +39,13 @@
   --ifm-color-primary-dark: #9f9fff;
   --ifm-color-primary-darker: #9f9fff;
   --ifm-color-primary-darkest: #9f9fff;
-  --ifm-color-primary-light: #9f9fff;  --ifm-color-primary-lighter: #9f9fff;
+  --ifm-color-primary-light: #9f9fff;  
+  --ifm-color-primary-lighter: #9f9fff;
   --ifm-color-primary-lightest: #9f9fff;
   --ifm-color-primary-button: #222222;
   --ifm-color-primary-text-button : #9f9fff;
   --docusaurus-highlighted-code-line-bg: rgba(35, 35, 35, 0.3);
+  --navbar-icon-color: #ddd; 
 }
 
 
@@ -140,4 +143,37 @@
 .footer__copyright {
   margin-left: 20px;
   font-size: 0.9rem;
+}
+
+/* navbar icons*/
+.pseudo-icon {
+  opacity: 1;
+}
+
+.pseudo-icon:hover {
+  opacity: 0.8;
+}
+
+.pseudo-icon::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+}
+
+.github-icon::before {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  mask-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 1024 1024' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z' transform='scale(64)' fill='%231B1F23'/%3E%3C/svg%3E");
+  background-color: var(--navbar-icon-color);
+}
+
+.discord-icon::before {
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  mask-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' xml:space='preserve'%3E%3Cpath d='M18.942 5.556a16.299 16.299 0 0 0-4.126-1.297c-.178.321-.385.754-.529 1.097a15.175 15.175 0 0 0-4.573 0 11.583 11.583 0 0 0-.535-1.097 16.274 16.274 0 0 0-4.129 1.3c-2.611 3.946-3.319 7.794-2.965 11.587a16.494 16.494 0 0 0 5.061 2.593 12.65 12.65 0 0 0 1.084-1.785 10.689 10.689 0 0 1-1.707-.831c.143-.106.283-.217.418-.331 3.291 1.539 6.866 1.539 10.118 0 .137.114.277.225.418.331-.541.326-1.114.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595c.415-4.396-.709-8.209-2.973-11.589zM8.678 14.813c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c.001 1.123-.793 2.045-1.798 2.045zm6.644 0c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c0 1.123-.793 2.045-1.798 2.045z'/%3E%3C/svg%3E");
+  background-color: var(--navbar-icon-color);
+  width: 28px;
+  height: 28px;
 }
