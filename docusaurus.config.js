@@ -100,16 +100,21 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/capsule-corp-ternoa/ternoa-js',
-            label: 'GitHub',
-            position: 'left',
+            href: 'https://github.com/capsule-corp-ternoa',
+            className: 'pseudo-icon github-icon',
+            position: 'right',
           },
           {
-            type: 'localeDropdown',
+            href: 'https://discord.com/invite/mQeEWQj46a',
+            className: 'pseudo-icon discord-icon discord-card',
             position: 'right',
           },
           {
             type: 'search',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],
