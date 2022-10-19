@@ -1,8 +1,4 @@
 {
   "label": "Ternoa Fundamentals",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Add description"
-  }
+  "position": 2
 }
