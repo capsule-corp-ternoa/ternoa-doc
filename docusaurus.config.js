@@ -15,7 +15,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn', 
   favicon: 'img/favicon.ico',
-  noIndex: true, //
+  noIndex: true, 
   staticDirectories: ['public', 'static'],
 
   // GitHub pages deployment config.
@@ -38,13 +38,13 @@ const config = {
         calendar: 'gregory',
         path: 'en'
       },
-      fr: {
+      /*fr: {
         label: 'Français',
         direction: 'ltr',
         htmlLang: 'fr-FR',
         calendar: 'gregory',
         path: 'fr',
-      },
+      },*/
     },
   },
 
@@ -76,14 +76,14 @@ const config = {
         indexName: '',
         contextualSearch: true,
       },*/
-      announcementBar: {
+      /*announcementBar: {
         id: 'annoucementBar-0',
         content:
           'FR version WIP <a target="_blank" rel="noopener noreferrer" href="#">english version</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: true,
-      },
+      },*/
       navbar: {
         hideOnScroll: false, 
         title: 'Ternoa',
@@ -113,10 +113,10 @@ const config = {
             type: 'search',
             position: 'right',
           },
-          {
+          /*{
             type: 'localeDropdown',
             position: 'right',
-          },
+          },*/
         ],
       },
       docs: {
