@@ -16,7 +16,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
           <Link
             className={clsx('button button--primary button--lg', styles.linkButton)}
-            to="/docs/intro">
+            to="/intro">
             Get Started  →
           </Link>
       </div>
@@ -27,9 +27,7 @@ function HomepageHeader() {
 export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+    <Layout>
       <HomepageHeader />
       <main>
         <HomepageFeatures />

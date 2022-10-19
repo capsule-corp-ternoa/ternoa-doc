@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ternoa',
+  title: 'Ternoa Documentation',
   tagline: 'All resources you\'ll need to build the future on Ternoa',
   url: 'https://docs.ternoa.network/',
   baseUrl: '/',
@@ -15,7 +15,7 @@ const config = {
   onBrokenMarkdownLinks: 'warn',
   onDuplicateRoutes: 'warn', 
   favicon: 'img/favicon.ico',
-  noIndex: true, //
+  noIndex: true, 
   staticDirectories: ['public', 'static'],
 
   // GitHub pages deployment config.
@@ -38,13 +38,13 @@ const config = {
         calendar: 'gregory',
         path: 'en'
       },
-      fr: {
+      /*fr: {
         label: 'Français',
         direction: 'ltr',
         htmlLang: 'fr-FR',
         calendar: 'gregory',
         path: 'fr',
-      },
+      },*/
     },
   },
 
@@ -59,6 +59,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/',
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -76,17 +77,17 @@ const config = {
         indexName: '',
         contextualSearch: true,
       },*/
-      announcementBar: {
+      /*announcementBar: {
         id: 'annoucementBar-0',
         content:
           'FR version WIP <a target="_blank" rel="noopener noreferrer" href="#">english version</a>.',
         backgroundColor: '#fafbfc',
         textColor: '#091E42',
         isCloseable: true,
-      },
+      },*/
       navbar: {
         hideOnScroll: false, 
-        title: 'Ternoa',
+        title: 'Ternoa Documentation',
         logo: {
           alt: 'Ternoa Logo',
           src: '/img/ternoa_logo.svg',
@@ -97,7 +98,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Documentation',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/capsule-corp-ternoa',
@@ -113,10 +114,10 @@ const config = {
             type: 'search',
             position: 'right',
           },
-          {
+          /*{
             type: 'localeDropdown',
             position: 'right',
-          },
+          },*/
         ],
       },
       docs: {
@@ -138,19 +139,19 @@ const config = {
             items: [
               {
                 label: 'Welcome',
-                to: '/docs/intro',
+                to: '/intro',
               },
               {
                 label: 'Ternoa Fundamentals',
-                to: '/docs/category/ternoa-fundamentals',
+                to: '/category/ternoa-fundamentals',
               },
               {
                 label: 'For Developers',
-                to: '/docs/category/for-developers',
+                to: '/category/for-developers',
               },
               {
                 label: 'For Node Operators',
-                to: '/docs/category/for-node-operators',
+                to: '/category/for-node-operators',
               },
             ],
           },
@@ -185,7 +186,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Ternoa, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ternoa Documentation, Inc. Built with Docusaurus.`,
       },
       colorMode: {
           defaultMode: 'dark', 
