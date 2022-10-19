@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ternoa',
+  title: 'Ternoa Documentation',
   tagline: 'All resources you\'ll need to build the future on Ternoa',
   url: 'https://docs.ternoa.network/',
   baseUrl: '/',
@@ -86,7 +86,7 @@ const config = {
       },*/
       navbar: {
         hideOnScroll: false, 
-        title: 'Ternoa',
+        title: 'Ternoa Documentation',
         logo: {
           alt: 'Ternoa Logo',
           src: '/img/ternoa_logo.svg',
@@ -97,7 +97,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Documentation',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/capsule-corp-ternoa',
@@ -185,7 +185,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Ternoa, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Ternoa Documentation, Inc. Built with Docusaurus.`,
       },
       colorMode: {
           defaultMode: 'dark', 
