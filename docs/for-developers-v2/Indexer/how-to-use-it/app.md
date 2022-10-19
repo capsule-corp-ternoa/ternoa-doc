@@ -4,15 +4,14 @@ sidebar_position: 2
 
 # App
 
-## Use it from an App
+## USE IT FROM AN APP
 
 Here we'll see the simplest example to request indexer data from a node application.
 We'll use the simple request used in the playground section.
 
-First of all, in a new folder, create 2 files:
+### First of all, in a new folder, create 2 files:
 
-package.json
-```json
+``` json title="package.json" showLineNumbers
 {
   "name": "indexer-request-sample",
   "version": "1.0.0",
@@ -30,8 +29,8 @@ package.json
 }
 ```
 
-index.js
-```javascript
+
+```javascript title="index.js" showLineNumbers
 import { request } from "graphql-request"
 
 const getLastListedNFTs = async () => {

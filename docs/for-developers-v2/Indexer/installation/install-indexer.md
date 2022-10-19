@@ -4,9 +4,13 @@ sidebar_position: 1
 
 # Install Indexer
 
-> Prerequisite: have yarn installed, docker and docker-compose installed and running on your machine.
+:::note remarque
 
-If you check [our repository](https://github.com/capsule-corp-ternoa/ternoa-subql), you will see that we have many branches.
+ Have **yarn** installed, **docker** and **docker-compose installed** and running on your machine.
+
+:::
+
+If you check **[our repository](https://github.com/capsule-corp-ternoa/ternoa-subql)**, you will see that we have many branches.
 Each branch correspond to a chain spec version (eg. v40, v41, v42, v43) and a chain environment (staging, testnet, mainnet).
 
 To index the whole testnet chain, you will need to use different version of the indexer. At the beginning, the chain version was v40 and it got 2 runtime upgrades, first to v41 then v42.
@@ -33,4 +37,4 @@ docker-compose pull
 docker-compose up
 ```
 
-> Wait few seconds for the indexing to start, you can check the blockchain data in your local graphql playground (default: [localhost:3000](http://localhost:3000))
+> Wait few seconds for the indexing to start, you can check the blockchain data in your local graphql playground (default: **[localhost:3000](http://localhost:3000))**

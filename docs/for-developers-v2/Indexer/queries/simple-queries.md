@@ -6,11 +6,11 @@ sidebar_position: 1
 
 In this section, you'll simple queries:
 
-> You can try this directly in our [indexer's playground](https://indexer.testnet.ternoa.com/)
+> You can try this directly in our **[indexer's playground](https://indexer.testnet.ternoa.com/)**.
 
 ## Query listed NFTs
 
-```graphql
+```graphql showLineNumbers
 {
   nftEntities(filter: { listed: { equalTo: 1 } }) {
     totalCount
@@ -29,7 +29,7 @@ In this section, you'll simple queries:
 ```
 
 ## Query owned NFTs
-```graphql
+```graphql showLineNumbers
 {
   nftEntities(
     filter: {
@@ -52,7 +52,7 @@ In this section, you'll simple queries:
 ```
 
 ## Query created NFTs
-```graphql
+```graphql showLineNumbers
 {
   nftEntities(
     filter: {
@@ -75,7 +75,7 @@ In this section, you'll simple queries:
 ```
 
 ## Query capsules
-```graphql
+```graphql showLineNumbers
 {
   nftEntities(
     filter: {
@@ -98,7 +98,7 @@ In this section, you'll simple queries:
 ```
 
 ## Query marketplaces
-```graphql
+```graphql showLineNumbers
 {
   marketplaceEntities{
     totalCount
@@ -116,7 +116,7 @@ In this section, you'll simple queries:
 ```
 
 ## Query specific NFT
-```graphql
+```graphql showLineNumbers
 {
   nftEntity(id: "100") {
     id
@@ -132,7 +132,7 @@ In this section, you'll simple queries:
 ```
 
 ## Query specific NFT history
-```graphql
+```graphql showLineNumbers
 {
   nftTransferEntities(
     orderBy: TIMESTAMP_DESC

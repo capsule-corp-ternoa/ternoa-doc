@@ -21,7 +21,7 @@ Indexer deployment requires 2 apps :
 
 - Create both apps
 - Set the following environment variables on the NodeJS App
-```javascript
+```javascript showLineNumbers
 CC_PRE_BUILD_HOOK="bash init.sh"
 CC_WORKER_COMMAND="bash run_worker.sh"
 PORT="8080"
@@ -29,7 +29,7 @@ PORT="8080"
 - The deployment should fail, this is intended (Only the first time deploying), but we need to check if the schema and the tables are created correctly as follow
 ![Db-configuration](./db-configuration.png)
 - Update the environments variables and replace the old ones by
-```javascript
+```javascript showLineNumbers
 CC_PRE_BUILD_HOOK="bash build.sh"
 CC_WORKER_COMMAND="bash run_worker.sh"
 PORT="8080"
@@ -38,4 +38,4 @@ PORT="8080"
 
 The process is the same to deploy the dictionary
 
-Note : During the resize of the Database Addon on clevercloud, the created schema will be migrated with less permissions, permissions should be added manually after the migration
+Note : During the resize of the Database Addon on clevercloud, the created schema will be migrated with less permissions, permissions should be added manually after the migration.

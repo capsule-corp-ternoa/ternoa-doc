@@ -6,13 +6,13 @@ sidebar_position: 3
 
 In this section, you'll see how to order queries:
 
-> You can try this directly in our [indexer's playground](https://indexer.testnet.ternoa.com/)
+> You can try this directly in our **[indexer's playground](https://indexer.testnet.ternoa.com/)**
 
 Each field generate a sort option that you can apply on any request. For example:
 
 ## Query NFTs ordered by creation timestamp
 
-```graphql
+```graphql showLineNumbers
 {
   nftEntities(
     filter: { listed: { equalTo: 1 } }
@@ -39,7 +39,7 @@ You can put as many sort fields as you need:
 
 ## Query NFTs ordered by creation timestamp, isCapsule field, price
 
-```graphql
+```graphql showLineNumbers
 {
   nftEntities(
     filter: { listed: { equalTo: 1 } }
@@ -62,6 +62,6 @@ You can put as many sort fields as you need:
 }
 ```
 
-> You can access all the different orders in the schema tab on the right panel of the [graphql playground](https://indexer.testnet.ternoa.com/).
+> You can access all the different orders in the schema tab on the right panel of the **[graphql playground](https://indexer.testnet.ternoa.com/)**.
 
 > ![sortFields](./sort-fields.png)

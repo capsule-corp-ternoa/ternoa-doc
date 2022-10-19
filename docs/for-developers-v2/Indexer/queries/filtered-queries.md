@@ -6,13 +6,13 @@ sidebar_position: 4
 
 In this section, you'll see how to filter queries:
 
-> You can try this directly in our [indexer's playground](https://indexer.testnet.ternoa.com/)
+> You can try this directly in our **[indexer's playground](https://indexer.testnet.ternoa.com/)**
 
 You can use any of the graphql generated filters to filter your data depending on your requirements:
 
 ## Query NFTs filtered by listed field, owner and isCapsule field
 
-```graphql
+```graphql showLineNumbers
 {
   nftEntities(
     filter: {
