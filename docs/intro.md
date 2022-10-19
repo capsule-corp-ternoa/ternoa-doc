@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # 👋 Welcome  
 
-**All resources you'll need to build the future on Ternoa**
+**All resources you'll need to build the future on Ternoa Documentation**
 
 
 
