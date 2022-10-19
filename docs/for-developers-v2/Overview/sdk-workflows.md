@@ -14,7 +14,7 @@ ___
 It's not strictly necessary but it's good practice to initialize the API as soon as possible.
 If this call is omitted then the first SDK call will return an exception. The default chain endpoint is: `DEFAULT_CHAIN_ENDPOINT = "wss://alphanet.ternoa.com"`. It can be modified by passing a new endpoint as the first argument to the _initializeApi()_ function.
  
-``` jsx
+``` js showLineNumbers
 // Import
 import { initializeApi } from "ternoa-js"
 
@@ -32,7 +32,7 @@ async function main() {
 
 Simply pass the required endpoint to the _initializeApi()_ function.
 
-``` jsx
+``` js showLineNumbers
   ...
    //enpoint here will make the init API on the Ternoa mainnet network
    await initializeApi('wss://mainnet.ternoa.io');
@@ -45,7 +45,7 @@ Simply pass the required endpoint to the _initializeApi()_ function.
 
 **Note:** Ternoa SDK provides **a very useful** `getRawApi()` function to interact with the API. If the API is connected, it will be directly returned
 
-``` jsx 
+``` js showLineNumbers
   ...
    //we asume that API has been inited before
    const api = await getRawApi()
@@ -72,7 +72,7 @@ This single line `createNft()` function, requires a few parameters : some offcha
 
 _*In most cases this will be an IPFS hash that points to a JSON file which contains fields as "name", "description" or "image". In other cases this can be a link to a either a static or a dynamic file, plain text or a small JSON string._ In the exemple below, we just pass a string.
 
-``` jsx
+``` js showLineNumbers
 // Imports
 import { initializeApi } from "ternoa-js"
 import { createNft } from "ternoa-js/nft"
@@ -108,7 +108,7 @@ Let's go into the detail of each steps to create an NFT manually.
 First of all, instead of using the `createNft()` function, you will use the `createNftTx()`. And instead of creating, signing and submiting, the transaction and get the returned events, it will just create an unsigned and unsubmitted Create-NFT **Transaction Hash** ready to be used and valid for 5 minutes.
 
 
-``` jsx
+``` js showLineNumbers
 // Imports
 import { initializeApi } from "ternoa-js"
 import { createNftTx } from "ternoa-js/nft"
@@ -135,7 +135,7 @@ const create createNFTManually = async () => {
 Now we have the txHash, we can move to the signing step. But before detailing it, it's good to know that _"signing"_ can be directely embed in the submit function. It means that depending on the submit function you are using (see the last step [below](#)), _signing your tx hash before submit might not be necessary_. In case you sign manually the tx hash, you will receive a hex value of the signed transaction ready to be send. The `signTxHex()` function expect **a keyring** that will sign the transaction and the **transaction hash to be signed**. 
 
 
-``` jsx
+``` js showLineNumbers
 const create createNFTManually = async () => {
   try {
     ...
@@ -158,7 +158,7 @@ Submiting a transaction is generally the last step of the transaction execussion
 
 * `submitTxHex()` - The most versatile and customizable way to submit your txHash. You can manage your self the callback function. It obvioulsy requires the hex value to be submited but also an optionnal callback. This function require the transaction hash to be signed before being sent. 
 
-``` jsx
+``` js showLineNumbers
 const create createNFTManually = async () => {
   try {
     ...
@@ -182,7 +182,7 @@ const create createNFTManually = async () => {
 Note: Here you do not need to necessarily pass a signed txHash. If you pass the Keyring as a parameter and an unsigned tx hash as the signing process will be done here for you. 
 
 
-``` jsx
+``` js showLineNumbers
 const create createNFTManually = async () => {
   try {
     ...
@@ -204,7 +204,7 @@ const create createNFTManually = async () => {
 * `submitTxNonBlocking()`: This one works as the `submitTxBlocking` but in a non blocking way. It returns a pair of objects that are used to track the progress of the transaction execution. The first returned object is a conditional variable which can yield the information if the operation is finished. The second returned objects is an array of events which gets populated automatically once the operation is finished.
 
 
-``` jsx 
+``` js showLineNumbers 
 const create createNFTManually = async () => {
   try {
     ...

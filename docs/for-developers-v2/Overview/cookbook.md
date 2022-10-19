@@ -25,7 +25,7 @@ As an exemple, this can be usefull **if you want to create a large amount of NFT
 
 In this exemple we are going to run the `batchAllTxHex` but because we want the process to stop and revert in case of error and an hex format as result, but `batchTxHex`, `batchTx` or `batchAllTx` could be used with the exact same code below.
 
-``` js
+``` js showLineNumbers
 
 export const nftsBatchMintingHex = async (nftMetadata, quantity) => {
   // nftMetaData represents here the offChain datas of the NFT. 
@@ -48,7 +48,7 @@ export const nftsBatchMintingHex = async (nftMetadata, quantity) => {
 
 In this exemple, we show a way to check if the `batch` is completed or interupted. Keep in mind that BatchTx Extrinsic is considered as successfull even when interrupted. It does not mean that all tx are validated: the chain provide the `ExtrinsicSuccess` event anyway. A good practice would be to monitor `BatchCompleted` and check with our findEvent function if a `BatchInterrupted` Event has been thrown within the Batch. If a BatchCompleted event is available, it means that the batch has not been interrupted. Otherwise, the batch has been interrupted at some point. Check the event list.
 
-``` jsx
+``` js showLineNumbers
 
 export const batchTx = async () => {
   try {
