@@ -59,6 +59,7 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/',
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -138,19 +139,19 @@ const config = {
             items: [
               {
                 label: 'Welcome',
-                to: '/docs/intro',
+                to: '/intro',
               },
               {
                 label: 'Ternoa Fundamentals',
-                to: '/docs/category/ternoa-fundamentals',
+                to: '/category/ternoa-fundamentals',
               },
               {
                 label: 'For Developers',
-                to: '/docs/category/for-developers',
+                to: '/category/for-developers',
               },
               {
                 label: 'For Node Operators',
-                to: '/docs/category/for-node-operators',
+                to: '/category/for-node-operators',
               },
             ],
           },
