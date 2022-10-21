@@ -6,30 +6,26 @@ sidebar_position: 3
 
 In this section, you'll see how to order queries:
 
-> You can try this directly in our **[indexer's playground](https://indexer.testnet.ternoa.com/)**
+> You can try this directly in our **[alphanet indexer's playground](https://indexer-alphanet.ternoa.dev/)** or in our **[mainnet indexer's playground](https://indexer-mainnet.ternoa.network/)**
 
 Each field generate a sort option that you can apply on any request. For example:
 
 ## Query NFTs ordered by creation timestamp
 
 ```graphql showLineNumbers
-{
+query {
   nftEntities(
-    filter: { listed: { equalTo: 1 } }
     first: 10
     offset: 0
     orderBy: TIMESTAMP_CREATE_DESC
   ) {
     totalCount
     nodes {
-      id
-      serieId
-      listed
-      isCapsule
-      timestampList
-      price
-      marketplaceId
-      nftIpfs
+      nftId
+      owner
+      collectionId
+      offchainData
+      timestampCreate
     }
   }
 }
@@ -37,31 +33,27 @@ Each field generate a sort option that you can apply on any request. For example
 
 You can put as many sort fields as you need:
 
-## Query NFTs ordered by creation timestamp, isCapsule field, price
+## Query NFTs ordered by creation timestamp and price
 
 ```graphql showLineNumbers
-{
+query {
   nftEntities(
-    filter: { listed: { equalTo: 1 } }
     first: 10
     offset: 0
-    orderBy: [TIMESTAMP_CREATE_ASC, IS_CAPSULE_ASC, PRICE_ASC]
+    orderBy: [TIMESTAMP_CREATE_DESC, PRICE_ASC]
   ) {
     totalCount
     nodes {
-      id
-      serieId
-      listed
-      isCapsule
-      timestampList
-      price
-      marketplaceId
-      nftIpfs
+      nftId
+      owner
+			price
+      priceRounded
+      timestampCreate
     }
   }
 }
 ```
 
-> You can access all the different orders in the schema tab on the right panel of the **[graphql playground](https://indexer.testnet.ternoa.com/)**.
+> You can access all the different orders in the schema tab on the right panel of both **[alphanet playground](https://indexer-alphanet.ternoa.dev/)** or **[mainnet playground](https://indexer-mainnet.ternoa.network/)**
 
-> ![sortFields](./sort-fields.png)
+> ![sortFields](./sort-playground.png)

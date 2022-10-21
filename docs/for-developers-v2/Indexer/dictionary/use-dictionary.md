@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
-# Use the network dictionary
+# Add the dictionary to indexer
 
 You can improve the performance of the indexation part by using a dictionary endpoint instead of targeting directly the blockchain to get data.
 - **[How to use a dictionary](https://doc.subquery.network/tutorials_examples/dictionary/)**.

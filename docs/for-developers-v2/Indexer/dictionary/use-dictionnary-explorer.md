@@ -1,8 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 2
 ---
 
-# Use the dictionary as an explorer
+# Query the dictionary directly
+
+## Use the dictionary as an explorer
 
 The main interest of the dictionary is to have a middleman database between the blockchain and the indexer. This database will allow the indexer to query blocks metadata from the dictionary, this means that if we want to get only on NFT creation events, the indexer will ask the dictionary for the corresponding blocks. (So, for example, instead of fetching blocks 0 to 100, it will fetch only the number 5, 16 and 94 because that’s where NFTs are created.
 

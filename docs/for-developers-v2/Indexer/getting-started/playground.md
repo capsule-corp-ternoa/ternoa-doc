@@ -6,7 +6,9 @@ sidebar_position: 1
 
 ## USE IT FROM PLAYGROUND
 
-You can go to **[our indexer](https://indexer.testnet.ternoa.com/)** and directly query any data needed.
+Depending on the datas you are looking for, you can directly query any data needed on: 
+- **[The Alphanet indexer](https://indexer-alphanet.ternoa.dev/)**
+- **[The Mainnet indexer](https://indexer-mainnet.ternoa.network/)**
 
 #### You just need to create the graphql request, for example, a simple request to get the 10 last listed nft: 
 ```graphql
@@ -19,18 +21,18 @@ You can go to **[our indexer](https://indexer.testnet.ternoa.com/)** and directl
     totalCount
     nodes {
       nftId
-      serieId
-      isCapsule
       owner
       creator
+      collectionId
+      offchainData
     }
   }
 }
 ```
 #### Same example in the playground:
-![exemple](./example.png)
+![exemple](./playground-example.png)
 
 #### You can access the hole schema in the right panel of the playground:
-![playgroundPanel](./playground-pannel.png)
+![playgroundPanel](./playground-schema.png)
 
 Or directly in our **[repository](https://github.com/capsule-corp-ternoa/ternoa-subql/blob/main/schema.graphql)**.
