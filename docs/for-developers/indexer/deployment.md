@@ -4,9 +4,9 @@ sidebar_position: 7
 
 # Deployment
 
-## Architecture where indexer is being used
+<!-- ## Architecture where indexer is being used
 
-![Architecture](./ternoa-architecture.png)
+![Architecture](./ternoa-architecture.png) -->
 
 ## Deployment steps (on Clevercloud)
 
@@ -36,6 +36,6 @@ PORT="8080"
 ```
 - Click on the "rebuild and restart" button at the top of the page
 
-The process is the same to deploy the dictionary
+The process is the same to deploy the dictionary.
 
 Note : During the resize of the Database Addon on clevercloud, the created schema will be migrated with less permissions, permissions should be added manually after the migration.

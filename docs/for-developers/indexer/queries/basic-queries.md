@@ -8,27 +8,6 @@ In this section, you'll make some simple and basic queries:
 
 > You can try this directly in our **[alphanet indexer's playground](https://indexer-alphanet.ternoa.dev/)** or in our **[mainnet indexer's playground](https://indexer-mainnet.ternoa.network/)**
 
-## Let's query the 10 first listed NFTs on the nftEntities
-
-```graphql showLineNumbers
-query {
-  nftEntities(first: 10, filter: { listedForSale: { equalTo: true } }) {
-    totalCount
-    nodes {
-      nftId
-      listedForSale
-      owner
-      timestampList
-      price
-      marketplaceId
-    }
-  }
-}
-```
-
-To access the nodes information you need, you can look directly into the docs panel on the right side of the playground : 
-> ![sortFields](./nodes-path.png)
-
 ## Query owned NFTs on the nftEntities
 
 ```graphql showLineNumbers
@@ -50,6 +29,9 @@ query {
   }
 }
 ```
+
+To access the nodes information you want to display, you can look directly into the docs panel on the right side of the playground : 
+> ![sortFields](./nodes-path.png)
 
 ## Query created NFTs on the nftEntities
 ```graphql showLineNumbers
@@ -94,7 +76,23 @@ query {
   }
 }
 ``` -->
+## Let's query the 10 first listed NFTs on the nftEntities
 
+```graphql showLineNumbers
+query {
+  nftEntities(first: 10, filter: { listedForSale: { equalTo: true } }) {
+    totalCount
+    nodes {
+      nftId
+      listedForSale
+      owner
+      timestampList
+      price
+      marketplaceId
+    }
+  }
+}
+```
 ## Query marketplaces on the marketplaceEntities
 ```graphql showLineNumbers
 query {
