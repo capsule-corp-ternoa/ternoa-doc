@@ -4,22 +4,32 @@ sidebar_position: 1
 
 # Add the dictionary to indexer
 
-You can improve the performance of the indexation part by using a dictionary endpoint instead of targeting directly the blockchain to get data.
-- **[How to use a dictionary](https://doc.subquery.network/tutorials_examples/dictionary/)**.
-- You can see in **[our repository](https://github.com/capsule-corp-ternoa/ternoa-subql/blob/v42/testnet/project.yaml)** what is the dictionary endpoint.
+You can improve the performance of the indexation part by using a dictionary endpoint instead of targeting directly the blockchain to get data. Under the hood, the Dictionary provides a list of relevant block heights only that contains the specific events and extrinsics.
 
-**For example:**
+_Example_: If you look at a createNft event, not every blocks will contain this event since it depends on users usage of the Ternoa chain. When looking at events, the dictionary will provide the list that contains the createNft event we are looking for instead of every events of each block.
 
-```yaml 
-network:
-  # genesisHash: '0xd44bcfb0e98da45ace37e4df8469e5dbba8c4fc5449acda24c50cea6f5f2ca99' #staging
-  # endpoint: 'wss://staging.chaos.ternoa.com'
-  # dictionary: 'https://dictionary-staging.ternoa.dev/'
-  genesisHash: '0xd9adfc7ea82be63ba28088d62b96e9270ad2af25c962afc393361909670835b2' #testnet
-  endpoint: 'wss://testnet.ternoa.com'
-  dictionary: 'https://dictionary-testnet.ternoa.dev/'
-  # genesisHash: '0x710016a91bfbd4ffc5035ae19b7b94be74a2fd2f693cc692aaedae35c0cacd58'
-  # endpoint: wss://dev.chaos.ternoa.com
-  chaintypes:
-    file: ./types.json
+- You can see in **[our repository](https://github.com/capsule-corp-ternoa/ternoa-subql/blob/mainnet/project.yaml)** what is the dictionary endpoint adn how to add it.
+
+**Code snippet example:** look at line 7
+
+```yaml showLineNumbers
+...
+  schema:
+    file: ./schema.graphql
+  network:
+    genesisHash: '0x6859c81ca95ef624c9dfe4dc6e3381c33e5d6509e35e147092bfbc780f777c4e'
+    endpoint: wss://mainnet.ternoa.network
+    dictionary: https://dictionary-mainnet.ternoa.dev/
+  dataSources:
+    - kind: substrate/Runtime
+      startBlock: 1
+      mapping:
+        file: "./dist/index.js"
+        handlers:
+          - handler: handleEvent
+            kind: substrate/EventHandler
+            filter:
+              module: balances
+              method: Transfer
+...
 ```
