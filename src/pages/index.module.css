@@ -3,30 +3,41 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  font-weight: 400;
-  letter-spacing: .10px;
+ .heroBanner {
+  font-weight: 600;
   width: 100%;
-  height: 500px;
-  
+  height: 650px;
+  background: var(--linear-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 996px) {
+.heroTitle {
+  font-size: 6rem;
+}
+
+@media screen and (max-width: 1020px) {
   .heroBanner {
-    padding: 2rem;
+    padding: 2rem; 
   }
+  .heroTitle {
+font-size: 3rem;
+
+}
 }
 
 .linkButton {
-  border-radius: 10px; 
+  border-radius: 20px; 
   text-align: center;
-  border: solid 1px;
+
 }
 
 .linkButton:hover {
-background-color: var(--ifm-color-primary-button);
-border: solid 1px var(--ifm-color-primary-button);
-color:  var(--ifm-color-primary-text-button);
+  border: solid 2px var(--linear-gradient-button);
+  text-decoration: underline;
+  background-color: var(--linear-gradient-text);
+
+
 }
 
  
