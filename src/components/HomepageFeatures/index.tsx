@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
         and get new experience with creation, minting and trading NFTs.
       </>
     ),
-    url: '/docs/category/ternoa-fundamentals'
+    url: '/category/ternoa-fundamentals'
   },
   
   {
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
         Ternoa Blockchain and deploy your own Marketplace.
       </>
     ),
-    url: '/docs/category/for-developers'
+    url: 'category/for-developers'
   },
 
   {
@@ -46,7 +46,7 @@ const FeatureList: FeatureItem[] = [
         later in the form of a workshop and/or gitbook documentation.
       </>
     ),
-    url: '/docs/category/for-node-operators'
+    url: '/category/for-node-operators'
   },
 ];
 
