@@ -10,4 +10,4 @@ The main difference with the Dictionary lies in the fact that with the Indexer w
 For example, all data related to NFTs and collections are neatly recored in the Indexer.
 
 Ternoa deploys its own indexer [here](https://indexer-mainnet.ternoa.dev/) on which you can submit GraphQL queries to retrieve on-chain data.
-For more information on how to run your own Indexer go to the [developers section](/docs/category/indexer).
+For more information on how to run your own Indexer go to the [developers section](/category/indexer).

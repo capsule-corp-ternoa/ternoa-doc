@@ -11,30 +11,28 @@ sidebar_position: 1
 :::
 
 If you check **[our repository](https://github.com/capsule-corp-ternoa/ternoa-subql)**, you will see that we have many branches.
-Each branch correspond to a chain spec version (eg. v40, v41, v42, v43) and a chain environment (staging, testnet, mainnet).
-
-To index the whole testnet chain, you will need to use different version of the indexer. At the beginning, the chain version was v40 and it got 2 runtime upgrades, first to v41 then v42.
-You have to use the correct version of indexer depending on the specversion of the blocks you want to index.
-- v40 -> v40/testnet
-- v41 -> v41/testnet
-- v42 -> v42/testnet
+Each branch correspond to a chain spec version and a chain environment (the old testnet (soon deprecated), the alphanet and mainnet).
 
 ## Installation process
 
 ```bash
 git clone https://github.com/capsule-corp-ternoa/ternoa-subql.git
 cd ternoa-subql
-git checkout v40/testnet
+git checkout alphanet
 yarn install
 yarn codegen
 yarn build
 ```
 
-- In the docker-compose.yml, change the graphql-engine image from query-ternoa to onfinality/subql-query:latest (we’ll see later how to use our custom query to have distinct and aggregation plugins)
+Every time the graphQl Schema change, you need to run the yarn codegen command.
+Every time the code change, you need to build it again with the yarn build command.
+Now everything is built, you can launch it on with docker. 
 
 ```bash
 docker-compose pull
 docker-compose up
 ```
 
-> Wait few seconds for the indexing to start, you can check the blockchain data in your local graphql playground (default: **[localhost:3000](http://localhost:3000))**
+docker-compose pull need to be run to pull the last version and does not need to be ran again, unless you change any docker image.
+
+> After a few seconds, the indexing starts. You can see in the shell every blocks indexed. To check the blockchain data stored, run a [query](/for-developers/indexer/queries/basic-queries) in your local graphql playground in a browser (default **[localhost:3000](http://localhost:3000)**).

@@ -2,9 +2,9 @@
 sidebar_position: 2
 --- 
 
-# App
+# DApp
 
-## USE IT FROM AN APP
+## USE IT IN YOUR DAPP
 
 Here we'll see the simplest example to request indexer data from a node application.
 We'll use the simple request used in the playground section.
@@ -24,7 +24,7 @@ We'll use the simple request used in the playground section.
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "graphql-request": "^4.0.0"
+    "graphql-request": "^5.0.0"
   }
 }
 ```
@@ -42,15 +42,15 @@ const getLastListedNFTs = async () => {
 	  ) {
 		totalCount
 		nodes {
-		  nftId
-		  serieId
-		  isCapsule
-		  owner
-		  creator
-		}
+			nftId
+			owner
+			creator
+			collectionId
+			offchainData
+    	}
 	  }
 	}`
-	const response = await request("https://indexer.testnet.ternoa.com/", gqlQuery)
+	const response = await request("https://indexer-alphanet.ternoa.dev/", gqlQuery)
 	if (response.nftEntities){
 		console.log("Total count", response.nftEntities.totalCount)
 		response.nftEntities.nodes.forEach(x => console.log(x))
