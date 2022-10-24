@@ -4,7 +4,6 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
-
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -15,13 +14,15 @@ function HomepageHeader() {
         <div className="row">
           <div className="col col--7">
             <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
-            <p>{siteConfig.tagline}</p>
+            <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
+            <div>
               <Link
-                className={clsx('', styles.linkButton)}
-                to="/intro">
-                Get Started  →
+                className={clsx('button button--outline button--primary',styles.linkButton)}
+                to="/intro"> 
+                Get Started
               </Link>
             </div>
+          </div>
         </div>
       </div>
     </header>

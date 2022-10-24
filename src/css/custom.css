@@ -9,6 +9,10 @@
   line-height: 25px;
   margin: 0;
  }
+
+ .container {
+  padding: 0 var(--ifm-spacing-horizontal);
+ }
  
  
 /* You can override the default Infima variables here. */
