@@ -14,4 +14,4 @@ sidebar_position: 2
 6. Input your password 
 7. Transfer **completed!**
 
-![img-desktop](./sendingNFT_v1.gif)
+![img-desktop](./SendingNFT_v1.gif)

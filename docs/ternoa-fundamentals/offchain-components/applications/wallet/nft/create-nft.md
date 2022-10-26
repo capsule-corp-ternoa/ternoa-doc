@@ -17,7 +17,7 @@ ___
 ___
 ### 3. Select 'Choose a file' 
 
-![img-mobile](./NFTtab-3.png )
+![img-mobile](./NFTtab-3.png)
 
 :::info
 **You can upload image, audio, text file, and video:**
@@ -29,7 +29,7 @@ ___
 
 ### 4. Input your NFT data, then click 'Mint now'
 
-![img-mobile](./NFTtab-4.png )
+![img-mobile](./NFTtab-4.png)
 
 :::info
 Royalties give you a percentage of the sale price each time your NFT is traded on a Ternoa chain. NFT royalty payments are perpetual and are executed automatically.
@@ -42,27 +42,27 @@ ___
 
 ### 5. The NFT initializing process will begin
 
-![img-mobile](./NFTtab-5.png )
+![img-mobile](./NFTtab-5.png)
 ___
 
 ### 6. Confirm Minting transaction fees 
 
-![img-mobile](./NFTtab-6.png )
+![img-mobile](./NFTtab-6.png)
 ___
 
 ### 7. Input password  
 
-![img-mobile](./NFTtab-7.png )
+![img-mobile](./NFTtab-7.png)
 ___
 
 ### 8. Minting begins 
 
-![img-mobile](./NFTtab-8.png )
+![img-mobile](./NFTtab-8.png)
 ___
 
 ### 9. NFT creation completed!  
 
-![img-mobile](./NFTtab-9.png )
+![img-mobile](./NFTtab-9.png)
 
 :::info
 It will take a few seconds before your NFT will be visible in your Ternoa Wallet
