@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
         Ternoa Blockchain and deploy your own Marketplace.
       </>
     ),
-    url: 'category/for-developers'
+    url: '/for-developers/'
   },
 
   {
