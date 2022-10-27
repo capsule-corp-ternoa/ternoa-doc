@@ -17,7 +17,7 @@ ___
 ___
 ### 3. Select 'Choose a file' 
 
-![img-mobile](./NFTtab-3.png)
+![img-mobile](./NFTtab3.PNG)
 
 :::info
 **You can upload image, audio, text file, and video:**
