@@ -13,8 +13,19 @@
  .container {
   padding: 0 var(--ifm-spacing-horizontal);
  }
- 
- 
+.toggle {
+  background: inherit;
+
+}
+.toggle > summary {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.toggle:hover {
+  border: 1px solid var(--ifm-color-primary);
+}
+
 /* You can override the default Infima variables here. */
 :root {
   
