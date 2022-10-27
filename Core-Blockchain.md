@@ -1,6 +1,6 @@
 # 🧐 Ternoa Fundamentals 
 
-This (repository?) is your gateway to Ternoa's blockchain and it's vast ecosystem. 
+This  file is your gateway to Ternoa's blockchain and its vast ecosystem. 
 
 Here we cover all aspects of Ternoa and its ecosystem in detail for our users and developers. One stand to gain a deeper understanding of the underlying architecture that powers the chain and a comprehensive account of its ecosystem.
 
@@ -21,47 +21,82 @@ With native support for Secret NFTs, Delegating and Lending, Transaction Batchin
 
 **Table of Contents**
 
-  - [Introduction](#introduction)
-  - [Blockchain](#blockchain)
-    - [Chain Architecture :](#chain-architecture)
-      - [Security Protocols :](#security-protocols)
-      - [Consensus Mechanism :](#consensus-mechanism)
-      - [Networks :](#networks)
-  -  [NFT Primitives](#nft-primitives)
-     - [Types :](#types)
-       - [Basic NFTs](#basic-nfts)
-       - [Secret NFTs](#secret-nfts)
-       - [Capsules](#capsules)
-       - [Soulbound NFTs](#soulbound-nfts)
-     - [Features:]()
-       - [Collection]()
-       - [Marketplace]()
-       - [Renting]()
-       - [Auction]()
-  - [Off Chain](#off-chain)
-    - [SDK :](#ternoa-sdk)
-      - [Introduction](#introduction-1)
-      - [Development](#development)
-    - [Indexer :](#indexer)
-      - [Introduction](#introduction-2)
-      - [Architecture](#architecture)
-      - [Deployment](#deployment)
-    - [Dictionary](#dictionary)
-      - [Introduction](#introduction-3)
+  - [Inception](#inception)
+  - [Core Blockchain](#core-blockchain)
+    - [Consensus](#consensus)
+    - [Pallets](#pallets)
+    - [Security](#security)
+    - [Governance](#governance)
 
 
-## Introduction : / Inception:
+## Inception:
 
-The Idea of ternoa came into existence for the purpose of creating a technology to enable the forever/timeless storage of Data while keeping Security and Privacy in mind (only making it accessible to the owner) with built in Inheritence, to pass it through time if needed.
+The Idea of ternoa came into existence for the purpose of creating a technology to enable the timeless/lifetime storage of Data while keeping Security and Privacy in mind (only making it accessible to the owner) with built in Inheritence, to pass it through time if needed.
 
 It's a result of four long years of Research and Development paired alongside immense effort put in by the core team. Looking back, we've come a long way as today Ternoa provides Innovative and Ingeneous solutions on the Polkadot ecosystem for a multitude of problems.
 
 With accordance to our beliefs in Individual Liberty, Ternoa combines the decentralization aspect of a blockchain with native support for state of the art encryption technology using Trusted execution environment (TEEs), turning NFTs into secure, private Data containers, allowing users to retain `True Ownership` of Digital Data.  
 
-## Blockchain 
+## Core Blockchain 
 
-### Chain Architecture :
-[Finalizing Content]
+Ternoa is a Decentralised, Immutable, Open source, NFT-centric Layer 1 blockchain built using the substrate framework, i.e. multi-chain by design and aims to provide a technical stack to build scalable and secure NFTs with native support for advanced features.
+
+
+The Ternoa's blockchain is secured by a democratic consensus protocol ensuring state of the art energy efficiency when compared with the likes of PoW blockchains. We believe that mass adoption of Web 3 requires a sustainable approach. 
+
+
+Oh and `Fun Fact` : Ternoa supports Forkless upgrades, i.e. the ability to update the runtime logic without forking the code base. Thus enabling Ternoa’s blockchain to evolve {with repect to/over} time.
+
+
+### Consensus
+
+Sustainability is One of our Core beliefs, keeping that in mind we ensure state-of-the-art energy consumption by using Nominated Proof of Stake (NPoS) as our consensus protocol.
+
+NPoS is based on the selection process of validators which are authorised to participate in the consensus protocol. 
+
+or
+
+{In NPoS, Trusted Validators are elected democratically by the Nominators to participate in consensus building with other validators.}
+
+or
+
+{NPoS is based on the democratic election of validators authorized to participate in consensus protocol by the Nominators.}
+
+The core concept behind Proof of Stake is having "Skin in the Game", which refers to the economic incentive for one to act appropriately instead of maliciously as they stand to loose their stake in part or as a whole.
+
+Nominators contribute to the security of the network by electing upto 16 trusted validators with their stake. Nominators are subject to both rewards from the validation process and slashing if the elected/nominated validators behave maliciously.
+
+The key objective of NPoS is to ensure decentralization and fair representation through _proportional justified representation_ as well as high security through _maximin_ support. Its optimized to elect a set number of individuals from a larger pool/set of candidates.
+
+Validators hold a key role in the upkeep and security of the network/relay chain by staking the Native token $CAPS and by participating in the process of achieving consensus and verifying transactions alongside other validators. 
+
+As a great man once said "With great power, comes great responsibility", it couldn't be more true for the validators. The Validator will have the responsibility to run a Node that will validate transactions and keep the blockchain secure. They need to run secure and reliable infrastructure and be available for consensus building at all times. For validation of transactions and reaching consensus, validators are paid in the native token $CAPS to incentivise appropriate behaviour. Additionally, validators need a stake backing their legitimacy  thereby disincentivising malicious behaviour in fear of the stake being slashed or worse, siezed in the worst case scenarios.
+
+
+### Pallets
+
+
+
+### Security
+
+
+
+### Governance
+
+$CAPS is the native token of the Ternoa network/ecosystem and it plays a central role in the Blockchain's Governance.
+
+The administration of Stakeholder vote is managed by the Democracy module. 
+It allows $CAPS holders to have proportional voting power and a say in the decision making process regarding blockchain governance which includes developments, protocols, etc.
+
+For a proposal to be (integrated?), it first has to be voted on for which it has to be added to either one the two queues accordingly : 
+
+* The `Proposal Queue` : which comprises of all public proposals
+* The `External Queue` : which comprises of a single proposal of external origin. (like a Technical committee or a collective group)
+
+
+At the launch period, a referendum is created from a proposal taken from either one of the queues. {accoding to the conditions set beforehand }(wasn't it supposed to be the most popular ones?)
+
+Any $CAPS holder in the system can vote on referendums. The voting system allows the holder to fix their conviction behind the vote. The conviction dictates the token lockup period as well as the multiplier which scales the power of the vote exponentially.
 
 ### Security Protocols : 
 
@@ -85,11 +120,6 @@ This capability in today’s processors is called Secure Execution Environment f
 
 Certified master nodes on our network will take advantage of the inbuilt capabilities of these processors to establish TEEs. This would in turn sheild the nodes from malicious code. It'll offer a secure area within the processor whih protects both the confidentiallity and Integrity of the Data inside of it which is especially important for zero trust networks like ternoa. We've named them **Secret nodes** due to obvious reasons 😅 . 
 
-### Consensus Mechanism :
-
-Sustainability is One of our Core beliefs, keeping that in mind we ensure state-of-the-art energy consumption by using Nominated Proof of Stake (NPoS) for our protocol.
- 
-[Finalize content]
 
 ### Networks :
 The ternoa chain consists of multiple networks with varying use cases. It contains both Mainnets and DevNets. Local blockchain environment or DevNets are being used to test out cutting edge tech dapps by our users and developers alike to test dapps before deployment.
