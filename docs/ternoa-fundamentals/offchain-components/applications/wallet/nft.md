@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+sidebar_position: 3
+sidebar_label: Create & Send NFT
 ---
 
 # Create NFT
@@ -70,3 +71,19 @@ It will take a few seconds before your NFT will be visible in your Ternoa Wallet
 ___
 
 ![img-desktop](./creatingNFT_v1.gif)
+
+___
+
+## Send NFT
+
+### To send an NFT, follow the tutorial below:
+
+1. Select an **NFT** to send 
+2. Click 'Send to someone' 
+3. Paste the wallet address or click on + to send to a specific account 
+4. Click **'Next'**
+5. Confirm the transfer fees 
+6. Input your password 
+7. Transfer **completed!**
+
+![img-desktop](./SendingNFT_v1.gif)
