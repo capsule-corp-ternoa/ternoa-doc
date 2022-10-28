@@ -29,7 +29,7 @@
 }
 
 .linkButton {
-  border: 2px solid;
+  border: 2px solid var(--ifm-color-primary);
   border-radius: 5px;
   font-size: 18px;
   text-align: center;
@@ -38,7 +38,7 @@
 }
 
 .linkButton:hover {
-  border: 2px solid; 
+  border: 2px solid var(--ifm-color-primary); 
 }
 
 @media screen and (max-width: 1439px) {
