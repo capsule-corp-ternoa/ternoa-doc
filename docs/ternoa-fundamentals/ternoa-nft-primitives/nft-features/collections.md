@@ -10,8 +10,6 @@ These digital items are distinguishable from one another by a unique number. Tha
 
 NFTs represent proof of ownership on the blockchain. Creators need a way to group NFTs in a higher order entity. This entity is a collection. If a collection is created, NFTs can be put in it at its creation or after.
 
-___
-
 ##  How to create a NFT Collection ? 
 
 <nav class="pagination-nav">
@@ -22,13 +20,10 @@ ___
   </div>
 </nav>
 
-___
-
 ## Abstract
 
 In EVM / Smart Contract based, collection are represented by smart contract. It implies some advantages and drawback. "Buyers" need to mint their NFT themselves, each contract will have its own set of rules, the smart contract can follow or not some standards.
 At Ternoa, you can create and be the owner of a collection. When minting NFTs, you can specify this collection and put it on sale. The NFTs will always be part of this collection and it's origin / grouping can be ensured over time. Collections will always follow the same set of rules.
-___
 
 ## 🎯 Objective 
 
@@ -277,10 +272,9 @@ ___
 * User can limit his collection if not set at creation
 * User can close his collection
 * User can burn a collection if it's empty
-___
+
 ## References
 TBD
-___
 
 ## Copyright
 TBD
