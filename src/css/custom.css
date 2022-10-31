@@ -4,19 +4,37 @@
  * work well for content-centric websites.
  */
 
+ /*Img in Markdown files*/
+ img[alt="img-mobile"] { 
+  max-width: 30%; 
+}
+
+img[alt="nft-intro"] { 
+  max-width: 60%; 
+}
+
+img[alt="img-desktop"] { 
+  max-width: 80%; 
+}
+
+img[alt="img-square"] { 
+  max-width: 70%; 
+}
+
+.responsive-iframe {
+  max-width: 100%;
+}
+
 * {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 25px;
   margin: 0;
  }
 
- img[alt="img-square"] { 
-  max-width: 70%; 
-}
-
  .container {
   padding: 0 var(--ifm-spacing-horizontal);
  }
+ 
 .toggle {
   background: inherit;
 
@@ -29,7 +47,7 @@
 .toggle:hover {
   border: 1px solid var(--ifm-color-primary);
 }
-
+ 
 /* You can override the default Infima variables here. */
 :root {
   
