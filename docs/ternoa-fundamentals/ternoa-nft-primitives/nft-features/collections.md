@@ -146,7 +146,7 @@ ___
 | LIMIT    | <ul><li>Only an owner can limit the collection</li><li>A collection can only be limited once</li><li>A closed collection cannot be limited</li></ul>
 
 ___
-## 🌊 End-to-end workflows (Ternoa-specific)
+## 🌊 Workflows
 
 <details className="toggle">
   <summary>Creating a collection</summary>
@@ -262,19 +262,3 @@ ___
     </div>
   </div>
 </details>
-
-___
-## Test cases
-
-* User can create a collection
-* User can create an NFT directly in a collection
-* User can add an NFT to a collection
-* User can limit his collection if not set at creation
-* User can close his collection
-* User can burn a collection if it's empty
-
-## References
-TBD
-
-## Copyright
-TBD
