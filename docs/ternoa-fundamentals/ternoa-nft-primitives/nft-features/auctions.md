@@ -109,46 +109,7 @@ interface {
 }
 ```
 
-___
-## Constraints
-- To create an auction, the user must own the NFT.
-- To create an auction, the start block must not start in the past.
-- To create an auction, the end block must not be before start block.
-- To create an auction, the duration must not be too long.
-- To create an auction, the duration must not be too short.
-- To create an auction, the start block must not be too far in the future.
-- To create an auction and if buy it price is provided, it must be greater than start price.
-- To create an auction, the NFT must be available (not listed, capsule, delegated, soulbound, rented, ...).
-- To create an auction, the marketplace must exist.
-- To create an auction, the user must be allowed to list on the marketplace.
-- To create an auction, the start price must cover the flat commission fee if it exists.
-- To create an auction, the user must have enough tokens to cover the listing fee if it exists.
-- To cancel an auction, it must not have started.
-- To end an auction, it must be in extended period.
-- To end an auction, it must have at least one bid.
-- To add a bid, bidder must not be auction owner.
-- To add a bid, auction must have started.
-- To add a bid, the amount must be higher than previous highest bid.
-- To add a bid, the amount must be higher or equal than starting price.
-- To add a bid, the bidder must have enough funds to cover for the specified bid amount.
-- To remove a bid, auction must not be in the end period
-- To remove a bid, user must have made a bid.
-- To buy an auctioned NFT (buy it now), the auction must have specified a buy it now price.
-- To buy an auctioned NFT (buy it now), the auction must have started.
-- To buy an auctioned NFT (buy it now), the buy it price must be higher than the highest bid.
-- To buy an auctioned NFT (buy it now), the user must have enough funds to cover the buy it price amount.
-- To buy an auctioned NFT (buy it now), the user must not be auction creator.
-- To claim an amount of tokens, the user must have a pending claim (bid that did not win and is not retrieved).
-
-___
-## Additional Info
-- If a bid list becomes too long, to add a new bid, the first one will get "dropped" and the user will have to claim the amount to retrieve his funds even if the auction has not finished yet.
-
-___
-
-## Metadata
-
-## 🌊 End-to-end workflows (Ternoa-specific)
+## 🌊 Workflows
 
 <details className="toggle">
   <summary>Creating an Auction</summary>
@@ -279,21 +240,3 @@ ___
     </div>
   </div>
 </details>
-
-___
-
-## Test cases
-- User can create an auction for an NFT.
-- User can cancel the auction.
-- User can end the auction in the extended period.
-- User can add a bid.
-- User can remove a bid before the end period.
-- User can buy an NFT at Buy it Now Price if it was specified.
-- An auction should complete automatically at the end of the period.
-- A user must be able to claim his bidded amount if he did not win the auction.
-
-## References
-TBD
-
-## Copyright
-TBD
