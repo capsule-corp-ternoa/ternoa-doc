@@ -8,12 +8,12 @@ The architecture proposed involves storage and retrieval of keys in a trusted ex
 
 As an offchain extension of Key Management, Secure Computation and Confidential Storage for blockchains, there are at least five responsibilities of TEE :
 
-    Using Remote Attestation mechanism to prove the genuinity of hardware and the codes running on it to be approved by blockchain validators and registered on the blockchain
+* Using Remote Attestation mechanism to prove the genuinity of hardware and the codes running on it to be approved by blockchain validators and registered on the blockchain
 
-    Validation of the offchain requests from the application, comparing to onchain data (i.e NFT ownership)
+* Validation of the offchain requests from the application, comparing to onchain data (i.e NFT ownership)
 
-    Processing the application request in a secure environment (i.e sealing the secrets)
+* Processing the application request in a secure environment (i.e sealing the secrets)
 
-    Providing the blockchain with verified offchain data gathered from application (i.e availablity of encryption key for secure NFT)
+* Providing the blockchain with verified offchain data gathered from application (i.e availablity of encryption key for secure NFT)
 
-    Secure distributed backup and secure migration of secrets to other TEE machines
+* Secure distributed backup and secure migration of secrets to other TEE machines
