@@ -10,16 +10,6 @@ These digital items are distinguishable from one another by a unique number. Tha
 
 NFTs represent proof of ownership on the blockchain. Creators need a way to group NFTs in a higher order entity. This entity is a collection. If a collection is created, NFTs can be put in it at its creation or after.
 
-##  How to create a NFT Collection ? 
-
-<nav class="pagination-nav">
-  <div class="pagination-nav__item">
-    <a class="pagination-nav__link" href="https://www.youtube.com/watch?v=fzH7Gjadmj0&ab_channel=HashLipsNFT">
-      <div class="pagination-nav__label">How to create an NFT collection - Ultimate guide</div>
-    </a>
-  </div>
-</nav>
-
 ## Abstract
 
 In EVM / Smart Contract based, collection are represented by smart contract. It implies some advantages and drawback. "Buyers" need to mint their NFT themselves, each contract will have its own set of rules, the smart contract can follow or not some standards.
@@ -30,69 +20,10 @@ At Ternoa, you can create and be the owner of a collection. When minting NFTs, y
 Collections are used to represent all the assets in a single (or multiple) contract addresses and help users group items from the same creator. They have one or more owners and are typically associated with important metadata such as creator royalties and descriptions.
 
 The main objective of collections are to give a way to group NFTs. Grouping can have multiple meaning, eg. having the same NFT in a high quantity grouped in the same collection or having multiple NFTs sharing the same types of attributes, while still being different, gathered in one entity. This can ease navigation in dApps and more generally improve user experience while using Ternoa's chain.
-___
 
 ## Specification
 
-### Collection External Interfaces
-Collections support the following onchain interfaces:
-```rust
-interface { 
-  /// Interface Id: TIP101-01
-  /// Description: User can create a new collection.
-  /// Constraint(s): 
-  ///		- None
-  create_collection(offchain_data, BoundedVec<u8, CollectionOffchainDataLimit>, limit: Option<u32>);
-
-
-  /// Interface Id: TIP101-02
-  /// Description: User can add NFTs to his collection.
-  /// Constraint(s):  
-  ///		- The collection must not be closed.
-  ///		- The collection must not have reached limit if it has one.
-  ///		- NFT must not already be in a collection.
-  ///		- NFT must be owned.
-  ///		- Collection must be owned.
-  add_nft_to_collection(nft_id: NFTId, collection_id: CollectionId);
-
-  /// Interface Id: TIP101-03
-  /// Description: User can add NFTs to his collection.
-  /// Constraint(s):  
-  ///		- Collection must be owned.
-  ///		- The collection must be empty. (If NFTs are in the collection, they need to be burned)
-  burn_collection(collection_id: CollectionId);
-
-  /// Interface Id: TIP101-04
-  /// Description: User can close a collection signalling that no more NFTs will be added in the collection.
-  /// Constraint(s):  
-  ///		- Collection must be owned.
-  ///		- Collection must not be already closed.
-  close_collection(collection_id: CollectionId);
-  
-  /// Interface Id: TIP101-05
-  /// Description: User can add a maximum number of NFTs as a limit to his collection. Once the collection reaches that number of collection, it will be considered limited (complete)
-  /// Constraint(s):  
-  ///		- Collection must be owned.
-  ///		- Collection must not be closed.
-  ///		- Collection must not already have a limit (it can be set on collection creation).
-  ///		- Collection must have an inferior amount of NFTs that the speified limit.
-  limit_collection(collection_id: CollectionId, limit: u32);
-}
-```
-
-### Existing Interfaces changed for collections
-```rust
-interface {
-  /// Interface Id: TIP101-06
-  /// Description: User can create an NFT with any existing collection he owns.
-  /// Constraint(s): 
-  ///		- The collection must not be closed.
-  ///		- The collection must not have reached limit if it has one.
-  ///		- Collection must be owned.
-  create_nft(owner: AccountId, offchain_data: BoundedVec<u8, NFTOffchainDataLimit>, royalty: Permill, collection_id: Option<CollectionId>, is_soulbound: bool);
-}
-```
-___
+Ternoa Improvment proposal 101 is the technical implementation specifications for the Collection feature on Ternoa network. Find all details on: [TIP-101](https://github.com/capsule-corp-ternoa/ternoa-proposals/blob/9685c1778d4bb4d5470d4f23bea04db6c62f9705/TIPs/tip-101-Collection.md)
 
 ## 💾 Ternoa Collection Metadata
 
