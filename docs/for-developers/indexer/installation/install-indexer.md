@@ -39,7 +39,7 @@ docker-compose pull need to be run to pull the last version and does not need to
 
 ## Common errors on containers start
 
-### Database conection failed
+### Database connection failed
 
 ```bash
 ERROR Unable to connect to the database SequelizeConnectionRefusedError: connect ECONNREFUSED XX.XX.XX.XX:YYYY
