@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Install Indexer
 
-:::note remarque
+:::note NOTE
 
  Have **yarn** installed, **docker** and **docker-compose installed** and running on your machine.
 
@@ -36,3 +36,25 @@ docker-compose up
 docker-compose pull need to be run to pull the last version and does not need to be ran again, unless you change any docker image.
 
 > After a few seconds, the indexing starts. You can see in the shell every blocks indexed. To check the blockchain data stored, run a [query](/for-developers/indexer/queries/basic-queries) in your local graphql playground in a browser (default **[localhost:3000](http://localhost:3000)**).
+
+## Common errors on containers start
+
+### Database conection failed
+
+```bash
+ERROR Unable to connect to the database SequelizeConnectionRefusedError: connect ECONNREFUSED XX.XX.XX.XX:YYYY
+``` 
+
+The subquery-node container tends to be ready before the postgres one. No worries, it will automatically restart until the database is ready.
+
+### Outdated .data
+
+```bash
+ERROR Node failed to start AssertionError: Specified project manifest chain id / genesis hash does not match database stored genesis hash, consider cleaning project schema using --force-clean
+``` 
+
+
+Remember to delete the `.data` folder at root on the network changes. Also make sure to use the corret network genesis hash in the `project.yaml` file.
+
+
+
