@@ -7,23 +7,23 @@ sidebar_position: 5
 ___
 
 
-## COOKBOOK OVERVIEW 🍴
+## Overview 🍴
 
-This section covers some basic usecases. Thoses _**code snippets**_ allow you to discover the differents way to use/interact with a feature, some options or best practices and provides crusty informations. _If you are looking for full exemple instead of short code snippets,_ you rather look at our [Ternoa-js dApp](https://e2e.ternoa.network/) and [gitHub](https://github.com/capsule-corp-ternoa/ternoa-js-test-dapp) repo. Depending of the community requests and feebacks, we will implement more of thoses cookbook exemples and make them available for everyone below. 
+This section covers some basic use cases. These _**code snippets**_ allow you to discover the different way to use/interact with a feature, some options and best practices, and provides crusty information. _If you are looking for full exemple instead of short code snippets,_ you rather look at our [Ternoa-js dApp](https://e2e.ternoa.network/) and [gitHub](https://github.com/capsule-corp-ternoa/ternoa-js-test-dapp) repo. Depending of the community requests and feeback, we will implement more of those cookbook examples and make them available for everyone below. 
 
 ___
 
 ## Utility Batch/BatchAll
 
-`batchTxHex` or `batchAllTxHex` functions can be implemented into the execution process of a transaction. Both transactions do the same and expect the same parameters. The difference is that with the "batch" one, our transactions will be executed until one fails and at that point it will not continue to the next batched transaction. With "batchAll" it will first try to do them all and if any one fails it will revered the successful ones and the state of the chain will not change. _The general rule of thumb is to always use the **batchAll transaction**._ 
+`batchTxHex` or `batchAllTxHex` functions can be implemented into the execution process of a transaction. Both transactions do the same and expect the same parameters. The difference is that with the "batch" one, our transactions will be executed until one fails and at that point it will not continue to the next batched transaction. With "batchAll" it will first try to do them all, and if anyone fails it will revert the successful ones and the state of the chain will not change. _The general rule of thumb is to always use the **batchAll transaction**._ 
 
 `batchTx` or `batchAllTx` functions also exist and return both the tx hash but not in _hex_ format. They both work exactly the same. 
 
-As an exemple, this can be usefull **if you want to create a large amount of NFT** : Instead of creating all the NFTs one by one, it's recommended, in cases where more than one operation needs to be done, to group them all and to executed them as one transaction. This allows you to save on transaction fees and most importantly to save on time.
+As an example, this can be useful **if you want to create a large amount of NFT** : Instead of creating all the NFTs one by one, it's recommended, in cases where more than one operation needs to be done, to group them all and to executed them as one transaction. This allows you to save on transaction fees and most importantly to save on time.
 
 ### Let's assume we are trying to batch a mint of NFT
 
-In this exemple we are going to run the `batchAllTxHex` but because we want the process to stop and revert in case of error and an hex format as result, but `batchTxHex`, `batchTx` or `batchAllTx` could be used with the exact same code below.
+In this example we are going to run the `batchAllTxHex` but because we want the process to stop and revert in case of error and an hex format as result, but `batchTxHex`, `batchTx` or `batchAllTx` could be used with the exact same code below.
 
 ``` js showLineNumbers
 
@@ -46,14 +46,14 @@ export const nftsBatchMintingHex = async (nftMetadata, quantity) => {
 
 ```
 
-In this exemple, we show a way to check if the `batch` is completed or interupted. Keep in mind that BatchTx Extrinsic is considered as successfull even when interrupted. It does not mean that all tx are validated: the chain provide the `ExtrinsicSuccess` event anyway. A good practice would be to monitor `BatchCompleted` and check with our findEvent function if a `BatchInterrupted` Event has been thrown within the Batch. If a BatchCompleted event is available, it means that the batch has not been interrupted. Otherwise, the batch has been interrupted at some point. Check the event list.
+In this example, we show a way to check if the `batch` is completed or interrupted. Keep in mind that BatchTx Extrinsic is considered as successful even when interrupted. It does not mean that all tx are validated: the chain provide the `ExtrinsicSuccess` event anyway. A good practice would be to monitor `BatchCompleted` and check with our findEvent function if a `BatchInterrupted` Event has been thrown within the Batch. If a BatchCompleted event is available, it means that the batch has not been interrupted. Otherwise, the batch has been interrupted at some point. Check the event list.
 
 ``` js showLineNumbers
 
 export const batchTx = async () => {
   try {
     ...
-    // we asume the API is initialized and the Keyring has been recovered. 
+    // we assume the API is initialized and the Keyring has been recovered. 
     // We create a first tx and get the hash : a collection without limit
     const signableCollection = await createCollectionTx("BatchCollectionTestings", undefined)
     // We create a second tx with a wrong parameter to interupt the batch : a collection id that does not exist in the chain for now
@@ -95,7 +95,7 @@ ___
 
 ## IPFS Upload
 
-IPFS is one fo the solution we recommand to upload the NFT metadatas and to provide them as the offchainDatas of your feature. The full IPFS Upload will be soon added to the ternoa-js SDK. For now, we invite you to look at this [github discussions](https://github.com/capsule-corp-ternoa/ternoa-js/discussions/62) or to this [dApp](https://github.com/capsule-corp-ternoa/ternoa-workshop/blob/main/helpers/ipfs.ts) exemple we used for a workshop before.
+IPFS is one fo the solution we recommend to upload the NFT metadatas and to provide them as the offchainDatas of your feature. The full IPFS Upload will be soon added to the ternoa-js SDK. For now, we invite you to look at this [github discussions](https://github.com/capsule-corp-ternoa/ternoa-js/discussions/62) or to this [dApp](https://github.com/capsule-corp-ternoa/ternoa-workshop/blob/main/helpers/ipfs.ts) example we used for a workshop before.
 
 A little reminder to the expected formats : 
 
