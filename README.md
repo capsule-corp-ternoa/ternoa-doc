@@ -1,12 +1,4 @@
-<div id="top"></div>
 
-<!-- PROJECT BADGES-->
-[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <a href="https://github.com/capsule-corp-ternoa/ternoa-doc">
     <img src="https://docs.ternoa.network/img/ternoa_logo.svg" alt="Logo" width="80" height="80">
@@ -26,6 +18,9 @@
     ·
     <a href="https://github.com/capsule-corp-ternoa/ternoa-doc/discussions">Discussions</a>
   </p>
+  
+  <!-- PROJECT BADGES-->
+[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 </div>
 
 
@@ -72,16 +67,6 @@ Today, Ternoa develops all NFTs basics on the Polkadot ecosystem, enabling innov
 
 **Read our [LitePaper](https://litepaper.ternoa.network/)**
 
-<div align="center">
-
-[![Ternoa Litepaper Screenshot][product-screenshot]](https://litepaper.ternoa.network/)
-
-</div>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<div id="built-with"></div>
-
 ### Built With
 
 - [Node JS](https://nodejs.org/)
@@ -91,27 +76,15 @@ Today, Ternoa develops all NFTs basics on the Polkadot ecosystem, enabling innov
 - [Form-Data](https://www.npmjs.com/package/form-data)
 - [mime-types](https://www.npmjs.com/package/mime-types)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-<div id="getting-started"></div>
-
 ### Getting Started
 
 To work and contribute on our documentation, you can clone our repo and run Docusaurus 2 following the instructions below.
-
-
-<div id="prerequisites"></div>
 
 **Prerequisites**
 
   ```
   npm install yarn@latest -g
   ```
-
-<div id="installation"></div>
 
 ### Installation
 
@@ -158,27 +131,13 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- USECASES -->
-<div id="usecases"></div>
-
 ### Usage Examples
 
 You can find useful examples of usecases. Additional screenshots, code examples, demos or links to more resources from the Ternoa community. We will highlight community works soon.
 
 For your first examples you can check our [CookBook](https://docs.ternoa.network/for-developers/sdk/cookbook)
 
-**Time Capsule dApp** is our most relevant use case on the Ternoa blockchain, check out [here](https://litepaper.ternoa.network/use-case/time-capsule)
-
-_For more examples, please refer to the [Wiki](https://wiki.ternoa.network/)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- DOCMAP -->
-<div id="docmap"></div>
+**Time Capsule dApp** is our most relevant use case on the Ternoa blockchain, check out [https://time-capsule.xyz/](https://time-capsule.xyz/)
 
 ### Docmap
 
@@ -195,13 +154,6 @@ _For more examples, please refer to the [Wiki](https://wiki.ternoa.network/)_
 
 See the [open issues](https://github.com/capsule-corp-ternoa/ternoa-doc/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-<div id="contributing"></div>
-
 ### Contributing
 
 Contributions are what make the Ternoa community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -215,34 +167,11 @@ Don't forget to give the project a star ! Thanks again Fam !
 4. Push to the Branch (`git push origin feature/AmazingTernoaFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- CONTACT -->
-<div id="contact"></div>
-
 ### Contact
 
 Capsule Corp Labs - [@Ternoa_](https://twitter.com/ternoa_) - [support@ternoa.com](mailto:support@ternoa.com)
 
 Project Link: [Ternoa SDK](https://github.com/capsule-corp-ternoa/ternoa-js)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-<div id="acknowledgments"></div>
-
-### Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
