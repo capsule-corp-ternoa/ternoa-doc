@@ -6,9 +6,9 @@ sidebar_position: 4
 
 ___
 
-## OVERVIEW : What are chain events ?
+## Overview: What are chain events?
 
-**Events are objects containing decoded values (datas)** provided by the chain in the result of any transaction triggered using the `submitTxBlocking` function.  At least one of these two `ExtrinsicSuccessEvent` or  `ExtrinsicFailedEvent` events are provided for any transaction depending on its success or fail. While `submitTxBlocking` provides the SDK handlers main events list of ***BlockchainEvents*** available, we also allow you to filter this list to get the ones you need. *An exemple to filter only the events list of a balance transfert transaction :*
+**Events are objects containing decoded values (datas)** provided by the chain in the result of any transaction triggered using the `submitTxBlocking` function.  At least one of these two `ExtrinsicSuccessEvent` or  `ExtrinsicFailedEvent` events are provided for any transaction depending on its success or fail. While `submitTxBlocking` provides the SDK handlers main events list of ***BlockchainEvents*** available, we also allow you to filter this list to get the ones you need. *An example to filter only the events list of a balance transfer transaction :*
 
 ```javascript
 
@@ -16,17 +16,17 @@ const balanceTransfertEvents = BlockchainEvents.findEvents(BalancesTransferEvent
 
 
 ```
-**note :** *BlockchainEvents is the result of `submitTxBlocking` function. It can be stored in a constant for exemple.*
+**note :** *BlockchainEvents is the result of `submitTxBlocking` function. It can be stored in a constant for example.*
 
-To get a better understanding of Events, we already jumped a bit deeper than the first and easiest option to get the extrinsics events list. In case, you do not need to handle manually signing or sending your transaction, each of the Ternoa extrinsics feature comes with two functions to execute a transaction and an easy one to directly get the required events list. *See the exemple below :  
+To better understand Events, we already jumped a bit deeper than the first and easiest option to get the extrinsics events list. In case you do not need to manually sign or send your transaction, each of the Ternoa extrinsics feature comes with two functions to execute a transaction and an easy one to directly get the required events list. *See the example below :  
 When the `balancesTransferTx` function creates an unsigned unsubmitted transaction hash, the `balancesTransfer` function signs and submits the transaction to provide the events list.*
 
 ___
 
 ## About the Event Design Format: 
-In order to make the returned events datas usefull, we provide both the native format and a friendly ready to use format design format : 
+To make the returned events data usefull, we provide both the native format and a friendly ready to use format: 
 - a string as an AccountId32 correspond to a classic user valid address. 
-- a string as u128 is a BN value as string natively used under the hood by the chain.
+- a string as u128 is a BN value as a string natively used under the hood by the chain.
 - a rounded data (ex: amoutRounded) is the "human" version of a data, (usually a BN) that can be directly used. 
 - some events from the utility pallet do not return any data.
 
@@ -122,7 +122,7 @@ ___
   		- royalty: *number*
 
  - ### NFTTransferredEvent
-	- **Summary:** An NFT has been transfered.
+	- **Summary:** An NFT has been transferred.
 	- **Datas returned:** 
   		- nftId: *number*
   		- sender: *string as AccountId32*
@@ -191,14 +191,14 @@ ___
 	- **Summary:** The marketplace configuration has been updated. Parameters can be unchanged (Noop), Removed or Set
 	- **Datas returned:** 
   		- marketplaceId: *number*
-  		- commissionFeeType: *optionnal string : Remove or Set*
-  		- commissionFee: *optionnal string*
-  		- commissionFeeRounded: *optionnal Number*
-  		- listingFeeType: *optionnal string : Remove or Set*
-  		- listingFee: *optionnal string*
-  		- listingFeeRounded: *optionnal Number*
-  		- accountList: *optionnal Array of strings as AccountId32*
-  		- offchainData: *optionnal string*
+  		- commissionFeeType: *optional string : Remove or Set*
+  		- commissionFee: *optional string*
+  		- commissionFeeRounded: *optional Number*
+  		- listingFeeType: *optional string : Remove or Set*
+  		- listingFee: *optional string*
+  		- listingFeeRounded: *optional Number*
+  		- accountList: *optional Array of strings as AccountId32*
+  		- offchainData: *optional string*
  
  - ### MarketplaceMintFeeSetEvent 
 	- **Summary:** The marketplace mint fee has been set.
@@ -213,9 +213,9 @@ ___
   		-  marketplaceId: *number*
   		-  price: *string*
   		-  priceRounded: *number*
-  		-  commissionFeeType: *optionnal string : Percentage or Flat value*
-  		-  commissionFee: *optionnal string*
-  		-  commissionFeeRounded: *optionnal number*
+  		-  commissionFeeType: *optional string : Percentage or Flat value*
+  		-  commissionFee: *optional string*
+  		-  commissionFeeRounded: *optional number*
 
  - ### NFTUnlistedEvent
 	- **Summary:**  An NFT has been unlisted from a marketplace.
@@ -241,7 +241,7 @@ ___
 
 ## Utility
 - ### ItemCompletedEvent
-	- **Summary:** A single item within a Batch of dispatches has completed with no error.
+	- **Summary:** A single item within a Batch of dispatches has been completed with no error.
 	- **Datas returned:** 
   		- This is an empty event : it does not return any specific event.
 
@@ -253,8 +253,8 @@ ___
 			- module: *object*
 			  -	index: *number*
 			  - error: *string*
-  		- errorType: *optionnal string*
-  		- details: *optionnal string*
+  		- errorType: *optional string*
+  		- details: *optional string*
 
 - ### BatchCompletedEvent 
 	- **Summary:** Batch of dispatches completed fully with no error.
@@ -273,8 +273,8 @@ ___
 			- module: *object*
 			  -	index: *number*
 			  - error: *string*
-  		- errorType: *optionnal string*
-  		- details: *optionnal string*
+  		- errorType: *optional string*
+  		- details: *optional string*
   		- dispatchInfo: *object*
 			- weigth: *string*
 			- class: *string*
