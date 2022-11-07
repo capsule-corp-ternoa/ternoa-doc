@@ -4,10 +4,10 @@ sidebar_position: 1
 
 # Aggregation
 
-Some aggregations plugins are available to count some data. You can use them in simple queries.
+Some aggregation plugins are available to count some data. You can use them in simple queries.
 
-If you look at the indexer playground docs and schema on the right panel, you can see some aggregate fileds. 
-They allow to make some mathematical calculations for some specific datas. Let's keep the exemple to query some NFT filtered by a specific owner and calculate the total amount in CAPS for each listed NFT. 
+If you look at the indexer playground docs and schema on the right panel, you can see some aggregate fields. 
+They allow to make some mathematical calculations for some specific datas. Let's keep the example to query some NFT filtered by a specific owner and calculate the total amount in CAPS for each listed NFT. 
 
 ```graphql showLineNumbers
 query {

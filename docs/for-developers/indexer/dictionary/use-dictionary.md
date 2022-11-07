@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Add the dictionary to indexer
 
-You can improve the performance of the indexation part by using a dictionary endpoint instead of targeting directly the blockchain to get data. Under the hood, the Dictionary provides a list of relevant block heights only that contains the specific events and extrinsics.
+You can improve the performance of the indexation part by using a dictionary endpoint instead of targeting directly the blockchain to get data. Under the hood, the Dictionary provides a list of relevant block heights containing the specific events and extrinsics.
 
 _Example_: If you look at a createNft event, not every blocks will contain this event since it depends on users usage of the Ternoa chain. When looking at events, the dictionary will provide the list that contains the createNft event we are looking for instead of every events of each block.
 
