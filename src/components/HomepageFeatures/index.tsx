@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
         and get new experience with creation, minting and trading NFTs.
       </>
     ),
-    url: '/category/ternoa-fundamentals'
+    url: '/category/fundamentals'
   },
   
   {
