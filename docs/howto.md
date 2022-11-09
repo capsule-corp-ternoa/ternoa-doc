@@ -28,6 +28,6 @@ From there one of the Ternoa team member will review your changes, and either me
 
 Remember that after you click "Propose Changes", you must also click on "Create Pull Request" on the next page. 
 
-::: info
+> info
 
 If you're committing changes on an existing branch that you already created, select the fist option and click on "Commit changes".
