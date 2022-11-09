@@ -143,7 +143,7 @@ const config = {
               },
               {
                 label: 'Ternoa Fundamentals',
-                to: '/category/ternoa-fundamentals',
+                to: '/category/fundamentals',
               },
               {
                 label: 'For Developers',
