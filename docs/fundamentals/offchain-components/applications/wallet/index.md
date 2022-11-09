@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
-sidebar_label: 💝 Ternoa Wallet
+sidebar_label: 📱 Ternoa Wallet
 ---
 
-# 💝 Ternoa Wallet
+# 📱 Ternoa Wallet
 
 **Download the Ternoa Wallet application. The best crypto wallet to manage your CAPS, decrypt your SecretNFT and access dApps powered by Ternoa Chain.**
 
