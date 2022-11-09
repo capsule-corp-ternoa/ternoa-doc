@@ -25,17 +25,12 @@ ___
 ## Contact
 From your **Address Book**, you can add and review recent contacts, and observe other accounts. 
 
-### Add Contacts
-- Go to to your Account
-- Click on **'Contact'**
-- Click on the + 
-- Enter the account name and wallet address
-- Select **'Add contact'**
 
-![img-desktop](./contact-1.gif)
+![img-desktop](./contact-1.png)
+![img-desktop](./contact-2.png)
+___
 
 ### Observe Contacts
-- Click on one of your contacts profile
-- Confirm **Active account changed** by clicking 'OK'
 
-![img-desktop](./contact-2.gif)
+![img-desktop](./contact-3.png)
+![img-desktop](./contact-4.png)
