@@ -61,19 +61,21 @@ If you're logged in, you'll be taken to the GitHub built-in text editor where yo
 When you've completed your changes, you can add any specific details on what was changed and commit to a new branch to create a new Pull Request to the repository. 
 
 ![image](https://user-images.githubusercontent.com/5689530/200411267-33fdac0e-74e1-42f0-b020-6e38dc48090f.png)
-![image](https://user-images.githubusercontent.com/5689530/200413223-fe0cf226-b638-485d-8ee2-f6e94f110555.png)
-
 
 > If you're committing changes on an existing branch that you already created, select the fist option and click on "Commit changes".
 
 
-Remember that after clickin on "Propose Changes" or "Commit changes", you must also click on "Create Pull Request" on the next page.
+Remember that after clicking on "Propose Changes" or "Commit changes", you must also click on "Create Pull Request" on the next page.
 
-![image](https://user-images.githubusercontent.com/5689530/200994196-295a0589-9faf-4ab4-8723-a4962a882d54.png)
+![image](https://user-images.githubusercontent.com/5689530/200413223-fe0cf226-b638-485d-8ee2-f6e94f110555.png)
+
 
 > Please be careful to the **base** branch, we won't merge on main branch so you have to select the develop branch for example.
 
-From there one of the Ternoa team member will review your changes, and either merge them or request changes with a comment.
+![image](https://user-images.githubusercontent.com/5689530/200994196-295a0589-9faf-4ab4-8723-a4962a882d54.png)
+
+
+**From there one of the Ternoa team member will review your changes, and either merge them or request changes with a comment.**
 
 
 ### For developers
