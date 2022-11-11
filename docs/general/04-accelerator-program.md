@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Accelerator Program"
-sidebar_position: 2
+sidebar_position: 4
 ---
 
 # Accelerator Program

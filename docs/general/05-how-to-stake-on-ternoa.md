@@ -1,6 +1,6 @@
 ---
 sidebar_label: "How to stake on Ternoa"
-sidebar_position: 1
+sidebar_position: 5
 ---
 
 # How to Stake in Ternoa
