@@ -1,6 +1,6 @@
 ---
+sidebar_label: How to Contribute
 sidebar_position: 2
-sidebar_label: ❓ How to Contribute
 ---
 
 # 🤝 Contributing
@@ -41,12 +41,9 @@ While Ternoa often refers to blockchain or coding, **you can collaborate on just
 
 Even if you’re a software developer, working on this Ternoa documentation can help you get started in open source. It’s often less intimidating to work on projects that don’t involve code, and the process of collaboration will build your confidence and experience.
 
-
 Nonetheless, pull requests, issues, discussions, and contributions from the community are widely encouraged.
 
 Otherwise, Capsule Corp Labs holds the administrative position and final word on the content that is included.
-
-
 
 ## 📚 How to Contribute on Github
 
@@ -121,8 +118,6 @@ Use the following command to set the [remote upstream repo](https://docs.github.
 `git remote add upstream https://github.com/capsule-corp-ternoa/ternoa-doc.git`
 
 You now have a fork of the Ternoa Documentation repo set up in your local workspace. You can make changes to the files in the workspace, add commits, then push your changes to your fork of the repo to then create a Pull Request.
-
-
 
 ## 🪧 Guideline and Rules
 
