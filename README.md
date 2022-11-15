@@ -141,7 +141,7 @@ For your first examples you can check our [CookBook](https://docs.ternoa.network
 
 ### Docmap
 
-- [ ] [Ternoa Fundamentals](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/main/docs/intro.md#-ternoa-fundamentals)
+- [ ] [Ternoa Wiki](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/main/docs/intro.md#-ternoa-wiki)
     - [ ] [Core Blockchain](https://docs.ternoa.network/category/core-blockchain)
     - [ ] [Offchain Components](https://docs.ternoa.network/category/offchain-components)
     - [ ] [TEE Enclaves](https://docs.ternoa.network/category/tee-enclaves)

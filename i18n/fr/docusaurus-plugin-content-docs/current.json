@@ -3,14 +3,14 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.tutorialSidebar.category.Ternoa Fundamentals": {
-    "message": "Ternoa Fondamentaux",
-    "description": "The label for category Ternoa Fundamentals in sidebar tutorialSidebar"
+  "sidebar.tutorialSidebar.category.Ternoa Wiki": {
+    "message": "Ternoa Wiki",
+    "description": "The label for category Ternoa Wiki in sidebar tutorialSidebar"
   },
 
-  "sidebar.tutorialSidebar.category.Ternoa Fundamentals.link.generated-index.description": {
+  "sidebar.tutorialSidebar.category.Ternoa Wiki.link.generated-index.description": {
     "message": "Tout ce que vous devez savoir",
-    "description": "The generated-index page description for category Ternoa Fundamentals in sidebar tutorialSidebar"
+    "description": "The generated-index page description for category Ternoa Wiki in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Core Blockchain": {
     "message": "Core Blockchain",

@@ -142,8 +142,8 @@ const config = {
                 to: '/intro',
               },
               {
-                label: 'Ternoa Fundamentals',
-                to: '/category/fundamentals',
+                label: 'Ternoa Wiki',
+                to: '/category/wiki',
               },
               {
                 label: 'For Developers',
