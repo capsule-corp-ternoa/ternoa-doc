@@ -145,7 +145,7 @@ For your first examples you can check our [CookBook](https://docs.ternoa.network
     - [ ] [Core Blockchain](https://docs.ternoa.network/category/core-blockchain)
     - [ ] [Offchain Components](https://docs.ternoa.network/category/offchain-components)
     - [ ] [TEE Enclaves](https://docs.ternoa.network/category/tee-enclaves)
-    - [ ] [Ternoa NFT Primitives](https://docs.ternoa.network/category/ternoa-nft-primitives)
+    - [ ] [Ternoa NFT Primitives](https://docs.ternoa.network/category/nft-features)
     - [ ] [Staking](https://docs.ternoa.network/category/staking)
 - [ ] [For Developers](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/main/docs/intro.md#-for-developers)
     - [ ] [Ternoa-JS SDK](https://docs.ternoa.network/category/ternoa-js-sdk)
