@@ -35,7 +35,7 @@ Review below to learn the core foundation of the blockchain architecture, offcha
 #### 3. TEE Enclaves
 - [TEE Enclaves](https://docs.ternoa.network/category/tee-enclaves) docs
 #### 4. Ternoa NFT Primitives
-- [NFT Types](https://docs.ternoa.network/category/ternoa-nft-primitives) docs
+- [NFT Types](https://docs.ternoa.network/category/nft-primitives) docs
 - [NFT Features](https://docs.ternoa.network/category/nft-features) docs
 - [NFT Specifications](https://docs.ternoa.network/category/nft-specifications) docs
 
