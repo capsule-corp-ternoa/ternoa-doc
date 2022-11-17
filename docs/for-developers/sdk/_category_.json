@@ -3,7 +3,7 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Welcome to the [Ternoa-JS SDK](https://github.com/capsule-corp-ternoa/ternoa-js) documentation"
+    "description": "Welcome to the <a href='https://github.com/capsule-corp-ternoa/ternoa-js'>Ternoa-JS SDK</a> documentation"
   }
 }
 
