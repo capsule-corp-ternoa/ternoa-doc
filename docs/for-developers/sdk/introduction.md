@@ -1,10 +1,11 @@
-sidebar_position
+---
+sidebar_position: 1
+---
 
-1
 
 # [](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/docs/for-developers/sdk/introduction.md#introduction)Introduction
 
-----------
+___
 
 ## [](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/docs/for-developers/sdk/introduction.md#overview-%EF%B8%8F)Overview  ⚙️
 
