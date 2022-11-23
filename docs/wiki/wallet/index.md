@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-sidebar_label: 📱 Ternoa Wallet
+sidebar_label: Wallet
 ---
 
 # 📱 Ternoa Wallet
