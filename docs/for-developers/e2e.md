@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# 🧩 E2E test dApp
+# 🧩 E2E Test dApp
 
 **The E2E test dApp is the easiest way to test our SDK.** 
 
