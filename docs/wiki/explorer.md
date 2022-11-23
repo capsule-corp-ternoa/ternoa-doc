@@ -5,4 +5,10 @@ sidebar_label: Explorer
 
 #  🌐 Explorer
 
-Use our explorer: [https://explorer.ternoa.com/](https://explorer.ternoa.com/)
+## Mainnet
+
+[https://explorer.ternoa.com/](https://explorer.ternoa.com/)
+
+## Alphanet
+
+[https://explorer-alphanet.ternoa.dev/](https://explorer-alphanet.ternoa.dev/)
