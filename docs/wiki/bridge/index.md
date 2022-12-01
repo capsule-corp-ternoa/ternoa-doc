@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-sidebar_label: 🌉 Ternoa Bridge
+sidebar_position: 5
+sidebar_label: Bridge
 ---
 
 # Ternoa Bridge
