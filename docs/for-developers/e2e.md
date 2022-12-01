@@ -1,10 +1,13 @@
 ---
 sidebar_position: 4
+sidebar_label: For Developers
 ---
 
 # 🧩 E2E Test dApp
 
 **The E2E test dApp is the easiest way to test our SDK.** 
+
+=> [E2E Test dApp](https://e2e.ternoa.network/)
 
 
 ## Ternoa-js SDK ⚙️ 
@@ -17,7 +20,7 @@ Based on **Polkadot.js API** and **Javascript**, it offers application developer
 You can submit any transaction to the chain to manage your NFTs or familiarize yourself with our helpers with the code snippets.
 This application aims to be build by the community and is **the perfect entry door to learn how to use Ternoa SDK**, your contribution and interest are warm welcomed.
 
-If you look for more global information about Ternoa, check our **[website](https://www.ternoa.com/)**.
+If you look for more global information about Ternoa, check our **[website](https://www.ternoa.network/)**.
 
 ___
 ## Getting Started the Ternoa JS Test Dapp
