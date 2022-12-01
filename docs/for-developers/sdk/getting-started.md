@@ -6,11 +6,31 @@ sidebar_position: 2
 
 ___
 
+## Ternoa-js SDK ⚙️ 
+
+>**[Ternoa-js SDK](https://github.com/capsule-corp-ternoa/ternoa-js)** has been thought with one intention: **it aims to be one of the easiest tool to build web3 projects on top of the Ternoa Chain**. 
+
+
+Based on **Polkadot.js API** and **Javascript**, it offers application developers the ability to query substrate chains like the Ternoa chain. It provides a seamless experience and allows you to start building at a glance : an extra short init and just a few lines of code after, you will create your NFT.
+
+You can submit any transaction to the chain to manage your NFTs or familiarize yourself with our helpers with the code snippets.
+This application aims to be build by the community and is **the perfect entry door to learn how to use Ternoa SDK**, your contribution and interest are warm welcomed.
+
+If you look for more global information about Ternoa, check our **[website](https://www.ternoa.network/)**.
+
 ## Installation ⌨️
 
 We recommend installing ternoa-js in your project with Node.js using npm: 
 
-`npm install ternoa-js`
+```bash
+npm install ternoa-js
+```
+
+First, run the development server:
+
+```bash
+npm run dev
+```
 
 And there you go! You're ready to use the latest stable version of the Ternoa-js SDK.
 
