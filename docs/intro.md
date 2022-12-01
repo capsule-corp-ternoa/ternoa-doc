@@ -23,7 +23,7 @@ sidebar_label: 👋 Welcome
 >
 > Creating NFTs and building dApps on most blockchains is complex. Ternoa was designed to break barriers for developers, web3 enthusiasts, and entrepreneurs and empower them to save time and money. We believe mass adoption of NFTs is only possible with a fundamental tech evolution. In this guide, we have developed a range of tools to walk you through how to use and build on Ternoa for the first time. 
 
-## 📚 Ternoa Fundamentals
+## 📚 Ternoa Wiki
 
 Review below to learn the core foundation of the blockchain architecture, offchain components, trusted execution environment, and NFT specifications. 
 
@@ -35,7 +35,7 @@ Review below to learn the core foundation of the blockchain architecture, offcha
 #### 3. TEE Enclaves
 - [TEE Enclaves](https://docs.ternoa.network/category/tee-enclaves) docs
 #### 4. Ternoa NFT Primitives
-- [NFT Types](https://docs.ternoa.network/category/ternoa-nft-primitives) docs
+- [NFT Types](https://docs.ternoa.network/category/nft-features) docs
 - [NFT Features](https://docs.ternoa.network/category/nft-features) docs
 - [NFT Specifications](https://docs.ternoa.network/category/nft-specifications) docs
 

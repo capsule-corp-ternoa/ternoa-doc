@@ -1,6 +1,6 @@
 {
-  "label": "Fundamentals",
-  "position": 3,
+  "label": "TEE Enclaves",
+  "position": 1,
   "link": {
     "type": "generated-index"
   }

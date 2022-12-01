@@ -11,10 +11,7 @@ ___
 **Events are objects containing decoded values (datas)** provided by the chain in the result of any transaction triggered using the `submitTxBlocking` function.  At least one of these two `ExtrinsicSuccessEvent` or  `ExtrinsicFailedEvent` events are provided for any transaction depending on its success or fail. While `submitTxBlocking` provides the SDK handlers main events list of ***BlockchainEvents*** available, we also allow you to filter this list to get the ones you need. *An example to filter only the events list of a balance transfer transaction :*
 
 ```javascript
-
 const balanceTransfertEvents = BlockchainEvents.findEvents(BalancesTransferEvent)
-
-
 ```
 **note :** *BlockchainEvents is the result of `submitTxBlocking` function. It can be stored in a constant for example.*
 

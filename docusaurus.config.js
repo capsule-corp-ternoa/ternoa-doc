@@ -64,6 +64,10 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        gtag: {
+          trackingID: 'G-WVJQ0JRBZK',
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -142,8 +146,8 @@ const config = {
                 to: '/intro',
               },
               {
-                label: 'Ternoa Fundamentals',
-                to: '/category/fundamentals',
+                label: 'Ternoa Wiki',
+                to: '/category/wiki',
               },
               {
                 label: 'For Developers',

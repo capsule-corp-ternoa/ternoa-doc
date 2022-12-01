@@ -1,5 +1,5 @@
 ---
-sidebar_label: How to Contribute
+sidebar_label: Contributing
 sidebar_position: 2
 ---
 

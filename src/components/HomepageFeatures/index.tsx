@@ -12,7 +12,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Ternoa fundamentals',
+    title: 'Ternoa Wiki',
     icon: '🔎',
     description: (
       <>
@@ -21,7 +21,7 @@ const FeatureList: FeatureItem[] = [
         and get new experience with creation, minting and trading NFTs.
       </>
     ),
-    url: '/category/fundamentals'
+    url: '/category/wiki'
   },
   
   {
