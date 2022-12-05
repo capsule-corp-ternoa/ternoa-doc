@@ -43,7 +43,7 @@ For a referendum to be proposed by the council, a strict majority of members mus
 Council motions which pass with a 3/5 (60%) super-majority - but without reaching unanimous support - will move to a public referendum under a neutral, majority-carries voting scheme. In the case that all members of the council vote in favor of a motion, the vote is considered unanimous and becomes a referendum with negative adaptive quorum biasing.
 
 
-# Referanda 
+# Referenda 
 
 Referenda are simple, inclusive, stake-based voting schemes. Each referendum has a specific proposal associated with it that takes the form of a privileged function call in the runtime (that includes the most powerful call: set_code, which can switch out the entire code of the runtime, achieving what would otherwise require a "hard fork").
 
