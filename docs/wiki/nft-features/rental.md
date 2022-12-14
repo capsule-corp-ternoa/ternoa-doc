@@ -13,45 +13,6 @@ Rental Contract are a way to spread the use of an NFT and earning money without 
 ## Motivation
 Rental contracts have so many usecases in the real world that could be adapted to the NFTs. While the main purpose of renting an NFT is to easily empower any projects to get the best utility of an NFT by spreading its features to everyone, it is also a great way to cover many real world sucessful usecases. And if rental NFT are already popular in the gaming industry, the tractions it gains in many other filed is truely relevant to our web 3 ecosystem (events-tickets, music, sport, subscription...).
 
-___
-
-## 🔎 What is NFT Lending?
-NFT lending is very similar to the cryptocurrency industry’s  P2P loans. However, unlike P2P lending, where individuals lend each other credit in a decentralized setup, NFT lending often functions via a middle man, the NFT lending platform.
-
-NFT lending is, therefore, the opportunity to access loans with NFT’s as collateral. In other words, it is the practice of putting your NFT up as collateral for loans. NFT crypto lending is accessing crypto loans against NFT collateral.
-
-Through NFT loans, lenders can access passive income from loan interest payments. On the other hand, borrowers can enjoy more liquidity on their holdings until they are ready to sell their CryptoPunks or BAYCs.
-
-### How Does NFT Lending Work?
- The NFT lending process involves three parties; the lender, the borrower, and the lending platform.
-
-- The lender is the party that lends its crypto assets in exchange for interest.
-- The borrower borrows a loan from a lender against an NFT.
-- The lending platform is the middle man. The platform also holds NFT collateral until the loan is repaid in escrow.
-
-### Description
-NFT lending is the process of lending and/or borrowing money by using NFTs (Non-fungible token) as a collateral of the loans made. This process is managed by lending platforms, that we will discuss today in this article about the Best NFT Lending Platforms.
-
-The NFT lending process is part of the larger topic of Crypto Lending, that uses the same principle but with “standard” cryptos as a collateral.
-
-**This is the usual process during an NFT lending situation:**
-
-- **Borrowers** use their NFTs as a collateral of their loan request, that will be locked (in the platform smart contract) once the loan money is issued
--**Lenders**, on their side, can accept to loan the money to the borrower in exchange of interests (usually paid in crypto such as ETH).
-- Once the **borrower** repays the loan and the interests to the lender, he receives back his NFT
-_ If the **borrower** doesn’t pay back his loan, the NFT is given to the lender
-
-### The Best NFT Lending Platforms
-
- | **Rank**  | **Name**  | **Country** | **Collection**  | **Currency** | **Lend**  | **Borrow** | **Rates** | **LVT** 
-| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- 
-| **1** | **[NFTFI](https://www.nftfi.com/)** | South Africa | CryptoPunks, Bored Ape, Mutant Ape, Art Blocks, Autoglyphs, ... | ETH, DAI | Yes | Yes | 20-80% | up to 50%
-| **2** | **[Arcade](https://www.arcade.xyz/)** | US | ? | 	wETH, USDC, DAI | Yes | Yes | 5-60% | ? 
-| **3** | **[NEXO](https://nexo.io/nft-lending)** | UK | CryptoPunks, Bored Ape | ETH, stablecoins | - | Yes | 12-15% | 10-20%
-| **4** | **[Drops](https://drops.co/)** | Undefined | ? | - | Yes | Yes | ? | up to 80%
-
-___
-
 ## ✨ Specification
 
 ### Lifecycle states
