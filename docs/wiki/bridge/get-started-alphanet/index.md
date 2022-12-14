@@ -50,6 +50,6 @@ To claim ETH test tokens, you will need to go to the **[Goerli Faucet](https://g
 11. Enter your wallet address, and hit **'Send Me ETH'**
 12. Check your wallet, you should have an additional 0.25 ETH
 
-**To claim Ternoa test CAPS on the Alphanet Faucet, follow these steps [here](https://wiki.ternoa.network/learn/asset-management/caps/claim-test-caps)**
+**To claim Ternoa test CAPS on the Alphanet Faucet, follow these steps [here](https://www.ternoa.network/alphanet)**
 
 
