@@ -30,4 +30,4 @@ ___
 
 ## You need to buy CAPS ?
 
-You have plenty of options to buy CAPS from centralized or decentralized platforms. You can find the list here: **https://www.ternoa.com/token**
+You have plenty of options to buy CAPS from centralized or decentralized platforms. You can find the list here: **https://www.ternoa.network/token**

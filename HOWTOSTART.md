@@ -31,8 +31,8 @@ _____________________________________________________
 
 ## Add Links
 To add internal or external link in your doc : 
-- insert external link :  `[go to the external link](https://www.ternoa.com/)` result : [go to the external link](https://www.ternoa.com/)
-- insert internal link : `[go to the internal link](/docs/category/core-blockchain)` result : [go to the internal link](https://www.ternoa.com/)
+- insert external link :  `[go to the external link](https://www.ternoa.network/)` result : [go to the external link](https://www.ternoa.network/)
+- insert internal link : `[go to the internal link](/docs/category/core-blockchain)` result : [go to the internal link](https://www.ternoa.network/)
 
 _____________________________________________________
 

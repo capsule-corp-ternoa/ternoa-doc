@@ -43,7 +43,7 @@ ___
 The **[Helpers](https://e2e.ternoa.network/app/NFT/CreateNFT)** section list several helpers from our SDK and their parameters presented in a form. The request is created once the required fields are correctly filled in. It has to be signed before being submited to the chain. You can connect your Ternoa Wallet with Wallet Connect or use your Polkadot extension.
 
 Ternoa ecosystem is based on 2 environments: **Alphanet** & **Mainnet**, where transactions are conducted in **$CAPS token**.
-- **Alphanet** stands for the gateway to explore and test the Ternoa chain. It uses test $CAPS tokens claimable on our faucet: **[Alphanet Faucet](https://www.ternoa.com/alphanet)**.
+- **Alphanet** stands for the gateway to explore and test the Ternoa chain. It uses test $CAPS tokens claimable on our faucet: **[Alphanet Faucet](https://www.ternoa.network/alphanet)**.
 - **Mainnet** is the main chain where data is stored.
 
 :::tip
