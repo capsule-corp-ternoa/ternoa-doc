@@ -183,10 +183,6 @@ const config = {
                 label: 'Ternoa',
                 href: 'https://www.ternoa.com/',
               },
-              {
-                label: 'Wiki Ternoa',
-                href: 'https://wiki.ternoa.network/',
-              },
             ],
           },
         ],

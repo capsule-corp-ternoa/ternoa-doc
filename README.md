@@ -19,41 +19,26 @@
     <a href="https://github.com/capsule-corp-ternoa/ternoa-doc/discussions">Discussions</a>
   </p>
   
-  <!-- PROJECT BADGES-->
+  <!-- PROJECT BADGES -->
 [![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] [![LinkedIn][linkedin-shield]][linkedin-url]
 </div>
 
 
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usecases">Usage Examples</a></li>
-    <li><a href="#docmap">Docmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+
+### Table of Contents
+- [About The Project](#about-ternoa)
+  * [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [Usage Examples](#usage-examples)
+- [Docmap](#docmap)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
 
 
 <!-- ABOUT TERNOA -->
-<div id="about"></div>
 
 ### About Ternoa
 
@@ -85,6 +70,7 @@ To work and contribute on our documentation, you can clone our repo and run Docu
   ```
   npm install yarn@latest -g
   ```
+
 
 ### Installation
 
@@ -129,7 +115,7 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ### Usage Examples
 
@@ -138,6 +124,7 @@ You can find useful examples of usecases. Additional screenshots, code examples,
 For your first examples you can check our [CookBook](https://docs.ternoa.network/for-developers/sdk/cookbook)
 
 **Time Capsule dApp** is our most relevant use case on the Ternoa blockchain, check out [https://time-capsule.xyz/](https://time-capsule.xyz/)
+
 
 ### Docmap
 
@@ -154,6 +141,8 @@ For your first examples you can check our [CookBook](https://docs.ternoa.network
 
 See the [open issues](https://github.com/capsule-corp-ternoa/ternoa-doc/issues) for a full list of proposed features (and known issues).
 
+
+
 ### Contributing
 
 Contributions are what make the Ternoa community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -166,6 +155,8 @@ Don't forget to give the project a star ! Thanks again Fam !
 3. Commit your Changes (`git commit -m 'Add some AmazingTernoaFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingTernoaFeature`)
 5. Open a Pull Request
+
+
 
 ### Contact
 
