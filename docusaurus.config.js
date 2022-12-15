@@ -132,7 +132,7 @@ const config = {
       footer: {
         style: 'light',
         logo: {
-          href: 'https://www.ternoa.com/',
+          href: 'https://www.ternoa.network/',
           src: '/img/ternoa_logo.svg',
           alt: 'Ternoa Doc',
           height: '38px',
@@ -181,7 +181,7 @@ const config = {
             items: [
               {
                 label: 'Ternoa',
-                href: 'https://www.ternoa.com/',
+                href: 'https://www.ternoa.network/',
               },
             ],
           },
