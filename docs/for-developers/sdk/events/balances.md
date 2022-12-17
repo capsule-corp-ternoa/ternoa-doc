@@ -4,6 +4,8 @@ sidebar_label: Balances
 ---
 
 # Balances
+
+
 - ## BalancesWithdrawEvent 
 	- **Summary:** Some amount was withdrawn from the account
 	- **Datas returned:** 
