@@ -4,6 +4,9 @@ sidebar_label: Marketplace
 ---
 
 # Marketplace
+
+The Marketplace events like ConfigSet, Listed, Sold...
+
  - ## MarketplaceCreatedEvent 
 	- **Summary:** A marketplace has been created.
 	- **Datas returned:** 

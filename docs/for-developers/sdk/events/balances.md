@@ -5,6 +5,7 @@ sidebar_label: Balances
 
 # Balances
 
+The Balances events like Deposit, Withdraw, Transfer...
 
 - ## BalancesWithdrawEvent 
 	- **Summary:** Some amount was withdrawn from the account

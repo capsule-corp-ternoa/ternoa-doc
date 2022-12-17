@@ -4,6 +4,9 @@ sidebar_label: NFT
 ---
 
 # NFT
+
+Find all the NFT events like Burned, Created, Tranferred...
+
  - ## NFTCreatedEvent 
 	- **Summary:** An NFT has been created.
 	- **Datas returned:** 

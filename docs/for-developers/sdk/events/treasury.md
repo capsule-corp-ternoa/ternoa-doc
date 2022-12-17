@@ -4,6 +4,9 @@ sidebar_label: Treasury
 ---
 
 # Treasury
+
+The Treasury Deposit Event
+
 - ## TreasuryDepositEvent
 	- **Summary:** Some funds have been deposited.
 	- **Datas returned:** 

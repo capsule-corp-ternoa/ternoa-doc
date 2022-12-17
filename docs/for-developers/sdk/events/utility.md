@@ -4,6 +4,9 @@ sidebar_label: Utility
 ---
 
 # Utility
+
+The Utility events like ItemCompleted, BatchInterrupted or BatchCompleted
+
 - ## ItemCompletedEvent
 	- **Summary:** A single item within a Batch of dispatches has been completed with no error.
 	- **Datas returned:** 

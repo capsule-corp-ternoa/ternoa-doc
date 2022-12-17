@@ -4,6 +4,9 @@ sidebar_label: System
 ---
 
 # System
+
+The System events like NewAccount or Extrinsic statuses
+
 - ## ExtrinsicFailedEvent 
 	- **Summary:** An extrinsic failed.
 	- **Datas returned:** 

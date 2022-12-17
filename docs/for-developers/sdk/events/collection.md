@@ -4,6 +4,9 @@ sidebar_label: Collection
 ---
 
 # Collection
+
+The Collection events like Burned, Created, Closed...
+
  - ## CollectionCreatedEvent 
 	- **Summary:** A Collection has been created.
 	- **Datas returned:** 
