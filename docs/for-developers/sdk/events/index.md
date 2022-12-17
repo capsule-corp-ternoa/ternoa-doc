@@ -7,7 +7,7 @@ sidebar_label: 🗓️ Events
 
 ___
 
-## Overview: What are chain events?
+## Overview: What are chain events ?
 
 **Events are objects containing decoded values (datas)** provided by the chain in the result of any transaction triggered using the `submitTxBlocking` function.  At least one of these two `ExtrinsicSuccessEvent` or  `ExtrinsicFailedEvent` events are provided for any transaction depending on its success or fail. While `submitTxBlocking` provides the SDK handlers main events list of ***BlockchainEvents*** available, we also allow you to filter this list to get the ones you need. *An example to filter only the events list of a balance transfer transaction :*
 
@@ -21,7 +21,8 @@ When the `balancesTransferTx` function creates an unsigned unsubmitted transacti
 
 ___
 
-## About the Event Design Format: 
+## About the Event Design Format
+
 To make the returned events data usefull, we provide both the native format and a friendly ready to use format: 
 - a string as an AccountId32 correspond to a classic user valid address. 
 - a string as u128 is a BN value as a string natively used under the hood by the chain.
@@ -30,8 +31,9 @@ To make the returned events data usefull, we provide both the native format and 
 
 ___
 
-## Some examples using Events : 
-Events methods workflow samples coming...
+## Some examples using Events
+
+Some samples of chain events methods workflow usage are coming very soon...
 
 ___
 
