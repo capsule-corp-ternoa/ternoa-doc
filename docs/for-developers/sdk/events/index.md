@@ -30,6 +30,11 @@ To make the returned events data usefull, we provide both the native format and 
 
 ___
 
+## Some examples using Events : 
+Events methods workflow samples coming...
+
+___
+
 ## The events below are the Events handled in the Ternoa SDK sorted by categories 
 
 
@@ -38,12 +43,3 @@ import DocCardList from '@theme/DocCardList';
 
 <DocCardList />
 ```
-
-
-* [Balances](https://github.com/capsule-corp-ternoa/ternoa-js/wiki/4-Events#balances)
-* [Treasury](https://github.com/capsule-corp-ternoa/ternoa-js/wiki/4-Events#treasury)
-* [NFT](https://github.com/capsule-corp-ternoa/ternoa-js/wiki/4-Events#nft)
-* [Collection](https://github.com/capsule-corp-ternoa/ternoa-js/wiki/4-Events#collection)
-* [Marketplace](https://github.com/capsule-corp-ternoa/ternoa-js/wiki/4-Events#marketplace)
-* [Utility](https://github.com/capsule-corp-ternoa/ternoa-js/wiki/4-Events#utility)
-* [System](https://github.com/capsule-corp-ternoa/ternoa-js/wiki/4-Events#system)
