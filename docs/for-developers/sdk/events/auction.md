@@ -7,6 +7,7 @@ sidebar_label: Auction
 
 The Auction events
 
+
 - ## AuctionCreatedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
@@ -20,10 +21,12 @@ The Auction events
   		- startBlock: *number*
   		- endBlock: *number*
 
+
 - ## AuctionCancelledEvent  
 	- **Summary:** 
 	- **Datas returned:** 
 		- nftId: *number*
+
 
 - ## AuctionCompletedEvent  
 	- **Summary:** 
@@ -36,7 +39,8 @@ The Auction events
   		- marketplaceCutRounded: *number*
   		- royaltyCut: *string as u128*
   		- royaltyCutRounded: *number*
-		
+
+
 - ## BidAddedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
@@ -44,6 +48,7 @@ The Auction events
   		- bidder: *string as AccountId32*
   		- amount: *string as u128*
   		- amountRounded: *number*
+
 
 - ## BidRemovedEvent  
 	- **Summary:** 
@@ -53,9 +58,10 @@ The Auction events
   		- amount: *string as u128*
   		- amountRounded: *number*
 
+
 - ## BalanceClaimedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
-  		- account: *string as AccountId32*
+		- account: *string as AccountId32*
   		- amount: *string as u128*
   		- amountRounded: *number*

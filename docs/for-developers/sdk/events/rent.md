@@ -7,6 +7,7 @@ sidebar_label: Rent
 
 The Rental events
 
+
 - ## ContractCreatedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
@@ -26,10 +27,12 @@ The Rental events
   		- renteeCancellationFee: *optional string or number : Remove or Set*
   		- renteeCancellationFeeRounded: *optional number : Remove or Set*
 
+
 - ## ContractCanceledEvent  
 	- **Summary:** 
 	- **Datas returned:** 
 		- nftId: *number*
+
 
 - ## ContractStartedEvent  
 	- **Summary:** 
@@ -37,11 +40,13 @@ The Rental events
 		- nftId: *number*
 		- rentee: *string*
 
+
 - ## ContractRevokedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
 		- nftId: *number*
 		- revokedBy: *string*
+
 
 - ## ContractOfferCreatedEvent  
 	- **Summary:** 
@@ -49,11 +54,13 @@ The Rental events
 		- nftId: *number*
 		- rentee: *string*
 
+
 - ## ContractOfferRetractedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
 		- nftId: *number*
 		- rentee: *string*
+
 
 - ## ContractSubscriptionTermsChangedEvent  
 	- **Summary:** 
@@ -66,10 +73,12 @@ The Rental events
   		- rentFee: *string or number*
 		- rentFeeRounded: *number*
 
+
 - ## ContractSubscriptionTermsAcceptedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
 		- nftId: *number*
+
 
 - ## ContractEndedEvent  
 	- **Summary:** 
@@ -77,10 +86,12 @@ The Rental events
 		- nftId: *number*
 		- revokedBy: *string*
 
+
 - ## ContractSubscriptionPeriodStartedEvent  
 	- **Summary:** 
 	- **Datas returned:** 
 		- nftId: *number*
+
 
 - ## ContractExpiredEvent  
 	- **Summary:** 
