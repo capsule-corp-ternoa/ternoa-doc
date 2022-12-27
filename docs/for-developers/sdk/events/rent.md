@@ -9,7 +9,7 @@ The Rental events
 
 
 - ## ContractCreatedEvent  
-	- **Summary:** 
+	- **Summary:**  An NFT has been created an unsigned unsubmitted Create-Rent-Contract Transaction Hash.
 	- **Datas returned:** 
 		- nftId: *number*
   		- renter: *string*
