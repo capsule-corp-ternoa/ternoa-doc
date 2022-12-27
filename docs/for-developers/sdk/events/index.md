@@ -37,8 +37,9 @@ Some samples of chain events methods workflow usage are coming very soon...
 
 ___
 
-## The events below are the Events handled in the Ternoa SDK sorted by categories 
+## Events list
 
+The events below are the Events handled in the Ternoa SDK sorted by categories 
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
