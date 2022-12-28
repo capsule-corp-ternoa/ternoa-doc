@@ -9,7 +9,7 @@ The Auction events
 
 
 - ## AuctionCreatedEvent  
-	- **Summary:** 
+	- **Summary:**  An auction for an NFT has been created.
 	- **Datas returned:** 
 		- nftId: *number*
   		- marketplaceId: *number*
@@ -23,13 +23,13 @@ The Auction events
 
 
 - ## AuctionCancelledEvent  
-	- **Summary:** 
+	- **Summary:** An auction for an NFT has been cancelled.
 	- **Datas returned:** 
 		- nftId: *number*
 
 
 - ## AuctionCompletedEvent  
-	- **Summary:** 
+	- **Summary:** An auction for an NFT has been completed.
 	- **Datas returned:** 
 		- nftId: *number*
   		- newOwner: *string as AccountId32*
@@ -42,7 +42,7 @@ The Auction events
 
 
 - ## BidAddedEvent  
-	- **Summary:** 
+	- **Summary:** The bidder has added a new bid offer.
 	- **Datas returned:** 
 		- nftId: *number*
   		- bidder: *string as AccountId32*
@@ -51,7 +51,7 @@ The Auction events
 
 
 - ## BidRemovedEvent  
-	- **Summary:** 
+	- **Summary:** The bidder has removed his bid offer.
 	- **Datas returned:** 
 		- nftId: *number*
   		- bidder: *string as AccountId32*
@@ -60,7 +60,7 @@ The Auction events
 
 
 - ## BalanceClaimedEvent  
-	- **Summary:** 
+	- **Summary:** Bidders that did not win the auction have claimed back their bids balance after an auction ends.
 	- **Datas returned:** 
 		- account: *string as AccountId32*
   		- amount: *string as u128*
