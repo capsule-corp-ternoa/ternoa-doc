@@ -9,7 +9,7 @@ The Rental events
 
 
 - ## ContractCreatedEvent  
-	- **Summary:**  An NFT has been created an unsigned unsubmitted Create-Rent-Contract Transaction Hash.
+	- **Summary:**  A rental contract has been created on the chain for an NFT.
 	- **Datas returned:** 
 		- nftId: *number*
   		- renter: *string*
@@ -29,41 +29,41 @@ The Rental events
 
 
 - ## ContractCanceledEvent  
-	- **Summary:** 
+	- **Summary:** A rental contract that is not running has been cancelled.
 	- **Datas returned:** 
 		- nftId: *number*
 
 
 - ## ContractStartedEvent  
-	- **Summary:** 
+	- **Summary:** A running contract has started.
 	- **Datas returned:** 
 		- nftId: *number*
 		- rentee: *string*
 
 
 - ## ContractRevokedEvent  
-	- **Summary:** 
+	- **Summary:** A running contract has been revoked.
 	- **Datas returned:** 
 		- nftId: *number*
 		- revokedBy: *string*
 
 
 - ## ContractOfferCreatedEvent  
-	- **Summary:** 
+	- **Summary:** An offer has been made for an available contract.
 	- **Datas returned:** 
 		- nftId: *number*
 		- rentee: *string*
 
 
 - ## ContractOfferRetractedEvent  
-	- **Summary:** 
+	- **Summary:** A rent offer has been retracted for manual acceptance contract.
 	- **Datas returned:** 
 		- nftId: *number*
 		- rentee: *string*
 
 
 - ## ContractSubscriptionTermsChangedEvent  
-	- **Summary:** 
+	- **Summary:** The subscription terms has been changed for subscription contracts.
 	- **Datas returned:** 
 		- nftId: *number*
 		- period: *number*
@@ -75,25 +75,25 @@ The Rental events
 
 
 - ## ContractSubscriptionTermsAcceptedEvent  
-	- **Summary:** 
+	- **Summary:** The subscription terms has been accepted for subscription contracts.
 	- **Datas returned:** 
 		- nftId: *number*
 
 
 - ## ContractEndedEvent  
-	- **Summary:** 
+	- **Summary:** A running contract has ended.
 	- **Datas returned:** 
 		- nftId: *number*
 		- revokedBy: *string*
 
 
 - ## ContractSubscriptionPeriodStartedEvent  
-	- **Summary:** 
+	- **Summary:** The subscription period has started for subscription contracts.
 	- **Datas returned:** 
 		- nftId: *number*
 
 
 - ## ContractExpiredEvent  
-	- **Summary:** 
+	- **Summary:** A running contract has expired.
 	- **Datas returned:** 
 		- nftId: *number*
