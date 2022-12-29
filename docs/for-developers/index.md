@@ -35,3 +35,18 @@ Both tools scan through each block and their events to see what happened on the 
 - Indexer deals with specific Ternoa on-chain data based on our designed pallets. For example, all data related to NFTs and collections are neatly recorded in the Indexer.
 
 Indexer uses Dictionary in its `project.yaml` configuration file to drastically improve the overall indexing performance and reduce synchronisation time.
+
+## Articles
+
+Below is a list of tech articles about Ternoa. If you have written a blog post or tutorial that mentions Ternoa, feel free to add it here!
+
+> Any language is allowed
+
+### Maintainer Articles
+
+- [How to batch transactions with Ternoa SDK 🔗](https://dev.to/victorsalomon/how-to-batch-transactions-with-ternoa-sdk-1h64)
+- [Data management for dApps built on Ternoa 🫧](https://dev.to/dontelmo/data-management-for-dapps-built-on-ternoa-114d)
+
+### Community Articles
+
+- [(FR) Découverte de l’indexer Ternoa](https://medium.com/@gege83var/d%C3%A9couverte-de-lindexer-ternoa-1929c1b2846)
