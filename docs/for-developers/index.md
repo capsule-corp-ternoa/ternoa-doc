@@ -15,7 +15,7 @@ import DocCardList from '@theme/DocCardList';
 <DocCardList />
 ```
 
-We will assume that you have read the Ternoa [Builder Tools](/category/builder-tools) section. You are now familiar with the fundamental differences and aims about both tools. The following [FAQ](#faq) answers common questions about which tool to use. The two sections above will provide you with all you need to know to install and use [Ternoa-JS SDK](/category/ternoa-js-sdk), [Indexer](/category/indexer) and Dictionary.
+The sections above will provide you with all you need to know to install and use [Ternoa-JS SDK](/category/javascript-sdk), [Indexer](/category/indexer) and [Dictionary](/for-developers/indexer/dictionary/). The following [FAQ](#faq) answers common questions about which tool to use.
 
 ## FAQ
 
