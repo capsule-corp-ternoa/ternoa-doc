@@ -5,12 +5,14 @@ sidebar_position: 5
 ---
 
   
+
 # 🔐 Secret NFT
 
+  
 
 ## Simple Summary
 
-NFTs represent proof of ownership on the blockchain. However, the media associated with the NFTs are public in nature and lacks any semblance of privacy whatsoever, thus can be viewed by anyone. Ternoa's Secret NFTs are special in this regard as they support encrypted data. Only the current owner of the secret NFT can view and if required, decrypt the secret NFT at any point of time.
+NFTs represent proof of ownership on the blockchain. However, the media associated with the NFTs is public in nature and lacks any semblance of privacy whatsoever, thus can be viewed by anyone. Ternoa's Secret NFTs are special in this regard as they support encrypted data. Only the current owner of the secret NFT can view and if required, decrypt the secret NFT at any point of time.
 
   
 
@@ -62,7 +64,7 @@ The decryption keys are used to retrieve the secret associated with the NFT and 
 
 While Basic NFTs merely represent ownership, Secret NFT's can contain sensitive information and provide the owner with the option to encrypt, decrypt or access that data.
 
-Leveraging TEEs and SSS to bring a confidentiality aspect to the Basic NFT, enables a variety of different use cases across different segments and makes the process more efficient and secure.
+Leveraging TEEs and Shamir Secret Sharing to bring a confidentiality aspect to the Basic NFT, enables a variety of different use cases across different segments and makes the process more efficient and secure.
 
 We refer to the process of encryption of the secret associated with it or conversion of a Basic NFT to a Secret NFT as cyphering.
 
@@ -285,30 +287,6 @@ ___
 </div>
 
 </details>
-
-___
-
-### Encryption, Decryption and Transmission of Data 
-
-- (Ask for Help)
-  
-___
-
-  
-
-### Results (Ask for Help)
-
-#### Add Secret
-
-- boo
-
-- asdf
-
-___
-
-### Encrypted state
-
-The owner of a Secret NFT still call an extrinsic function(s) at any point of time.
 
 ___
 
