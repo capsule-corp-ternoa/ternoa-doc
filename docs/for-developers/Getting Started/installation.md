@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 description: How to install Ternoa SDK locally, and start a dApp in no time.
 ---
 

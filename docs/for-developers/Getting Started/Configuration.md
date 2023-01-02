@@ -1,18 +1,15 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
+description: Start to initialize your dAppwith the Ternoa SDK.
 ---
 
-# SDK Workflows 🏁
+# Configuration
 
-This section will go through the main workflow process to execute a transaction. 
-In just a few steps, you will be able to init the Ternoa SDK API and start using it. 
+This section will go through the main workflow process to execute a transaction. In just a few steps, you will be able to init the Ternoa SDK API and start using it. 
 
-___
+## Initialize the API
 
-## INIT THE API
-
-It's optional, but it's good practice to initialize the API as soon as possible.
-If this call is omitted, the first SDK call will return an exception. The default chain endpoint is: `DEFAULT_CHAIN_ENDPOINT = "wss://alphanet.ternoa.com"`. It can be modified by passing a new endpoint as the first argument to the _initializeApi()_ function.
+It's optional, but it's good practice to initialize the API as soon as possible. If this call is omitted, the first SDK call will return an exception.
  
 ``` js showLineNumbers
 // Import
@@ -28,9 +25,13 @@ async function main() {
 }
 ```
 
-## How to customize the API endpoint?
+:::caution
+The default chain endpoint is: `DEFAULT_CHAIN_ENDPOINT = "wss://alphanet.ternoa.com"`.
+:::
 
-Simply pass the required endpoint to the _initializeApi()_ function.
+## How to customize the chain endpoint?
+
+Simply pass the required endpoint to the `initializeApi()` function.
 
 ``` js showLineNumbers
   ...
@@ -56,8 +57,6 @@ Simply pass the required endpoint to the _initializeApi()_ function.
   ...
 }
 ```
-
-___
 
 ## Let's Create!
 
