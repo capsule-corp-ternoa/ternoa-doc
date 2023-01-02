@@ -1,8 +1,7 @@
 ---
 sidebar_position: 2
+description: How to install Ternoa SDK locally, and start a dApp in no time.
 ---
-
-# Installation
 
 <!-- ## Ternoa-js SDK ⚙️ 
 
@@ -16,13 +15,13 @@ This application aims to be build by the community and is **the perfect entry do
 
 If you look for more global information about Ternoa, check our **[website](https://www.ternoa.network/)**. -->
 
-## Installation ⌨️
+To start easily, we recommend installing npm package `ternoa-js` in your project.
 
-We recommend installing ternoa-js in your project with Node.js using npm: 
 
-```bash
+
+````bash
 npm install ternoa-js
-```
+````
 
 First, run the development server:
 
