@@ -1,23 +1,9 @@
 ---
-sidebar_position: 4
-sidebar_label: For Developers
+sidebar_position: 5
+sidebar_label: FAQ
 ---
 
-# For Developers
-
-## Overview
-
-Let's learn about the most important tools to build on top of Ternoa chain!
-
-```mdx-code-block
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
-```
-
-The sections above will provide you with all you need to know to install and use [Ternoa-JS SDK](/category/javascript-sdk), [Indexer](/category/indexer) and [Dictionary](/for-developers/indexer/dictionary/). The following [FAQ](#faq) answers common questions about which tool to use.
-
-## FAQ
+# FAQ
 
 ### When should I use Ternoa-JS getters or Indexer queries to get on-chain data?
 
