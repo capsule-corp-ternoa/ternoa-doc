@@ -12,8 +12,11 @@ sidebar_position: 5
 
 ## Simple Summary
 
-NFTs represent proof of ownership on the blockchain. However, the media associated with the NFTs is public in nature and lacks any semblance of privacy whatsoever, thus can be viewed by anyone. Ternoa's Secret NFTs are special in this regard as they support encrypted data. Only the current owner of the secret NFT can view and if required, decrypt the secret NFT at any point of time.
+NFTs represent proof of ownership on the blockchain, but (by design) they are neither secret nor private as the media associated with the NFT is public in nature.
 
+Ternoa's Secret NFTs are special in this regard as they support encrypted data. Only the current owner of the secret NFT can view and if required, decrypt the secret NFT at any point of time. This allows an individual to possess True Ownership of their data.
+
+Our Secret NFTs make use of state-of-the-art cryptography to give their owners top notch privacy standards that no other type of NFT can offer. Ternoa's Secret NFTs are designed to be 100% secure and private. Moreover, unlike other crypto assets that promise privacy but fail miserably when it comes practicality, our secret NFTs are designed from the ground up keeping common use cases in mind.
   
 
 ## Abstract
@@ -21,7 +24,6 @@ NFTs represent proof of ownership on the blockchain. However, the media associat
 Secret NFTs require the generation , exchange and storage of cryptographic keys stored in an OffChain enclave running within a Trusted execution environment. The keys to encrypt and decrypt the data associated with the Secret NFTs are generated within the wallet or dApp, and transferred to the TEE enclave in a securely.
 
 The owner of the NFT can request the TEE enclave to retrieve the decryption key associated with the NFT, and use it to view the unencrypted data. Secret NFTs can be transferred peer-to-peer or traded in marketplaces. As an additional layer of security, TEE enclaves are configured in clusters that support Shamir secret sharing (SSS) scheme.
-
   
 
 ## Motivation
@@ -29,6 +31,7 @@ The owner of the NFT can request the TEE enclave to retrieve the decryption key 
 While the blockchain as a public ledger of transactions provides irrefutable proof of ownership of NFTs, it does not meet the data privacy standards needed for many of the NFT use cases we'd wish to implement. Secret NFTs have been designed by Ternoa with this in mind.
 
 Examples of private data that can be stored in NFTs include private images or videos, Digital rights management, private documents with long-term storage such as legal deed containing inheritance details and confidential company details.
+
 ___
 
 ## 🔎 What is a Secret NFT?
@@ -43,6 +46,7 @@ The Secret NFT can be decrypted by the current owner at any point to retrieve th
 
 Secret NFTs can be used to store confidential data, for example - an image, a song, a document, or any other secured secret in encrypted form.
 
+Our Secret NFTs are also very easy to use. They can be transferred and traded just like any other NFT, but they also feature a set of advanced privacy features that will allow you to do things such as hide your asset from prying eyes, transfer seamlessly between wallets etc. These features make it possible for you to maintain complete control over the way in which your data is perceived by others while still being able to interact with them freely.
   
 ### How Does Secret NFTs Work?
 
