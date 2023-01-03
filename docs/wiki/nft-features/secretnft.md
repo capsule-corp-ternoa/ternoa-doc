@@ -18,7 +18,7 @@ NFTs represent proof of ownership on the blockchain. However, the media associat
 
 ## Abstract
 
-Secret NFTs require the generation , exchange and storage of cryptographic keys stored in an OffChain enclave running within a Trusted execution environment. The keys to encrypt and decrypt the data associated with the Secret NFTs are generated within the wallet or dApp, and transferred to the TEE enclave in a secure manner.
+Secret NFTs require the generation , exchange and storage of cryptographic keys stored in an OffChain enclave running within a Trusted execution environment. The keys to encrypt and decrypt the data associated with the Secret NFTs are generated within the wallet or dApp, and transferred to the TEE enclave in a securely.
 
 The owner of the NFT can request the TEE enclave to retrieve the decryption key associated with the NFT, and use it to view the unencrypted data. Secret NFTs can be transferred peer-to-peer or traded in marketplaces. As an additional layer of security, TEE enclaves are configured in clusters that support Shamir secret sharing (SSS) scheme.
 
@@ -26,7 +26,9 @@ The owner of the NFT can request the TEE enclave to retrieve the decryption key 
 
 ## Motivation
 
-While the blockchain as a public ledger of transactions provides irrefutable proof of ownership of NFTs, it does not meet the data privacy standards needed for many of the NFT use cases we'd wish to implement. Secret NFTs have been designed by Ternoa with this in mind. Examples of private data that can be stored in NFTs include private images or videos, Digital rights management, limited edition audio releases by music artists, private documents with long-term storage such as legal deed containing inheritance details and confidential company details.
+While the blockchain as a public ledger of transactions provides irrefutable proof of ownership of NFTs, it does not meet the data privacy standards needed for many of the NFT use cases we'd wish to implement. Secret NFTs have been designed by Ternoa with this in mind.
+
+Examples of private data that can be stored in NFTs include private images or videos, Digital rights management, private documents with long-term storage such as legal deed containing inheritance details and confidential company details.
 ___
 
 ## 🔎 What is a Secret NFT?
@@ -87,7 +89,6 @@ ___
 
 ## ✨ Specification
 
-  
 
 ### Lifecycle states
 
@@ -290,6 +291,7 @@ ___
 
 ___
 
+
 ## 🌊 End-to-end workflow (Ternoa-specific)
 
   
@@ -299,23 +301,23 @@ ___
 
 <div>
 
-<p>The following is the workflow proposed for minting secret NFTs :</p>
+<p>The proposed workflow for minting secret NFTs :</p>
 
 <ol>
 
-<li>1.  User selects a media or custom data for storing privately in a secret NFT.</li>
+<li>1.  User selects a media to be stored privately in a secret NFT.</li>
 
-<li>2.  The Wallet or dApp use the Ternoa SDK to generate a key pair for each NFT..</li>
+<li>2.  The wallet or dApp use the Ternoa SDK to generate a key pair for each NFT..</li>
 
-<li>3.  The public key of the generated keypair is used to encrypt the secret data.</li>
+<li>3.  The public key of the generated key-pair is used to encrypt the secret data.</li>
 
-<li>4.  The encrypted secret data is stored on IPFS and its content id (CID) is recorded.</li>
+<li>4.  The encrypted secret data is stored On-Chain via IPFS and its Content ID (CID) is recorded.</li>
 
-<li>5.  The CID of the encrypted secret data is used to construct the offchain metadata json file</li>
+<li>5.  The CID of the encrypted secret data is used to reconstruct the Off-Chain metadata json file</li>
 
-<li>6.  The offchain metadata file is stored on IPFS, and its content id (CID) is used to trigger an extrinsic on the blockchain to mint a secret NFT.</li>
+<li>6.  The Off-Chain metadata file is stored on IPFS, and its content id (CID) is used to trigger an extrinsic event (txn) on the blockchain to mint a secret NFT.</li>
 
-<li>7.  The id of the new NFT is obtained from the blockchain by the wallet/Dapp using Ternoa SDK.</li>
+<li>7.  The ID of the new NFT is obtained from the blockchain by the wallet/dApp using the [Ternoa SDK](https://github.com/capsule-corp-ternoa/ternoa-js).</li>
 
 <li>8.  The secret key used to encrypt the secret data is split into shares using a threshold secret scheme (such as Shamir Secret Shares).</li>
 
@@ -393,8 +395,7 @@ ___
 *  User can mint a secret NFT directly.
 *  User can convert a Basic NFT to secret NFT.
 *  Owner can decrypt and view the secret associated the secret NFT.
-*  User can list secret NFT in the marketplace.
-*  User can trade secret NFT in any marketplace.
+*  User can list and trade a secret NFT in the secondary marketplace.
 
 ## References
 
