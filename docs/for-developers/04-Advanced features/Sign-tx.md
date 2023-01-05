@@ -5,11 +5,13 @@ sidebar_label: Sign transaction
 
 # Sign a transaction hash
 
-Now we have the txHash, and we can move to the signing step. But before detailing it, it's good to know that _"signing"_ can be directly embedded in the submit function.
+Now we have the `txHash`, and we can move to the signing step. But before detailing it, it's good to know that _"signing"_ can be directly embedded in the [submit function](../04-Advanced%20features/Submit-tx.md).
 
-It means that depending on the submit function you are using (see the last step [below](#)), _signing your tx hash before submitting might not be necessary_. In case you sign manually the tx hash, you will receive a hex value of the signed transaction ready to be sent.
+It means that depending on the submit function you are using (see the last step below), _signing your tx hash before submitting might not be necessary_. In case you sign manually the tx hash, you will receive a hex value of the signed transaction ready to be sent.
 
-The `signTxHex()` function expect **a keyring** that will sign the transaction and the **transaction hash to be signed**. 
+## `signTxHex()` 
+
+This function expect **a keyring** that will sign the transaction and the **transaction hash to be signed**. 
 
 
 ``` js showLineNumbers
