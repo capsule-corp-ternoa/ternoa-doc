@@ -5,23 +5,22 @@ sidebar_label: Create NFT
 
 # Create my first NFT
 
-On Ternoa, to create a NFT you three actions to remind:
+On Ternoa, to create a NFT you have three actions to remind:
 
 - **Create** a tx
 - **Sign** the tx
 - **Submit** the tx
 
-## Simple Mode
-
 Those three actions are simplified in one function: `createNft()`
 
-`createNft()` function requires parameters:
+## `createNft()`
 
+function parameters:
 - **offchainData** metadatas*
 - **royalty** (in %)
 - **collectionId** if you want this NFT to belong to a collection
 - **isSoulbound** status. Boolean (false/true)
-- **vkeyring** that will be used to sign and submit the transaction
+- **keyring** that will be used to sign and submit the transaction
 - **waitUntil** callback parameter, to define at which point we want to get the results of the transaction execution.
 
 Here a snippet example:
