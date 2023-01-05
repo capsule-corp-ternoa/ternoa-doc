@@ -43,6 +43,6 @@ Example to specify a version: `npm i ternoa-js@1.2.0-rc0`
 
 ___
 
-## Let's create NFTs!
+## Let's configure
 
 Now the SDK is installed, you are ready to go. The following section will cover the basic SDK workflow to init the api and start the transaction process.
