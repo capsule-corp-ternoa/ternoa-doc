@@ -16,8 +16,11 @@ Those three actions are simplified in one function: `createNft()`
 ## `createNft()`
 
 function parameters:
-- **offchainData** metadatas*
-- **royalty** (in %)
+- **offchainData** metadatas
+:::info
+In most cases this will be an IPFS hash that points to a JSON file which contains fields as "name", "description" or "image". In other cases this can be a link to a either a static or a dynamic file, plain text or a small JSON string._ In the example below, we just pass a string.
+:::
+- **royalty**: pourcentage received by the creator when the NFT is sold.
 - **collectionId** if you want this NFT to belong to a collection
 - **isSoulbound** status. Boolean (false/true)
 - **keyring** that will be used to sign and submit the transaction
@@ -49,7 +52,3 @@ const createMyFirstNFT = async () => {
   }
 }
 ```
-
-:::info
-**offchainData** metadatas*: In most cases this will be an IPFS hash that points to a JSON file which contains fields as "name", "description" or "image". In other cases this can be a link to a either a static or a dynamic file, plain text or a small JSON string._ In the example below, we just pass a string.
-:::

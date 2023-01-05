@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+title: Introduction
 description: Welcome to the Ternoa developer documentation.
 ---
 

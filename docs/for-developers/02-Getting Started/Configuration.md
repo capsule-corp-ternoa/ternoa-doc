@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-description: Start to initialize your dAppwith the Ternoa SDK.
+description: Start to initialize your dApp with the Ternoa SDK.
 ---
 
 # Configuration
