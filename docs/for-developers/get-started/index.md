@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-sidebar_label: Getting started
+sidebar_label: Get started
 ---
 
 # Getting Started
 
 ## Overview
 
-<!-- Let's learn about the most important tools to build on top of Ternoa chain! -->
+If you are ready for developing on our mainet/alphanet networks please check out following pages:
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
