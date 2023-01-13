@@ -45,7 +45,7 @@ The Ternoa chain has two networks based on Substrate: Mainnet and Alphanet.
 
 ## Glossary
 
-- **CAPS**: Ternoa chain tokens
+- **CAPS**: Ternoa chain token. [More details about CAPS](https://www.ternoa.network/token)
 - **dApp**: Decentralized application
 - **Substrate**: Blockchain framework used by Ternoa.
 - **FRAME**: Custom chain module describing a feature
