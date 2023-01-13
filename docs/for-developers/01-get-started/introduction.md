@@ -11,9 +11,9 @@ Welcome to the builder section 👨‍💻
 
 Ternoa provides a collection of tools to make web3 projects development easier and faster:
 
-- [**Ternoa FRAMEs**](https://github.com/capsule-corp-ternoa/ternoa-pallets) - Custom substrate FRAMEs to create and manage utility NFTs.
 - [**Ternoa-JS**](https://www.npmjs.com/package/ternoa-js) - An isomorphic javascript library integrating the custom Ternoa FRAMEs to interact with the chain in a seamless experience.
 - [**Ternoa Indexer**](https://indexer-mainnet.ternoa.dev) - A graphql queryable database to get on-chain data.
+- [**Ternoa FRAMEs**](https://github.com/capsule-corp-ternoa/ternoa-pallets) - Custom substrate FRAMEs to create and manage utility NFTs.
 
 The Ternoa chain has two networks based on Substrate: Mainnet and Alphanet.
 
