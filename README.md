@@ -125,24 +125,6 @@ For your first examples you can check our [CookBook](https://docs.ternoa.network
 
 **Time Capsule dApp** is our most relevant use case on the Ternoa blockchain, check out [https://time-capsule.xyz/](https://time-capsule.xyz/)
 
-
-### Docmap
-
-- [ ] [Ternoa Wiki](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/main/docs/intro.md#-ternoa-wiki)
-    - [ ] [Core Blockchain](https://docs.ternoa.network/category/core-blockchain)
-    - [ ] [Offchain Components](https://docs.ternoa.network/category/offchain-components)
-    - [ ] [TEE Enclaves](https://docs.ternoa.network/category/tee-enclaves)
-    - [ ] [Ternoa NFT Primitives](https://docs.ternoa.network/category/nft-features)
-    - [ ] [Staking](https://docs.ternoa.network/category/staking)
-- [ ] [For Developers](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/main/docs/intro.md#-for-developers)
-    - [ ] [Ternoa-JS SDK](https://docs.ternoa.network/category/ternoa-js-sdk)
-    - [ ] [Indexer](https://docs.ternoa.network/category/indexer)
-- [ ] [For Node Operators](https://github.com/capsule-corp-ternoa/ternoa-doc/blob/main/docs/intro.md#-for-node-operators)
-
-See the [open issues](https://github.com/capsule-corp-ternoa/ternoa-doc/issues) for a full list of proposed features (and known issues).
-
-
-
 ### Contributing
 
 Contributions are what make the Ternoa community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
