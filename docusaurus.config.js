@@ -75,12 +75,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      /*algolia: {
-        appId: '', 
-        apiKey: '', 
-        indexName: '',
+      algolia: {
+        appId: 'FOQX5V6698', 
+        apiKey: 'e1d6e170addd504d0098660fa261dd2e', 
+        indexName: 'prod_doc_search',
         contextualSearch: true,
-      },*/
+      },
       /*announcementBar: {
         id: 'annoucementBar-0',
         content:
@@ -100,7 +100,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'welcome',
             position: 'left',
             label: 'Docs',
           },
