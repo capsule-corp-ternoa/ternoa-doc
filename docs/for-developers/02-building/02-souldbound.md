@@ -1,12 +1,13 @@
 ---
-sidebar_label: Create an SBT
+sidebar_position: 2
+sidebar_label: Create a SBT
 ---
 
-# 
+# Create a Soulbound Token
 
-## Overview
-
-Here you will find an example on how to create a soulbound token (SBT) NFT.
+:::info
+A soulbound token (SBT) is a unique and indivisible Basic NFT that is bound to a specific account and **cannot be traded or transferred** to another account.
+:::
 
 ## Pre-requisites
 
