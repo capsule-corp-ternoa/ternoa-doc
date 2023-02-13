@@ -12,7 +12,7 @@ If you did not looked yet at the needed prerequisites before starting to code (a
 ## How to create an NFT on-chain? 
 
 ### Code Snippet
-This function creates an NFT on the Ternoa chain. It returns an object promise containing the NFTCreatedEvent provided by the Ternoa blochain.
+This function creates an NFT on the Ternoa chain. It returns an object promise containing the NFTCreatedEvent provided by the Ternoa blockchain.
 Use your own account by updating the //TernoaTestAccount with your account seed when retrieving the keyring from the example below.
 
 ```typescript showLineNumbers
@@ -56,10 +56,10 @@ The response provided from the blockchain event includes all the informations be
 ## How to retrieve an NFT using our Indexer? 
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
-You can query data for some specific entities (NFT, Collection, Markeplace(...)) using graphql.
+You can query data for some specific entities (NFT, Collection, Marketplace(...)) using graphql.
 *In this exemple, we use the graphql-request library.*
 
-You first need to prepare a stringified query to get NFT data from a specific NFT id, as we did in the uery(id) function. 
+You first need to prepare a stringified query to get NFT data from a specific NFT id, as we did in the query(id) function. 
 Do not hesitate to adapt the information you require in your query. When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query.
 
 
