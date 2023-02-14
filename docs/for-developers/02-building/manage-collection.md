@@ -163,6 +163,8 @@ type CollectionType = {
 This function limits a collection of NFT on the Ternoa chain. It returns an object promise containing the CollectionLimitedEvent provided by the Ternoa blockchain.
 Use your own account by updating the //TernoaTestAccount with your account seed when retrieving the keyring from the example below. **Replace the COLLECTION_ID** with the one to limit.
 
+**Note:** The collection limit can only be set once. Either at collection creation or using the extrinsic below. 
+
 ```typescript showLineNumbers
 import { limitCollection, initializeApi, getKeyringFromSeed, WaitUntil} from "ternoa-js";
 
