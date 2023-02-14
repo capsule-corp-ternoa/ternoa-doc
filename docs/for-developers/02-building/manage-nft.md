@@ -5,7 +5,7 @@ sidebar_label: Manage your NFTs
 
 # Manage your NFTs
 
-Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also covers many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalty without using any smart contracts.
+Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalty without using any smart contracts.
 
 If you did not looked yet at the needed prerequisites before starting to code (a ternoa account, claimed some test caps, and installed the ternoa-js api with `npm install ternoa-js`), please look at the [Get Started]("") section. We also strongly recommand you to look at the good practice [section]("") to learn more about main concept you will see in the code below (**API initialization, Keyring** (...))
 
@@ -67,7 +67,6 @@ const delegateNFT = async () => {
 	}
 };
 ```
-
 ## How to retrieve a delegated/undelegated NFT using our Indexer? 
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
@@ -114,8 +113,7 @@ type NftType = {
     delegatee: string | null;
 };
 ```
-
-## How to Burn an NFT? 
+## How to burn an NFT? 
 
 This function burns an NFT from the Ternoa chain. It returns an object promise containing the NFTBurnedEvent provided by the Ternoa blockchain.
 Use your own account by updating the //TernoaTestAccount with your account seed when retrieving the keyring from the example below. **Replace the NFT_ID variable** with the ID you want to burn.
@@ -147,7 +145,6 @@ The response provided from the blockchain event includes all the informations be
 ```typescript
 `nftId`: ID of the burnt NFT.
 ```
-
 ## How to retrieve a burnt NFT using our Indexer? 
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
@@ -226,7 +223,6 @@ The response provided from the blockchain event includes all the informations be
 `nftId`: ID of the updated NFT.
 `royalty`: The new royalty amount as a number.
 ```
-
 ## How to retrieve the NFT royalty using our Indexer? 
 
 Ternoa indexer is **a record of the Ternoa Chain data.**

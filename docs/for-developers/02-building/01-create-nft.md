@@ -5,7 +5,7 @@ sidebar_label: Create an NFT
 
 # Create an NFT
 
-Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also covers many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalties without using any smart contracts.
+Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalties without using any smart contracts.
 
 If you did not looked yet at the needed prerequisites before starting to code (a ternoa account, claimed some test caps, and installed the ternoa-js api with `npm install ternoa-js`), please look at the [Get Started]("") section. We also strongly recommand you to look at the good practice [section]("") to learn more about main concept you will see in the code below (**API initialization, Keyring** (...))
 
