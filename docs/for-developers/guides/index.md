@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-sidebar_label: Building
+sidebar_label: Guides
 ---
 
-# Building
+# Guides
 
 ## Overview
 

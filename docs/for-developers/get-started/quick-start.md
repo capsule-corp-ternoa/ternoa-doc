@@ -3,8 +3,6 @@ sidebar_position: 3
 sidebar_label: Quickstart NodeJS
 ---
 
-import CodeBlock from "@theme/CodeBlock";
-
 # Quickstart NodeJS
 
 ## Introduction
@@ -19,7 +17,7 @@ This tutorial will teach you how to set up a server-side dApp that can **mint, r
 
 Before getting started, make sure you have the following ready:
 
-1. Create a [Ternoa account](/for-developers/get-started/create-account) with Alphanet CAPS
+1. Create a [Ternoa account](/for-developers/get-started/create-account) with [Alphanet CAPS](/for-developers/get-started/create-account#step-2-get-some-free-test-caps-tokens)
 2. Install and set up your editor of choice (we will use Visual Studio Code [VSC] in this tutorial)
 3. Install [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
 
@@ -27,16 +25,16 @@ Before getting started, make sure you have the following ready:
 
 The easiest way to quickstart jumping into Ternoa SDK and start building on the chain, is to download the starter repository [here](https://github.com/capsule-corp-ternoa/ternoa-sdk-starter), and start our tutorial:
 
-<CodeBlock language="shell" showLineNumbers>
+```bash showLineNumbers
   git clone https://github.com/capsule-corp-ternoa/ternoa-sdk-starter.git
   cd ternoa-sdk-starter
-</CodeBlock>
+```
 
 We already installed the Ternoa-JS, you can directly run the following command:
 
-<CodeBlock language="shell" showLineNumbers>
+```bash showLineNumbers
   npm install
-</CodeBlock>
+```
 
 In the `src/basics/` folder we will find the following files:
 
@@ -48,9 +46,9 @@ In the `src/basics/` folder we will find the following files:
 
 Run the following command to execute each script once you have read carefully the comments (replace FILENAME with the correct file name):
 
-<CodeBlock language="shell" showLineNumbers>
+```bash showLineNumbers
   npm run start src/basics/FILENAME.ts
-</CodeBlock>
+```
 
 Wow ! One single line of code to create an NFT ? One single line of code to list an NFT on a Marketplace? Amazing right?
 Let's go ! You are now ready to start building your own dApp using our toolkit.
