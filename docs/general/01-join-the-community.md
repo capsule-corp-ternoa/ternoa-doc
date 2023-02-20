@@ -3,7 +3,7 @@ sidebar_label: "Join the Community"
 sidebar_position: 1
 ---
 
-# Join the Community
+# Join the Ternoa Community
 
   + Connect with the community and ask questions: **[Discord](https://discord.com/invite/EbqNHbZt9x)** | **[Telegram](https://t.me/ternoa)**
   + Get help, request features and report bugs: **[GitHub Discussions](https://github.com/capsule-corp-ternoa)**
