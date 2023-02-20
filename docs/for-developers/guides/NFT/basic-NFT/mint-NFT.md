@@ -30,7 +30,7 @@ const mintNFT = async () => {
   try {
     const keyring = await getKeyringFromSeed("//TernoaTestAccount");
     const nftData = await createNft(
-      "hello world",
+      "IPFS_CID",
       0,
       undefined,
       false,

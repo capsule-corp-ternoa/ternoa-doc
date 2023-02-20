@@ -28,6 +28,7 @@ The Ternoa chain has two networks based on Substrate: Mainnet and Alphanet.
 | Indexer         | https://indexer-mainnet.ternoa.dev    |
 | Dictionary      | https://dictionary-mainnet.ternoa.dev |
 | Explorer        | https://explorer.ternoa.com           |
+| IPFS node       | https://ipfs-mainnet.trnnfr.com       |
 
 </TabItem>
 
@@ -40,6 +41,7 @@ The Ternoa chain has two networks based on Substrate: Mainnet and Alphanet.
 | Indexer         | https://indexer-alphanet.ternoa.dev    |
 | Dictionary      | https://dictionary-alphanet.ternoa.dev |
 | Explorer        | https://explorer-alphanet.ternoa.dev   |
+| IPFS node       | https://ipfs-alphanet.trnnfr.com       |
 
 </TabItem>
 </Tabs>
