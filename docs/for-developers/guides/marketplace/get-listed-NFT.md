@@ -10,7 +10,9 @@ You can query data for some specific entities (NFT, Collection, Marketplace(...)
 _In this exemple, we use the graphql-request library._
 
 You first need to prepare a stringified query to get NFT data from a specific marketplace id, as we did in the query(id) function.
-Do not hesitate to adapt the information you require in your query. When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the NFT is listed for sale, the **marketplaceId** field should not be null, **isListed** should be true and a **timestampList** should be filled.
+Do not hesitate to adapt the information you require in your query. You can check all the fields queryable for the [NftEntity](/for-developers/guides/NFT/basic-NFT/get-NFT#step-1-nftentity-query-preparation).
+
+When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the NFT is listed for sale, the **marketplaceId** field should not be null, **isListed** should be true and a **timestampList** should be filled.
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";

@@ -5,4 +5,6 @@ sidebar_label: NFT
 
 # NFT
 
-Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalties without using any smart contracts.
+NFTs represent proof of ownership of a digital or physical asset, on the blockchain. NFTs can represent digital assets such as images, videos, audio files, documents or simply some data. NFTs can also act as proxies for physical assets such as real estate, consumer or industrial goods, or precious metals.
+
+The media associated with NFTs, and other associated metadata, are stored offchain in a decentralised storage network such as IPFS, but the link to this metadata is stored onchain as part of the NFT.

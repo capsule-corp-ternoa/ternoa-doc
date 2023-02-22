@@ -12,7 +12,7 @@ Before getting started, make sure you have the following ready:
 1. Create a [Ternoa account](/for-developers/get-started/create-account) with [Alphanet CAPS](/for-developers/get-started/create-account#step-2-get-some-free-test-caps-tokens)
 2. Install and set up your editor of choice (we will use Visual Studio Code [VSC] in this tutorial)
 3. Install [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
-4. [Initialize Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-2-initialize-ternoa-js)
+4. [Install & initialize Ternoa-JS](/for-developers/get-started/install-ternoa-js)
 
 ## Create an auction on a marketplace using Ternoa-JS
 
@@ -60,7 +60,7 @@ const listAuctionNFT = async () => {
 
 ### The expected params
 
-```typescript
+```markdown
 `nftId`: The ID of the NFT.
 `marketplaceId`: The ID of the marketplace where the auction will take place.
 `startBlock`: The ID of the block at which the auction starts.
@@ -75,7 +75,7 @@ const listAuctionNFT = async () => {
 
 The response provided from the blockchain event includes all the informations below according to the params provided when buying an NFT.
 
-```typescript
+```markdown
 `nftId`: NFT id auctioned.
 `marketplaceId`: Marketplace id where the NFT was listed for auction.
 `creator`: The auction creator.

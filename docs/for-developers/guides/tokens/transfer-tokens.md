@@ -14,7 +14,7 @@ Before getting started, make sure you have the following ready:
 1. Create a [Ternoa account](/for-developers/get-started/create-account) with [Alphanet CAPS](/for-developers/get-started/create-account#step-2-get-some-free-test-caps-tokens)
 2. Install and set up your editor of choice (we will use Visual Studio Code [VSC] in this tutorial)
 3. Install [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
-4. [Initialize Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-2-initialize-ternoa-js)
+4. [Install & initialize Ternoa-JS](/for-developers/get-started/install-ternoa-js)
 
 ## How to transfer CAPS to an address
 

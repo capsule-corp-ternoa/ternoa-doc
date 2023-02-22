@@ -14,7 +14,7 @@ Before getting started, make sure you have the following ready:
 1. Create a [Ternoa account](/for-developers/get-started/create-account) with [Alphanet CAPS](/for-developers/get-started/create-account#step-2-get-some-free-test-caps-tokens)
 2. Install and set up your editor of choice (we will use Visual Studio Code [VSC] in this tutorial)
 3. Install [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
-4. [Initialize Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-2-initialize-ternoa-js)
+4. [Install & initialize Ternoa-JS](/for-developers/get-started/install-ternoa-js)
 
 ## How to delegate an NFT using Ternoa-JS
 
@@ -50,10 +50,10 @@ const delegateNFT = async () => {
 
 ### The expected params
 
-```typescript
+```markdown
 `id`: The ID of the NFT.
 `recipient`: Destination account. If set to undefined this functions acts as a way to undelegate a delegated NFT.
-`keyring`:  the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
+`keyring`: the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
 `waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
@@ -61,7 +61,7 @@ const delegateNFT = async () => {
 
 The response provided from the blockchain event includes all the informations below according to the params provided when delegating/undelegating the NFT.
 
-```typescript
+```markdown
 `nftId`: ID of the delegated/undelegated NFT.
 `recipient`: The address of the delegatee as string or null when the NFT is undelegated.
 ```
@@ -104,7 +104,9 @@ You can query data for some specific entities (NFT, Collection, Marketplace(...)
 _In this exemple, we use the graphql-request library._
 
 You first need to prepare a stringified query to get NFT data from a specific NFT id, as we did in the query(id) function.
-Do not hesitate to adapt the information you require in your query. When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the NFT is delegated, just add the `**isDelegated**` and `**delegatee**`fields in the list.
+Do not hesitate to adapt the information you require in your query. You can check all the fields queryable for the [NftEntity](/for-developers/guides/NFT/basic-NFT/get-NFT#step-1-nftentity-query-preparation).
+
+When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the NFT is delegated, just add the `**isDelegated**` and `**delegatee**`fields in the list.
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
