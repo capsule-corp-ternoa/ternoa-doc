@@ -5,9 +5,7 @@ sidebar_label: For Developers
 
 # For Developers
 
-## Overview
-
-Let's learn about the most important tools to build on top of Ternoa chain!
+This section explains how to install the required tools to build a decentralized javascript application (dApp) on top of Ternoa chain.
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
