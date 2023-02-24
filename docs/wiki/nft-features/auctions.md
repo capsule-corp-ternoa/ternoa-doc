@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# 📈 Auctions
+# Auctions
 
-## 💡 What is an Auction ? 
+## What is an Auction ? 
 Auctions can be an exciting way to sell an NFT. An auction is a type of sale where the NFT seller sets a minimum price and a time period. Buyers can place bids on the amount they are willing to pay for the NFT as long as they are above the minimum price. At the end of the time period, the NFT is sold to the highest bidder.
 
 ## Abstract
@@ -17,7 +17,7 @@ And for users, who see adherence to a decentralized and disintermediated process
 
 ___
 
-## ✨ How does English auction work?
+## How does English auction work?
 
 :::info
 **English Auction or Highest bid (where the highest bid wins at the end)**

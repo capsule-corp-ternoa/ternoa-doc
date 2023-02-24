@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# 🖼️ Marketplace 
+# Marketplace 
 
 ## Simple Summary
 
@@ -12,11 +12,11 @@ NFTs represent proof of ownership on the blockchain. Creators need a way to grou
 
 In the objective of seeling and buying NFTs, we created the marketplace entity. Each user can create his own marketplace and define rules that apply to who can put on sale, what is the listing (putting on sale) cost and what is the commission fee. **This document descrive the motivation and specification of the marketplace entity.**
 
-## 🎯 Motivation
+## Motivation
 
 The main objective of marketplaces is to have a support / media to exchange NFTs other than plain P2P transfer. Having marketplaces allows user to define price for their NFTs. **Those NFTs can be art, gaming items, tickets or any asset that can be represneted by a digital entity.**
 
-## 🌊 Workflows
+## Workflows
 
 <details className="toggle">
   <summary>Creating a marketplace</summary>

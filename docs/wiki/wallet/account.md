@@ -2,8 +2,8 @@
 sidebar_position: 4
 ---
 # Account
-## Wallet Address
-You can find your **Ternoa Wallet Address** in the **Profile** area of the app.
+## Settings & Features
+You can find your **Ternoa Wallet Address** in the **Profile**
 ![img-desktop](./wallet-address-1.png)
 ___
 ## Change Password
@@ -21,6 +21,6 @@ From your **Address Book**, you can add and review recent contacts, and observe 
 ![img-desktop](./contact-2.png)
 ___
 
-### Observe Contacts
+## Observe Contacts
 ![img-desktop](./contact-3.png)
 ![img-desktop](./contact-4.png)

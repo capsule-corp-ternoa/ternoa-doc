@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# 🔰 Collections
+# Collections
 
-## 🤔 What is an NFT collection?
+## What is an NFT collection?
 
 These digital items are distinguishable from one another by a unique number. That number or serial number for NFTs is a token ID, which is stored on the blockchain. The serial number works in the same way as a barcode and the code corresponds to the information about that particular item: how it looks, its distinguishing attributes, the artist or organization that made it, and more.
 
@@ -15,7 +15,7 @@ NFTs represent proof of ownership on the blockchain. Creators need a way to grou
 In EVM / Smart Contract based, collection are represented by smart contract. It implies some advantages and drawback. "Buyers" need to mint their NFT themselves, each contract will have its own set of rules, the smart contract can follow or not some standards.
 At Ternoa, you can create and be the owner of a collection. When minting NFTs, you can specify this collection and put it on sale. The NFTs will always be part of this collection and it's origin / grouping can be ensured over time. Collections will always follow the same set of rules.
 
-## 🎯 Objective 
+## Objective 
 
 Collections are used to represent all the assets in a single (or multiple) contract addresses and help users group items from the same creator. They have one or more owners and are typically associated with important metadata such as creator royalties and descriptions.
 
@@ -25,7 +25,7 @@ The main objective of collections are to give a way to group NFTs. Grouping can 
 
 Ternoa Improvment proposal 101 is the technical implementation specifications for the Collection feature on Ternoa network. Find all details on: [TIP-101](https://github.com/capsule-corp-ternoa/ternoa-proposals/blob/9685c1778d4bb4d5470d4f23bea04db6c62f9705/TIPs/tip-101-Collection.md)
 
-## 💾 Ternoa Collection Metadata
+## Ternoa Collection Metadata
 
 ###  🔢 On-Chain Metadata - Collection
 
@@ -37,7 +37,7 @@ Ternoa Improvment proposal 101 is the technical implementation specifications fo
 | `limit`    | Limit defines the total number of NFTs a collection can have. Limit is optional at the time of collection creation and thus can only be defined once.    | M(once), if limit is set or the collection is closed → I
 | `is_closed`    | 	Creator of the collection cannot add more NFTs to the collection if marked as closed. At the time of the collection creation this parameter is set to default: false. However, creator can chose to close the collection at any point of time after the collection has been created.       | M(once), if the collection is closed → I
 
-###  🔢 Off-Chain Metadata - Collection - Not Enforceable
+###  Off-Chain Metadata - Collection - Not Enforceable
 
 Collection, like NFTs, have their own metadata that are store in json in either IPFS, a private server, any other type of storage. Metadatas cannot be enforced but we suggest this format:
 

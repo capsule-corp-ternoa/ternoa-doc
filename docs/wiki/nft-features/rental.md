@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# 🤝 Rental
+# Rental
 
 ## Simple Summary
 NFTs represent proof of ownership on the blockchain. **Renting is a powerful tool for the NFT owners to make more out of their NFTs.** An NFT rental agreement is an on chain rental contract, between the owner of an NFT and a renter (usually called rentee) who will have a temporary access to the NFT properties, against a rent fee (an amount or an NFT).
@@ -13,7 +13,7 @@ Rental Contract are a way to spread the use of an NFT and earning money without 
 ## Motivation
 Rental contracts have so many usecases in the real world that could be adapted to the NFTs. While the main purpose of renting an NFT is to easily empower any projects to get the best utility of an NFT by spreading its features to everyone, it is also a great way to cover many real world sucessful usecases. And if rental NFT are already popular in the gaming industry, the tractions it gains in many other filed is truely relevant to our web 3 ecosystem (events-tickets, music, sport, subscription...).
 
-## ✨ Specification
+## Specification
 
 ### Lifecycle states
 

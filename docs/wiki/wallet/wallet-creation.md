@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Create your Wallet
+# Wallet Creation
 
 ## How to create your Ternoa Wallet
 
