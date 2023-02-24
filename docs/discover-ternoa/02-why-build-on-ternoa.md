@@ -55,7 +55,7 @@ Using these you could for example build:
 There are already various companies and individuals building on Ternoa. Here just a few examples to give you an idea of what's possible. 
 
 
-**MafiaFoot:**[https://mafiafoot.com/] MafiaFoot is an engaging mobile fantasy football game where players can build their football empire. It's based on collectible NFT cards representing players ranging from common to legendary. As gamers collect their team, and play against other teams, they gain the native token of the game $MFF. The NFT drops of the MafiaFoot team all sold out within minutes, and their community already counts over 20,000 football enthusiasts, all powered by Ternoa.
+**[MafiaFoot](https://mafiafoot.com/)** MafiaFoot is an engaging mobile fantasy football game where players can build their football empire. It's based on collectible NFT cards representing players ranging from common to legendary. As gamers collect their team, and play against other teams, they gain the native token of the game $MFF. The NFT drops of the MafiaFoot team all sold out within minutes, and their community already counts over 20,000 football enthusiasts, all powered by Ternoa.
 
 **Tapnation:** Tapnation is a casual games developer and studio that has reached over 800 million downloads since its launch. They've partnered with Ternoa to start exploring blockchain gaming, and make Ternoa's native token $CAPS available to players in their games. 
 
