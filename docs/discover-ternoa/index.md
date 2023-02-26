@@ -6,7 +6,7 @@ sidebar_label: Discover Ternoa
 
 # What is Ternoa
 
-[Ternoa](https://www.ternoa.network/) is a next-gen blockchain NFT framework enabling everyone to build web3. It empowers anyone to start their first NFT project without having to learn a new language. Users benefit from access to advanced NFT use cases that go beyond JPEGs. With Ternoa you can share secret NFTs, rent your NFTs for passive income, and more. 
+[Ternoa](https://www.ternoa.network/) is a next-gen layer 1 blockchain NFT framework enabling everyone to build web3. It empowers anyone to start their first NFT project without having to learn a new language. Users benefit from access to advanced NFT use cases that go beyond JPEGs. With Ternoa you can share secret NFTs, rent your NFTs for passive income, and more. 
 
 Read on to learn more in detail about what Ternoa offers. 
 
@@ -15,7 +15,6 @@ Read on to learn more in detail about what Ternoa offers.
 
 Unlike general-purpose blockchains like Ethereum, Ternoa focuses on providing the best experience for users and developers to leverage NFTs. Our infrastructure empowers devs and provides a utility that natively doesn't exist on other chains. 
 
-- Interoperability with the Polkadot ecosystem due to the use of the Substrate Framework (below for more) 
 - Advanced NFTs: secret NFTs, rental NFTs, soulbond tokens, dynamic NFTs, and more 
 - Low fees
 - High scalability 
@@ -42,7 +41,7 @@ On Polkadot, various parachains work together, connected through the so-called r
 
 The relay chain acts as a hub coordinating communications between chains and ensuring the security and validity of transactions across the network. It's like a server that facilitates communications in traditional setups, but unlike a server, it's decentralized and run by validators worldwide. 
 
-Ternoa uses the same framework as Polkadot to ensure interoperability, scalability, and a smooth transition to securing a parachain slot. 
+Ternoa uses the same framework as Polkadot to ensure scalability and a smooth transition to securing a parachain slot. 
 
 
 
