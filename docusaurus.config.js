@@ -98,12 +98,12 @@ const config = {
           width: 40,
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'welcome',
-            position: 'left',
-            label: 'Docs',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'welcome',
+          //   position: 'left',
+          //   label: 'Docs',
+          // },
           {
             href: 'https://github.com/capsule-corp-ternoa',
             className: 'pseudo-icon github-icon',
