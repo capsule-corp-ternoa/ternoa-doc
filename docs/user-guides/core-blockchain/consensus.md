@@ -5,33 +5,25 @@ sidebar_position: 1
 ---
 
 ## What is Consensus in Blockchain?
-
-Blockchain is a distributed decentralized network that provides immutability, privacy, security, and transparency. There is no central authority present to validate and verify the transactions, yet every transaction in the Blockchain is considered to be completely secured and verified. This is possible only because of the presence of the consensus protocol which is a core part of any Blockchain network. A consensus algorithm is a procedure through which all the peers of the Blockchain network reach a common agreement about the present state of the distributed ledger. In this way, consensus algorithms achieve reliability in the Blockchain network and establish trust between unknown peers in a distributed computing environment. Essentially, the consensus protocol makes sure that every new block that is added to the Blockchain is the one and only version of the truth that is agreed upon by all the nodes in the Blockchain. The Blockchain consensus protocol consists of some specific objectives such as coming to an agreement, collaboration, co-operation, equal rights to every node, and mandatory participation of each node in the consensus process. Thus, a consensus algorithm aims at finding a common agreement that is a win for the entire network.
+Blockchain is a secure and decentralized network that relies on a consensus protocol to ensure the accuracy and reliability of its transactions. This protocol enables all nodes in the network to agree on the current state of the ledger, thereby establishing trust between unknown peers in a distributed computing environment. The consensus algorithm helps achieve reliability, collaboration, co-operation, equal rights for every node, and mandatory participation from all nodes in the consensus process. This creates a single version of the truth that is agreed upon by all nodes in the network, making it a win for everyone involved.
 
 ## Why do we need Consensus?
 
-As mentioned above, consensus is a method for coming to agreement over a shared state. In order for the state of the
-blockchain to continue to build and move forward, all nodes in the network must agree and come to
-consensus. It is the way that the nodes in a decentralized network are able to stay synced with each
-other. Without consensus for the decentralized network of nodes in a blockchain, there is no way to
-ensure that the state one node believes is true will be shared by the other nodes. Consensus aims to
-provide the _objective_ view of the state amid participants who each have their own _subjective_
-views of the network. It is the process by which these nodes communicate and come to agreement, and
-are able to build new blocks.
+Consensus is a crucial method for achieving agreement and synchronization among nodes in a decentralized blockchain network. It ensures that all nodes agree on the shared state and allows for the building and progression of the blockchain. Consensus aims to provide an objective view of the state by reconciling the subjective views of the participants. This process enables the nodes to communicate, reach agreement, and build new blocks.
 
-## Widely known consensus : PoW, PoS
+## Widely known consensus
 
 ### Proof of Work(PoW)
 
-This consensus algorithm is used to select a miner for the next block generation. Bitcoin uses this PoW consensus algorithm. The central idea behind this algorithm is to solve a complex mathematical puzzle and easily give out a solution. This mathematical puzzle requires a lot of computational power and thus, the node who solves the puzzle as soon as possible gets to mine the next block. 
+This consensus algorithm used by Bitcoin to select a miner for the next block generation. The algorithm involves solving a complex mathematical puzzle that requires significant computational power. The node that solves the puzzle first is rewarded with the opportunity to mine the next block.
 
 ### Proof of Stake(PoS)
 
 This is the most common alternative to PoW. Ethereum has shifted from PoW to PoS consensus. In this type of consensus algorithm, instead of investing in expensive hardware to solve a complex puzzle, validators invest in the coins of the system by locking up some of their coins as stake. After that, all the validators will start validating the blocks. Validators will validate blocks by placing a bet on it if they discover a block which they think can be added to the chain. Based on the actual blocks added in the Blockchain, all the validators get a reward proportionate to their bets and their stake increase accordingly. In the end, a validator is chosen to generate a new block based on their economic stake in the network. Thus, PoS encourages validators through an incentive mechanism to reach to an agreement.
 
-## Ternoa's Consensus : NPoS
+## Ternoa's Consensus
 
-### Nominated Proof of Stake
+### Nominated Proof of Stake (NPoS)
 
 In traditional PoS systems, block production participation is dependent on token holdings as opposed
 to computational power. While PoS developers usually have a proponent for equitable participation in

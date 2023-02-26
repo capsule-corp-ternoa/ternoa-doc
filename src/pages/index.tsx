@@ -18,7 +18,7 @@ function HomepageHeader() {
             <div>
               <Link
                 className={clsx('button button--outline button--primary',styles.linkButton)}
-                to="/welcome"> 
+                to="/discover-ternoa"> 
                 Get Started
               </Link>
             </div>

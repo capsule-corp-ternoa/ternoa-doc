@@ -29,4 +29,4 @@ TEEs encrypt the enclaves and then decrypt them on the fly, but only within the 
 
 This capability in today’s processors is called Secure Execution Environment for AMD, Software Guard Extension for Intel and Secure Execution for IBM. 
 
-Certified master nodes on our network will take advantage of the inbuilt capabilities of these processors to establish TEEs. This, in turn sheild the nodes from malicious code. It offers a secure environment within the processor which protects both the confidentiallity and Integrity of the Data inside of it which is especially important for zero trust networks like ternoa. We've named them **Secret nodes** due to obvious reasons 😅 . 
+Certified master nodes on our network will take advantage of the inbuilt capabilities of these processors to establish TEEs. This, in turn sheild the nodes from malicious code. It offers a secure environment within the processor which protects both the confidentiallity and Integrity of the Data inside of it which is especially important for zero trust networks like ternoa. We've named them **Secret nodes** due to obvious reasons. 
