@@ -6,8 +6,8 @@ sidebar_position: 1
 
 Some aggregation plugins are available to count some data. You can use them in simple queries.
 
-If you look at the indexer playground docs and schema on the right panel, you can see some aggregate fields. 
-They allow to make some mathematical calculations for some specific datas. Let's keep the example to query some NFT filtered by a specific owner and calculate the total amount in CAPS for each listed NFT. 
+If you look at the indexer playground docs and schema on the right panel, you can see some aggregate fields.
+They allow to make some mathematical calculations for some specific data. Let's keep the example to query some NFT filtered by a specific owner and calculate the total amount in CAPS for each listed NFT.
 
 ```graphql showLineNumbers
 query {
@@ -34,7 +34,7 @@ query {
 }
 ```
 
-The expected outcome will be : 
+The expected outcome will be :
 
 ```graphql showLineNumbers
 ...
@@ -48,11 +48,8 @@ aggregates: {
 
 > ![filterFields](./aggregate.png)
 
-
-
-
 <!-- To see more details about the corresponding code you can check **[this link](https://github.com/capsule-corp-ternoa/subql/blob/dev-update/packages/query/src/graphql/plugins/PgAggregateTransfer.ts)**.
-___ 
+___
 
 ## Most sold
 

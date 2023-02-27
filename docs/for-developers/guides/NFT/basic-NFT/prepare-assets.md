@@ -7,7 +7,7 @@ sidebar_label: How to prepare Basic NFT assets
 
 A Ternoa NFT is composed of two files: an asset file (e.g. image, video, music) and a metadata json file. The asset file CID is nested into the metadata file and both are stored on IPFS (Interplanetary File Systems) with their dedicated hashes.
 
-IPFS (Interplanetary File Systems) is one of the solution we recommend to upload NFTs medias and other associated metadatas. Thus offchain datas are stored in a fully decentralized way and only the link to this metadata is stored on-chain as part of the NFT. This link is frequently a fingerprint called a cryptographic ID (e.g. `Qmf5RHhnUjSCfCN9d1Ee6sUWxe3Eqvogw1cTsssrxAxtPn`). IPFS files are accessible using those hashes.
+IPFS (Interplanetary File Systems) is one of the solution we recommend to upload NFTs medias and other associated metadatas. Thus offchain data are stored in a fully decentralized way and only the link to this metadata is stored on-chain as part of the NFT. This link is frequently a fingerprint called a cryptographic ID (e.g. `Qmf5RHhnUjSCfCN9d1Ee6sUWxe3Eqvogw1cTsssrxAxtPn`). IPFS files are accessible using those hashes.
 
 Ternoa provides its own IPFS public nodes on different HTTP gateways based on the network environement:
 

@@ -19,7 +19,7 @@ In this example we are going to run the `batchAllTxHex` but because we want the 
 ```js showLineNumbers
 
 export const nftsBatchMintingHex = async (nftMetadata, quantity) => {
-  // nftMetaData represents here the offChain datas of the NFT.
+  // nftMetaData represents here the offChain data of the NFT.
   // quantity is the number of NFT to be minted
   try{
   ...
