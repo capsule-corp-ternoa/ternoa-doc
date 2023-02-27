@@ -7,7 +7,7 @@ sidebar_label: How to prepare Collection assets
 
 A Ternoa Collection is composed of three files: a profile picture image, a banner image and a metadata json file. The image files CID is nested into the metadata file and all are stored on IPFS (Interplanetary File Systems) with their dedicated hashes.
 
-IPFS (Interplanetary File Systems) is one of the solution we recommend to upload NFTs medias and other associated metadatas. Thus offchain datas are stored in a fully decentralized way and only the link to this metadata is stored on-chain as part of the NFT. This link is frequently a fingerprint called a cryptographic ID (e.g. `Qmf5RHhnUjSCfCN9d1Ee6sUWxe3Eqvogw1cTsssrxAxtPn`). IPFS files are accessible using those hashes.
+IPFS (Interplanetary File Systems) is one of the solution we recommend to upload NFTs medias and other associated metadatas. Thus offchain data are stored in a fully decentralized way and only the link to this metadata is stored on-chain as part of the NFT. This link is frequently a fingerprint called a cryptographic ID (e.g. `Qmf5RHhnUjSCfCN9d1Ee6sUWxe3Eqvogw1cTsssrxAxtPn`). IPFS files are accessible using those hashes.
 
 Ternoa provides its own IPFS public nodes on different HTTP gateways based on the network environement:
 

@@ -10,7 +10,7 @@ created: 2022-12-09
 
 ## Overview
 
-IPFS (Interplanetary File Systems) is one of the solution we recommend to upload NFTs medias and other associated metadatas. Thus offchain datas are stored in a fully decentralized way and only the link to this metadata is stored on-chain as part of the NFT. This link is frequently a fingerprint called a cryptographic hash ID (e.g. `Qmf5RHhnUjSCfCN9d1Ee6sUWxe3Eqvogw1cTsssrxAxtPn`). IPFS files are accessible using those hashes.
+IPFS (Interplanetary File Systems) is one of the solution we recommend to upload NFTs medias and other associated metadatas. Thus offchain data are stored in a fully decentralized way and only the link to this metadata is stored on-chain as part of the NFT. This link is frequently a fingerprint called a cryptographic hash ID (e.g. `Qmf5RHhnUjSCfCN9d1Ee6sUWxe3Eqvogw1cTsssrxAxtPn`). IPFS files are accessible using those hashes.
 
 On Ternoa NFTs are composed of two files: an asset file (e.g. image, video, music) and a metadata json file. The asset file hash is nested into the metadata file and both are stored on IPFS with their dedicated hashes.
 
@@ -89,23 +89,27 @@ An IPFS client is available on ternoa-js SDK to make IPFS upload simple with onl
 Here is an example uploading an image "shining.jpg" from the movie:
 
 ```typescript
-import { TernoaIPFS, File } from "ternoa-js"
+import { TernoaIPFS, File } from "ternoa-js";
 
 const main = async () => {
-  const file = new File([await fs.promises.readFile("shining.jpg")], "shining.jpg", {
-    type: "image/jpg",
-  })
+  const file = new File(
+    [await fs.promises.readFile("shining.jpg")],
+    "shining.jpg",
+    {
+      type: "image/jpg",
+    }
+  );
 
-  const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY")
+  const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
   const nftMetadata = {
     title: "Shining, a nice movie",
     description: "This is (not) my first Ternoa's NFT",
-  }
+  };
 
-  const { Hash } = await ipfsClient.storeNFT(file, nftMetadata)
-  console.log("The off-chain metadata hash is ", Hash)
-}
+  const { Hash } = await ipfsClient.storeNFT(file, nftMetadata);
+  console.log("The off-chain metadata hash is ", Hash);
+};
 ```
 
 First the JPG image file named "shining.jpg" is read from the file system and wrapped in a specific `File` instance. The TernoaIPFS class is then used to create an IPFS client that connects to a specified IPFS node using a given API key. The metadata for the file is then defined in an object and passed to the `storeNFT` method of the client along with the `File` instance. The resulting `Hash` of the off-chain metadata is logged to the console.
