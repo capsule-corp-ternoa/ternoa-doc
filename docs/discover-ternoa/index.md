@@ -4,45 +4,29 @@ sidebar_label: Discover Ternoa
 ---
 
 
-# What is Ternoa
+# Begin Here
 
-[Ternoa](https://www.ternoa.network/) is a next-gen layer 1 blockchain NFT framework enabling everyone to build web3. It empowers anyone to start their first NFT project without having to learn a new language. Users benefit from access to advanced NFT use cases that go beyond JPEGs. With Ternoa you can share secret NFTs, rent your NFTs for passive income, and more. 
+## Ready to start building? ##
 
-Read on to learn more in detail about what Ternoa offers. 
+- Start exploring our [Ternoa.js SDK](https://docs.ternoa.network/for-developers/get-started/) designed to make web3 projects development easier and faster.
 
 
-# Ternoa Deep Dive
+## Create an NFT with just a few lines of code ##
+- Get started with our [Basic NFT guide and tutorial.](https://docs.ternoa.network/for-developers/guides/NFT/) 
+ 
 
-Unlike general-purpose blockchains like Ethereum, Ternoa focuses on providing the best experience for users and developers to leverage NFTs. Our infrastructure empowers devs and provides a utility that natively doesn't exist on other chains. 
+## Mint a Soulbound Token ##
+- SBTs enhance decentralized identity and reputation management in web3. Create your first Soulbound using our [SBT Guide.](https://docs.ternoa.network/for-developers/guides/NFT/soulbound-NFT/prepare-assets) 
 
-- Advanced NFTs: secret NFTs, rental NFTs, soulbond tokens, dynamic NFTs, and more 
-- Low fees
-- High scalability 
 
-## Consensus: NPOS
+## Launch an NFT Collection ##
+- Elevate the NFT experience by tracking, managing, and trading unique NFTS with ease via collections. Explore our comprehensive [NFT Collection Guide.](https://docs.ternoa.network/for-developers/guides/collection/)
+ 
 
-The Ternoa blockchain uses nominated Proof-of-Stake as a consensus algorithm facilitating fast validation of transactions while ensuring future scalability. NPoS is a variation of Proof-of-Stake, where token holders. 
-
-## Substrate 
-Substrate is an open-source blockchain framework developed by Gavin Wood, a co-founder of Ethereum and founder of Polkadot, to enable developers to build and customize blockchains freely. Launched in 2018, substrate now features an impressive collection of libraries and hundreds of projects relying on it. 
-
-All substrate-based chains can easily interoperate and be integrated with each other. A powerful Substrate component is so-called pallets, which Ternoa has developed various pallets to make advanced NFTs easy to access. 
-
-**Pallets:** a piece of software that fulfills a specific function, such as creating NFT or governance votes. All pallets are modular and can be stacked to create more complex logic. 
-
-## Polkadot and how it relates to Ternoa 
-Polkadot is one of the most vibrant blockchain ecosystems by development activity. Ternoa is proud to contribute to it, but you might still wonder how Ternoa and Polkadot relate. 
-
-Substrate, the framework we use to build, is the same powering the Polkadot ecosystem and all parachains. 
-
-Polkadot is a blockchain protocol that connects various blockchains into one unified system. Created by Gavin Wood, it was launched in 2020 to address challenges of existing blockchains, such as scalability and interoperability. 
-
-On Polkadot, various parachains work together, connected through the so-called relay chain. Parachains are independent, customizable blockchains that run parallel to the relay chain with their own rules and features. 
-
-The relay chain acts as a hub coordinating communications between chains and ensuring the security and validity of transactions across the network. It's like a server that facilitates communications in traditional setups, but unlike a server, it's decentralized and run by validators worldwide. 
-
-Ternoa uses the same framework as Polkadot to ensure scalability and a smooth transition to securing a parachain slot. 
-
+## New here? Explore the World of Ternoa ##
+- [What is Ternoa? ](https://docs.ternoa.network/discover-ternoa/what-is-ternoa)
+- [What can Ternoa empower you to build?](https://docs.ternoa.network/discover-ternoa/explore-ternoa-features/)
+- [Unlock the benefits of building on Ternoa.](https://docs.ternoa.network/discover-ternoa/why-build-on-ternoa)
 
 
 

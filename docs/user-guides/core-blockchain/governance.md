@@ -4,7 +4,7 @@ sidebar_label: "Governance"
 sidebar_position: 4
 ---
 
-# What is Governance?
+## What is Governance? ##
 
 In plain terms, governance is the management or structure a participant in a system agrees to when entering into that system. Governance is not only the rules that a user has to follow but also the punishments for not following the rules.
 
@@ -32,7 +32,7 @@ On-chain governance refers to blockchain governance that takes place on the bloc
 
 To make any changes to the network, the idea is to compose active token(CAPS) holders and the council together to administrate a network upgrade decision. No matter whether the proposal is proposed by the public (token holders) or the council, it finally will have to go through a referendum to let all holders, weighted by stake, make the decision.
 
-# Council
+## Council ##
 
 To represent passive stakeholders, Ternoa follows the idea of a "council" by Polkadot. The council is an on-chain entity comprising several actors, each represented as an on-chain account. On Ternoa, the council currently consists of 8 members.
 
@@ -51,19 +51,19 @@ Referenda are discrete events, have a fixed period where voting happens, and the
 
 Referenda can be started in one of several ways:
 
-Publicly submitted proposals;
-Proposals submitted by the council, either through a majority or unanimously;
-Proposals submitted as part of the enactment of a prior referendum;
-Emergency proposals submitted by the Technical Committee and approved by the Council.
+- Publicly submitted proposals;
+- Proposals submitted by the council, either through a majority or unanimously;
+- Proposals submitted as part of the enactment of a prior referendum;
+- Emergency proposals submitted by the Technical Committee and approved by the Council.
 All referenda have an enactment delay associated with them. This is the period between the referendum ending and, assuming the proposal was approved, the changes being enacted.
 
 Referenda is considered baked if it is closed and tallied. Again, assuming the proposal was approved, it would be scheduled for enactment. Referenda is considered unbaked if it is pending an outcome, i.e. being voted on.
 
 For the first two ways that a referendum is launched, this is a fixed time of 28 days. For the third type, it can be set as desired. Emergency proposals deal with major problems with the network that need to be "fast-tracked". These will have a shorter enactment time.
 
-# Proposing a Referendum
+## Proposing a Referendum ##
 
-## Public Referenda
+## Public Referenda ##
 
 Anyone can propose a referendum by depositing the minimum amount of tokens for a certain period (number of blocks). If someone agrees with the proposal, they may deposit the same amount of tokens to support it - this action is called endorsing. The proposal with the highest amount of bonded support will be selected to be a referendum in the next voting cycle.
 
@@ -73,13 +73,13 @@ The bonded tokens will be released once the proposal is tabled (that is, brought
 
 There can be a maximum of 100 public proposals in the proposal queue.
 
-## Council Referenda
+## Council Referenda ##
 
-Unanimous Council - When all members of the council agree on a proposal, it can be moved to a referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of stake voting, the smaller the amount necessary for it to pass).
+** Unanimous Council ** - When all members of the council agree on a proposal, it can be moved to a referendum. This referendum will have a negative turnout bias (that is, the smaller the amount of stake voting, the smaller the amount necessary for it to pass).
 
-Majority Council - When agreement from only a simple majority of council members occurs, the referendum can also be voted upon, but it will be majority-carries (51% wins).
+** Majority Council **- When agreement from only a simple majority of council members occurs, the referendum can also be voted upon, but it will be majority-carries (51% wins).
 
-There can only be one active referendum at any given time, except when there is also an emergency referendum in progress.
+- There can only be one active referendum at any given time, except when there is also an emergency referendum in progress.
 
 ## Voting Timetable
 
@@ -97,10 +97,10 @@ It is possible to vote without locking at all, but your vote is worth a small fr
 
 Example:
 
-Peter: Votes No with 10 CAPS for a 128 week lock period => 10 x 6 = 60 Votes
+- Peter: Votes No with 10 CAPS for a 128 week lock period => 10 x 6 = 60 Votes
 
-Logan: Votes Yes with 20 CAPS for a 4 week lock period => 20 x 1 = 20 Votes
+- Logan: Votes Yes with 20 CAPS for a 4 week lock period => 20 x 1 = 20 Votes
 
-Kevin: Votes Yes with 15 CAPS for a 8 week lock period => 15 x 2 = 30 Votes
+- Kevin: Votes Yes with 15 CAPS for a 8 week lock period => 15 x 2 = 30 Votes
 
 Even though combined both Logan and Kevin vote with more CAPS than Peter, the lock period for both of them is less than Peter, leading to their voting power counting as less.
