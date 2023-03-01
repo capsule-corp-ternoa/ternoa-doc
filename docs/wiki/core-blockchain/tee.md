@@ -1,8 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# TEE Design
+# Trusted Execution Environment
+
+Trusted Execution Environments (TEEs) are used in blockchain technology to provide a secure environment for code. A TEE is a secure hardware environment that isolates code execution from the main operating system, ensuring that code is executed securely and without interference.
 
 The architecture proposed involves storage and retrieval of keys in a trusted execution environment (TEE) which is an offchain component associated with the secret NFT solution. TEE programs running on processors such as SGX provide strong trust guarantees in terms of data privacy and verification of the programs running within them. This can be achieved through techniques such as remote attestation that gives assurance that the program running inside the enclave is running on genuine TEE hardware (such as SGX), and the programs have not been modified by the TEE node operators. Data storage on TEEs are also secured by sealing them with the secure keys associated with the TEE hardware and/or author of the TEE programs.
 

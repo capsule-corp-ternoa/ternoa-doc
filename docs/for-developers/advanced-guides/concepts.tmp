@@ -1,0 +1,16 @@
+---
+sidebar_position: 1
+sidebar_label: Key concepts
+---
+
+# Key concepts and good practices
+
+-   init API
+-   on-chain, off-chain
+-   keyring + keyring vs no keyring signing (to learn more about how to sign without Keyring see ...)
+-   WaitUntil, Lag Indexer
+
+-   no keyring, signer
+-   wallet connection
+-   Offchain datas - IPFS
+-   batching

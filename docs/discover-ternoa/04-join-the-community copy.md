@@ -12,7 +12,7 @@ sidebar_position: 4
 
 ___
 
-# Join Ternoa Accelerator Program
+## Join Ternoa Accelerator Program
 
 **The Blox and Ternoa** have partnered to offer builders an opportunity to transform their passion projects into thriving startups, complete with grants and funding to make their web3 innovation a reality.
 

@@ -1,7 +1,7 @@
 ---
 title: Ternoa Consensus
 sidebar_label: "Consensus"
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 ## What is Consensus in Blockchain?
@@ -11,19 +11,19 @@ Blockchain is a secure and decentralized network that relies on a consensus prot
 
 Consensus is a crucial method for achieving agreement and synchronization among nodes in a decentralized blockchain network. It ensures that all nodes agree on the shared state and allows for the building and progression of the blockchain. Consensus aims to provide an objective view of the state by reconciling the subjective views of the participants. This process enables the nodes to communicate, reach agreement, and build new blocks.
 
-## Widely known consensus
+# Widely known consensus
 
-### Proof of Work(PoW)
+### Proof of Work
 
 This consensus algorithm used by Bitcoin to select a miner for the next block generation. The algorithm involves solving a complex mathematical puzzle that requires significant computational power. The node that solves the puzzle first is rewarded with the opportunity to mine the next block.
 
-### Proof of Stake(PoS)
+### Proof of Stake
 
 This is the most common alternative to PoW. Ethereum has shifted from PoW to PoS consensus. In this type of consensus algorithm, instead of investing in expensive hardware to solve a complex puzzle, validators invest in the coins of the system by locking up some of their coins as stake. After that, all the validators will start validating the blocks. Validators will validate blocks by placing a bet on it if they discover a block which they think can be added to the chain. Based on the actual blocks added in the Blockchain, all the validators get a reward proportionate to their bets and their stake increase accordingly. In the end, a validator is chosen to generate a new block based on their economic stake in the network. Thus, PoS encourages validators through an incentive mechanism to reach to an agreement.
 
-## Ternoa's Consensus
+# Ternoa's Consensus
 
-### Nominated Proof of Stake (NPoS)
+### Nominated Proof of Stake
 
 In traditional PoS systems, block production participation is dependent on token holdings as opposed
 to computational power. While PoS developers usually have a proponent for equitable participation in
@@ -46,7 +46,7 @@ Validators assume the role of producing new blocks in [BABE](#block-production-b
 blocks, and guaranteeing finality. Nominators can choose to back validators with
 their stake. Nominators can approve candidates that they trust and back them with their tokens.
 
-## Probabilistic vs. Provable Finality
+# Probabilistic vs. Provable Finality
 
 A pure Nakamoto consensus blockchain that runs PoW is only able to achieve the notion of
 _probabilistic finality_ and reach _eventual consensus_. Probabilistic finality means that under
@@ -89,7 +89,7 @@ Hybrid consensus has been proposed in the past. Notably, it was proposed (now de
 Ethereum's transition to proof of stake in [EIP 1011](http://eips.ethereum.org/EIPS/eip-1011), which
 specified [Casper FFG](#casper-ffg).
 
-## Block Production: BABE
+## Block Production
 
 BABE (Blind Assignment for Blockchain Extension) is the block production mechanism that runs between
 the validator nodes and determines the authors of new blocks. BABE is comparable as an algorithm to
@@ -127,7 +127,7 @@ this algorithm always produce blocks, but these _secondary_ blocks are ignored i
 produces a primary block from a VRF-selected validator. Thus, a slot can have
 either a _primary_ or a _secondary_ block, and no slots are ever skipped.
 
-## Finality Gadget: GRANDPA
+## Finality Gadget
 
 GRANDPA (GHOST-based Recursive ANcestor Deriving Prefix Agreement) is the finality gadget that is
 implemented for the Ternoa Chain.

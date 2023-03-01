@@ -1,6 +1,6 @@
 ---
-sidebar_label: Why build on Ternoa
-sidebar_position: 3
+sidebar_label: Why build on Ternoa?
+sidebar_position: 4
 ---
 
 # Why build on Ternoa
