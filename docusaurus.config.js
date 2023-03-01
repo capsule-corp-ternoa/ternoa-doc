@@ -67,7 +67,7 @@ const config = {
           },
           {
             to: '/wiki/how-to-stake-on-ternoa',
-            from: 'general/how-to-stake-on-ternoa',
+            from: '/general/how-to-stake-on-ternoa',
           },
           {
             to: '/category/features',
