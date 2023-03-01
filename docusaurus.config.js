@@ -48,6 +48,46 @@ const config = {
     },
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/discover-ternoa',
+            from: [
+              '/welcome', 
+              '/general',
+              '/general/join-the-community', 
+              '/general/contibutors', 
+              '/general/ambassador-program', 
+              '/general/accelerator-program',
+              '/general/code-of-conduct'
+            ]
+          },
+          {
+            to: '/wiki/how-to-stake-on-ternoa',
+            from: '/general/how-to-stake-on-ternoa',
+          },
+          {
+            to: '/category/features',
+            from: [
+              '/category/nft-primitives', 
+              '/wiki/nft-features/collections', 
+              '/wiki/nft-features/marketplace', 
+              '/wiki/nft-features/auctions', 
+              '/wiki/nft-features/rental', 
+            ]
+          },
+          {
+            to: '/for-developers/overview',
+            from: '/wiki/explorer'
+          }
+        ],
+      }
+    ]
+  ],
+
   presets: [
     [
       'classic',
