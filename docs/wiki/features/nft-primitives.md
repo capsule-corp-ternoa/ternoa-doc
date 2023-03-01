@@ -6,6 +6,8 @@ sidebar_position: 2
 
 NFT primitives are the core building blocks or protocols that enable the creation and management of NFTs. It typically includes the technical specifications and standards that define how NFTs are minted, transferred, and stored on the blockchain. NFT primitives serve as the foundation for various NFT applications and platforms, allowing developers to build new and innovative use cases for NFTs. Ternoa currently supports: Auction, Collection, Delegation, Rental, Soulbound Token, and soon Transfer Protocols. 
 
+Learn how to create your own with our [Developer Guides.](https://docs.ternoa.network/for-developers/guides/) 
+
 ## Auction
 
 Auctions can be an exciting way to sell an NFT and have it reach the highest selling potential. An auction is a type of sale where the NFT seller sets a minimum price and a time period. Buyers can place bids on the amount they are willing to pay for the NFT as long as they are above the minimum price. At the end of the time period, the NFT is sold to the highest bidder. Auctions can be conducted on-chain, making them transparent and secure, and supporting various features such as creating, canceling, and ending auctions, bidding, removing bids, buying at a fixed price. 

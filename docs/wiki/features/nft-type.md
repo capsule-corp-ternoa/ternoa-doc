@@ -6,6 +6,8 @@ sidebar_position: 1
 
 NFTs are digital assets representing ownership of a one-of-a-kind item or piece of content, ranging from art to video game items or credentials. At Ternoa, we currently support: Basic NFTs, Secret NFTs, and soon Capsule NFTs.
 
+Learn how to create your own with our [Developer Guides.](https://docs.ternoa.network/for-developers/guides/) 
+
 ## Basic NFT ##
 
 Basic NFTs are digital assets on the blockchain that represent ownership of a digital or physical asset, with associated metadata stored on-chain and off-chain. They can be minted, transferred, listed, sold, auctioned, burned and can have royalties associated with them. Basic NFTs  involve storing the media file on a decentralized storage network and storing off-chain metadata in IPFS. 
