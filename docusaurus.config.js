@@ -66,11 +66,11 @@ const config = {
             ]
           },
           {
-            to: '/category/wiki/how-to-stake-on-ternoa',
-            from: '/general/how-to-stake-on-ternoa'
+            to: '/wiki/how-to-stake-on-ternoa',
+            from: 'general/how-to-stake-on-ternoa',
           },
           {
-            to: '/wiki/features',
+            to: '/category/features',
             from: [
               '/category/nft-primitives', 
               '/wiki/nft-features/collections', 

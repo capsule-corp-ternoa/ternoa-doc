@@ -3,7 +3,9 @@ sidebar_label: "Key Concepts"
 sidebar_position: 1
 ---
 
-Discover key Ternoa concepts and fundamental principles that outlines the platform's functionality and operation.
+# Key Concepts
+
+Discover key Ternoa concepts, functionalities, and fundamental principles.
 
 ## Alphanet
 
