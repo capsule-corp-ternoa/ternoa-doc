@@ -1,42 +1,46 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/dracula');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-
+const lightCodeTheme = require("prism-react-renderer/themes/dracula");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Ternoa Documentation',
-  tagline: 'All resources you\'ll need to build the future on Ternoa',
-  url: 'https://docs.ternoa.network/',
-  baseUrl: '/',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
-  onDuplicateRoutes: 'warn', 
-  favicon: 'img/favicon.ico',
-  noIndex: true, 
-  staticDirectories: ['public', 'static'],
+  title: "Ternoa Documentation",
+  tagline: "All resources you'll need to build the future on Ternoa",
+  url: "https://docs.ternoa.network/",
+  baseUrl: "/",
+  onBrokenLinks: "warn",
+  onBrokenMarkdownLinks: "warn",
+  onDuplicateRoutes: "warn",
+  favicon: "img/favicon.ico",
+  noIndex: true,
+  staticDirectories: ["public", "static"],
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Ternoa', // Usually your GitHub org/user name.
-  projectName: 'Ternoa-doc', // Usually your repo name.
+  organizationName: "Ternoa", // Usually your GitHub org/user name.
+  projectName: "Ternoa-doc", // Usually your repo name.
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en', 'fr'],
-    path: 'i18n',
+    defaultLocale: "en",
+    locales: ["en", "fr"],
+    path: "i18n",
     localeConfigs: {
       en: {
-        label: 'English',
-        direction: 'ltr',
-        htmlLang: 'en-GB',
-        calendar: 'gregory',
-        path: 'en'
+        label: "English",
+        direction: "ltr",
+        htmlLang: "en-GB",
+        calendar: "gregory",
+        path: "en",
       },
       /*fr: {
         label: 'Français',
@@ -50,62 +54,62 @@ const config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-client-redirects',
+      "@docusaurus/plugin-client-redirects",
       {
         redirects: [
           {
-            to: '/discover-ternoa',
+            to: "/discover-ternoa",
             from: [
-              '/welcome', 
-              '/general',
-              '/general/join-the-community', 
-              '/general/contibutors', 
-              '/general/ambassador-program', 
-              '/general/accelerator-program',
-              '/general/code-of-conduct'
-            ]
+              "/welcome",
+              "/general",
+              "/general/join-the-community",
+              "/general/contibutors",
+              "/general/ambassador-program",
+              "/general/accelerator-program",
+              "/general/code-of-conduct",
+            ],
           },
           {
-            to: '/wiki/how-to-stake-on-ternoa',
-            from: '/general/how-to-stake-on-ternoa',
+            to: "/wiki/how-to-stake-on-ternoa",
+            from: "/general/how-to-stake-on-ternoa",
           },
           {
-            to: '/category/features',
+            to: "/category/features",
             from: [
-              '/category/nft-primitives', 
-              '/wiki/nft-features/collections', 
-              '/wiki/nft-features/marketplace', 
-              '/wiki/nft-features/auctions', 
-              '/wiki/nft-features/rental', 
-            ]
+              "/category/nft-primitives",
+              "/wiki/nft-features/collections",
+              "/wiki/nft-features/marketplace",
+              "/wiki/nft-features/auctions",
+              "/wiki/nft-features/rental",
+            ],
           },
           {
-            to: '/for-developers/overview',
-            from: '/wiki/explorer'
-          }
+            to: "/for-developers/overview",
+            from: "/wiki/explorer",
+          },
         ],
-      }
-    ]
+      },
+    ],
   ],
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/',
-          routeBasePath: '/',
+            "https://github.com/capsule-corp-ternoa/ternoa-doc/blob/develop/",
+          routeBasePath: "/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-WVJQ0JRBZK',
+          trackingID: "G-WVJQ0JRBZK",
           anonymizeIP: true,
         },
       }),
@@ -116,9 +120,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: 'FOQX5V6698', 
-        apiKey: 'e1d6e170addd504d0098660fa261dd2e', 
-        indexName: 'prod_doc_search',
+        appId: "FOQX5V6698",
+        apiKey: "e1d6e170addd504d0098660fa261dd2e",
+        indexName: "prod_doc_search",
         contextualSearch: true,
       },
       /*announcementBar: {
@@ -130,11 +134,11 @@ const config = {
         isCloseable: true,
       },*/
       navbar: {
-        hideOnScroll: false, 
-        title: 'Ternoa Documentation',
+        hideOnScroll: false,
+        title: "Ternoa Documentation",
         logo: {
-          alt: 'Ternoa Logo',
-          src: '/img/ternoa_logo.svg',
+          alt: "Ternoa Logo",
+          src: "/img/ternoa_logo.svg",
           width: 40,
         },
         items: [
@@ -145,18 +149,18 @@ const config = {
           //   label: 'Docs',
           // },
           {
-            href: 'https://github.com/capsule-corp-ternoa',
-            className: 'pseudo-icon github-icon',
-            position: 'right',
+            href: "https://github.com/capsule-corp-ternoa",
+            className: "pseudo-icon github-icon",
+            position: "right",
           },
           {
-            href: 'https://discord.com/invite/mQeEWQj46a',
-            className: 'pseudo-icon discord-icon discord-card',
-            position: 'right',
+            href: "https://discord.com/invite/mQeEWQj46a",
+            className: "pseudo-icon discord-icon discord-card",
+            position: "right",
           },
           {
-            type: 'search',
-            position: 'right',
+            type: "search",
+            position: "right",
           },
           /*{
             type: 'localeDropdown',
@@ -166,62 +170,62 @@ const config = {
       },
       docs: {
         sidebar: {
-          autoCollapseCategories: true, 
-        }
+          autoCollapseCategories: true,
+        },
       },
       footer: {
-        style: 'light',
+        style: "light",
         logo: {
-          href: 'https://www.ternoa.network/',
-          src: '/img/ternoa_logo.svg',
-          alt: 'Ternoa Doc',
-          height: '38px',
+          href: "https://www.ternoa.network/",
+          src: "/img/ternoa_logo.svg",
+          alt: "Ternoa Doc",
+          height: "38px",
         },
         links: [
           {
-            title: 'Documentation',
+            title: "Documentation",
             items: [
               {
-                label: 'Welcome',
-                to: '/intro',
+                label: "Welcome",
+                to: "/intro",
               },
               {
-                label: 'Ternoa Wiki',
-                to: '/category/wiki',
+                label: "Ternoa Wiki",
+                to: "/category/wiki",
               },
               {
-                label: 'For Developers',
-                to: '/category/for-developers',
+                label: "For Developers",
+                to: "/category/for-developers",
               },
               {
-                label: 'For Node Operators',
-                to: '/category/for-node-operators',
+                label: "For Node Operators",
+                to: "/category/for-node-operators",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Discord',
-                href: 'https://discord.com/invite/mQeEWQj46a',
+                label: "Discord",
+                href: "https://discord.com/invite/mQeEWQj46a",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/ternoa_',
+                label: "Twitter",
+                href: "https://twitter.com/ternoa_",
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/capsule-corp-ternoa/ternoa-js',
+                label: "GitHub",
+                href: "https://github.com/capsule-corp-ternoa/ternoa-js",
               },
             ],
           },
           {
-            title: 'About Ternoa',
+            title: "About Ternoa",
             items: [
               {
-                label: 'Ternoa',
-                href: 'https://www.ternoa.network/',
+                label: "Ternoa",
+                href: "https://www.ternoa.network/",
               },
             ],
           },
@@ -229,14 +233,14 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Ternoa Documentation, Inc. Built with Docusaurus.`,
       },
       colorMode: {
-          defaultMode: 'dark', 
-          disableSwitch: false, 
-          respectPrefersColorScheme: false,
-        },
+        defaultMode: "dark",
+        disableSwitch: false,
+        respectPrefersColorScheme: false,
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['rust'],
+        additionalLanguages: ["rust"],
       },
     }),
 };
