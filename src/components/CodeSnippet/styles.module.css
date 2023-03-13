@@ -1,0 +1,41 @@
+.cardBgDark {
+  background: hsla(0, 0%, 100%, .06);
+  -webkit-backdrop-filter: blur(120px);
+  backdrop-filter: blur(120px);
+}
+
+.radius {
+  border-radius: 20px;
+}
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+.py3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.p2 {
+  padding: 0.5rem !important;
+}
+
+.p3 {
+  padding: 1rem !important;
+}
+
+.justifyContentBetween {
+  justify-content: space-between !important;
+}
+
+.textWhite50 {
+  --bs-text-opacity: 1;
+  color: hsla(0, 0%, 100%, .5) !important;
+}
+
+.alignItemsCenter {
+  align-items: center !important;
+}

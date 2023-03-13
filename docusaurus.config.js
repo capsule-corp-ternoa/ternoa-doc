@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Ternoa Documentation",
-  tagline: "All resources you'll need to build the future on Ternoa",
+  title: "Build your web3 project on Ternoa",
+  tagline: "Accelerate your web3 development with our easy-to-use Ternoa.js SDK, guides, and tutorials",
   url: "https://docs.ternoa.network/",
   baseUrl: "/",
   onBrokenLinks: "warn",

@@ -1,13 +1,18 @@
-.features {
+.moreFeatures {
   display: flex;
   align-items: center;
   padding: 0rem 2rem 1rem 1rem;
   text-decoration: none;
 }
 
-.featureIcon {
-  margin-bottom: 20px;
+h2 {
   text-align: center;
+  font-size: 3.125rem;
+  margin: 4rem 1rem;
+}
+
+h3.featureTitle {
+  font-size: 1.5rem;
 }
 
 .cards {
@@ -15,8 +20,8 @@
   background-color: rgba(255, 255, 255, 0.05);
   padding: 2rem 1rem;
   max-width: 350px;
-  margin: 10px auto;
-  text-align: center;
+  margin: 2rem auto;
+  text-align: left;
 }
 
 .cards:hover {
@@ -24,10 +29,6 @@
   background-color: rgba(255, 255, 255, 0.15);
   cursor: pointer;
 
-}
-
-.card h3 {
-  font-size: 1.875rem;
 }
 
 .linkUrl {
