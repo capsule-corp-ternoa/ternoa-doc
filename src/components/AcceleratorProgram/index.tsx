@@ -19,7 +19,7 @@ export default function AcceleratorProgram(): JSX.Element {
               </Link>
             </div>
           </div>
-          <div className='col col--5'>
+          <div className='col col--5 alignCenter'>
             <img src='/img/ternoa-accelerator-program.png' />
           </div>
         </div>
