@@ -16,9 +16,7 @@ const FeatureList: FeatureItem[] = [
     imagePath: '/img/building-ternoa.png',
     description: (
       <>
-        A step by step tutorial to start with Ternoa.
-        Here you will learn everything with token CAPS management
-        and get new experience with creation, minting and trading NFTs.
+        Start exploring our Ternoa.js SDK designed to make web3 projects development easier and faster.
       </>
     ),
     url: 'for-developers/overview '
@@ -29,8 +27,7 @@ const FeatureList: FeatureItem[] = [
     imagePath: '/img/explore-ternoa.png',
     description: (
       <>
-        All you need to know to build dApps, interact with the
-        Ternoa Blockchain and deploy your own Marketplace.
+        From advanced NFT features, creating collections & marketplaces, explore what you can you build on Ternoa.
       </>
     ),
     url: '/category/features'
@@ -41,9 +38,7 @@ const FeatureList: FeatureItem[] = [
     imagePath: '/img/launch-ternoa.png',
     description: (
       <>
-        This guide will explain the basic principles on how to run a validator
-        node and how to stake CAPS. A more detailed approach will be available
-        later in the form of a workshop and/or gitbook documentation.
+        Review the basic principles on how to run a validator node and how to stake CAPS.
 
       </>
     ),
@@ -53,7 +48,7 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ imagePath, url, title, description }: FeatureItem) {
   return (
-    <Link to={url} className={clsx('col dFlex', styles.linkUrl)}>
+    <div className='col dFlex'>
       <div className={clsx('card col-demo', styles.cards)}>
         <div className="card_header">
           <div className={(styles.featureIcon)}>
@@ -64,8 +59,14 @@ function Feature({ imagePath, url, title, description }: FeatureItem) {
         <div>
           <p>{description}</p>
         </div>
+        <Link
+          className={clsx('button outlineGradientBtn', styles.btnGo)}
+          to={url}>
+          <span className='gradientText'>GO</span>
+        </Link>
       </div>
-    </Link>
+
+    </div>
 
   );
 }

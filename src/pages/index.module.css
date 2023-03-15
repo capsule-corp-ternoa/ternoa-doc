@@ -3,31 +3,34 @@
  * and scoped locally.
  */
 
- .heroBanner {
+.heroBanner {
   width: 100%;
   padding-top: 2rem;
   background-color: var(--ifm-color-classic);
   padding-left: 3rem;
 }
 
+.headerContainer {
+  display: flex;
+  align-items: center;
+}
+
 .heroTitle {
   font-size: 4.688rem;
   line-height: 1;
-  background: var(--linear-gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.heroSubtitle {
-  font-size: 1.625rem; 
-  line-height: 1.1;
-  padding: 14px 0px;
-  font-weight: 500;
   color: var(--navbar-icon-color);
 }
 
-.btnContainer{
-  text-align: center;
+.heroSubtitle {
+  font-size: 1.625rem;
+  line-height: 1.1;
+  padding: 14px 0px;
+  font-weight: 500;
+  color: var(--docsearch-muted-color);
+}
+
+.btnContainer {
+  text-align: left;
 }
 
 .linkButton {
@@ -41,49 +44,54 @@
 }
 
 .linkButton:hover {
-  border: 2px solid var(--ifm-color-primary); 
+  border: 2px solid var(--ifm-color-primary);
+}
+
+.ctaBtn {
+  margin: 2rem .5rem;
 }
 
 @media screen and (max-width: 1439px) {
   .heroBanner {
-    padding: 3rem; 
+    padding: 3rem;
   }
+
   .heroTitle {
     font-size: 4.1rem;
   }
+
   .heroSubtitle {
-    font-size: 2.1rem; 
+    font-size: 2.1rem;
     line-height: 40px;
   }
 }
 
 @media screen and (max-width: 1037px) {
   .heroBanner {
-    padding: 3rem; 
+    padding: 3rem;
   }
+
   .heroTitle {
     font-size: 4rem;
   }
+
   .heroSubtitle {
-    font-size: 2.1rem; 
+    font-size: 2.1rem;
     line-height: 40px;
   }
 }
 
 @media screen and (max-width: 817px) {
   .heroBanner {
-    padding: 2rem; 
+    padding: 2rem;
   }
+
   .heroTitle {
     font-size: 3rem;
   }
+
   .heroSubtitle {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     line-height: 40px;
   }
 }
-
-
-
- 
-  

@@ -4,6 +4,32 @@
  * work well for content-centric websites.
  */
 
+/* Custom fonts */
+@font-face {
+  font-family: "AirBnbCereal Black";
+  src: url('/static/fonts/woff/AirbnbCerealBlack.woff') format('woff');
+}
+
+@font-face {
+  font-family: "AirBnbCereal Bold";
+  src: url('/static/fonts/woff/AirbnbCerealBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "AirBnbCereal Book";
+  src: url('/static/fonts/woff/AirbnbCerealBook.woff') format('woff');
+}
+
+@font-face {
+  font-family: "AirBnbCereal ExtraBold";
+  src: url('/static/fonts/woff/AirbnbCerealExtraBold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "AirBnbCereal Light";
+  src: url('/static/fonts/woff/AirbnbCerealLight.woff') format('woff');
+}
+
 /*Img in Markdown files*/
 img[alt="img-mobile"] {
   max-width: 30%;
@@ -26,7 +52,7 @@ img[alt="img-square"] {
 }
 
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "AirBnbCereal Book", sans-serif;
   line-height: 25px;
   margin: 0;
 }
@@ -51,16 +77,18 @@ img[alt="img-square"] {
 
 /* You can override the default Infima variables here. */
 :root {
-
+  --ifm-font-family-monospace: "AirBnbCereal Book";
+  --ifm-font-family-base: "AirBnbCereal Book";
   --ifm-color-classic: rgb(48, 48, 48)f;
   --ifm-color-primary: #840cc6;
-  --ifm-color-primary-dark: #840cc6;
-  --ifm-color-primary-darker: #840cc6;
-  --ifm-color-primary-darkest: #840cc6;
-  --ifm-color-primary-light: #840cc6;
-  --ifm-color-primary-lighter: #840cc6;
-  --ifm-color-primary-lightest: #840cc6;
+  --ifm-color-primary-dark: #770bb2;
+  --ifm-color-primary-darker: #700aa8;
+  --ifm-color-primary-darkest: #5c088b;
+  --ifm-color-primary-light: #910dda;
+  --ifm-color-primary-lighter: #980ee4;
+  --ifm-color-primary-lightest: #a720f1;
   --ifm-code-font-size: 95%;
+  --ifm-background-color: transparent !important;
   --ifm-color-primary-button: #dedede;
   --ifm-color-primary-text-button: #840cc6;
   --docusaurus-highlighted-code-line-bg: rgba(209, 209, 209, 0.1);
@@ -82,7 +110,7 @@ img[alt="img-square"] {
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-classic: rgb(211, 211, 211)f;
+  --ifm-color-classic: rgba(0, 0, 0);
   --ifm-color-primary: #9f9fff;
   --ifm-color-primary-dark: #9f9fff;
   --ifm-color-primary-darker: #9f9fff;
@@ -94,6 +122,9 @@ img[alt="img-square"] {
   --ifm-color-primary-text-button: #9f9fff;
   --docusaurus-highlighted-code-line-bg: rgba(35, 35, 35, 0.3);
   --navbar-icon-color: #ddd;
+  --ifm-background-color: rgba(0, 0, 0) !important;
+  --ifm-background-surface-color: rgba(0, 0, 0) !important;
+
 }
 
 
@@ -192,6 +223,13 @@ img[alt="img-square"] {
   font-size: 0.9rem;
 }
 
+
+/* navbar title */
+.navbar__title {
+  font-family: "AirbnbCereal ExtraBold";
+  font-size: 1.4rem;
+}
+
 /* navbar icons*/
 .pseudo-icon {
   opacity: 1;
@@ -225,19 +263,81 @@ img[alt="img-square"] {
   height: 28px;
 }
 
-.gradientBtn {
-  background: linear-gradient(90deg, #004FFF 0%, #CB06ED 33.3%, #FF0062 68.16%, #FF8500 99.9%);
-  font-size: 1.25rem;
+
+/*titles */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "AirBnbCereal ExtraBold";
+}
+
+.dFlex {
+  display: flex !important;
+}
+
+.alignCenter {
+  align-self: center;
+}
+
+.py3 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.p2 {
+  padding: 0.5rem !important;
+}
+
+.p3 {
+  padding: 1rem !important;
+}
+
+.justifyContentBetween {
+  justify-content: space-between !important;
+}
+
+.fwBold {
+  font-weight: bold;
+}
+
+.alignItemsCenter {
+  align-items: center !important;
+}
+
+.purpleBtn {
+  background: rgba(159, 159, 255, 0.2);
+  font-size: 1.125rem;
   border-radius: 8px;
   font-weight: 500;
-  margin: 4rem 1rem;
   text-align: center;
   padding: 8px 17px;
+  color: var(--ifm-color-primary);
+}
+
+.purpleBtn:hover {
+  color: var(--ifm-color-primary-darkest);
+}
+
+[data-theme='dark'] .purpleBtn:hover {
+  color: white;
+}
+
+[data-theme='dark'] .purpleBtn {
+  color: rgba(159, 159, 255, 1);
+}
+
+.gradientBtn {
+  background: linear-gradient(90deg, #004FFF 0%, #CB06ED 33.3%, #FF0062 68.16%, #FF8500 99.9%);
+  font-size: 1.125rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px 17px;
   color: white;
 }
 
 .outlineGradientBtn {
-  font-family: "Airbnb Cereal App Medium", sans-serif;
   color: white;
   transition: all 0.2s;
   box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
@@ -248,13 +348,16 @@ img[alt="img-square"] {
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #070714 inset;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   border-radius: 8px;
   font-weight: 500;
-  margin: 4rem 1rem;
   text-align: center;
   padding: 8px 17px;
   color: white;
+}
+
+[data-theme='light'] .outlineGradientBtn {
+  box-shadow: 2px 1000px 1px white inset;
 }
 
 .outlineGradientBtn:hover {
@@ -263,6 +366,29 @@ img[alt="img-square"] {
   text-decoration: none;
 }
 
-.dFlex {
-  display: flex !important;
+
+.outlineGradientBtn:hover span {
+  background: transparent;
+  color: white;
+  -webkit-background-clip: inherit;
+  -webkit-text-fill-color: inherit;
+}
+
+.gradientText {
+  background: var(--linear-gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme='dark'] .card {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+}
+
+.row {
+  flex-direction: row !important;
 }

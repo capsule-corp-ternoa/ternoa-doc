@@ -10,33 +10,24 @@
   text-align: center;
 }
 
+[data-theme='dark'] .cards {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .cards {
   border-radius: 20x;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 2rem 1rem;
   max-width: 350px;
   margin: 10px auto;
   text-align: center;
 }
 
-.cards:hover {
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  cursor: pointer;
-
-}
-
 .card h3 {
   font-size: 1.875rem;
 }
 
-.linkUrl {
-  text-decoration: none;
-  text-decoration-line: inherit;
-  color: var(--ifm-color-classic);
-}
-
-.linkUrl:hover {
-  text-decoration: none;
-  color: var(--ifm-color-classic);
+.btnGo {
+  width: 180px;
+  margin: auto;
 }

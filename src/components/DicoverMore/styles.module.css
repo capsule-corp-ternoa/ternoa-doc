@@ -15,29 +15,20 @@ h3.featureTitle {
   font-size: 1.5rem;
 }
 
+[data-theme='dark'] .cards {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
 .cards {
   border-radius: 20x;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.4);
   padding: 2rem 1rem;
   max-width: 350px;
   margin: 2rem auto;
   text-align: left;
+  justify-content: space-evenly;
 }
 
-.cards:hover {
-  text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.15);
-  cursor: pointer;
-
-}
-
-.linkUrl {
-  text-decoration: none;
-  text-decoration-line: inherit;
-  color: var(--ifm-color-classic);
-}
-
-.linkUrl:hover {
-  text-decoration: none;
-  color: var(--ifm-color-classic);
+.learnMoreBtn {
+  width: fit-content;
 }

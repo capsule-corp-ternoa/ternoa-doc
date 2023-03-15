@@ -21,7 +21,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Ternoa", // Usually your GitHub org/user name.
   projectName: "Ternoa-doc", // Usually your repo name.
-
   markdown: {
     mermaid: true,
   },
@@ -97,6 +96,12 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
@@ -120,8 +125,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: "FOQX5V6698",
-        apiKey: "e1d6e170addd504d0098660fa261dd2e",
+        appId: "PI9GFCRCJH",
+        apiKey: "31223bafd0fcb62c8747038c7122b8b7",
         indexName: "prod_doc_search",
         contextualSearch: true,
       },
@@ -135,19 +140,57 @@ const config = {
       },*/
       navbar: {
         hideOnScroll: false,
-        title: "Ternoa Documentation",
+        title: "ternoa",
         logo: {
           alt: "Ternoa Logo",
           src: "/img/ternoa_logo.svg",
           width: 40,
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'welcome',
-          //   position: 'left',
-          //   label: 'Docs',
-          // },
+          {
+            type: 'dropdown',
+            label: 'Docs',
+            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                label: 'Discover Ternoa',
+                docId: 'discover-ternoa/index',
+              },
+              {
+                type: 'doc',
+                label: 'What is Ternoa',
+                docId: 'discover-ternoa/what-is-ternoa',
+              },
+              {
+                type: 'doc',
+                label: 'Explore Features',
+                docId: 'discover-ternoa/explore-ternoa-features',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'SDK',
+            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                label: 'Overview',
+                docId: 'for-developers/overview',
+              },
+              {
+                type: 'doc',
+                label: 'Developer Guides',
+                docId: 'for-developers/guides/index',
+              },
+              {
+                type: 'doc',
+                label: 'Advanced Guides',
+                docId: 'for-developers/advanced-guides/index',
+              },
+            ],
+          },
           {
             href: "https://github.com/capsule-corp-ternoa",
             className: "pseudo-icon github-icon",
@@ -162,10 +205,6 @@ const config = {
             type: "search",
             position: "right",
           },
-          /*{
-            type: 'localeDropdown',
-            position: 'right',
-          },*/
         ],
       },
       docs: {

@@ -1,34 +1,60 @@
 import React from 'react';
 import clsx from 'clsx';
 import styles from './styles.module.css';
+import { useColorMode } from "@docusaurus/theme-common";
 
+const DiscordIcon = (props) => (
+  <svg width="64" height="66" viewBox="0 0 64 66" fill={props.fill} className={props.class} xmlns="http://www.w3.org/2000/svg">
+    <path d="M7.50052 58.2914H48.9852L47.0078 52.2328L51.7536 56.0742L56.1039 59.748L64.0135 66V6.80625C63.8089 3.13242 60.4542 0 56.2948 0L7.51415 0.0128906C3.36841 0.0128906 0 3.14531 0 6.81914V51.4852C0 55.3652 3.36841 58.2914 7.50052 58.2914ZM38.1981 15.6234L38.1026 15.6621L38.1435 15.6234H38.1981ZM15.9966 19.1168C21.3287 15.443 26.2654 15.6234 26.2654 15.6234L26.6609 15.9973C20.1287 17.4668 17.183 20.2254 17.183 20.2254C17.183 20.2254 17.974 19.8645 19.3513 19.2973C28.1338 16.0359 37.7344 16.268 46.6259 20.4059C46.6259 20.4059 43.6666 17.8277 37.5435 16.1777L38.089 15.675C38.9345 15.675 43.4212 15.8297 48.2079 19.1426C48.2079 19.1426 53.5673 27.8051 53.5673 38.4527C53.39 38.2465 50.2398 43.0289 42.1256 43.1965C42.1256 43.1965 40.7483 41.727 39.78 40.4508C44.5258 39.1617 46.2986 36.5836 46.2986 36.5836C44.744 37.5117 43.3257 38.066 42.1665 38.6074C40.3937 39.3422 38.6208 39.7031 36.848 40.077C28.4611 41.366 23.7425 39.2133 19.2968 37.4988L17.7694 36.7641C17.7694 36.7641 19.5423 39.3422 24.0971 40.6313C22.897 41.9203 21.7106 43.3898 21.7106 43.3898C13.61 43.2094 10.6507 38.427 10.6507 38.427C10.6644 27.7664 15.9966 19.1168 15.9966 19.1168Z" fill={props.fill} />
+    <path d="M38.7166 35.1145C40.7894 35.1145 42.4668 33.4645 42.4668 31.4277C42.4668 29.4039 40.7894 27.7539 38.7166 27.7539V27.7668C36.6573 27.7668 34.9663 29.4168 34.9663 31.4406C34.9663 33.4645 36.6437 35.1145 38.7166 35.1145Z" fill={props.fill} />
+    <path d="M25.2835 35.1145C27.3563 35.1145 29.0337 33.4645 29.0337 31.4277C29.0337 29.4039 27.3563 27.7539 25.2971 27.7539L25.2835 27.7668C23.2106 27.7668 21.5332 29.4168 21.5332 31.4406C21.5332 33.4645 23.2106 35.1145 25.2835 35.1145Z" fill={props.fill} />
+  </svg>
+
+)
+
+const GithubIcon = (props) => (
+  <svg width="64" height="60" viewBox="0 0 64 60" fill={props.fill} className={props.class} xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 0C14.325 0 0 13.7697 0 30.7677C0 44.354 9.1625 55.8857 21.875 59.9457C23.475 60.2392 24.0625 59.2853 24.0625 58.466C24.0625 57.7323 24.0375 55.8001 24.025 53.2321C15.125 55.0909 13.25 49.111 13.25 49.111C11.8 45.5646 9.6875 44.6108 9.6875 44.6108C6.7875 42.7031 9.9125 42.7397 9.9125 42.7397C13.125 42.9476 14.8125 45.907 14.8125 45.907C17.6625 50.6151 22.3 49.2455 24.1375 48.4628C24.425 46.4695 25.25 45.1244 26.1625 44.354C19.05 43.5835 11.5875 40.9421 11.5875 29.1535C11.5875 25.7906 12.825 23.0513 14.875 20.8991C14.5125 20.1164 13.4375 16.9981 15.15 12.7547C15.15 12.7547 17.825 11.9353 23.95 15.9097C26.5125 15.2249 29.225 14.8825 31.95 14.8703C34.675 14.8825 37.3875 15.2249 39.95 15.9097C46.025 11.9353 48.7125 12.7547 48.7125 12.7547C50.4375 16.9858 49.35 20.1164 49.0375 20.8991C51.075 23.0513 52.3125 25.7906 52.3125 29.1535C52.3125 40.9666 44.8375 43.5713 37.7125 44.3295C38.8375 45.2589 39.875 47.1421 39.875 50.0159C39.875 54.137 39.8375 57.4388 39.8375 58.4416C39.8375 59.2487 40.4 60.2147 42.0375 59.8968C54.8375 55.8735 64 44.3417 64 30.7677C64 13.7697 49.675 0 32 0Z" fill={props.fill} />
+  </svg>
+
+)
+
+const TwitterIcon = (props) => (
+  <svg width="63" height="47" viewBox="0 0 63 47" fill={props.fill} className={props.class} xmlns="http://www.w3.org/2000/svg">
+    <path d="M63 5.55865C60.6621 6.50769 58.1643 7.12908 55.5557 7.43413C58.2381 5.96538 60.2807 3.66057 61.2404 0.88125C58.7426 2.24832 55.9863 3.20865 53.0455 3.75096C50.683 1.43486 47.2992 0 43.6201 0C36.4711 0 30.7125 5.33269 30.7125 11.863C30.7125 12.8007 30.7986 13.7046 31.0078 14.5632C20.2658 14.0887 10.7666 9.3548 4.38047 2.15793C3.26074 3.93173 2.60859 5.96538 2.60859 8.15721C2.60859 12.2697 4.90957 15.9077 8.34258 18.0091C6.26309 17.9752 4.23281 17.4216 2.51016 16.5517C2.51016 16.5856 2.51016 16.6308 2.51016 16.6873C2.51016 22.4493 6.98906 27.2396 12.8584 28.3356C11.8125 28.5954 10.6559 28.731 9.47461 28.731C8.6502 28.731 7.81348 28.6858 7.02598 28.5276C8.69941 33.2276 13.449 36.6735 19.0969 36.7865C14.7041 39.9387 9.11777 41.8481 3.08848 41.8481C2.03027 41.8481 1.00898 41.8029 0 41.6899C5.72168 45.0793 12.5016 47.0113 19.8105 47.0113C43.5832 47.0113 56.577 28.9344 56.577 13.2639C56.577 12.7442 56.5523 12.2358 56.5277 11.7274C59.0871 10.0553 61.2404 7.96514 63 5.55865Z" fill={props.fill} />
+  </svg>
+
+)
 export default function JoinCommunity(): JSX.Element {
+  const { colorMode } = useColorMode();
+  console.log({ colorMode });
+
   return (
     <section className={styles.joinCommunity}>
       <div className="container">
-        <div className="row">
+        <div className="row card">
           <div className='col col--7'>
             <h2 className={styles.communityTitle}>Join the community</h2>
-            <p className={styles.description}>Short description in some lines of the project. Usefull for user to understand what the value of the project.</p>
+            <p className={styles.description}>Join our supportive and innovative community, the gateway into the world of Ternoa.</p>
             <div className={clsx('row', styles.socialContainer)}>
               <div className='col col--3'>
                 <a className="" href='https://discord.com/invite/mQeEWQj46a' target="_blank">
-                  <img src="/img/discord.svg" alt="ternoa discord" />
+                  <DiscordIcon fill={colorMode === 'light' ? "black" : "white"} />
                 </a>
               </div>
               <div className='col col--3'>
                 <a className="" href='https://github.com/capsule-corp-ternoa' target="_blank">
-                  <img src='/img/github.svg' alt='ternoa github' />
+                  <GithubIcon fill={colorMode === 'light' ? "black" : "white"} />
                 </a>
               </div>
               <div className='col col--3'>
                 <a className="" href='https://twitter.com/Ternoa_' target="_blank">
-                  <img src='/img/twitter.svg' alt="ternoa twitter" />
+                  <TwitterIcon fill={colorMode === 'light' ? "black" : "white"} />
                 </a>
               </div>
             </div>
           </div>
-          <div className='col col--5'>
+          <div className='col col--5 alignCenter'>
             <img src='/img/ternoa-community.png' />
           </div>
         </div>

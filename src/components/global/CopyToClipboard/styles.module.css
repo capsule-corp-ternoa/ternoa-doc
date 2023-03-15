@@ -3,12 +3,13 @@
   width: 12px;
   height: 12px;
   margin-left: 8px;
-  fill: rgba(250, 250, 250, 0.5);
+  fill: var(--navbar-icon-color);
   width: 16px;
   height: 16px;
   margin-left: 12px;
-  fill: rgba(250, 250, 250, 0.5);
+  fill: var(--navbar-icon-color);
 }
+
 .checkMarkIcon {
   fill: #14ffc6 !important;
 }
@@ -17,8 +18,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  color: hsla(0,0%,98%,.5);
-  font-family: Airbnb Cereal App Light;
+  color: var(--navbar-icon-color);
   padding: 0;
   margin-right: 16px;
   font-size: 16px;

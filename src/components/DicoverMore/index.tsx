@@ -14,44 +14,43 @@ const FeatureList: FeatureItem[] = [
     title: 'Why build on Ternoa?',
     description: (
       <>
-        Short description in some lines of the project. Usefull for user to understand what the value of the project.
+        Ternoa is accessible, fast, scalable, and doesn't require learning a new programming language.
       </>
     ),
     url: '/discover-ternoa/why-build-on-ternoa'
   },
   {
+    title: 'Builder Guides',
+    description: (
+      <>
+        Ternoa offers tools that streamline and accelerate building web3 projects.
+      </>
+    ),
+    url: '/for-developers/guides/'
+  },
+
+  {
+    title: 'Buy CAPS',
+    description: (
+      <>
+        With CAPS, Ternoa users will be able to explore dApps, NFTs and take advantage of the Ternoa infrastructure.      </>
+    ),
+    url: '/wiki/how-to-buy-caps'
+  },
+  {
     title: 'NFT Primitives',
     description: (
       <>
-        Short description in some lines of the project. Usefull for user to understand what the value of the project.
+        Discover Ternoa's core building blocks that empower the creation and management of NFTs.
       </>
     ),
     url: '/wiki/features/nft-primitives'
   },
   {
-    title: 'Builder Guides',
-    description: (
-      <>
-        Short description in some lines of the project. Usefull for user to understand what the value of the project.
-      </>
-    ),
-    url: '/for-developers/guides/'
-  },
-  {
-    title: 'Integrate Tools',
-    description: (
-      <>
-        Short description in some lines of the project. Usefull for user to understand what the value of the project.
-      </>
-    ),
-    url: '/for-developers/get-started/'
-  },
-  {
     title: 'User Guides',
     description: (
       <>
-        Short description in some lines of the project. Usefull for user to understand what the value of the project.
-      </>
+        Uncover Ternoa's comprehensive resources to manage Ternoa Wallet, Bridge CAPS, understand key concepts, and more.      </>
     ),
     url: '/category/wiki'
   },
@@ -59,7 +58,7 @@ const FeatureList: FeatureItem[] = [
     title: 'Stake CAPS',
     description: (
       <>
-        Short description in some lines of the project. Usefull for user to understand what the value of the project.
+        Review our guide on how to stake CAPS on the Ternoa network.
       </>
     ),
     url: 'wiki/how-to-stake-on-ternoa'
@@ -68,14 +67,18 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ url, title, description }: FeatureItem) {
   return (
-    <Link to={url} className={clsx('col col--4 dFlex', styles.linkUrl)}>
+    <div className='col col--4 dFlex'>
       <div className={clsx('card col-demo', styles.cards)}>
         <div className="card_header">
           <h3 className={styles.featureTitle}>{title}</h3>
         </div>
         <p>{description}</p>
+        <Link to={url} className={clsx('button purpleBtn', styles.learnMoreBtn)}>
+          Learn more
+        </Link>
       </div>
-    </Link>
+    </div>
+
 
   );
 }
