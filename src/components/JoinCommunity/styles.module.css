@@ -1,14 +1,13 @@
 .joinCommunity {
   display: flex;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2rem;
   text-decoration: none;
   margin-top: 4rem;
 }
 
 h2.communityTitle {
   text-align: left;
-  font-size: 4.688rem;
   margin: 0 0 2rem;
 }
 

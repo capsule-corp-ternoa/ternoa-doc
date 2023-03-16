@@ -285,6 +285,11 @@ h4 {
   padding-bottom: 1rem !important;
 }
 
+.mx2 {
+  margin-left: .5rem !important;
+  margin-right: .5rem !important;
+}
+
 .p2 {
   padding: 0.5rem !important;
 }
@@ -303,6 +308,11 @@ h4 {
 
 .alignItemsCenter {
   align-items: center !important;
+}
+
+.row-reverse,
+.row.row-reverse {
+  flex-direction: row-reverse !important;
 }
 
 .purpleBtn {

@@ -125,9 +125,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: "PI9GFCRCJH",
-        apiKey: "31223bafd0fcb62c8747038c7122b8b7",
-        indexName: "prod_doc_search",
+        appId: "JDLVU0U8IU",
+        apiKey: "970f1b0558f5a511df9cc0ad33a97c09",
+        indexName: "ternoa_doc",
         contextualSearch: true,
       },
       /*announcementBar: {
@@ -226,7 +226,7 @@ const config = {
             items: [
               {
                 label: "Welcome",
-                to: "/intro",
+                to: "/what-is-ternoa ",
               },
               {
                 label: "Ternoa Wiki",
@@ -234,7 +234,7 @@ const config = {
               },
               {
                 label: "For Developers",
-                to: "/category/for-developers",
+                to: "/for-developers",
               },
               {
                 label: "For Node Operators",

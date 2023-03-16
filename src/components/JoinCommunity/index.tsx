@@ -32,7 +32,7 @@ export default function JoinCommunity(): JSX.Element {
   return (
     <section className={styles.joinCommunity}>
       <div className="container">
-        <div className="row card">
+        <div className="row card mx2">
           <div className='col col--7'>
             <h2 className={styles.communityTitle}>Join the community</h2>
             <p className={styles.description}>Join our supportive and innovative community, the gateway into the world of Ternoa.</p>

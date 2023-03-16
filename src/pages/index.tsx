@@ -15,10 +15,7 @@ function HomepageHeader() {
   return (
     <header className={clsx('hero', styles.heroBanner)}>
       <div className="container">
-        <div className={clsx('row', styles.headerContainer)}>
-          <div className='col col--6'>
-            <CodeBlockSnippet />
-          </div>
+        <div className={clsx('row row-reverse', styles.headerContainer)}>
           <div className="col col--6">
             <h1 className={styles.heroTitle}>{siteConfig.title}</h1>
             <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
@@ -39,6 +36,9 @@ function HomepageHeader() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className='col col--6'>
+            <CodeBlockSnippet />
           </div>
         </div>
 
