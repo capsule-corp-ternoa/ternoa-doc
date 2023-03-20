@@ -18,3 +18,29 @@ h2.communityTitle {
 .socialContainer {
   margin-top: 4rem;
 }
+
+@media screen and (max-width: 996px) {
+  .joinCommunity {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  h2.communityTitle {
+    font-size: 2.6rem;
+    margin: 1rem 0;
+  }
+
+  .socialItem {
+    flex: none !important;
+    width: calc(100% / 3);
+    float: left;
+  }
+
+  .twitter {
+    padding-top: 10px;
+  }
+
+  .illustration {
+    margin-top: 2rem;
+  }
+}

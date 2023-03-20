@@ -37,17 +37,17 @@ export default function JoinCommunity(): JSX.Element {
             <h2 className={styles.communityTitle}>Join the community</h2>
             <p className={styles.description}>Join our supportive and innovative community, the gateway into the world of Ternoa.</p>
             <div className={clsx('row', styles.socialContainer)}>
-              <div className='col col--3'>
+              <div className={clsx('col col--3', styles.socialItem)}>
                 <a className="" href='https://discord.com/invite/mQeEWQj46a' target="_blank">
                   <DiscordIcon fill={colorMode === 'light' ? "black" : "white"} />
                 </a>
               </div>
-              <div className='col col--3'>
+              <div className={clsx('col col--3', styles.socialItem)}>
                 <a className="" href='https://github.com/capsule-corp-ternoa' target="_blank">
                   <GithubIcon fill={colorMode === 'light' ? "black" : "white"} />
                 </a>
               </div>
-              <div className='col col--3'>
+              <div className={clsx('col col--3', styles.socialItem, styles.twitter)}>
                 <a className="" href='https://twitter.com/Ternoa_' target="_blank">
                   <TwitterIcon fill={colorMode === 'light' ? "black" : "white"} />
                 </a>
@@ -55,7 +55,7 @@ export default function JoinCommunity(): JSX.Element {
             </div>
           </div>
           <div className='col col--5 alignCenter'>
-            <img src='/img/ternoa-community.png' />
+            <img src='/img/ternoa-community.png' className={styles.illustration} />
           </div>
         </div>
       </div>

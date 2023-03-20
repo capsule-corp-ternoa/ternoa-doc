@@ -85,8 +85,8 @@ function Feature({ url, title, description }: FeatureItem) {
 
 export default function DiscoverMore(): JSX.Element {
   return (
-    <div className='moreFeatures'>
-      <h2>Discover more</h2>
+    <div className={styles.moreFeatures}>
+      <h2 className={styles.moreTitle}>Discover more</h2>
       <section className={styles.more}>
         <div className="container">
           <div className="row">
