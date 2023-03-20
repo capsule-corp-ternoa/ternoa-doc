@@ -5,10 +5,11 @@ sidebar_label: How to prepare Secret NFT assets
 
 # How to prepare Secret NFT assets
 
-- Off-Chain Metadata: Secret NFT metadata, Secret Media Metadata
-- Ternoa IPFS Client + one line helper: secretNftEncryptAndUploadFile - Encrypts and uploads a file on an IFPS gateway.
+A Ternoa Secret NFT is a unique type of NFT that incorporates encrypted data, making it more secure and exclusive than a Basic NFT. Only the current owner of the Secret NFT has access to the encrypted data at any given time.
 
-A Ternoa Secret NFT is composed of three files: a public asset file (e.g. image, video, music), a secret asset file (e.g. image, video, music) and a metadata json file. The asset file CID is nested into the metadata file and the three files are stored on IPFS (Interplanetary File Systems) with their dedicated hashes.
+There are two ways to create a Secret NFT: either by adding a secret to an existing Basic NFT or by creating a new Secret NFT from scratch. In both cases, you will need to [prepare the Basic NFT assets](/for-developers/guides/NFT/basic-NFT/prepare-assets) beforehand.
+
+A Ternoa Secret NFT comprises two additional files: a secret asset file (such as an image, video, or music file) and a metadata JSON file for the secret. To ensure maximum security and exclusivity, the secret asset file must be encrypted, and the encrypted file is nested within the metadata file. Both files are stored on IPFS (Interplanetary File Systems) with unique hashes dedicated to each file.
 
 IPFS (Interplanetary File Systems) is one of the solution we recommend to upload NFTs medias and other associated metadatas. Thus offchain datas are stored in a fully decentralized way and only the link to this metadata is stored on-chain as part of the NFT. This link is frequently a fingerprint called a cryptographic ID (e.g. `Qmf5RHhnUjSCfCN9d1Ee6sUWxe3Eqvogw1cTsssrxAxtPn`). IPFS files are accessible using those hashes.
 
@@ -18,7 +19,9 @@ Ternoa provides its own IPFS public nodes on different HTTP gateways based on th
 - ALPHANET: **ipfs-alphanet.trnnfr.com**
 
 :::info
+
 Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to get your API Key.
+
 :::
 
 ## Off-Chain Metadata
@@ -56,11 +59,11 @@ Here below is the expected format for secret NFT:
 
 An IPFS client is available on Ternoa-JS SDK to make IPFS upload simple with only one line of code.
 
-Place any asset you want to use at the root of your project and use this code snippet by completing _FILE_NAME_ & _FILE_TYPE_:
+Place any asset you want to use at the root of your project and use the following code snippet by completing _FILE_NAME_ & _FILE_TYPE_. A _PUBLIC_PGP_KEY_ is also require to encrypt the secret asset before uploading it to IPFS.
 
 ```typescript showLineNumbers
 import fs from "fs";
-import { TernoaIPFS, File } from "ternoa-js";
+import { encryptFile, TernoaIPFS, File } from "ternoa-js";
 
 const main = async () => {
   const file = new File(
@@ -70,22 +73,45 @@ const main = async () => {
       type: "FILE_TYPE",
     }
   );
+  const encryptedFile = await encryptFile(file, "PUBLIC_PGP_KEY");
 
   const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
   const nftMetadata = {
-    title: "NFT TITLE",
-    description: "NFT DESCRIPTION",
+    title: "(OPTIONAL) Something strong.",
+    description: "(OPTIONAL) This is my first Secret NFT on Ternoa.",
   };
 
-  const { Hash } = await ipfsClient.storeNFT(file, nftMetadata);
+  const mediaMetadata = {
+    name: "(OPTIONAL) FILE_NAME",
+  };
+
+  const { Hash } = await ipfsClient.storeSecretNFT(
+    encryptedFile,
+    "FILE_TYPE",
+    "PUBLIC_PGP_KEY",
+    nftMetadata,
+    mediaMetadata
+  );
   console.log("The off-chain metadata CID hash is ", Hash);
 };
 ```
 
-First the asset file is read from the file system and wrapped in a specific `File` instance imported from the Ternoa-JS library. The `TernoaIPFS` class is then used to create an IPFS client that connects to a specified IPFS node using a given API key. The metadata for the file is then defined in an object and passed to the `storeNFT` method of the client along with the `File` instance. The resulting `Hash` of the off-chain metadata is logged to the console.
+First the asset file is read from the file system and wrapped in a specific `File` instance imported from the Ternoa-JS library. The `encryptFile` function is used to encrypt the file contents using a specified public PGP key. The `TernoaIPFS` class is then used to create an IPFS client that connects to a specified IPFS node using a given API key. The metadatas for the file and the media are then defined in an object and passed to the `storeSecretNFT` method of the client along with the encrypted file, the file type and the public PGP key. The resulting `Hash` of the off-chain metadata is logged to the console.
 
-The `storeNFT` method handles two IPFS uploads under the hood: a first one with the NFT media (e.g. the image) and a second one with the JSON metadata file, including the media's hash from the first upload response. This method also validates the metadata structure to ensure TIPs compatibility.
+The `storeSecretNFT` method handles two IPFS uploads under the hood: a first one with the NFT media (e.g. the image) and a second one with the JSON metadata file, including the media's hash from the first upload response. This method also validates the metadata structure to ensure TIPs compatibility.
+
+:::info
+
+Ternoa-JS provides a convenient helper function named `secretNftEncryptAndUploadFile` that combines the file encryption and storage of a Secret NFT on IPFS.
+
+:::
+
+:::info
+
+You can generate a PGP key pair using the `generatePGPKeys` helper from Ternoa-JS.
+
+:::
 
 ## Next
 
