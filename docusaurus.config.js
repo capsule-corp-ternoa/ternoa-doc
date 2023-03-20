@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Ternoa Documentation",
-  tagline: "All resources you'll need to build the future on Ternoa",
+  title: "Build your web3 project on Ternoa",
+  tagline: "Accelerate your web3 development with our easy-to-use Ternoa.js SDK, guides, and tutorials",
   url: "https://docs.ternoa.network/",
   baseUrl: "/",
   onBrokenLinks: "warn",
@@ -21,7 +21,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "Ternoa", // Usually your GitHub org/user name.
   projectName: "Ternoa-doc", // Usually your repo name.
-
   markdown: {
     mermaid: true,
   },
@@ -97,6 +96,12 @@ const config = {
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
+          filename: 'sitemap.xml',
+        },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
@@ -120,9 +125,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       algolia: {
-        appId: "FOQX5V6698",
-        apiKey: "e1d6e170addd504d0098660fa261dd2e",
-        indexName: "prod_doc_search",
+        appId: "JDLVU0U8IU",
+        apiKey: "970f1b0558f5a511df9cc0ad33a97c09",
+        indexName: "ternoa_doc",
         contextualSearch: true,
       },
       /*announcementBar: {
@@ -135,19 +140,57 @@ const config = {
       },*/
       navbar: {
         hideOnScroll: false,
-        title: "Ternoa Documentation",
+        title: "ternoa",
         logo: {
           alt: "Ternoa Logo",
           src: "/img/ternoa_logo.svg",
           width: 40,
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'welcome',
-          //   position: 'left',
-          //   label: 'Docs',
-          // },
+          {
+            type: 'dropdown',
+            label: 'Docs',
+            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                label: 'Discover Ternoa',
+                docId: 'discover-ternoa/index',
+              },
+              {
+                type: 'doc',
+                label: 'What is Ternoa',
+                docId: 'discover-ternoa/what-is-ternoa',
+              },
+              {
+                type: 'doc',
+                label: 'Explore Features',
+                docId: 'discover-ternoa/explore-ternoa-features',
+              },
+            ],
+          },
+          {
+            type: 'dropdown',
+            label: 'SDK',
+            position: 'left',
+            items: [
+              {
+                type: 'doc',
+                label: 'Overview',
+                docId: 'for-developers/overview',
+              },
+              {
+                type: 'doc',
+                label: 'Developer Guides',
+                docId: 'for-developers/guides/index',
+              },
+              {
+                type: 'doc',
+                label: 'Advanced Guides',
+                docId: 'for-developers/advanced-guides/index',
+              },
+            ],
+          },
           {
             href: "https://github.com/capsule-corp-ternoa",
             className: "pseudo-icon github-icon",
@@ -162,10 +205,6 @@ const config = {
             type: "search",
             position: "right",
           },
-          /*{
-            type: 'localeDropdown',
-            position: 'right',
-          },*/
         ],
       },
       docs: {
@@ -187,7 +226,7 @@ const config = {
             items: [
               {
                 label: "Welcome",
-                to: "/intro",
+                to: "discover-ternoa/what-is-ternoa",
               },
               {
                 label: "Ternoa Wiki",
@@ -195,7 +234,7 @@ const config = {
               },
               {
                 label: "For Developers",
-                to: "/category/for-developers",
+                to: "/for-developers",
               },
               {
                 label: "For Node Operators",
