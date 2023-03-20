@@ -226,7 +226,7 @@ const config = {
             items: [
               {
                 label: "Welcome",
-                to: "/what-is-ternoa ",
+                to: "discover-ternoa/what-is-ternoa",
               },
               {
                 label: "Ternoa Wiki",
