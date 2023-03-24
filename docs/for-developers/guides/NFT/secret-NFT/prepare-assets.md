@@ -88,7 +88,7 @@ const main = async () => {
 
   const { Hash } = await ipfsClient.storeSecretNFT(
     encryptedFile,
-    "FILE_TYPE",
+    file.type,
     "PUBLIC_PGP_KEY",
     nftMetadata,
     mediaMetadata
