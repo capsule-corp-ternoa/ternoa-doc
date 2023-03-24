@@ -15,12 +15,12 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.3.1",
-    "@docusaurus/plugin-client-redirects": "^2.3.1",
-    "@docusaurus/plugin-sitemap": "^2.3.1",
-    "@docusaurus/preset-classic": "^2.3.1",
-    "@docusaurus/theme-mermaid": "^2.3.1",
-    "algoliasearch": "^4.15.0",
+    "@docusaurus/core": "^2.4.0",
+    "@docusaurus/plugin-client-redirects": "^2.4.0",
+    "@docusaurus/plugin-sitemap": "^2.4.0",
+    "@docusaurus/preset-classic": "^2.4.0",
+    "@docusaurus/theme-mermaid": "^2.4.0",
+    "algoliasearch": "^4.16.0",
     "clsx": "^1.2.1",
     "highlight.js": "^11.7.0",
     "postcss-discard-comments": "^5.1.2",
@@ -29,10 +29,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.3.1",
-    "@tsconfig/docusaurus": "^1.0.6",
+    "@docusaurus/module-type-aliases": "^2.4.0",
+    "@tsconfig/docusaurus": "^1.0.7",
     "eslint-plugin-mdx": "^2.0.5",
-    "typescript": "^4.8.3"
+    "typescript": "^5.0.2"
   },
   "browserslist": {
     "production": [
