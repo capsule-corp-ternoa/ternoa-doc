@@ -1,0 +1,40 @@
+.moreFeatures {
+  align-items: center;
+  padding: 0rem 2rem 1rem 1rem;
+  text-decoration: none;
+}
+
+h2.moreTitle {
+  text-align: center;
+  font-size: 3.125rem;
+  margin: 4rem 1rem;
+}
+
+h3.featureTitle {
+  font-size: 1.5rem;
+}
+
+[data-theme='dark'] .cards {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cards {
+  border-radius: 20x;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 2rem 1rem;
+  max-width: 350px;
+  margin: 2rem auto;
+  text-align: left;
+  justify-content: space-evenly;
+}
+
+.learnMoreBtn {
+  width: fit-content;
+}
+
+@media screen and (max-width: 996px) {
+  h2.moreTitle {
+    font-size: 2.6rem;
+    margin: 1rem 0;
+  }
+}

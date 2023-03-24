@@ -1,0 +1,33 @@
+.joinCommunity {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  text-decoration: none;
+  margin-top: 4rem;
+}
+
+h2.communityTitle {
+  text-align: left;
+  margin: 0 0 2rem;
+  font-size: 3.125rem;
+}
+
+.description {
+  max-width: 450px;
+}
+
+@media screen and (max-width: 996px) {
+  .joinCommunity {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  h2.communityTitle {
+    font-size: 2.6rem;
+    margin: 1rem 0;
+  }
+
+  .illustration {
+    margin-top: 2rem;
+  }
+}

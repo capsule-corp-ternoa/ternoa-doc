@@ -1,0 +1,23 @@
+.cardBg {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme='dark'] .cardBg {
+  background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+
+.radius {
+  border-radius: 20px;
+}
+
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+.snippetTitle {
+  color: var(--navbar-icon-color);
+}

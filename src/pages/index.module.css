@@ -3,84 +3,95 @@
  * and scoped locally.
  */
 
- .heroBanner {
+.heroBanner {
   width: 100%;
-  height: 650px;
+  padding-top: 2rem;
   background-color: var(--ifm-color-classic);
   padding-left: 3rem;
 }
 
+.headerContainer {
+  display: flex;
+  align-items: center;
+}
+
 .heroTitle {
-  font-size: 5.5rem;
+  text-transform: uppercase;
   line-height: 1;
-  background: var(--linear-gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--navbar-icon-color);
 }
 
 .heroSubtitle {
-  font-size: 2.3rem; 
+  font-size: 1.625rem;
   line-height: 1.1;
   padding: 14px 0px;
   font-weight: 500;
-  background: var(--linear-gradient-text);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--docsearch-muted-color);
+}
+
+.btnContainer {
+  text-align: left;
 }
 
 .linkButton {
   border: 2px solid var(--ifm-color-primary);
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 18px;
   text-align: center;
   padding: 8px 17px;
   font-weight: 500;
+  margin: 4rem 1rem;
 }
 
 .linkButton:hover {
-  border: 2px solid var(--ifm-color-primary); 
+  border: 2px solid var(--ifm-color-primary);
+}
+
+.ctaBtn {
+  margin: 2rem .5rem;
 }
 
 @media screen and (max-width: 1439px) {
   .heroBanner {
-    padding: 3rem; 
+    padding: 3rem;
   }
+
   .heroTitle {
     font-size: 4.1rem;
   }
+
   .heroSubtitle {
-    font-size: 2.1rem; 
+    font-size: 2rem;
     line-height: 40px;
   }
 }
 
 @media screen and (max-width: 1037px) {
   .heroBanner {
-    padding: 3rem; 
+    padding: 3rem;
   }
+
   .heroTitle {
     font-size: 4rem;
   }
+
   .heroSubtitle {
-    font-size: 2.1rem; 
+    font-size: 2.1rem;
     line-height: 40px;
   }
 }
 
 @media screen and (max-width: 817px) {
   .heroBanner {
-    padding: 2rem; 
+    padding: 2rem;
   }
+
   .heroTitle {
     font-size: 3rem;
   }
+
   .heroSubtitle {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
     line-height: 40px;
   }
 }
-
-
-
- 
-  

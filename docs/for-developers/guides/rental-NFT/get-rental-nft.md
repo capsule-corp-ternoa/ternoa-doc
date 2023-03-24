@@ -15,7 +15,7 @@ Do not hesitate to adapt the information you require in your query. When the que
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
 
-const RENTAL_NFT = //update NFT id here with existing rental NFT;
+const RENTAL_NFT = #update NFT id here with existing rental NFT;
 const query = (id: number) => gql`
     {
         rentEntity(id: "${id}") {
@@ -49,7 +49,7 @@ const getRentalNFTData = async () => {
 	try {
 		const response = await request<{ rentEntity: RentalNFTType }>(
 			"https://indexer-alphanet.ternoa.dev",
-			query(CRENTAL_NFT)
+			query(RENTAL_NFT)
 		);
 		console.log(response);
 	} catch (error) {
