@@ -1,9 +1,9 @@
 ---
 sidebar_position: 2
-sidebar_label: How to retrieve a Secret NFT
+sidebar_label: How to retrieve a Capsule NFT
 ---
 
-# How to retrieve a Secret NFT using Ternoa Indexer
+# How to retrieve a Capsule NFT using Ternoa Indexer
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Marketplace(...)) using GraphQL.
@@ -50,7 +50,7 @@ Here are detailed the paramaters available for the `NftEntity`:
 `timestampConvertedToCapsule`: The last capsule conversion timestamp. - Date | null
 ```
 
-For example, if we want to get the Secret NFT: owner / id / off-chain data / secret off-chain data / isSecret state / collection id / royalty; we have to prepare the following query by replacing _NFT_ID_ with the Secret NFT id you want to get the information from (e.g. the NFT id from the Secret NFT minted previously in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-secret-NFT)):
+For example, if we want to get the Capsule NFT: owner / id / off-chain data / capsule off-chain data / isCapsule state / collection id / royalty; we have to prepare the following query by replacing _NFT_ID_ with the Capsule NFT id you want to get the information from (e.g. the NFT id from the Capsule NFT minted previously in ["How to mint a Capsule NFT on-chain"](/for-developers/guides/NFT/capsule-NFT/mint-capsule-NFT)):
 
 ```typescript
 {
@@ -58,8 +58,8 @@ For example, if we want to get the Secret NFT: owner / id / off-chain data / sec
     owner
     nftId
     offchainData
-    secretOffchainData
-    isSecret
+    capsuleOffchainData
+    isCapsule
     collectionId
     royalty
   }
@@ -70,21 +70,21 @@ For example, if we want to get the Secret NFT: owner / id / off-chain data / sec
 
 Once the query is ready, you can make the request to our Indexer instances by providing both the indexer endpoint and the query.
 
-Replace _NFT_ID_ in the following code snippet with the Secret NFT ID previouly generated in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-secret-NFT):
+Replace _NFT_ID_ in the following code snippet with the Capsule NFT ID previouly generated in ["How to mint a Capsule NFT on-chain"](/for-developers/guides/NFT/capsule-NFT/mint-capsule-NFT):
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
 
-const NFT_ID = 74260; // Use your Secret NFT id here
+const NFT_ID = 74266; // Use your Capsule NFT id here
 const query = (id: number) => gql`
     {
       nftEntity(id: "${id}") {
         owner
         nftId
         offchainData
-        secretOffchainData
-        isSecret
-        isSecretSyncing
+        capsuleOffchainData
+        isCapsule
+        isCapsuleSyncing
         collectionId
         royalty
       }
@@ -107,8 +107,8 @@ type NftType = {
   owner: string;
   nftId: string;
   offchainData: string;
-  secretOffchainData: string;
-  isSecret: boolean;
+  capsuleOffchainData: string;
+  isCapsule: boolean;
   collectionId: string;
   royalty: number;
 };
@@ -116,20 +116,21 @@ type NftType = {
 
 The `getNftData` function is an asynchronous function that sends a GraphQL request using the `request` function from the **"graphql-request"** library. Here we are using the Ternoa Alphanet instance at **"https://indexer-alphanet.ternoa.dev"** with the NFT ID 0 as the query parameter (you can try with your id). The response from the server is an object with a property nftEntity that has the data of the requested NFT entity.
 
-The response for the NFT id 74,260 the the Alphanet Network is:
+The response for the NFT id 74,266 the the Alphanet Network is:
 
 ```json
 {
   "data": {
     "nftEntity": {
       "owner": "5Cf8PBw7QiRFNPBTnUoks9Hvkzn8av1qfcgMtSppJvjYcxp6",
-      "nftId": "74260",
-      "offchainData": "public",
-      "secretOffchainData": "secret",
-      "isSecret": true,
-      "isSecretSynced": false,
+      "nftId": "74266",
+      "offchainData": "public metadata",
+      "capsuleOffchainData": "capsule offchain metadata",
+      "isCapsule": true,
+      "isCapsuleSynced": false,
       "collectionId": null,
-      "royalty": 0.001
+      "royalty": 0,
+      "timestampCreated": "2023-03-27T14:44:54.001"
     }
   }
 }
@@ -162,8 +163,8 @@ The response on the the Alphanet Network when this document is written is:
       "nodes": [
         {
           "owner": "5EU1EDxRBpoq48HXLvLfVyGJfrz5p3hGkQC46XJFTHS1mohb",
-          "nftId": "74260",
-          "timestampCreated": "2023-03-27T08:43:18.002"
+          "nftId": "74266",
+          "timestampCreated": "2023-03-27T14:44:54.001"
         },
         ...
       ]
@@ -172,7 +173,7 @@ The response on the the Alphanet Network when this document is written is:
 }
 ```
 
-The last NFT minted on the Ternoa chain is the NFT 74,260.
+The last NFT minted on the Ternoa chain is the NFT 74,266.
 
 ## Support
 
