@@ -77,12 +77,12 @@ const main = async () => {
 
   const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
-  const nftMetadata = {
+  const secretNftMetadata = {
     title: "(OPTIONAL) Something strong.",
     description: "(OPTIONAL) This is my first Secret NFT on Ternoa.",
   };
 
-  const mediaMetadata = {
+  const secretMediaMetadata = {
     name: "(OPTIONAL) FILE_NAME",
   };
 
@@ -90,8 +90,8 @@ const main = async () => {
     encryptedFile,
     file.type,
     "PUBLIC_PGP_KEY",
-    nftMetadata,
-    mediaMetadata
+    secretNftMetadata,
+    secretMediaMetadata
   );
   console.log("The off-chain metadata CID hash is ", Hash);
 };

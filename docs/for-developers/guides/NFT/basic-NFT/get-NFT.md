@@ -131,11 +131,11 @@ Ternoa Indexer comes with filtering and ordering options. Instead of requesting 
 
 ```typescript
 {
-  nftEntities(orderBy: [TIMESTAMP_CREATE_DESC]) {
+  nftEntities(orderBy: [TIMESTAMP_CREATED_DESC]) {
     nodes {
       owner
       nftId
-      timestampCreate
+      timestampCreated
     }
   }
 }

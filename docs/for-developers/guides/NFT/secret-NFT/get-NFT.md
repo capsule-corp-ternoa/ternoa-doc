@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 sidebar_label: How to retrieve a Secret NFT
 ---
 
@@ -50,7 +50,7 @@ Here are detailed the paramaters available for the `NftEntity`:
 `timestampConvertedToCapsule`: The last capsule conversion timestamp. - Date | null
 ```
 
-For example, if we want to get the NFT: owner / id / off-chain data / collection id / royalty; we have to prepare the following query by replacing _NFT_ID_ with the NFT id you want to get the information from (e.g. the NFT id from the NFT minted previously in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-NFT)):
+For example, if we want to get the Secret NFT: owner / id / off-chain data / secret off-chain data / isSecret state / collection id / royalty; we have to prepare the following query by replacing _NFT_ID_ with the Secret NFT id you want to get the information from (e.g. the NFT id from the Secret NFT minted previously in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-secret-NFT)):
 
 ```typescript
 {
@@ -58,6 +58,8 @@ For example, if we want to get the NFT: owner / id / off-chain data / collection
     owner
     nftId
     offchainData
+    secretOffchainData
+    isSecret
     collectionId
     royalty
   }
@@ -68,18 +70,21 @@ For example, if we want to get the NFT: owner / id / off-chain data / collection
 
 Once the query is ready, you can make the request to our Indexer instances by providing both the indexer endpoint and the query.
 
-Replace _NFT_ID_ in the following code snippet with the NFT ID previouly generated in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-NFT):
+Replace _NFT_ID_ in the following code snippet with the Secret NFT ID previouly generated in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-secret-NFT):
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
 
-const NFT_ID = 0;
+const NFT_ID = 74260; // Use your Secret NFT id here
 const query = (id: number) => gql`
     {
       nftEntity(id: "${id}") {
         owner
         nftId
         offchainData
+        secretOffchainData
+        isSecret
+        isSecretSyncing
         collectionId
         royalty
       }
@@ -102,6 +107,8 @@ type NftType = {
   owner: string;
   nftId: string;
   offchainData: string;
+  secretOffchainData: string;
+  isSecret: boolean;
   collectionId: string;
   royalty: number;
 };
@@ -109,17 +116,20 @@ type NftType = {
 
 The `getNftData` function is an asynchronous function that sends a GraphQL request using the `request` function from the **"graphql-request"** library. Here we are using the Ternoa Alphanet instance at **"https://indexer-alphanet.ternoa.dev"** with the NFT ID 0 as the query parameter (you can try with your id). The response from the server is an object with a property nftEntity that has the data of the requested NFT entity.
 
-The response for the NFT id 0 the the Alphanet Network is:
+The response for the NFT id 74260 the the Alphanet Network is:
 
 ```json
 {
   "data": {
     "nftEntity": {
-      "owner": "5DoaPm79MrWUQpFSDBhpmotRp344dc9eM4NV8aRb3vHEuzxH",
-      "nftId": "0",
-      "offchainData": "Hello",
-      "collectionId": "0",
-      "royalty": 100
+      "owner": "5Cf8PBw7QiRFNPBTnUoks9Hvkzn8av1qfcgMtSppJvjYcxp6",
+      "nftId": "74260",
+      "offchainData": "public",
+      "secretOffchainData": "secret",
+      "isSecret": true,
+      "isSecretSynced": false,
+      "collectionId": null,
+      "royalty": 0.001
     }
   }
 }
@@ -131,17 +141,17 @@ Ternoa Indexer comes with filtering and ordering options. Instead of requesting 
 
 ```typescript
 {
-  nftEntities(orderBy: [TIMESTAMP_CREATE_DESC]) {
+  nftEntities(orderBy: [TIMESTAMP_CREATED_DESC]) {
     nodes {
       owner
       nftId
-      timestampCreate
+      timestampCreated
     }
   }
 }
 ```
 
-The NFT in the response will be ordered by creation timestamp descendent with `orderBy: [TIMESTAMP_CREATE_DESC]`.
+The NFT in the response will be ordered by creation timestamp descendent with `orderBy: [TIMESTAMP_CREATED_DESC]`.
 
 The response on the the Alphanet Network when this document is written is:
 
@@ -152,14 +162,10 @@ The response on the the Alphanet Network when this document is written is:
       "nodes": [
         {
           "owner": "5EU1EDxRBpoq48HXLvLfVyGJfrz5p3hGkQC46XJFTHS1mohb",
-          "nftId": "72293",
-          "timestampCreate": "2023-02-22T10:05:06.001"
+          "nftId": "74260",
+          "timestampCreated": "2023-03-27T08:43:18.002"
         },
         {
-          "owner": "5EU1EDxRBpoq48HXLvLfVyGJfrz5p3hGkQC46XJFTHS1mohb",
-          "nftId": "72294",
-          "timestampCreate": "2023-02-22T10:05:06.001"
-        },
         ...
       ]
     }
@@ -167,7 +173,7 @@ The response on the the Alphanet Network when this document is written is:
 }
 ```
 
-The last NFT minted on the Ternoa chain is the NFT 72,293.
+The last NFT minted on the Ternoa chain is the NFT 74,260.
 
 ## Support
 

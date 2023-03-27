@@ -1,6 +1,6 @@
 ---
-sidebar_position: 4
-sidebar_label: How to mint a Secret NFT on-chain
+sidebar_position: 3
+sidebar_label: How to decrypt a Secret NFT
 ---
 
 # How to decrypt a Secret NFT

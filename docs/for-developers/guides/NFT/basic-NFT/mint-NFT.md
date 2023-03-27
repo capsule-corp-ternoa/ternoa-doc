@@ -21,12 +21,7 @@ In order to create an NFT on the Ternoa chain, Ternoa-JS provides you with a `cr
 Replace _IPFS_CID_ in the following code snippet with your CID hash previouly generated in ["How to prepare Basic NFT assets"](/for-developers/guides/NFT/basic-NFT/prepare-assets):
 
 ```typescript showLineNumbers
-import {
-  createNft,
-  initializeApi,
-  getKeyringFromSeed,
-  WaitUntil,
-} from "ternoa-js";
+import { createNft, getKeyringFromSeed, WaitUntil } from "ternoa-js";
 
 const mintNFT = async () => {
   try {
@@ -59,7 +54,7 @@ Here are detailed the `createNft` helper parameters:
 `royalty`: a number (in percentage between 0 an 100) to set the royalties taken by the owner for each NFT sale.
 `collectionId`: an optional parameter. If you want your NFT to belong to a collection, add the collection id here otherwise keep it undefined.
 `isSoulbound`: (boolean): when set to true, the NFT will be a soulbound NFT. Default is false.
-`keyring`: the provided keyring (containing the address) will be used to sign the transactio and pay the execution fee.
+`keyring`: the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
 `waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
