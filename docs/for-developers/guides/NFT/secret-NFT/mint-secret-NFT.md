@@ -34,13 +34,17 @@ import {
 
 const main = async () => {
   try {
-    const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
-    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-
-    const CLUSTER_ID = 0; // The cluster of TEE enclaves used to store private key shares
+    const SEED = "//TernoaTestAccount"; // The owner seed phrase.
+    const IPFS_NODE_URL = "IPFS_NODE_URL"; // The IPFS node used.
+    const IPFS_API_KEY = "IPFS_API_KEY"; // The IPFS node API KEY if required.
+    const CLUSTER_ID = 0; // The cluster of TEE enclaves used to store private key shares.
+    const NFT_ID = 0; // The Secret NFT ID.
     const SECRET_NFT_ROYALTY = 10; // Percentage of all second sales that the secret NFT creator will receive - 10%.
     const COLLECTION_ID = undefined; // The collection to which the secret NFT belongs. Optional Parameter: Default is undefined.
     const IS_SOULBOUND = false; // If true, makes the Secret NFT a Soulbound token. Default is false.
+
+    const ipfsClient = new TernoaIPFS(new URL(IPFS_NODE_URL), IPFS_API_KEY);
+    const keyring = await getKeyringFromSeed(SEED);
 
     const NFTFile = new File(
       [await fs.promises.readFile("FILE_NAME")],
