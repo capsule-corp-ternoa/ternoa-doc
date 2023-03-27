@@ -27,7 +27,6 @@ const TwitterIcon = (props) => (
 )
 export default function JoinCommunity(): JSX.Element {
   const { colorMode } = useColorMode();
-  console.log({ colorMode });
 
   return (
     <section className={styles.joinCommunity}>

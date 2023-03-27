@@ -14,63 +14,66 @@ NFTs represent proof of ownership on the blockchain. Renting is a powerful tool 
 ## Rental NFT features
 
 <details className="toggle">
-  <summary>Create Contract</summary>
+  <summary>Creating Contract</summary>
   <div>
     Create a rental contract on the chain for an NFT.
   </div>
+  <a to="/for-developers/guides/rental-NFT/create-rental-nft" className='button purpleBtn noUnderline my2'>
+    View code
+  </a>
 </details>
 
 <details className="toggle">
-  <summary>Revoke Contract</summary>
+  <summary>Revoking Contract</summary>
   <div>
     Revoke a running contract.
   </div>
 </details>
 
 <details className="toggle">
-  <summary>Cancel Contract</summary>
+  <summary>Cancelling Contract</summary>
   <div>
     Cancel a contract that is not running.
   </div>
 </details>
 
 <details className="toggle">
-  <summary>Rent</summary>
+  <summary>Renting</summary>
   <div>
     Rent an nft with automatic acceptance.
   </div>
 </details>
 
 <details className="toggle">
-  <summary> Make Rent Offer</summary>
+  <summary> Making Rent Offer</summary>
   <div>
     Make an offer for an available contract with manual acceptance.
   </div>
 </details>
 
 <details className="toggle">
-  <summary> Accept Rent Offer</summary>
+  <summary> Accepting Rent Offer</summary>
   <div>
     Accept a rent offer for manual acceptance contract.
   </div>
 </details>
 
 <details className="toggle">
-  <summary>Retract Rent Offer</summary>
+  <summary>Retracting Rent Offer</summary>
   <div>
     Retract a rent offer provided to a manual acceptance contract.
   </div>
 </details>
 
 <details className="toggle">
-  <summary>Change Subscription Terms</summary>
+  <summary>Changing Subscription Terms</summary>
   <div>
     Change the subscription terms for a subscription contract.
   </div>
 </details>
 
 <details className="toggle">
-  <summary>Accept Subscription Terms</summary>
+  <summary>Accepting Subscription Terms</summary>
   <div>
     Accept the subscription terms for a subscription contract.
   </div>

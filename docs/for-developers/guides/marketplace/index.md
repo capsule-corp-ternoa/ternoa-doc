@@ -31,6 +31,9 @@ Ternoa also offers a different ways to sell an NFT: auctions. Auctions are a typ
             <li>Collection list</li>
         </ul>
     </div>
+     <a to="/for-developers/guides/marketplace/manage-marketplace" className='button purpleBtn noUnderline my2'>
+        View code
+    </a>
 </details>
 
 <details className="toggle">
@@ -46,16 +49,25 @@ Ternoa also offers a different ways to sell an NFT: auctions. Auctions are a typ
 <details className="toggle">
   <summary>Listing an NFT</summary>
   <div>List an NFT on a marketplace.</div>
+  <a to="/for-developers/guides/marketplace/sale-NFT#list-for-sale-an-nft-on-a-marketplace-using-ternoa-js" className='button purpleBtn noUnderline my2'>
+      View code
+  </a>
 </details>
 
 <details className="toggle">
   <summary>Unlisting an NFT</summary>
   <div>Unlist an NFT from a marketplace.</div>
+  <a to="/for-developers/guides/marketplace/sale-NFT#unlist-an-nft-on-a-marketplace-using-ternoa-js" className='button purpleBtn noUnderline my2'>
+      View code
+  </a>
 </details>
 
 <details className="toggle">
   <summary>Buying an NFT</summary>
   <div>Buy an NFT on a marketplace.</div>
+  <a to="/for-developers/guides/marketplace/buy-NFT" className='button purpleBtn noUnderline my2'>
+      View code
+  </a>
 </details>
 
 ## Auctions features
@@ -63,31 +75,49 @@ Ternoa also offers a different ways to sell an NFT: auctions. Auctions are a typ
 <details className="toggle">
     <summary>Creating an Auction</summary>
     <div>Create an auction for an NFT.</div>
+    <a to="/for-developers/guides/marketplace/auction/create-auction" className='button purpleBtn noUnderline my2'>
+        View code
+    </a>
 </details>
 
 <details className="toggle">
     <summary>Cancelling an Auction</summary>
     <div>Cancel an auction for an NFT.</div>
+    <a to="/for-developers/guides/marketplace/auction/manage-auction#cancel-an-auction-on-a-marketplace-using-ternoa-js" className='button purpleBtn noUnderline my2'>
+        View code
+    </a>
 </details>
 
 <details className="toggle">
   <summary>Ending an Auction</summary>
   <div>End an auction for an NFT</div>
+  <a to="/for-developers/guides/marketplace/auction/manage-auction#end-an-auction-on-a-marketplace-using-ternoa-js" className='button purpleBtn noUnderline my2'>
+        View code
+    </a>
 </details>
 
 <details className="toggle">
   <summary>Adding a Bid</summary>
   <div>The bidder adds a new bid offer.</div>
+  <a to="/for-developers/guides/marketplace/auction/bid#bid-on-an-auction-using-ternoa-js" className='button purpleBtn noUnderline my2'>
+    View code
+  </a>
 </details>
 
 <details className="toggle">
   <summary>Removing a Bid</summary>
   <div>The bidder removes his bid offer.</div>
+  <a to="/for-developers/guides/marketplace/auction/bid#remove-a-bid-using-ternoa-js" className='button purpleBtn noUnderline my2'>
+      View code
+  </a>
 </details>
 
 <details className="toggle">
   <summary>Buy it Now</summary>
   <div>The NFT can be directly buy if a buyItPrice was defined and the auction has not started yet.</div>
+  <a to="/for-developers/guides/marketplace/auction/buy-it-now" className='button purpleBtn noUnderline my2'>
+    View code
+  </a>
 </details>
 
 <details className="toggle">

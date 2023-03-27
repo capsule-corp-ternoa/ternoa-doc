@@ -14,31 +14,34 @@ Ternoa responds to existing centralized storage solutions by using capsule or se
 ## Transmission Protocols features
 
 <details className="toggle">
-  <summary>Set one of the four transmission protocols</summary>
+  <summary>Setting one of the four transmission protocols</summary>
    <ul>
         <li>AtBlock: The Date Protocol </li>
         <li>AtBlockWithReset: The Date with countdown reset Protocol </li>
         <li>OnConsent: The Consent Protocol </li>
         <li>OnConsentAtBlock: The Consent at Date Protocol </li>
     </ul>
+    <a to="/for-developers/guides/transmission/set-protocol" className='button purpleBtn noUnderline my2'>
+      View code
+    </a>
 </details>
 
 <details className="toggle">
-  <summary>Reset the timer of the Date with Countdown Protocol</summary>
+  <summary>Reseting the timer of the Date with Countdown Protocol</summary>
   <div>
     It resets the timer countdown for AtBlockWithReset (Date with countdown) protocol.
   </div>
 </details>
 
 <details className="toggle">
-  <summary>Remove a transmission protocol</summary>
+  <summary>Removing a transmission protocol</summary>
   <div>
     It removes a transmission protocol from an NFT.
   </div>
 </details>
 
 <details className="toggle">
-  <summary>Add consent to the Consent Protocol</summary>
+  <summary>Adding consent to the Consent Protocol</summary>
   <div>
     It adds user consent to transmit the NFT: for users specified in the account list.
   </div>
