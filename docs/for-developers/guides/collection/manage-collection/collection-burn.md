@@ -23,26 +23,26 @@ Use your own account by updating the //TernoaTestAccount with your account seed 
 
 ```typescript showLineNumbers
 import {
-  burnCollection,
-  initializeApi,
-  getKeyringFromSeed,
-  WaitUntil,
+	burnCollection,
+	initializeApi,
+	getKeyringFromSeed,
+	WaitUntil,
 } from "ternoa-js";
 
 const burnCollection = async () => {
-  try {
-    await initializeApi();
-    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-    const COLLECTION_ID = 1; // the collection id you want to burn
-    const collectionData = await burnCollection(
-      COLLECTION_ID,
-      keyring,
-      WaitUntil.BlockInclusion
-    );
-    console.log(`Collection ${collectionData.collectionId} burned`);
-  } catch (e) {
-    console.error(e);
-  }
+	try {
+		await initializeApi();
+		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+		const COLLECTION_ID = 1; // the collection id you want to burn
+		const collectionData = await burnCollection(
+			COLLECTION_ID,
+			keyring,
+			WaitUntil.BlockInclusion
+		);
+		console.log(`Collection ${collectionData.collectionId} burned`);
+	} catch (e) {
+		console.error(e);
+	}
 };
 ```
 
@@ -66,7 +66,7 @@ The response provided from the blockchain event includes all the informations be
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Marketplace(...)) using graphql.
-_In this exemple, we use the graphql-request library._
+_In this example, we use the graphql-request library._
 
 You first need to prepare a stringified query to get collection data from a specific collection id, as we did in the query(id) function.
 Do not hesitate to adapt the information you require in your query. When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the collection is burned, the `**owner**` should be set to null and the `**timestampBurn**` must be filled.
@@ -87,22 +87,22 @@ const query = (id: number) => gql`
 `;
 
 const getCollectionData = async () => {
-  try {
-    const response = await request<{ collectionEntity: CollectionType }>(
-      "https://indexer-alphanet.ternoa.dev",
-      query(COLLECTION_ID)
-    );
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
+	try {
+		const response = await request<{ collectionEntity: CollectionType }>(
+			"https://indexer-alphanet.ternoa.dev",
+			query(COLLECTION_ID)
+		);
+		console.log(response);
+	} catch (error) {
+		console.error(error);
+	}
 };
 
 type CollectionType = {
-  collectionId: string;
-  nbNfts: number;
-  owner: string | null;
-  timestampBurn: string | null;
+	collectionId: string;
+	nbNfts: number;
+	owner: string | null;
+	timestampBurn: string | null;
 };
 ```
 

@@ -19,7 +19,7 @@ Before getting started, make sure you have the following ready:
 This function creates a AtBlockWithReset Protocol on the Ternoa chain. It returns an object promise containing the ProtocolSetEvent provided by the Ternoa blockchain.
 
 :::info
-Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below. **Replace the variables** according to your needs. Each protocol requires its own specific set of parameters but once you will have understood this AtBlockWithReset exemple, you will know of to set them all.
+Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below. **Replace the variables** according to your needs. Each protocol requires its own specific set of parameters but once you will have understood this AtBlockWithReset example, you will know of to set them all.
 :::
 
 ```typescript showLineNumbers
@@ -92,7 +92,7 @@ The expected params for creating an AtBlockWithReset protocol are objects under 
 ```markdown
 `nftId`: The NFT Id of the Protocol.
 `recipient`: The destination account of the NFT.
-`protocol`: The protocol kind. In our exemple, an atBlockWithReset and the transfer block.
+`protocol`: The protocol kind. In our example, an atBlockWithReset and the transfer block.
 Protocol can be either "atBlock", "atBlockWithReset", "onConsent" or "onConsentAtBlock".
 The expected object parameter is: { [key: string]: number | ProtocolOnConsentData | Omit<ProtocolOnConsentData, "block"> }
 However, using the formatter, converts the function parameters in the expected format and makes you avoid any error.

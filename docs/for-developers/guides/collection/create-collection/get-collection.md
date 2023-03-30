@@ -7,7 +7,7 @@ sidebar_label: How to retrieve a Collection
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Marketplace(...)) using GraphQL.
-_In this exemple, we use the graphql-request library._
+_In this example, we use the graphql-request library._
 
 ## Step 1: CollectionEntity query preparation
 
@@ -62,21 +62,21 @@ const query = (id: number) => gql`
 `;
 
 const getCollectionData = async () => {
-  try {
-    const response = await request<{ collectionEntity: CollectionType }>(
-      "https://indexer-alphanet.ternoa.dev",
-      query(COLLECTION_ID)
-    );
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
+	try {
+		const response = await request<{ collectionEntity: CollectionType }>(
+			"https://indexer-alphanet.ternoa.dev",
+			query(COLLECTION_ID)
+		);
+		console.log(response);
+	} catch (error) {
+		console.error(error);
+	}
 };
 
 type CollectionType = {
-  owner: string;
-  offchainData: string;
-  collectionId: string;
+	owner: string;
+	offchainData: string;
+	collectionId: string;
 };
 ```
 
@@ -86,13 +86,13 @@ The response for the collection id 0 the the Alphanet Network is:
 
 ```json
 {
-  "data": {
-    "collectionEntity": {
-      "owner": "5DoaPm79MrWUQpFSDBhpmotRp344dc9eM4NV8aRb3vHEuzxH",
-      "collectionId": "0",
-      "offchainData": "test"
-    }
-  }
+	"data": {
+		"collectionEntity": {
+			"owner": "5DoaPm79MrWUQpFSDBhpmotRp344dc9eM4NV8aRb3vHEuzxH",
+			"collectionId": "0",
+			"offchainData": "test"
+		}
+	}
 }
 ```
 

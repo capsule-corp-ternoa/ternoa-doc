@@ -7,7 +7,7 @@ sidebar_label: How to retrieve a Basic NFT
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Marketplace(...)) using GraphQL.
-_In this exemple, we use the graphql-request library._
+_In this example, we use the graphql-request library._
 
 ## Step 1: NftEntity query preparation
 
@@ -87,23 +87,23 @@ const query = (id: number) => gql`
 `;
 
 const getNftData = async () => {
-  try {
-    const response = await request<{ nftEntity: NftType }>(
-      "https://indexer-alphanet.ternoa.dev",
-      query(NFT_ID)
-    );
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
+	try {
+		const response = await request<{ nftEntity: NftType }>(
+			"https://indexer-alphanet.ternoa.dev",
+			query(NFT_ID)
+		);
+		console.log(response);
+	} catch (error) {
+		console.error(error);
+	}
 };
 
 type NftType = {
-  owner: string;
-  nftId: string;
-  offchainData: string;
-  collectionId: string;
-  royalty: number;
+	owner: string;
+	nftId: string;
+	offchainData: string;
+	collectionId: string;
+	royalty: number;
 };
 ```
 
@@ -113,15 +113,15 @@ The response for the NFT id 0 the the Alphanet Network is:
 
 ```json
 {
-  "data": {
-    "nftEntity": {
-      "owner": "5DoaPm79MrWUQpFSDBhpmotRp344dc9eM4NV8aRb3vHEuzxH",
-      "nftId": "0",
-      "offchainData": "Hello",
-      "collectionId": "0",
-      "royalty": 100
-    }
-  }
+	"data": {
+		"nftEntity": {
+			"owner": "5DoaPm79MrWUQpFSDBhpmotRp344dc9eM4NV8aRb3vHEuzxH",
+			"nftId": "0",
+			"offchainData": "Hello",
+			"collectionId": "0",
+			"royalty": 100
+		}
+	}
 }
 ```
 

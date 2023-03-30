@@ -25,24 +25,24 @@ Use your own account by updating the //TernoaTestAccount with your account seed 
 import { transferNft, getKeyringFromSeed, WaitUntil } from "ternoa-js";
 
 const main = async () => {
-  try {
-    // The known accounts we want to use
-    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-    const TO_ADDRESS = "RECIPIENT_ADDRESS";
+	try {
+		// The known accounts we want to use
+		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+		const TO_ADDRESS = "RECIPIENT_ADDRESS";
 
-    // The NFT id to transfer
-    const NFT_ID = NFT_ID;
+		// The NFT id to transfer
+		const NFT_ID = NFT_ID;
 
-    const nftData = await transferNft(
-      NFT_ID,
-      TO_ADDRESS,
-      keyring,
-      WaitUntil.BlockInclusion
-    );
-    console.log(`NFT ${nftData.nftId} transferred`);
-  } catch (e) {
-    console.error(e);
-  }
+		const nftData = await transferNft(
+			NFT_ID,
+			TO_ADDRESS,
+			keyring,
+			WaitUntil.BlockInclusion
+		);
+		console.log(`NFT ${nftData.nftId} transferred`);
+	} catch (e) {
+		console.error(e);
+	}
 };
 ```
 
@@ -69,7 +69,7 @@ The response provided from the blockchain event includes all the informations be
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Markeplace(...)) using graphql.
-_In this exemple, we use the graphql-request library._
+_In this example, we use the graphql-request library._
 
 You first need to prepare a stringified query to get NFT data from a specific NFT id, as we did in the query(id) function.
 Do not hesitate to adapt the information you require in your query. You can check all the fields queryable for the [NftEntity](/for-developers/guides/NFT/basic-NFT/get-NFT#step-1-nftentity-query-preparation).
@@ -93,23 +93,23 @@ const query = (id: number) => gql`
 `;
 
 const getNftData = async () => {
-  try {
-    const response = await request<{ nftEntity: NftType }>(
-      "https://indexer-alphanet.ternoa.dev",
-      query(NFT_ID)
-    );
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
+	try {
+		const response = await request<{ nftEntity: NftType }>(
+			"https://indexer-alphanet.ternoa.dev",
+			query(NFT_ID)
+		);
+		console.log(response);
+	} catch (error) {
+		console.error(error);
+	}
 };
 
 type NftType = {
-  nftId: string;
-  owner: string;
-  creator: string;
-  timestampBurn: string;
-  #Date;
+	nftId: string;
+	owner: string;
+	creator: string;
+	timestampBurn: string;
+	#Date;
 };
 ```
 
