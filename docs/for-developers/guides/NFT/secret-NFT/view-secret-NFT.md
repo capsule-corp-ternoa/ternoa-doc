@@ -16,7 +16,7 @@ Before getting started, make sure you have the following ready:
 
 ## Decrypting a Secret NFT using Ternoa-JS
 
-In order to decrypt a Secret NFT from the Ternoa chain, Ternoa-JS provides you with a `viewSecretNFT` helper to do so. It returns an string promise containing the decrypted base 64 file.
+In order to decrypt a Secret NFT from the Ternoa chain, Ternoa-JS provides you with a `viewSecretNFT` helper to do so. It returns a string promise containing the decrypted base 64 file.
 
 ```typescript showLineNumbers
 import { getKeyringFromSeed } from "./account";
