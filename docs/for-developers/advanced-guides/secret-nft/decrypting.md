@@ -30,18 +30,18 @@ sidebar_label: Decrypting
 
 ## Custom and destructured flow
 
-- How to retrieve Secret NFT assets
+-   How to retrieve Secret NFT assets
 
-  - Ternoa IPFS Client
+    -   Ternoa IPFS Client
 
-- How to prepare payloads for TEE enclaves
+-   How to prepare payloads for TEE enclaves
 
-  - Enclave health status
-  - Payload formatting
-  - Get request
+    -   Enclave health status
+    -   Payload formatting
+    -   Get request
 
-- How to retrive Secret Key
+-   How to retrieve Secret Key
 
-  - Shares combined
+    -   Shares combined
 
-- How to decrypt the secret
+-   How to decrypt the secret

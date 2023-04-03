@@ -5,11 +5,11 @@ sidebar_label: Rental NFT
 
 # Rental NFT
 
-Ternoa provides you with many advanced NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT advanced usecases: Ternoa allows you to easily create functions to rent, auctioned or even add secret to your NFTs without using any smart contracts.
+Ternoa provides you with many advanced NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT advanced use cases: Ternoa allows you to easily create functions to rent, auction, or even add a secret to your NFTs without using any smart contracts.
 
 ## What is Rental NFT?
 
-NFTs represent proof of ownership on the blockchain. Renting is a powerful tool for the NFT owners to make more out of their NFTs. An NFT rental agreement is an on chain rental contract, between the owner of an NFT and a renter (usually called rentee) who will have a temporary access to the NFT properties, against a rent fee (an amount or an NFT).
+NFTs represent proof of ownership on the blockchain. Renting is a powerful tool for NFT owners to make more out of their NFTs. An NFT rental agreement is an on-chain rental contract, between the owner of an NFT and a renter (usually called rentee) who will have temporary access to the NFT properties, against a rent fee (an amount or an NFT).
 
 ## Rental NFT features
 
@@ -54,7 +54,7 @@ NFTs represent proof of ownership on the blockchain. Renting is a powerful tool 
 <details className="toggle">
   <summary> Accepting Rent Offer</summary>
   <div>
-    Accept a rent offer for manual acceptance contract.
+    Accept a rent offer for a manual acceptance contract.
   </div>
 </details>
 

@@ -5,11 +5,11 @@ sidebar_label: Transmission Protocols
 
 # Transmission Protocols
 
-Ternoa provides you with many advanced NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT advanced usecases: Ternoa allows you to easily create functions to rent, auctioned or even add secret to your NFTs without using any smart contracts. Among those advanced features, Ternoa introduces a new concept when using your NFT: the Transmission Protocols.
+Ternoa provides you with many advanced NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT advanced use cases: Ternoa allows you to easily create functions to rent, auction, or even add secrets to your NFTs without using any smart contracts. Among those advanced features, Ternoa introduces a new concept when using your NFT: the Transmission Protocols.
 
 ## What are Transmission Protocols?
 
-Ternoa responds to existing centralized storage solutions by using capsule or secret NFTs and offer a new solution for secure data transmission: the transmission protocols. Existing storage solutions are limited and does not provide automated transfers services. Ternoa has created transmission protocols to be able to change the state and ownership of a digital asset (NFT) automatically after a specific condition has been met.
+Ternoa responds to existing centralized storage solutions by using a capsule or secret NFTs and offers a new solution for secure data transmission: the transmission protocols. Existing storage solutions are limited and do not provide automated transfer services. Ternoa has created transmission protocols to be able to change the state and ownership of a digital asset (NFT) automatically after a specific condition has been met.
 
 ## Transmission Protocols features
 

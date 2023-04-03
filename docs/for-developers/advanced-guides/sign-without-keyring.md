@@ -5,21 +5,21 @@ sidebar_label: How to sign a tx without keyring
 
 # How to sign a transaction without keyring in a browser environment
 
-The full transaction submitting process can only be achieved after its signature. It means that before submitting a transaction to the chain, a third party, we will called _"a signer"_ needs to sign the transaction to validate and register the transaction on the chain, and pay the transaction fees.
+The full transaction submitting process can only be achieved after its signature. It means that before submitting a transaction to the chain, a third party, we will called _"a signer"_ needs to sign the transaction to validate and register the transaction on the chain and pay the transaction fees.
 
-If you already read some example from the Guides section, you went through a parameter used in most of the functions called : **a Keyring**. The Keyring is responsible for managing a set of keypairs we use to sign the transaction. You can find more details about the keyring [here]("").
+If you already read some examples from the Guides section, you went through a parameter used in most of the functions called: **a Keyring**. The Keyring is responsible for managing a set of keypairs we use to sign the transaction.
 
-If we use the keyring in our example to focus on the content we want to demonstrate, most real dApp use-cases are different. Unless certain circumstances, retrieving the keyring from a seed is not a good practice you should include in your project and not something a dApp user will appreciate. You should neither ask nor provide a seed-phrase unless it is completely riskless.
+If we use the keyring in our example to focus on the content we want to demonstrate, most real dApp use cases are different. Unless in certain circumstances, retrieving the keyring from seed is not a good practice you should include in your project and not something a dApp user will appreciate. You should neither ask nor provide a seed phrase unless it is completely riskless.
 
-So how to sign a transaction without using the keyring retrieved from a seed-phrase in a browser environment?
+So how to sign a transaction without using the keyring retrieved from a seed phrase in a browser environment?
 
 ## Using a browser extension provider:
 
-In the code snippet below, we will step by step cover a signing use-case to create a basic NFT on the chain using the @polkadot/extension-dapp and uploading your File and Metadatas on IPFS.
+In the code snippet below, we will step by step cover a signing use-case to create a basic NFT on the chain using the @polkadot/extension-dapp and uploading your File and Metadata on IPFS.
 
-Please, note that this solution is not the only one. **Feel free to use any provider that would suit best to your dApp.**
+Please, note that this solution is not the only one. **Feel free to use any provider that would suit best your dApp.**
 
-_This code snipped is designed to work in a **Next-js environment**. According to Next-js server-side components rules, the import of the @polkadot/extension-dapp extension library might need to be slightly adapted to works in your javascript environment._
+_This code snipped is designed to work in a **Next-js environment**. According to Next-js server-side components rules, the import of the @polkadot/extension-dapp extension library might need to be slightly adapted to work in your javascript environment._
 
 ```typescript showLineNumbers
 import {
@@ -52,7 +52,7 @@ export const createAndSignNFT = async (
 		const nonce = (
 			await query("system", "account", [address])
 		).nonce.toNumber();
-		//3.2- Connect to the extention you want to use to get an injector (here we use directly Polkadot extension)
+		//3.2- Connect to the extension you want to use to get an injector (here we use directly Polkadot extension)
 		const { web3FromAddress } = await import("@polkadot/extension-dapp");
 		const injector = await web3FromAddress(address);
 		const signer = injector?.signer;
@@ -69,7 +69,7 @@ export const createAndSignNFT = async (
 			signedTx,
 			WaitUntil.BlockInclusion
 		);
-		//5.2 - Return the filtred NFTCreatedEvent
+		//5.2 - Return the filtered NFTCreatedEvent
 		return events.findEventOrThrow(NFTCreatedEvent);
 	} catch (error) {
 		console.log(error);
