@@ -5,7 +5,7 @@ sidebar_label: How to burn an NFT
 
 # Manage NFT - Burn
 
-Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalty without using any smart contracts.
+Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic use cases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT, or even set the NFT royalty without using any smart contracts.
 
 ## Prerequisites
 
@@ -51,12 +51,12 @@ const burnNFT = async () => {
 ```markdown
 `id`: The ID of the NFT to burn.
 `keyring`: the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when burning the NFT.
+The response provided from the blockchain event includes all the information below according to the parameters provided when burning the NFT.
 
 ```markdown
 `nftId`: ID of the burnt NFT.
@@ -65,13 +65,13 @@ The response provided from the blockchain event includes all the informations be
 ## How to retrieve a burnt NFT using Ternoa Indexer
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
-You can query data for some specific entities (NFT, Collection, Markeplace(...)) using graphql.
+You can query data for some specific entities (NFT, Collection, Marketplace (...)) using graphql.
 _In this example, we use the graphql-request library._
 
 You first need to prepare a stringified query to get NFT data from a specific NFT id, as we did in the query(id) function.
 Do not hesitate to adapt the information you require in your query. You can check all the fields queryable for the [NftEntity](/for-developers/guides/NFT/basic-NFT/get-NFT#step-1-nftentity-query-preparation).
 
-When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the NFT is burnt owner should be set to null, and a timestampBurn must be filled.
+When the query is ready, you can request our indexer by providing both the indexer endpoint and the query. To check if the NFT is burnt owner should be set to null, and a timestampBurn must be filled.
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";

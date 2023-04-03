@@ -7,7 +7,7 @@ sidebar_label: Getting started
 
 ## Overview
 
-If you are ready for developing on our mainet/alphanet networks please check out following pages:
+If you are ready for developing on our mainnet/alphanet networks please check out the following pages:
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

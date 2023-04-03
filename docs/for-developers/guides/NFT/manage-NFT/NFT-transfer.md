@@ -5,7 +5,7 @@ sidebar_label: How to transfer an NFT
 
 # Manage NFT - Transfer
 
-Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalty without using any smart contracts.
+Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic use cases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT, or even set the NFT royalty without using any smart contracts.
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Before getting started, make sure you have the following ready:
 
 ## How to transfer an NFT using Ternoa-JS
 
-The `transferNft` helpers transfers an NFT from the Ternoa chain. It returns an object promise containing the `NFTTransferredEvent` provided by the Ternoa blockchain.
+The `transferNft` helper transfers an NFT from the Ternoa chain. It returns an object promise containing the `NFTTransferredEvent` provided by the Ternoa blockchain.
 Use your own account by updating the //TernoaTestAccount with your account seed when retrieving the keyring from the example below. **Replace the NFT_ID variable** with the NFT ID you want to transfer.
 
 ```typescript showLineNumbers
@@ -50,31 +50,31 @@ const main = async () => {
 
 ```markdown
 `id`: The ID of the NFT to transfer.
-`recipient`: The recipient address.
+`recipient`: The recipient's address.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when transferring the NFT.
+The response provided from the blockchain event includes all the information below according to the parameters provided when transferring the NFT.
 
 ```markdown
 `nftId`: ID of the transferred NFT.
-`sender`: The sender address.
-`recipient`: The recipient address.
+`sender`: The sender's address.
+`recipient`: The recipient's address.
 ```
 
 ## How to retrieve a transferred NFT using Ternoa Indexer
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
-You can query data for some specific entities (NFT, Collection, Markeplace(...)) using graphql.
+You can query data for some specific entities (NFT, Collection, Marketplace (...)) using graphql.
 _In this example, we use the graphql-request library._
 
 You first need to prepare a stringified query to get NFT data from a specific NFT id, as we did in the query(id) function.
 Do not hesitate to adapt the information you require in your query. You can check all the fields queryable for the [NftEntity](/for-developers/guides/NFT/basic-NFT/get-NFT#step-1-nftentity-query-preparation).
 
-When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query.
+When the query is ready, you can request our indexer by providing both the indexer endpoint and the query.
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";

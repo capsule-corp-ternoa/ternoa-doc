@@ -50,7 +50,7 @@ await initializeApi();
 Once the Ternoa-JS library is initialized, you will be able to use all the powerful NFT FRAMEs designed by Ternoa to build your dApps.
 
 :::info
-The default network used is Alphanet. To connect to the Mainnet network it is as simple as passing a the correct WSS endpoint:
+The default network used is Alphanet. To connect to the Mainnet network it is as simple as passing the correct WSS endpoint:
 
 ```typescript showLineNumbers
 import { initializeApi } from "ternoa-js";

@@ -5,9 +5,9 @@ sidebar_label: NFT
 
 # NFT
 
-NFTs represent proof of ownership of a digital or physical asset, on the blockchain. NFTs can represent digital assets such as images, videos, audio files, documents or simply some data. NFTs can also act as proxies for physical assets such as real estate, consumer or industrial goods, or precious metals.
+NFTs represent proof of ownership of a digital or physical asset, on the blockchain. NFTs can represent digital assets such as images, videos, audio files, documents, or simply some data. NFTs can also act as proxies for physical assets such as real estate, consumer or industrial goods, or precious metals.
 
-The media associated with NFTs, and other associated metadata, are stored offchain in a decentralised storage network such as IPFS, but the link to this metadata is stored onchain as part of the NFT.
+The media associated with NFTs, and other associated metadata, are stored off-chain in a decentralized storage network such as IPFS, but the link to this metadata is stored on-chain as part of the NFT.
 
 ## Basic NFT features
 
@@ -32,7 +32,7 @@ The media associated with NFTs, and other associated metadata, are stored offcha
 <details className="toggle">
   <summary>Creating a Soulbound NFT</summary>
     <div>   
-        Create a basic Soulbound NFT on chain.
+        Create a basic Soulbound NFT on-chain.
     </div>
     <a to="/for-developers/guides/NFT/soulbound-NFT/mint-soulbound-NFT" className='button purpleBtn noUnderline my2'>
         View code
@@ -44,7 +44,7 @@ The media associated with NFTs, and other associated metadata, are stored offcha
 <details className="toggle">
   <summary>Creating a Secret NFT</summary>
   <div>
-    Create a Secret NFT on chain.
+    Create a Secret NFT on-chain.
   </div>
   <a to="/for-developers/guides/NFT/secret-NFT/mint-secret-NFT" className='button purpleBtn noUnderline my2'>
         View code
@@ -54,7 +54,7 @@ The media associated with NFTs, and other associated metadata, are stored offcha
 <details className="toggle">
   <summary>Adding a Secret to an NFT</summary>
   <div>   
-    Adds a Secret to an existing NFT on chain.
+    Adds a Secret to an existing NFT on-chain.
   </div>
 </details>
 
@@ -63,7 +63,7 @@ The media associated with NFTs, and other associated metadata, are stored offcha
 <details className="toggle">
     <summary>Creating a Capsule NFT</summary>
     <div>   
-        Create a Capsule NFT on chain.
+        Create a Capsule NFT on-chain.
     </div>
 </details>
 <details className="toggle">
@@ -73,15 +73,15 @@ The media associated with NFTs, and other associated metadata, are stored offcha
     </div>
 </details>
 <details className="toggle">
-    <summary>Setting the offchaindata of a Capsule NFT</summary>
+    <summary>Setting the off-chain data of a Capsule NFT</summary>
     <div>   
-        Set the offchain data of a Capsule NFT.
+        Set the off-chain data of a Capsule NFT.
     </div>
 </details>
 <details className="toggle">
     <summary>Notifying the enclaves to update the NFT keys</summary>
     <div>   
-        Notifies the enclaves that capsule owner requests new keys.
+        Notifies the enclaves that the capsule owner requests new keys.
     </div>
 </details>
 

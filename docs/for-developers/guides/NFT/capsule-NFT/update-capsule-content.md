@@ -16,14 +16,14 @@ Before getting started, make sure you have the following ready:
 
 ## Decrypting a Capsule NFT using Ternoa-JS
 
-- Retrieve the capsule off-chain data CID hash using Ternoa Indexer.
-- Prepare new asset
-- Prepare new capsule metadata with the new encrypted media added to the content array
-- Update off-chain data on-chain
+-   Retrieve the capsule off-chain data CID hash using Ternoa Indexer.
+-   Prepare new asset
+-   Prepare new capsule metadata with the new encrypted media added to the content array
+-   Update off-chain data on-chain
 
 ## Next
 
-Next step will be getting the NFT data from the Ternoa Indexer using the NFT id just generated. Keep it and continue on the ["How to retrieve a Capsule NFT"](/for-developers/guides/NFT/capsule-NFT/get-NFT) guide.
+The next step will be getting the NFT data from the Ternoa Indexer using the NFT id just generated. Keep it and continue on the ["How to retrieve a Capsule NFT"](/for-developers/guides/NFT/capsule-NFT/get-NFT) guide.
 
 ## Support
 

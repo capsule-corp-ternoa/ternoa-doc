@@ -12,19 +12,19 @@ _In this example, we use the graphql-request library._
 ## Step 1: NftEntity query preparation
 
 You first need to prepare a stringified query to get NFT data from a specific NFT id.
-Here are detailed the paramaters available for the `NftEntity`:
+Here are detailed the parameters available for the `NftEntity`:
 
 ```markdown
 `nftId`: The NFT id. - String
-`auction`: The auction data if the NFT is auctionned; null otherwise. - AuctionEntity | null
+`auction`: The auction data if the NFT is auctioned; null otherwise. - AuctionEntity | null
 `collection`: The collection data if the NFT is in a collection; null otherwise. - CollectionEntity | null
 `owner`: The NFT owner; null if the NFT is burned. - String | null
 `creator`: The NFT creator. - String
 `delegatee`: The delegatee address if the NFT is delegated; null otherwise. - String | null
 `royalty`: - The NFT royalty. - Number
-`offchainData`: The NFT off-chain data (e.g. IPFS CID hash, a link or any string). - String!
-`secretOffchainData`: The Secret NFT off-chain data (e.g. IPFS CID hash, a link or any string) if the NFT is a Secret NFT; null otherwise. - String | null
-`capsuleOffchainData`: The Capsule NFT off-chain data (e.g. IPFS CID hash, a link or any string) if the NFT is a Capsule NFT; null otherwise. - String | null
+`offchainData`: The NFT off-chain data (e.g. IPFS CID hash, a link, or any string). - String!
+`secretOffchainData`: The Secret NFT off-chain data (e.g. IPFS CID hash, a link, or any string) if the NFT is a Secret NFT; null otherwise. - String | null
+`capsuleOffchainData`: The Capsule NFT off-chain data (e.g. IPFS CID hash, a link, or any string) if the NFT is a Capsule NFT; null otherwise. - String | null
 `isCapsule`: Boolean flag: true if the NFT is a Capsule NFT; false otherwise. - Boolean
 `isCapsuleSynced`: Boolean flag: true if the NFT is a synced Capsule NFT; false otherwise. - Boolean
 `isSecret`: Boolean flag: true if the NFT is a Secret NFT; false otherwise. - Boolean
@@ -68,9 +68,9 @@ For example, if we want to get the Secret NFT: owner / id / off-chain data / sec
 
 ## Step 2: Sending the request to the Indexer
 
-Once the query is ready, you can make the request to our Indexer instances by providing both the indexer endpoint and the query.
+Once the query is ready, you can request our Indexer instances by providing both the indexer endpoint and the query.
 
-Replace _NFT_ID_ in the following code snippet with the Secret NFT ID previouly generated in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-secret-NFT):
+Replace _NFT_ID_ in the following code snippet with the Secret NFT ID previously generated in ["How to mint a Secret NFT on-chain"](/for-developers/guides/NFT/secret-NFT/mint-secret-NFT):
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
@@ -116,7 +116,7 @@ type NftType = {
 
 The `getNftData` function is an asynchronous function that sends a GraphQL request using the `request` function from the **"graphql-request"** library. Here we are using the Ternoa Alphanet instance at **"https://indexer-alphanet.ternoa.dev"** with the NFT ID 0 as the query parameter (you can try with your id). The response from the server is an object with a property nftEntity that has the data of the requested NFT entity.
 
-The response for the NFT id 74,260 the the Alphanet Network is:
+The response for the NFT id 74,260 the Alphanet Network is:
 
 ```json
 {
@@ -153,7 +153,7 @@ Ternoa Indexer comes with filtering and ordering options. Instead of requesting 
 
 The NFT in the response will be ordered by creation timestamp descendent with `orderBy: [TIMESTAMP_CREATED_DESC]`.
 
-The response on the the Alphanet Network when this document is written is:
+The response on the Alphanet Network when this document is written is:
 
 ```json
 {
