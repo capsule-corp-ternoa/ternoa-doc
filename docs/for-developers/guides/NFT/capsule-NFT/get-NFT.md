@@ -92,25 +92,25 @@ const query = (id: number) => gql`
 `;
 
 const getNftData = async () => {
-	try {
-		const response = await request<{ nftEntity: NftType }>(
-			"https://indexer-alphanet.ternoa.dev",
-			query(NFT_ID)
-		);
-		console.log(response);
-	} catch (error) {
-		console.error(error);
-	}
+  try {
+    const response = await request<{ nftEntity: NftType }>(
+      "https://indexer-alphanet.ternoa.dev",
+      query(NFT_ID)
+    );
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 type NftType = {
-	owner: string;
-	nftId: string;
-	offchainData: string;
-	capsuleOffchainData: string;
-	isCapsule: boolean;
-	collectionId: string;
-	royalty: number;
+  owner: string;
+  nftId: string;
+  offchainData: string;
+  capsuleOffchainData: string;
+  isCapsule: boolean;
+  collectionId: string;
+  royalty: number;
 };
 ```
 
@@ -120,19 +120,19 @@ The response for the NFT id 74,266 the Alphanet Network is:
 
 ```json
 {
-	"data": {
-		"nftEntity": {
-			"owner": "5Cf8PBw7QiRFNPBTnUoks9Hvkzn8av1qfcgMtSppJvjYcxp6",
-			"nftId": "74266",
-			"offchainData": "public metadata",
-			"capsuleOffchainData": "capsule off-chain metadata",
-			"isCapsule": true,
-			"isCapsuleSynced": false,
-			"collectionId": null,
-			"royalty": 0,
-			"timestampCreated": "2023-03-27T14:44:54.001"
-		}
-	}
+  "data": {
+    "nftEntity": {
+      "owner": "5Cf8PBw7QiRFNPBTnUoks9Hvkzn8av1qfcgMtSppJvjYcxp6",
+      "nftId": "74266",
+      "offchainData": "public metadata",
+      "capsuleOffchainData": "capsule off-chain metadata",
+      "isCapsule": true,
+      "isCapsuleSynced": false,
+      "collectionId": null,
+      "royalty": 0,
+      "timestampCreated": "2023-03-27T14:44:54.001"
+    }
+  }
 }
 ```
 
@@ -174,6 +174,10 @@ The response on the Alphanet Network when this document is written is:
 ```
 
 The last NFT minted on the Ternoa chain is the NFT 74,266.
+
+## Next
+
+The next step will be decrypting Capsule NFT content. Keep it and continue on the ["How to decrypt a Capsule NFT"](/for-developers/guides/NFT/capsule-NFT/view-capsule-NFT) guide.
 
 ## Support
 

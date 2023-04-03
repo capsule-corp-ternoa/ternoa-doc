@@ -166,6 +166,10 @@ const decrypt = async () => {
 
 The decrypt function calls the `decryptFile` helper from Ternoa-JS to decrypt the first encrypted asset of the capsule. The array of files is assumed to have been prepared in the previous [Step 3](/for-developers/guides/NFT/capsule-NFT/view-capsule-NFT#step-3-retrieve-the-capsule-nfts-content-assets-from-ipfs), and the capsule private key for decryption is assumed to have been retrieved in [Step 1](/for-developers/guides/NFT/capsule-NFT/view-capsule-NFT#step-1-obtain-the-private-key-associated-with-the-capsule-nft). The decrypted asset is in base 64 format. If there is any error during the execution, it will be logged into the console.
 
+## Next
+
+The next step will be updating Capsule NFT content. Keep it and continue on the ["How to update a Capsule NFT content"](/for-developers/guides/NFT/capsule-NFT/update-capsule-content) guide.
+
 ## Support
 
 If you face any trouble, feel free to reach out to our community engineers in our [Discord](https://discord.gg/fUmBkPpnRu).

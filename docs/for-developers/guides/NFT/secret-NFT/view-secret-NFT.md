@@ -23,30 +23,27 @@ import { getKeyringFromSeed } from "./account";
 import { viewSecretNFT, TernoaIPFS } from "./helpers";
 
 const main = async () => {
-	try {
-		const SEED = "//TernoaTestAccount"; // The NFT owner seed phrase.
-		const IPFS_NODE_URL = "IPFS_NODE_URL"; // The IPFS node used.
-		const IPFS_API_KEY = "IPFS_API_KEY"; // The IPFS node API KEY if required.
-		const CLUSTER_ID = 0; // The cluster of TEE enclaves used to store private key shares.
-		const NFT_ID = 0; // The Secret NFT ID.
+  try {
+    const SEED = "//TernoaTestAccount"; // The NFT owner seed phrase.
+    const IPFS_NODE_URL = "IPFS_NODE_URL"; // The IPFS node used.
+    const IPFS_API_KEY = "IPFS_API_KEY"; // The IPFS node API KEY if required.
+    const CLUSTER_ID = 0; // The cluster of TEE enclaves used to store private key shares.
+    const NFT_ID = 0; // The Secret NFT ID.
 
-		const ipfsClient = new TernoaIPFS(new URL(IPFS_NODE_URL), IPFS_API_KEY);
-		const keyring = await getKeyringFromSeed(SEED);
+    const ipfsClient = new TernoaIPFS(new URL(IPFS_NODE_URL), IPFS_API_KEY);
+    const keyring = await getKeyringFromSeed(SEED);
 
-		const decryptedBase64Secret = await viewSecretNFT(
-			NFT_ID,
-			ipfsClient,
-			keyring,
-			"OWNER",
-			CLUSTER_ID
-		);
-		console.log(
-			"The secret asset base 64 format is: ",
-			decryptedBase64Secret
-		);
-	} catch (e) {
-		console.error(e);
-	}
+    const decryptedBase64Secret = await viewSecretNFT(
+      NFT_ID,
+      ipfsClient,
+      keyring,
+      "OWNER",
+      CLUSTER_ID
+    );
+    console.log("The secret asset base 64 format is: ", decryptedBase64Secret);
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 
@@ -69,10 +66,6 @@ Here are detailed the `viewSecretNFT` helper parameters:
 ```
 
 The response returned a decrypted base64 format of the Secret NFT.
-
-## Next
-
-The next step will be getting the NFT data from the Ternoa Indexer using the NFT id just generated. Keep it and continue on the ["How to retrieve a Secret NFT"](/for-developers/guides/NFT/secret-NFT/get-NFT) guide.
 
 ## Support
 
