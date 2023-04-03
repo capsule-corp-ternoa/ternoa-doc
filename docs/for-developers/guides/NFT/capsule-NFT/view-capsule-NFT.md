@@ -18,10 +18,10 @@ Before getting started, make sure you have the following ready:
 
 If you want to decrypt the content of a Capsule NFT from the Ternoa chain, follow these steps:
 
--   Obtain the private key associated with the Capsule NFT. This key is necessary to decrypt the secret hashes that are nested in the NFT's metadata.
--   Retrieve the capsule off-chain data CID hash using Ternoa Indexer.
--   Retrieve the Capsule NFT's content assets from IPFS.
--   Decrypt each asset one by one and convert it into a base 64 format, as required. Note that you will need to use the private key obtained in step 1 to access and decrypt the content.
+- Obtain the private key associated with the Capsule NFT. This key is necessary to decrypt the secret hashes that are nested in the NFT's metadata.
+- Retrieve the capsule off-chain data CID hash using Ternoa Indexer.
+- Retrieve the Capsule NFT's content assets from IPFS.
+- Decrypt each asset one by one and convert it into a base 64 format, as required. Note that you will need to use the private key obtained in step 1 to access and decrypt the content.
 
 ## Step 1: Obtain the private key associated with the Capsule NFT
 
@@ -76,7 +76,6 @@ The next step will be to retrieve the capsule off-chain data from IPFS.
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Marketplace(...)) using GraphQL.
-_In this example, we use the graphql-request library._
 
 You first need to prepare a stringified query to get NFT data from a specific Capsule NFT id.
 
@@ -110,32 +109,32 @@ To retrieve a Capsule NFT's content assets from IPFS, Ternoa-JS provides you wit
 import { TernoaIPFS } from "ternoa-js";
 
 const retrieveEncryptedAssets = async () => {
-	try {
-		// ...
-		// fetching CAPSULE_OFFCHAIN_DATA in step 2
+  try {
+    // ...
+    // fetching CAPSULE_OFFCHAIN_DATA in step 2
 
-		const IPFS_NODE_URL = "IPFS_NODE_URL"; // The IPFS node used.
-		const IPFS_API_KEY = "IPFS_API_KEY"; // The IPFS node API KEY if required.
-		const CAPSULE_OFFCHAIN_DATA =
-			"QmNM7fDadTjoLKqMi8i4Lyru4FUiKyQYpRmSoXnDjtgm6N"; // The Capsule NFT off-chain data.
+    const IPFS_NODE_URL = "IPFS_NODE_URL"; // The IPFS node used.
+    const IPFS_API_KEY = "IPFS_API_KEY"; // The IPFS node API KEY if required.
+    const CAPSULE_OFFCHAIN_DATA =
+      "QmNM7fDadTjoLKqMi8i4Lyru4FUiKyQYpRmSoXnDjtgm6N"; // The Capsule NFT off-chain data.
 
-		const ipfsClient = new TernoaIPFS(new URL(IPFS_NODE_URL), IPFS_API_KEY);
+    const ipfsClient = new TernoaIPFS(new URL(IPFS_NODE_URL), IPFS_API_KEY);
 
-		const res = (await ipfsClient.getFile(
-			CAPSULE_OFFCHAIN_DATA
-		)) as NftMetadataType;
-		const assets = res.properties?.encrypted_media as { hash: string }[];
-		const encryptedFiles = await Promise.all(
-			assets.map(
-				async ({ hash }: { hash: string }) =>
-					(await ipfsClient.getFile(hash)) as string
-			)
-		);
+    const res = (await ipfsClient.getFile(
+      CAPSULE_OFFCHAIN_DATA
+    )) as NftMetadataType;
+    const assets = res.properties?.encrypted_media as { hash: string }[];
+    const encryptedFiles = await Promise.all(
+      assets.map(
+        async ({ hash }: { hash: string }) =>
+          (await ipfsClient.getFile(hash)) as string
+      )
+    );
 
-		// ...
-	} catch (e) {
-		console.error(e);
-	}
+    // ...
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 
@@ -153,18 +152,15 @@ The final step will be to decrypt the files.
 import { decryptFile } from "ternoa-js";
 
 const decrypt = async () => {
-	// ...
-	// capsule privateKey retrieved in step 1
-	// encryptedFiles array prepared in step 2
+  // ...
+  // capsule privateKey retrieved in step 1
+  // encryptedFiles array prepared in step 2
 
-	try {
-		const decryptedAsset1 = await decryptFile(
-			encryptedFiles[0],
-			privateKey
-		);
-	} catch (e) {
-		console.error(e);
-	}
+  try {
+    const decryptedAsset1 = await decryptFile(encryptedFiles[0], privateKey);
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 
