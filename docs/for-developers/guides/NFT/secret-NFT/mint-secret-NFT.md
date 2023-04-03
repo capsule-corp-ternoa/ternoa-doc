@@ -16,7 +16,7 @@ Before getting started, make sure you have the following ready:
 
 ## Minting a Secret NFT on-chain using Ternoa-JS
 
-In order to create an NFT on the Ternoa chain, Ternoa-JS provides you with a `mintSecretNFT` helper to do so.
+In order to create a Secret NFT on the Ternoa chain, Ternoa-JS provides you with a `mintSecretNFT` helper to do so.
 
 :::info
 Please note that an _api-key_ is needed to store data on Ternoa IPFS gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to get your API Key.
@@ -147,7 +147,7 @@ The response returned is an object promise containing:
 
 ## Next
 
-Next step will be getting the NFT data from the Ternoa Indexer using the NFT id just generated. Keep it and continue on the ["How to retrieve a Basic NFT"](/for-developers/guides/NFT/basic-NFT/get-NFT) guide.
+Next step will be getting the NFT data from the Ternoa Indexer using the NFT id just generated. Keep it and continue on the ["How to retrieve a Basic NFT"](/for-developers/guides/NFT/secret-NFT/get-NFT) guide.
 
 ## Support
 
