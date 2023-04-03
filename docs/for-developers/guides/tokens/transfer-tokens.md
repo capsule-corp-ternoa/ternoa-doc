@@ -5,7 +5,7 @@ sidebar_label: How to transfer CAPS tokens
 
 # CAPS Tokens Transfer
 
-CAPS is the Ternoa blockchain token. Transactions made on the Ternoa blockchain are carried out in CAPS. It is used in particular for the creation of NFTs, Encryption, storage data over time.
+CAPS is the Ternoa blockchain token. Transactions made on the Ternoa blockchain are carried out in CAPS. It is used in particular for the creation of NFTs, Encryption, and storage of data over time.
 
 ## Prerequisites
 
@@ -18,39 +18,39 @@ Before getting started, make sure you have the following ready:
 
 ## How to transfer CAPS to an address
 
-This example shows how to transfer CAPS balance to an address using `balancesTransfer`. The `numberToBalance` helper is used to format the amount from a number value to a BN value according to chain decimals (18 decimal for Ternoa).
+This example shows how to transfer a CAPS balance to an address using `balancesTransfer`. The `numberToBalance` helper is used to format the amount from a number value to a BN value according to chain decimals (18 decimals for Ternoa).
 
 ```typescript showLineNumbers
 import {
-  balancesTransfer,
-  getKeyringFromSeed,
-  numberToBalance,
-  WaitUntil,
+	balancesTransfer,
+	getKeyringFromSeed,
+	numberToBalance,
+	WaitUntil,
 } from "ternoa-js";
 
 const main = async () => {
-  try {
-    // The known accounts we want to use
-    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-    const TO_ADDRESS = "5GguNdS1T2J9BDFMqPhdPp8vtQxfhGJjiGwAaYF7TPLuiJPs";
+	try {
+		// The known accounts we want to use
+		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+		const TO_ADDRESS = "5GguNdS1T2J9BDFMqPhdPp8vtQxfhGJjiGwAaYF7TPLuiJPs";
 
-    // Amount transferred: 1 CAPS
-    const amount = numberToBalance(1); // 1 = 1000000000000000000 for the Ternoa blockchain
+		// Amount transferred: 1 CAPS
+		const amount = numberToBalance(1); // 1 = 1000000000000000000 for the Ternoa blockchain
 
-    const transferData = await balancesTransfer(
-      TO_ADDRESS,
-      amount,
-      keyring,
-      WaitUntil.BlockInclusion
-    );
-    console.log(
-      `The amount transferred to ${TO_ADDRESS} is:`,
-      transferData.amountRounded,
-      "CAPS"
-    );
-  } catch (e) {
-    console.error(e);
-  }
+		const transferData = await balancesTransfer(
+			TO_ADDRESS,
+			amount,
+			keyring,
+			WaitUntil.BlockInclusion
+		);
+		console.log(
+			`The amount transferred to ${TO_ADDRESS} is:`,
+			transferData.amountRounded,
+			"CAPS"
+		);
+	} catch (e) {
+		console.error(e);
+	}
 };
 
 main();

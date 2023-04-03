@@ -16,7 +16,7 @@ Before getting started, make sure you have the following ready:
 
 ## Bid on an auction using Ternoa-JS
 
-This function add a bid to an existing auction NFT on the Ternoa chain. It returns an object promise containing the BidAddedEvent provided by the Ternoa blockchain.
+This function adds a bid to an existing auction NFT on the Ternoa chain. It returns an object promise containing the BidAddedEvent provided by the Ternoa blockchain.
 
 :::info
 Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below.
@@ -25,28 +25,28 @@ Use your own account by updating the `//TernoaTestAccount` with your account see
 
 ```typescript showLineNumbers
 import {
-	addBid,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    addBid,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const auctionBid = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the nft id you want to bid on.
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the nft id you want to bid on.
         const bidAmount = // update with the amount to bid.
-		const res = await addBid(
-			NFT_ID,
+        const res = await addBid(
+            NFT_ID,
             bidAmount,
             keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`Bid added to NFT ${res.nftId} for ${res.amountRounded}CAPS`);
-	} catch (e) {
-		console.error(e);
-	}
+            WaitUntil.BlockInclusion
+        );
+        console.log(`Bid added to NFT ${res.nftId} for ${res.amountRounded}CAPS`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
@@ -56,23 +56,23 @@ const auctionBid = async () => {
 `nftId`: The ID of the auctioned NFT.
 `amount`: Rhe amount to bid.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when bidding on an auction.
+The response provided from the blockchain event includes all the information below according to the parameters provided when bidding on an auction.
 
 ```markdown
 `nftId`: NFT id auctioned.
-`bidder`: The bidder address.
-`amount`: The amount bidded as a string corresponding to the value in big number.
-`amountRounded`: The amount bidded as number.
+`bidder`: The bidder's address.
+`amount`: The amount bid as a string corresponding to the value in a big number.
+`amountRounded`: The amount bid as a number.
 ```
 
 ## Remove a bid using Ternoa-JS
 
-This function remove a bid from an auction on the Ternoa chain. It returns an object promise containing the BidRemovedEvent provided by the Ternoa blockchain.
+This function removes a bid from an auction on the Ternoa chain. It returns an object promise containing the BidRemovedEvent provided by the Ternoa blockchain.
 
 :::info
 Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below.
@@ -81,26 +81,26 @@ Use your own account by updating the `//TernoaTestAccount` with your account see
 
 ```typescript showLineNumbers
 import {
-	removeBid,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    removeBid,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const auctionBidRemoved = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the nft id you want to remove bid.
-		const res = await removeBid(
-			NFT_ID,
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the nft id you want to remove the bid.
+        const res = await removeBid(
+            NFT_ID,
             keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`Bid removed from NFT ${res.nftId}`);
-	} catch (e) {
-		console.error(e);
-	}
+            WaitUntil.BlockInclusion
+        );
+        console.log(`Bid removed from NFT ${res.nftId}`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
@@ -109,18 +109,18 @@ const auctionBidRemoved = async () => {
 ```markdown
 `nftId`: The ID of the auctioned NFT.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when removing a bid.
+The response provided from the blockchain event includes all the information below according to the parameters provided when removing a bid.
 
 ```markdown
 `nftId`: NFT id auctioned.
 `bidder`: The bidder address who removed the bid.
-`amount`: The bid amount removed as a string corresponding to the value in big number.
-`amountRounded`: The bid amount removed as number.
+`amount`: The bid amount removed as a string corresponding to the value in a big number.
+`amountRounded`: The bid amount is removed as a number.
 ```
 
 ## Support

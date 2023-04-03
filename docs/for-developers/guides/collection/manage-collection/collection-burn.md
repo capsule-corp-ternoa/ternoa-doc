@@ -5,7 +5,7 @@ sidebar_label: How to burn a Collection
 
 # Manage Collection - Burn
 
-Ternoa provides you with many collection features. Not only creating a collection can be done in just a few lines of code but we also cover many collection basic usecases: Ternoa allows you to easily create functions to close, limit and burn a collection.
+Ternoa provides you with many collection features. Not only creating a collection can be done in just a few lines of code but we also cover many collection basic use cases: Ternoa allows you to easily create functions to close, limit and burn a collection.
 
 ## Prerequisites
 
@@ -51,12 +51,12 @@ const burnCollection = async () => {
 ```markdown
 `id`: The ID of the Collection.
 `keyring`: the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when burning a collection of NFT.
+The response provided from the blockchain event includes all the information below according to the parameters provided when burning a collection of NFT.
 
 ```markdown
 `collectionId`: ID of the burned collection.
@@ -69,7 +69,7 @@ You can query data for some specific entities (NFT, Collection, Marketplace(...)
 _In this example, we use the graphql-request library._
 
 You first need to prepare a stringified query to get collection data from a specific collection id, as we did in the query(id) function.
-Do not hesitate to adapt the information you require in your query. When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the collection is burned, the `**owner**` should be set to null and the `**timestampBurn**` must be filled.
+Do not hesitate to adapt the information you require in your query. When the query is ready, you can request our indexer by providing both the indexer endpoint and the query. To check if the collection is burned, the `**owner**` should be set to null, and the `**timestampBurn**` must be filled.
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";

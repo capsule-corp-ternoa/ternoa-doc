@@ -20,34 +20,34 @@ This function lists for sale an existing NFT on an existing marketplace on the T
 
 :::info
 Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below.
-**Replace the NFT_ID** with the existing NFT to list, and the **MARKETPLACE_ID** by the existing marketplace id you want the NFT to be listed on.
+**Replace the NFT_ID** with the existing NFT to list, and the **MARKETPLACE_ID** with the existing marketplace id you want the NFT to be listed on.
 :::
 
 ```typescript showLineNumbers
 import {
-	listNft,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    listNft,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const listNftOnMp = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the nft id you want to list for sale.
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the nft id you want to list for sale.
         const MARKETPLACE_ID = // update with the marketplace id you want the NFT to be listed on.
-		const res = await listNft(
-			NFT_ID,
+        const res = await listNft(
+            NFT_ID,
             MARKETPLACE_ID,
             price,
-			keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`NFT id: ${res.nftId} listed on marketplace ${res.marketplaceId} for ${res.priceRounded}CAPS`);
-	} catch (e) {
-		console.error(e);
-	}
+            keyring,
+            WaitUntil.BlockInclusion
+        );
+        console.log(`NFT id: ${res.nftId} listed on marketplace ${res.marketplaceId} for ${res.priceRounded}CAPS`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
@@ -58,21 +58,21 @@ const listNftOnMp = async () => {
 `marketplaceId`: Marketplace Id of the marketplace to list the NFT on.
 `price`: Price of the NFT. It can be either a number or a Big Number.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when listing for sale the NFT.
+The response provided from the blockchain event includes all the information below according to the parameters provided when listing for sale the NFT.
 
 ```markdown
 `nftId`: NFT id listed for sale.
-`marketplaceId`: Marketplace id where the NFT have been listed for sale.
+`marketplaceId`: Marketplace id where the NFT has been listed for sale.
 `price`: The sale price of the NFT as a string corresponding to the value in big number.
-`priceRounded`: The sale price of the NFT as number.
-`commissionFeeType?`: If included on the marketpace, the commission fee on the NFT sale. If set, it can be either a fixed amount or a percentage.
-`commissionFee?`: If included on the marketpace, the commission fee value as a string corresponding to the value in big number.
-`commissionFeeRounded?`: If included on the marketpace, the commission fee value as number.
+`priceRounded`: The sale price of the NFT as a number.
+`commissionFeeType?`: If included on the marketplace, the commission fee on the NFT sale. If set, it can be either a fixed amount or a percentage.
+`commissionFee?`: If included on the marketplace, the commission fee value as a string corresponding to the value in a big number format.
+`commissionFeeRounded?`: If included on the marketplace, the commission fee value is a number.
 ```
 
 ## Unlist an NFT on a marketplace using Ternoa-JS
@@ -86,43 +86,43 @@ Use your own account by updating the `//TernoaTestAccount` with your account see
 
 ```typescript showLineNumbers
 import {
-	unlistNft,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    unlistNft,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const unlistNft = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the nft id you want to unlist from sale.
-		const res = await unlistNft(
-			NFT_ID,
-			keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`NFT id: ${res.nftId} unlisted.`);
-	} catch (e) {
-		console.error(e);
-	}
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the nft id you want to unlist from the sale.
+        const res = await unlistNft(
+            NFT_ID,
+            keyring,
+            WaitUntil.BlockInclusion
+        );
+        console.log(`NFT id: ${res.nftId} unlisted.`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
 ### The expected params
 
 ```markdown
-`nftId`: NFT Id of the NFT to unlist from sale.
+`nftId`: NFT Id of the NFT to unlist from the sale.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when unlisting the NFT.
+The response provided from the blockchain event includes all the information below according to the parameters provided when unlisting the NFT.
 
 ```markdown
-`nftId`: NFT id unlisted from sale.
+`nftId`: NFT id unlisted from the sale.
 ```
 
 ## Support

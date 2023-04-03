@@ -41,7 +41,7 @@ Do not hesitate to adapt the information you require in your query. You can chec
 
 ## Step 2: Sending the request to the Indexer
 
-Once the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the NFT is listed for sale, the **marketplaceId** field should not be null, **isListed** should be true and a **timestampList** should be filled.
+Once the query is ready, you can request our indexer by providing both the indexer endpoint and the query. To check if the NFT is listed for sale, the **marketplaceId** field should not be null, **isListed** should be true and a **timestampList** should be filled.
 
 Replace NFT_ID in the following code snippet with the NFT ID previously used in ["How to list for sale an NFT on a marketplace"](/for-developers/guides/marketplace/sale-NFT):
 

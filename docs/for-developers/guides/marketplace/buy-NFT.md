@@ -16,7 +16,7 @@ Before getting started, make sure you have the following ready:
 
 ## Buy an NFT on a marketplace using Ternoa-JS
 
-This function buys a listed for sale NFT on a marketplace on the Ternoa chain. It returns an object promise containing the NFTSoldEvent provided by the Ternoa blockchain.
+This function buys a listed-for-sale NFT on a marketplace on the Ternoa chain. It returns an object promise containing the NFTSoldEvent provided by the Ternoa blockchain.
 
 :::info
 Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below.
@@ -25,26 +25,26 @@ Use your own account by updating the `//TernoaTestAccount` with your account see
 
 ```typescript showLineNumbers
 import {
-	buyNft,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    buyNft,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const buyNft = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the nft id you want to buy.
-		const res = await buyNft(
-			NFT_ID,
-			keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`NFT id: ${res.nftId} bought for ${res.listedPriceRounded}CAPS on marketplace ${res.marketplaceId}.`);
-	} catch (e) {
-		console.error(e);
-	}
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the nft id you want to buy.
+        const res = await buyNft(
+            NFT_ID,
+            keyring,
+            WaitUntil.BlockInclusion
+        );
+        console.log(`NFT id: ${res.nftId} bought for ${res.listedPriceRounded}CAPS on marketplace ${res.marketplaceId}.`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
@@ -53,23 +53,23 @@ const buyNft = async () => {
 ```markdown
 `nftId`: NFT Id of the NFT to buy.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when buying an NFT.
+The response provided from the blockchain event includes all the information below according to the parameters provided when buying an NFT.
 
 ```markdown
 `nftId`: NFT id bought.
 `marketplaceId`: Marketplace id where the NFT was listed for sale.
-`buyer`: The NFT new owner.
-`listedPrice`: The sale price of the NFT as a string corresponding to the value in big number.
-`listedPriceRounded`: The sale price of the NFT as number.
-`marketplaceCut`: The marketpace commission fee on the NFT sale as a string corresponding to the value in big number.
-`marketplaceCutRounded`: The marketpace commission fee on the NFT sale as number.
-`royaltyCut`: The NFT creator royalty fee on the NFT sale as a string corresponding to the value in big number.
-`royaltyCutRounded`: The NFT creator royalty fee on the NFT sale as number.
+`buyer`: The NFT's new owner.
+`listedPrice`: The sale price of the NFT as a string corresponding to the value in a big number.
+`listedPriceRounded`: The sale price of the NFT as a number.
+`marketplaceCut`: The marketplace commission fee on the NFT sale as a string corresponding to the value in a big number.
+`marketplaceCutRounded`: The marketplace commission fee on the NFT sale as a number.
+`royaltyCut`: The NFT creator royalty fee on the NFT sale as a string corresponding to the value in a big number.
+`royaltyCutRounded`: The NFT creator royalty fee on the NFT sale as a number.
 ```
 
 ## Support
