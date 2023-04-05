@@ -15,21 +15,24 @@ export default function CodeBlockSnippet() {
 
     //Start Snippet
     //Do not format snippet as used is <pre/><code> below
-    const snippet = `import { createNft } from "ternoa-js/nft";
-import { generateSeed, getKeyringFromSeed } from "ternoa-js/account"
-const createMyFirstNFT = async () => {
-    try {
-        const account = await generateSeed()
-        const keyring = await getKeyringFromSeed(account.seed)
-        const address = keyring.address
-        await createNft(address, "My first NFT", 10, null, false, keyring)
-    } catch(e) {
-        console.log(e)
-    }
-}
-
-
-
+    const snippet = `import { createNft, initializeApi, getKeyringFromSeed, WaitUntil, safeDisconnect, NFTCreatedEvent } from "ternoa-js";
+const mintNFT = async (): Promise<NFTCreatedEvent> => {
+  try {
+    await initializeApi();
+    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+    const { nftId } = await createNft(
+        "hello world",
+        0,
+        undefined,
+        false,
+        keyring,
+        WaitUntil.BlockInclusion
+	);
+	console.log("The on-chain NFT id is: " nftId);
+  } catch (e) {
+    console.error(e);
+  }
+};
 `
     //End Snippet
     return (

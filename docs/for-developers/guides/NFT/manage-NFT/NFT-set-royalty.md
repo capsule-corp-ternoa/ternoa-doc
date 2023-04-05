@@ -5,7 +5,7 @@ sidebar_label: How to set an NFT royalty
 
 # Manage NFT - Set Royalty
 
-Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic usecases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT or even set the NFT royalty without using any smart contracts.
+Ternoa provides you with many NFT features. Not only creating an NFT can be done in just a few lines of code but we also cover many NFT basic use cases: Ternoa allows you to easily create functions to delegate, transfer, burn an NFT, or even set the NFT royalty without using any smart contracts.
 
 ## Prerequisites
 
@@ -23,28 +23,28 @@ Use your own account by updating the //TernoaTestAccount with your account seed 
 
 ```typescript showLineNumbers
 import {
-  setRoyalty,
-  initializeApi,
-  getKeyringFromSeed,
-  WaitUntil,
+	setRoyalty,
+	initializeApi,
+	getKeyringFromSeed,
+	WaitUntil,
 } from "ternoa-js";
 
 const delegateNFT = async () => {
-  try {
-    await initializeApi();
-    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-    const NFT_ID = 1; // the NFT id to update the royalty
-    const royalty = 10;
-    const nftData = await setRoyalty(
-      NFT_ID,
-      royalty,
-      keyring,
-      WaitUntil.BlockInclusion
-    );
-    console.log(`NFT ${nftData.nftId} undelegated`);
-  } catch (e) {
-    console.error(e);
-  }
+	try {
+		await initializeApi();
+		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+		const NFT_ID = 1; // the NFT id to update the royalty
+		const royalty = 10;
+		const nftData = await setRoyalty(
+			NFT_ID,
+			royalty,
+			keyring,
+			WaitUntil.BlockInclusion
+		);
+		console.log(`NFT ${nftData.nftId} undelegated`);
+	} catch (e) {
+		console.error(e);
+	}
 };
 ```
 
@@ -53,13 +53,13 @@ const delegateNFT = async () => {
 ```markdown
 `id`: The ID of the NFT to update the royalty.
 `amount`: The new royalty value.
-`keyring`:  the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`keyring`: the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when updating the NFT's royalty.
+The response provided from the blockchain event includes all the information below according to the parameters provided when updating the NFT's royalty.
 
 ```markdown
 `nftId`: ID of the updated NFT.
@@ -69,13 +69,13 @@ The response provided from the blockchain event includes all the informations be
 ## How to retrieve an NFT royalty using Ternoa Indexer
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
-You can query data for some specific entities (NFT, Collection, Markeplace(...)) using graphql.
-_In this exemple, we use the graphql-request library._
+You can query data for some specific entities (NFT, Collection, Marketplace (...)) using graphql.
+_In this example, we use the graphql-request library._
 
 You first need to prepare a stringified query to get NFT data from a specific NFT id, as we did in the query(id) function.
 Do not hesitate to adapt the information you require in your query. You can check all the fields queryable for the [NftEntity](/for-developers/guides/NFT/basic-NFT/get-NFT#step-1-nftentity-query-preparation).
 
-When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. Check the NFT royalty filed.
+When the query is ready, you can request our indexer by providing both the indexer endpoint and the query. Check the NFT royalty filed.
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
@@ -93,22 +93,22 @@ const query = (id: number) => gql`
 `;
 
 const getNftData = async () => {
-  try {
-    const response = await request<{ nftEntity: NftType }>(
-      "https://indexer-alphanet.ternoa.dev",
-      query(NFT_ID)
-    );
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
+	try {
+		const response = await request<{ nftEntity: NftType }>(
+			"https://indexer-alphanet.ternoa.dev",
+			query(NFT_ID)
+		);
+		console.log(response);
+	} catch (error) {
+		console.error(error);
+	}
 };
 
 type NftType = {
-  nftId: string;
-  owner: string;
-  creator: string;
-  royalty: number;
+	nftId: string;
+	owner: string;
+	creator: string;
+	royalty: number;
 };
 ```
 

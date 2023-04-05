@@ -290,6 +290,11 @@ h4 {
   margin-right: .5rem !important;
 }
 
+.my2 {
+  margin-top: .5rem !important;
+  margin-bottom: .5rem !important;
+}
+
 .p2 {
   padding: 0.5rem !important;
 }
@@ -401,4 +406,8 @@ h4 {
 
 .row {
   flex-direction: row !important;
+}
+
+.noUnderline {
+  text-decoration: none;
 }

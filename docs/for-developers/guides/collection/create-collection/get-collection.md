@@ -7,22 +7,22 @@ sidebar_label: How to retrieve a Collection
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Marketplace(...)) using GraphQL.
-_In this exemple, we use the graphql-request library._
+_In this example, we use the graphql-request library._
 
 ## Step 1: CollectionEntity query preparation
 
 You first need to prepare a stringified query to get Collection data from a specific collection id.
-Here are detailed the paramaters available for the `CollectionEntity`:
+Here are detailed the parameters available for the `CollectionEntity`:
 
 ```markdown
 `collectionId`: The collection id.- String
 `owner`: The collection owner; null if the collection is burned. - String | null
-`offchainData`: The collection off-chain data (e.g. IPFS CID hash, a link or any string). - String
+`offchainData`: The collection off-chain data (e.g. IPFS CID hash, a link, or any string). - String
 `nfts`: An array of the NFT ids in the collection - String[]
 `nbNfts`: The number of NFT in the collection. - Number
 `limit`: The collection limit if set; null otherwise. - Number | null
-`hasReachedLimit`: true if the Collection has reach its limit; false otherwise. - Boolean
-`isClosed`: - Boolean flag: true if the Collection is a closed; false otherwise. - Boolean
+`hasReachedLimit`: true if the Collection has reached its limit; false otherwise. - Boolean
+`isClosed`: - Boolean flag: true if the Collection is closed; false otherwise. - Boolean
 `timestampCreated`: The creation timestamp. - Date
 `timestampBurned`: The burning timestamp. - Date | null
 `timestampClosed`: The closing timestamp.- Date | null
@@ -43,9 +43,9 @@ For example, if we want to get the Collection: owner / id; we have to prepare th
 
 ## Step 2: Sending the request to the Indexer
 
-Once the query is ready, you can make the request to our Indexer instances by providing both the indexer endpoint and the query.
+Once the query is ready, you can request our Indexer instances by providing both the indexer endpoint and the query.
 
-Replace _COLLECTION_ID_ in the following code snippet with the collection ID previouly generated in ["How to mint a Collection on-chain"](/for-developers/guides/collection/create-collection/mint-collection)):
+Replace _COLLECTION_ID_ in the following code snippet with the collection ID previously generated in ["How to mint a Collection on-chain"](/for-developers/guides/collection/create-collection/mint-collection)):
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
@@ -62,37 +62,37 @@ const query = (id: number) => gql`
 `;
 
 const getCollectionData = async () => {
-  try {
-    const response = await request<{ collectionEntity: CollectionType }>(
-      "https://indexer-alphanet.ternoa.dev",
-      query(COLLECTION_ID)
-    );
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
+	try {
+		const response = await request<{ collectionEntity: CollectionType }>(
+			"https://indexer-alphanet.ternoa.dev",
+			query(COLLECTION_ID)
+		);
+		console.log(response);
+	} catch (error) {
+		console.error(error);
+	}
 };
 
 type CollectionType = {
-  owner: string;
-  offchainData: string;
-  collectionId: string;
+	owner: string;
+	offchainData: string;
+	collectionId: string;
 };
 ```
 
 The `getCollectionData` function is an asynchronous function that sends a GraphQL request using the `request` function from the **"graphql-request"** library. Here we are using the Ternoa Alphanet instance at **"https://indexer-alphanet.ternoa.dev"** with the Collection ID 0 as the query parameter (you can try with your id). The response from the server is an object with a property collectionEntity that has the data of the requested Collection entity.
 
-The response for the collection id 0 the the Alphanet Network is:
+The response for the collection id 0 the Alphanet Network is:
 
 ```json
 {
-  "data": {
-    "collectionEntity": {
-      "owner": "5DoaPm79MrWUQpFSDBhpmotRp344dc9eM4NV8aRb3vHEuzxH",
-      "collectionId": "0",
-      "offchainData": "test"
-    }
-  }
+	"data": {
+		"collectionEntity": {
+			"owner": "5DoaPm79MrWUQpFSDBhpmotRp344dc9eM4NV8aRb3vHEuzxH",
+			"collectionId": "0",
+			"offchainData": "test"
+		}
+	}
 }
 ```
 
@@ -114,7 +114,7 @@ Ternoa Indexer comes with filtering and ordering options. Instead of requesting 
 
 The NFT in the response will be ordered by creation timestamp descendent with `orderBy: [TIMESTAMP_CREATE_DESC]`.
 
-The response on the the Alphanet Network when this document is written is:
+The response on the Alphanet Network when this document is written is:
 
 ```json
 {
@@ -138,7 +138,7 @@ The response on the the Alphanet Network when this document is written is:
 }
 ```
 
-The last Collection minted on the Ternoa chain is the collection 585.
+The last Collection minted on the Ternoa chain is collection 585.
 
 ## Support
 

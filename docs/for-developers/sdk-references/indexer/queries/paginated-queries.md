@@ -14,61 +14,62 @@ You can paginate all the request using regular “first” and “offset” para
 
 ```graphql showLineNumbers
 query {
-  nftEntities(
-    filter: { listedForSale:{equalTo: true} }
-    first: 10
-    offset: 0
-  ) {
-    totalCount
-    nodes {
-      nftId
-      owner
-      collectionId
-      offchainData
-    }
-  }
+	nftEntities(
+		filter: { listedForSale: { equalTo: true } }
+		first: 10
+		offset: 0
+	) {
+		totalCount
+		nodes {
+			nftId
+			owner
+			collectionId
+			offchainData
+		}
+	}
 }
 ```
 
-This request fetches the first page with 10 items. For the next page you need to put an offset. For exemple in our case, qe addan offset of 10 in order to get the next 10 NFTs listed.
+This request fetches the first page with 10 items. For the next page you need to put an offset. For example in our case, qe addan offset of 10 in order to get the next 10 NFTs listed.
 
 ## Query paginated NFTs (second page)
 
 ```graphql showLineNumbers
 query {
-  nftEntities(
-    filter: { listedForSale:{equalTo: true} }
-    first: 10
-    offset: 10
-  ) {
-    totalCount
-    nodes {
-      nftId
-      owner
-      collectionId
-      offchainData
-    }
-  }
+	nftEntities(
+		filter: { listedForSale: { equalTo: true } }
+		first: 10
+		offset: 10
+	) {
+		totalCount
+		nodes {
+			nftId
+			owner
+			collectionId
+			offchainData
+		}
+	}
 }
 ```
+
 ## Query paginated NFTs (third page)
 
 Again to get the third page, you need to **increase** offset. Here we increase by 10 (20 in total) in order to get the next 10 NFTs listed.
 
 ```graphql showLineNumbers
 query {
-  nftEntities(
-    filter: { listedForSale:{equalTo: true} }
-    first: 10
-    offset: 20
-  ) {
-    totalCount
-    nodes {
-      nftId
-      owner
-      collectionId
-      offchainData
-    }
-  }
+	nftEntities(
+		filter: { listedForSale: { equalTo: true } }
+		first: 10
+		offset: 20
+	) {
+		totalCount
+		nodes {
+			nftId
+			owner
+			collectionId
+			offchainData
+		}
+	}
 }
 ```

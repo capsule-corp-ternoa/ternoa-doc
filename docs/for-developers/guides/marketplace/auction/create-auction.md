@@ -20,41 +20,41 @@ This function put an existing NFT to auction on a marketplace on the Ternoa chai
 
 :::info
 Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below.
-**Replace the NFT_ID** with the existing one to aution, the **MARKETPLACE_ID** by the existing marketplace id you want the NFT to be auctioned on, the **startBlock**, **endBlock**, **startPrice**, **buyItPrice**.
+**Replace the NFT_ID** with the existing one to auction, the **MARKETPLACE_ID** by the existing marketplace id you want the NFT to be auctioned on, the **startBlock**, **endBlock**, **startPrice**, **buyItPrice**.
 :::
 
 ```typescript showLineNumbers
 import {
-	createAuction,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    createAuction,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const listAuctionNFT = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the nft id you want to put in auction.
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the nft id you want to auction.
         const MARKETPLACE_ID = // update with the marketplace id you want the NFT to be auctioned on.
         const startBlock = // update with the auction start block number.
         const endBlock = // update with the auction end block number.
         const startPrice = // update with the auction start price.
         const buyItPrice = // update with the auction "buy it now" price.
-		const res = await createAuction(
-			NFT_ID,
+        const res = await createAuction(
+            NFT_ID,
             MARKETPLACE_ID,
             startBlock,
             endBlock,
             startPrice,
             buyItPrice,
             keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`NFT id: ${res.nftId} auctioned on marketplace ${res.marketplaceId} for ${res.startPrice}CAPS`);
-	} catch (e) {
-		console.error(e);
-	}
+            WaitUntil.BlockInclusion
+        );
+        console.log(`NFT id: ${res.nftId} auctioned on marketplace ${res.marketplaceId} for ${res.startPrice}CAPS`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
@@ -68,23 +68,23 @@ const listAuctionNFT = async () => {
 `startPrice`: The price at which the auction starts.
 `buyItPrice`: The price to directly buy the NFT before the auction starts. Optional Parameter.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when buying an NFT.
+The response provided from the blockchain event includes all the information below according to the parameters provided when buying an NFT.
 
 ```markdown
 `nftId`: NFT id auctioned.
 `marketplaceId`: Marketplace id where the NFT was listed for auction.
 `creator`: The auction creator.
-`startPrice`: The starting auction price of the NFT as a string corresponding to the value in big number.
-`startPriceRounded`: The starting auction price of the NFT as number.
-`buyItPrice`: If set, the price to directly buy the NFT before the auction starts as a string corresponding to the value in big number.
-`buyItPriceRounded`: If set, The price to directly buy the NFT before the auction starts as number.
-`startBlock`: The aution starting block number.
-`endBlock`: The aution ending block number.
+`startPrice`: The starting auction price of the NFT as a string corresponding to the value in a big number.
+`startPriceRounded`: The starting auction price of the NFT as a number.
+`buyItPrice`: If set, the price to directly buy the NFT before the auction starts as a string corresponding to the value in a big number.
+`buyItPriceRounded`: If set, The price to directly buy the NFT before the auction starts as a number.
+`startBlock`: The auction starting block number.
+`endBlock`: The auction ending block number.
 ```
 
 ## Support

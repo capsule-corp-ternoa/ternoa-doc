@@ -16,7 +16,7 @@ Before getting started, make sure you have the following ready:
 
 ## Cancel an auction on a marketplace using Ternoa-JS
 
-This function cancel an auctioned NFT from a marketplace on the Ternoa chain. It returns an object promise containing the AuctionCancelledEvent provided by the Ternoa blockchain.
+This function cancels an auctioned NFT from a marketplace on the Ternoa chain. It returns an object promise containing the AuctionCancelledEvent provided by the Ternoa blockchain.
 
 :::info
 Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below.
@@ -25,26 +25,26 @@ Use your own account by updating the `//TernoaTestAccount` with your account see
 
 ```typescript showLineNumbers
 import {
-	cancelAuction,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    cancelAuction,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const cancelAuctionNFT = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the auctioned nft id you want to cancel.
-		const res = await cancelAuction(
-			NFT_ID,
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the auctioned nft id you want to cancel.
+        const res = await cancelAuction(
+            NFT_ID,
             keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`Auction cancelled for NFT id: ${res.nftId}`);
-	} catch (e) {
-		console.error(e);
-	}
+            WaitUntil.BlockInclusion
+        );
+        console.log(`Auction cancelled for NFT id: ${res.nftId}`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
@@ -53,20 +53,20 @@ const cancelAuctionNFT = async () => {
 ```markdown
 `nftId`: The ID of the auctioned NFT to cancel.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when cancelling an auction.
+The response provided from the blockchain event includes all the information below according to the parameters provided when canceling an auction.
 
 ```markdown
-`nftId`: NFT id of the cancelled auction.
+`nftId`: NFT id of the canceled auction.
 ```
 
 ## End an auction on a marketplace using Ternoa-JS
 
-This function end an auctioned NFT from a marketplace on the Ternoa chain. It returns an object promise containing the AuctionCompletedEvent provided by the Ternoa blockchain.
+This function ends an auctioned NFT from a marketplace on the Ternoa chain. It returns an object promise containing the AuctionCompletedEvent provided by the Ternoa blockchain.
 
 :::info
 Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below.
@@ -75,26 +75,26 @@ Use your own account by updating the `//TernoaTestAccount` with your account see
 
 ```typescript showLineNumbers
 import {
-	endAuction,
-	initializeApi,
-	getKeyringFromSeed,
-	WaitUntil,
+    endAuction,
+    initializeApi,
+    getKeyringFromSeed,
+    WaitUntil,
 } from "ternoa-js";
 
 const endAuctionNFT = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const NFT_ID = // update with the auctioned nft id you want to end.
-		const res = await endAuction(
-			NFT_ID,
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const NFT_ID = // update with the auctioned nft id you want to end.
+        const res = await endAuction(
+            NFT_ID,
             keyring,
-			WaitUntil.BlockInclusion
-		);
-		console.log(`Auction ended for NFT id: ${res.nftId}`);
-	} catch (e) {
-		console.error(e);
-	}
+            WaitUntil.BlockInclusion
+        );
+        console.log(`Auction ended for NFT id: ${res.nftId}`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
@@ -103,22 +103,22 @@ const endAuctionNFT = async () => {
 ```markdown
 `nftId`: The ID of the auctioned NFT to end.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when ending an auction.
+The response provided from the blockchain event includes all the information below according to the parameters provided when ending an auction.
 
 ```markdown
 `nftId`: NFT id auctioned.
 `newOwner`: The new NFT owner.
-`amount`: The NFT price as a string corresponding to the value in big number.
-`amountRounded`: The NFT price as number.
-`marketplaceCut`: The marketpace commission fee on the auctioned NFT as a string corresponding to the value in big number.
-`marketplaceCutRounded`: The marketpace commission fee on the auctioned NFT as number.
-`royaltyCut`: The NFT creator royalty fee on the auctioned NFT as a string corresponding to the value in big number.
-`royaltyCutRounded`: The NFT creator royalty fee on the auctioned NFT as number.
+`amount`: The NFT price as a string corresponding to the value in a big number.
+`amountRounded`: The NFT price as a number.
+`marketplaceCut`: The marketplace commission fee on the auctioned NFT as a string corresponding to the value in a big number.
+`marketplaceCutRounded`: The marketplace commission fee on the auctioned NFT as a number.
+`royaltyCut`: The NFT creator royalty fee on the auctioned NFT as a string corresponding to the value in a big number.
+`royaltyCutRounded`: The NFT creator royalty fee on the auctioned NFT as a number.
 ```
 
 ## Support

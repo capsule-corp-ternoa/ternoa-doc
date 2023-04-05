@@ -16,19 +16,31 @@ The main objective of collections are to give a way to group NFTs. Grouping can 
 <details className="toggle">
     <summary>Creating a collection</summary>
     <div>Create a collection on the chain.</div>
-</details>
-
-<details className="toggle">
-  <summary>Closing a collection</summary>
-  <div>Close a collection on the chain.</div>
+    <a to="/for-developers/guides/collection/create-collection/mint-collection" className='button purpleBtn noUnderline my2'>
+      View code
+    </a>
 </details>
 
 <details className="toggle">
   <summary>Limit a collection</summary>
   <div>Set the collection limit on the chain.</div>
+  <a to="/for-developers/guides/collection/manage-collection/collection-limit" className='button purpleBtn noUnderline my2'>
+    View code
+  </a>
+</details>
+
+<details className="toggle">
+  <summary>Closing a collection</summary>
+  <div>Close a collection on the chain.</div>
+  <a to="/for-developers/guides/collection/manage-collection/collection-close" className='button purpleBtn noUnderline my2'>
+    View code
+  </a>
 </details>
 
 <details className="toggle">
   <summary>Burning a collection</summary>
   <div>Burn a collection on the chain.</div>
+  <a to="/for-developers/guides/collection/manage-collection/collection-burn" className='button purpleBtn noUnderline my2'>
+    View code
+  </a>
 </details>

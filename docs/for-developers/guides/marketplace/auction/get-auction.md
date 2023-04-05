@@ -7,14 +7,61 @@ sidebar_label: How to retrieve an auctioned NFT
 
 Ternoa indexer is **a record of the Ternoa Chain data.**
 You can query data for some specific entities (NFT, Collection, Auction, Marketplace(...)) using graphql.
-_In this exemple, we use the graphql-request library._
+_In this example, we use the graphql-request library._
 
-You first need to prepare a stringified query to get NFT and auction data from a specific marketplace id, as we did in the query(id) function.
-Do not hesitate to adapt the information you require in your query. When the query is ready, you can make the request to our indexer by providing both the indexer endpoint and the query. To check if the NFT is listed for auction, you must be capable to access the auction information in the auctionEntites.
+## Step 1: AuctionEntity query preparation
+
+You first need to prepare a stringified query to get NFT data from a specific marketplace id. Here are detailed the parameters available for the `AuctionEntity` concerning the NFT auction on a marketplace:
+
+```markdown
+`nftId`: The NFT id to be auctioned - String
+`marketplaceId`: The Marketplace id list the NFT on - String
+`creator`: The auction creator address - String
+`startPrice`: The auction initial price in Big Number format - String
+`startPriceRounded`: The auction initial price in a basic number format - Float
+`buyItNowPrice`: The auction direct buying price in Big Number format - String
+`buyItNowPriceRounded`: The auction direct buying price in a basic number format - Float
+`startBlockId`: The auction starting block id - Number
+`endBlockId`: The auction ending block id - Number
+`isCompleted`: Boolean flag: true if the auction is completed, false otherwise - Boolean
+`isCancelled`: Boolean flag: true if the auction has been canceled, false otherwise - Boolean
+`isExtendedPeriod`: Boolean flag: true if the auction is in the extending period, false otherwise - Boolean
+`bidders`: The bidders' list of addresses - [Bidder]
+`nbBidders`: The current number of bidders - Number
+`topBidAmount`: The auction best offer received in Big Number format - String
+`topBidAmountRounded`: The auction best offer received in a basic number format - Float
+`typeOfSale`: The type of listing: auction or sale - String
+`timestampCreated`: The auction creation timestamp. Date
+`timestampEnded`: The auction end timestamp. Date
+`timestampLastBid`: The last bid received timestamp. Date
+`timestampCancelled`: The auction cancellation timestamp. Date
+```
 
 :::info
-Because an NFT can be auctioned several times, you will find each auction in the result of your request. To access the running auction, add the filters "isCompleted" and "isCancelled" both equal to false. If no auction is running you can order them by timestampCreate for example.
+Because an NFT can be auctioned several times, you will find each auction as the result of your request. To access the running auction, add the filters "isCompleted" and "isCancelled" both equal to false. If no auction is running you can order them by timestampCreate for example.
 :::
+
+Do not hesitate to adapt the information you require in your query. Replace NFT_ID with the NFT id you want to get the information from (e.g. the NFT id from the NFT previously used in ["How to create an English auction on a marketplace"](/for-developers/guides/marketplace/auction/create-auction)):
+
+```typescript
+{
+      nftEntity(id: "${id}") {
+        nftId
+        isCompleted
+        isCancelled
+        marketplaceId
+        typeOfSale
+        startPriceRounded
+        timestampCreated
+      }
+    }
+```
+
+## Step 2: Sending the request to the Indexer
+
+Once the query is ready, you can request our indexer by providing both the indexer endpoint and the query.
+
+Replace NFT_ID in the following code snippet with the NFT ID previously used in ["How to create an English auction on a marketplace"](/for-developers/guides/marketplace/auction/create-auction):
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";
@@ -24,9 +71,11 @@ const query = (id: number) => gql`
     {
      auctionEntities(
         filter: {
-            nftId: { equalTo: "${id}" }
-            #isCompleted: { equalTo: false }
-            #isCancelled: { equalTo: false }
+            and: [
+                 nftId: { equalTo: "${id}" }
+                #isCompleted: { equalTo: false }
+                #isCancelled: { equalTo: false }
+            ]
         }
         #orderBy:TIMESTAMP_CREATE_DESC
         ) {
@@ -70,6 +119,8 @@ type AuctionType = {
 :::info
 You can also look if an NFT is auctioned in the nftEntity where the 'typeOfListing' should be set to "auction".
 :::
+
+The `getAuctionData` function is an asynchronous function that sends a GraphQL request using the `request` function from the **"graphql-request"** library. The response from the server is an object with a property auctionEntities that has the data of the auctioned NFT.
 
 ## Support
 

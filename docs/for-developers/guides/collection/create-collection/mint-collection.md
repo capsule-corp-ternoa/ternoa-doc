@@ -16,31 +16,34 @@ Before getting started, make sure you have the following ready:
 
 ## Minting a Collection on-chain using Ternoa-JS
 
-In order to create a Collection on the Ternoa chain, Ternoa-JS provides you with a `createCollection` helper to do so. It returns an object promise containing the `CollectionCreatedEvent` returned by the Ternoa blockchain.
+To create a Collection on the Ternoa chain, Ternoa-JS provides you with a `createCollection` helper to do so. It returns an object promise containing the `CollectionCreatedEvent` returned by the Ternoa blockchain.
 
-Replace _IPFS_CID_ in the following code snippet with your CID hash previouly generated in ["How to prepare Collection assets"](/for-developers/guides/collection/create-collection/prepare-assets):
+Replace _IPFS_CID_ in the following code snippet with your CID hash previously generated in ["How to prepare Collection assets"](/for-developers/guides/collection/create-collection/prepare-assets):
 
 ```typescript showLineNumbers
 import {
-  createCollection,
-  initializeApi,
-  getKeyringFromSeed,
-  WaitUntil,
+	createCollection,
+	initializeApi,
+	getKeyringFromSeed,
+	WaitUntil,
 } from "ternoa-js";
 
 const main = async () => {
-  try {
-    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-    const collectionData = await createCollection(
-      "IPFS_CID",
-      undefined,
-      keyring,
-      WaitUntil.BlockInclusion
-    );
-    console.log("The on-chain Collection id is: ", collectionData.collectionId);
-  } catch (e) {
-    console.error(e);
-  }
+	try {
+		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+		const collectionData = await createCollection(
+			"IPFS_CID",
+			undefined,
+			keyring,
+			WaitUntil.BlockInclusion
+		);
+		console.log(
+			"The on-chain Collection id is: ",
+			collectionData.collectionId
+		);
+	} catch (e) {
+		console.error(e);
+	}
 };
 ```
 
@@ -53,13 +56,13 @@ Use your own account by updating the `//TernoaTestAccount` with your account see
 Here are detailed the `createCollection` helper parameters:
 
 ```markdown
-`offchainData`: a string that can be IPFS CID hash that points to a JSON file, a plain text, a small JSON string, or a link to either a static or a dynamic file.
-`limit`: (Optionnal) an amount of NFT that can be associated with this collection.
-`keyring`: the provided keyring (containing the address) will be used to sign the transactio and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`offchainData`: a string that can be an IPFS CID hash that points to a JSON file, a plain text, a small JSON string, or a link to either a static or a dynamic file.
+`limit`: (Optional) an amount of NFT that can be associated with this collection.
+`keyring`: the provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
-The response returned includes all the informations below according to the parameters provided when creating the Collection.
+The response returned includes all the information below according to the parameters provided when creating the Collection.
 
 ```markdown
 `collectionId`: ID of the Collection.
@@ -70,7 +73,7 @@ The response returned includes all the informations below according to the param
 
 ## Next
 
-Next step will be getting the Collection data from the Ternoa Indexer using the Collection id just generated. Keep it and continue on the ["How to retrieve a Collection"](/for-developers/guides/collection/create-collection/get-collection) guide.
+The next step will be getting the Collection data from the Ternoa Indexer using the Collection id just generated. Keep it and continue on the ["How to retrieve a Collection"](/for-developers/guides/collection/create-collection/get-collection) guide.
 
 ## Support
 

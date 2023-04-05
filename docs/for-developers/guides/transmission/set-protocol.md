@@ -3,7 +3,7 @@ sidebar_position: 1
 sidebar_label: How to set a Transmission Protocol
 ---
 
-# How to set a Transmission Protocol for an NFT ?
+# How to set a Transmission Protocol for an NFT?
 
 ## Prerequisites
 
@@ -19,69 +19,69 @@ Before getting started, make sure you have the following ready:
 This function creates a AtBlockWithReset Protocol on the Ternoa chain. It returns an object promise containing the ProtocolSetEvent provided by the Ternoa blockchain.
 
 :::info
-Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below. **Replace the variables** according to your needs. Each protocol requires its own specific set of parameters but once you will have understood this AtBlockWithReset exemple, you will know of to set them all.
+Use your own account by updating the `//TernoaTestAccount` with your account seed when retrieving the keyring from the example below. **Replace the variables** according to your needs. Each protocol requires its own specific set of parameters but once you will have understood this AtBlockWithReset example, you will know of to set them all.
 :::
 
 ```typescript showLineNumbers
 import {
-	initializeApi,
-	getKeyringFromSeed,
-	createNft,
+    initializeApi,
+    getKeyringFromSeed,
+    createNft,
     getLastBlock,
-	setTransmissionProtocol,
-	WaitUntil,
+    setTransmissionProtocol,
+    WaitUntil,
 } from "ternoa-js";
 
 //First import the corresponding protocol helpers.
-//Helpers expect primitive values (strings, number, boolean (..)) and returns the corresponding formatted object in the format expected by the chain.
+//Helpers expect primitive values (strings, numbers, boolean (..)) and return the corresponding formatted object in the format expected by the chain.
 import {
-	formatAtBlockWithResetProtocol,
-	formatProtocolCancellation,
+    formatAtBlockWithResetProtocol,
+    formatProtocolCancellation,
 } from "ternoa-js/protocols/utils";
 
 const createContract = async () => {
-	try {
-		await initializeApi();
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const nftId = // update with the NFT id to be transfered with the AtBlockWithReset protocol.
+    try {
+        await initializeApi();
+        const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+        const nftId = // update with the NFT id to be transferred with the AtBlockWithReset protocol.
         const protocolRecipient = // update with the address of the recipient.
         const protocolExecutionDate = // update with the date you want the protocol to be executed.
 
-        // As the blockchain is expecting a block numbers rather than dates, an aproximative dateToBlock convertor could be used like below: consider approximatively one new block every 6 seconds.
+        // As the blockchain is expecting block numbers rather than dates, an approximative dateToBlock converter could be used like below: consider approximately one new block every 6 seconds.
         const lastBlockId = await getLastBlock()
         const duration = protocolExecutionDate.getTime() - new Date().getTime();
         const numberOfBlocks = duration / 6 / 1000
         const transmissionBlockId = Math.ceil(lastBlockId + numberOfBlocks)
 
         // Here you create some constants with each helper and value you want.
-		// First set the transmission protocol values: protocol kind and the block number (here the date converted to block)
-		const protocol = formatAtBlockWithResetProtocol(
-			"atBlockWithReset",
-			transmissionBlockId
-		);
-        // Second, set the cancellation option of your protocol : It can be anytime, none, or untilBlock. if untilBlock is set, you need to add the corresponding block id.
-		const cancellation = formatProtocolCancellation("anytime");
+        // First set the transmission protocol values: protocol kind and the block number (here the date converted to block)
+        const protocol = formatAtBlockWithResetProtocol(
+            "atBlockWithReset",
+            transmissionBlockId
+        );
+        // Second set the cancellation option of your protocol: It can be anytime, none, or untilBlock. if untilBlock is set, you need to add the corresponding block id.
+        const cancellation = formatProtocolCancellation("anytime");
 
-		// Provide each const one by one as parameters in our function below:
-		const {nftId, recipient, protocol } = await setTransmissionProtocol(
-			nftId,
-			protocolRecipient,
-			protocol,
-			cancellation,
-			keyring,
-			WaitUntil.BlockInclusion
-		);
+        // Provide each const one by one as parameters in our function below:
+        const {nftId, recipient, protocol } = await setTransmissionProtocol(
+            nftId,
+            protocolRecipient,
+            protocol,
+            cancellation,
+            keyring,
+            WaitUntil.BlockInclusion
+        );
 
-		console.log(`Protocol ${protocol} created for NFT: ${nftId}.`);
-	} catch (e) {
-		console.error(e);
-	}
+        console.log(`Protocol ${protocol} created for NFT: ${nftId}.`);
+    } catch (e) {
+        console.error(e);
+    }
 };
 ```
 
 ### The expected params
 
-The expected params for creating an AtBlockWithReset protocol are objects under specific format. The best practice and the easiest way to create the params, is to use the formaters we provide:
+The expected parameters for creating an AtBlockWithReset protocol are objects under a specific format. The best practice and the easiest way to create the params is to use the formatters we provide:
 
 -   formatAtBlockProtocol()
 -   formatAtBlockWithResetProtocol()
@@ -92,27 +92,27 @@ The expected params for creating an AtBlockWithReset protocol are objects under 
 ```markdown
 `nftId`: The NFT Id of the Protocol.
 `recipient`: The destination account of the NFT.
-`protocol`: The protocol kind. In our exemple, an atBlockWithReset and the transfer block.
-Protocol can be either "atBlock", "atBlockWithReset", "onConsent" or "onConsentAtBlock".
+`protocol`: The protocol kind. In our example, an atBlockWithReset and the transfer block.
+The protocol can be either "atBlock", "atBlockWithReset", "onConsent" or "onConsentAtBlock".
 The expected object parameter is: { [key: string]: number | ProtocolOnConsentData | Omit<ProtocolOnConsentData, "block"> }
-However, using the formatter, converts the function parameters in the expected format and makes you avoid any error.
+However, using the formatter converts the function parameters into the expected format and makes you avoid any errors.
 `protocolCancellation`: the cancellation period of the transmission protocol.
-It can be either "untilBlock" (set the block number), "anytime" (null) or "none" (null).
-Again the expexted format of the cancellation is under the same format { [key: string]: number | null }
-However, using the formatter, converts the function parameters in the expected format and makes you avoid any error.
+It can be either "untilBlock" (set the block number), "anytime" (null), or "none" (null).
+Again the expected format of the cancellation is under the same format { [key: string]: number | null }
+However, using the formatter converts the function parameters into the expected format and makes you avoid any errors.
 `keyring`: The provided keyring (containing the address) will be used to sign the transaction and pay the execution fee.
-`waitUntil`: WaitUntil define at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
+`waitUntil`: WaitUntil defines at which point we want to get the results of the transaction execution: BlockInclusion or BlockFinalization.
 ```
 
 ### Response
 
-The response provided from the blockchain event includes all the informations below according to the params provided when creating a date with countdown protocol.
+The response provided from the blockchain event includes all the information below according to the parameters provided when creating a date with the countdown protocol.
 
 ```markdown
 `nftId`: ID of the NFT used when creating a date with countdown protocol.
 `recipient`: The destination account of the NFT after protocol execution.
 `protocol`: The object containing the protocol data.
-`cancellation`: The obejct containing the cancellation type : null or the block number.
+`cancellation`: The object containing the cancellation type: null or the block number.
 ```
 
 ## Support
