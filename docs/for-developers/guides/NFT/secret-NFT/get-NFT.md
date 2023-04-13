@@ -84,7 +84,7 @@ const query = (id: number) => gql`
         offchainData
         secretOffchainData
         isSecret
-        isSecretSyncing
+        isSecretSynced
         collectionId
         royalty
       }
@@ -92,25 +92,25 @@ const query = (id: number) => gql`
 `;
 
 const getNftData = async () => {
-	try {
-		const response = await request<{ nftEntity: NftType }>(
-			"https://indexer-alphanet.ternoa.dev",
-			query(NFT_ID)
-		);
-		console.log(response);
-	} catch (error) {
-		console.error(error);
-	}
+  try {
+    const response = await request<{ nftEntity: NftType }>(
+      "https://indexer-alphanet.ternoa.dev",
+      query(NFT_ID)
+    );
+    console.log(response);
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 type NftType = {
-	owner: string;
-	nftId: string;
-	offchainData: string;
-	secretOffchainData: string;
-	isSecret: boolean;
-	collectionId: string;
-	royalty: number;
+  owner: string;
+  nftId: string;
+  offchainData: string;
+  secretOffchainData: string;
+  isSecret: boolean;
+  collectionId: string;
+  royalty: number;
 };
 ```
 
@@ -120,18 +120,18 @@ The response for the NFT id 74,260 the Alphanet Network is:
 
 ```json
 {
-	"data": {
-		"nftEntity": {
-			"owner": "5Cf8PBw7QiRFNPBTnUoks9Hvkzn8av1qfcgMtSppJvjYcxp6",
-			"nftId": "74260",
-			"offchainData": "public",
-			"secretOffchainData": "secret",
-			"isSecret": true,
-			"isSecretSynced": false,
-			"collectionId": null,
-			"royalty": 0.001
-		}
-	}
+  "data": {
+    "nftEntity": {
+      "owner": "5Cf8PBw7QiRFNPBTnUoks9Hvkzn8av1qfcgMtSppJvjYcxp6",
+      "nftId": "74260",
+      "offchainData": "public",
+      "secretOffchainData": "secret",
+      "isSecret": true,
+      "isSecretSynced": false,
+      "collectionId": null,
+      "royalty": 0.001
+    }
+  }
 }
 ```
 
