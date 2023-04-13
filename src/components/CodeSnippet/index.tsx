@@ -28,7 +28,7 @@ const mintNFT = async (): Promise<NFTCreatedEvent> => {
         keyring,
         WaitUntil.BlockInclusion
 	);
-	console.log("The on-chain NFT id is: " nftId);
+  console.log("The on-chain NFT id is: " nftId);
   } catch (e) {
     console.error(e);
   }

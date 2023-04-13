@@ -84,7 +84,7 @@ const query = (id: number) => gql`
         offchainData
         capsuleOffchainData
         isCapsule
-        isCapsuleSyncing
+        isCapsuleSynced
         collectionId
         royalty
       }
