@@ -10,7 +10,9 @@ Once you choose your cloud service provider and set-up your new server, the firs
 
 **To install Ternoa, use this command line:**
 ```bash 
-curl --proto '=https' --tlsv1.2 -sSf https://packages.ternoa.network/ternoa/installer | bash
+curl -sf -L https://packages.ternoa.network/ternoa/installer -o installer.sh
+sudo chmod +x installer.sh
+sudo ./installer.sh
 ```
 
 We've created a script for easy set-up.
