@@ -4,9 +4,11 @@ sidebar_position: 2
 
 # Install Ternoa
 
-## How to setup validator node ? 
+## Validator node quickstart 
 
-Once you choose your cloud service provider and set-up your new server, the first thing you will do is install Ternoa.
+There are two ways to run a Ternoa node:
+- For a quick setup follow the steps below
+- For a more detailed look into running Ternoa nodes, view our guide **[here](https://docs.ternoa.network/for-node-operators/how-to-run-a-validator-node)**
 
 **To install Ternoa, use this command line:**
 ```bash 
@@ -15,9 +17,9 @@ sudo chmod +x installer.sh
 sudo ./installer.sh
 ```
 
-We've created a script for easy set-up.
+We've created a script for easy setup.
 
-## Installed 🎉
+## Installed
 
 Once Ternoa is installed, let’s check to make sure that it’s working correctly: 
 ```bash 
@@ -37,3 +39,5 @@ journalctl -f -u ternoa.service
 ```
 
 Binary installs are available in the following directory: **https://packages.ternoa.network/ternoa/**
+
+For more detailed instructions, view our workshop on setting up a validator node **[here](https://docs.ternoa.network/for-node-operators/how-to-run-a-validator-node)**. 
