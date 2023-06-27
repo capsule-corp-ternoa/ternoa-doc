@@ -4,14 +4,16 @@ sidebar_position: 3
 
 # How to run a validator node
 
-This guide will explain the basic principles on how to run a validator node and how to stake CAPS. A more detailed approach will be available later in the form of a workshop and/or documentation.
+For a quickstart setup, follow instructions **[here](https://docs.ternoa.network/for-node-operators/how-to-setup-validator-node)** on how to run a validator node. For a more detailed look into running Ternoa nodes, view our video below. 
 
-The alpha version of the workshop can be found **[here](https://docs.google.com/presentation/d/1rjMtUB-foRfSkruRWzVbFqKS1VRVvqmk4ohxJ_lNYrk/edit#slide=id.p)**. We recommend you to go through the slides since most of the guide is based upon that same workshop.
 
-> _Make sure that you first fully read the guide before you start doing anything._
+:::info
 
+Make sure to fully read the guide before you start doing anything. To follow along during our workshop, the guide is **[here](https://docs.google.com/presentation/d/1rjMtUB-foRfSkruRWzVbFqKS1VRVvqmk4ohxJ_lNYrk/edit#slide=id.p)**, and you can skip to 9:17 in the video to begin.
+:::
 
 <iframe width="581" height="327" src="https://www.youtube.com/embed/RhYCDSq0Pv0" title="Ternoa Coffee Break #1 - How to Become a Ternoa Node Operator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ___
 
@@ -45,7 +47,7 @@ The key in correctly running the node is to use the right flags to connect to th
 - state-cache-size 0 - This fixes a bug that substrate has.
 - execution wasm - This runs the node in wasm mode. This is also used to fix a bug that is introduced in the substrate native runtime.
 
-We recommend you that you create a systemd service file which will run the node in the background and start it up on every restart. Instructions for that you can find in the linked workshop presentation.
+We recommend that you create a systemd service file which will run the node in the background and start it up on every restart. Instructions for that you can find in the linked workshop presentation **[here](https://docs.google.com/presentation/d/1rjMtUB-foRfSkruRWzVbFqKS1VRVvqmk4ohxJ_lNYrk/edit#slide=id.p)**.
 
 **Once the node is running, it will be visible in the telemetry UI and it will take time to sync up**
 
@@ -63,4 +65,4 @@ $ cat session_keys.txt
 
 The sessions keys are stored inside the "result" field. Make sure that you store it somewhere safe since it's going to be used in the next part of this guide.
 
-To make sure that the session keys are properly inserted, stop the node and start it again. This is quite important to do because otherwise the next step in this guide might not work
+To make sure that the session keys are properly inserted, stop the node and start it again. This is quite important to do because otherwise the final steps in this guide might not work.
