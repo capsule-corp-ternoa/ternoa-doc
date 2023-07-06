@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 sidebar_label: How to retrieve a rental NFT
 ---
 
@@ -57,7 +57,7 @@ You first need to prepare a stringified query to get the rental NFT data, from a
 `timestampExpired`: The contract expiration timestamp - Date
 ```
 
-Do not hesitate to adapt the information you require in your query and replace RENTAL_NFT_ID with the NFT id you want to get the information from (e.g. the NFT id from the NFT previously used in ["How to rent an NFT on-chain"](/for-developers/guides/rental-NFT/create-rental-nft)):
+Do not hesitate to adapt the information you require in your query and replace RENTAL_NFT_ID with the NFT id you want to get the information from (e.g. the NFT id from the NFT previously used in ["How to rent an NFT on-chain"](/for-developers/guides/NFT/rental-NFT/create-rental-nft)):
 
 ```typescript
 {
@@ -92,7 +92,7 @@ Do not hesitate to adapt the information you require in your query and replace R
 
 Once the query is ready, you can request our Indexer instances by providing both the indexer endpoint and the query.
 
-Replace RENTAL_NFT_ID in the following code snippet with the NFT ID previously used in ["How to rent an NFT on-chain"](/for-developers/guides/rental-NFT/create-rental-nft):
+Replace RENTAL_NFT_ID in the following code snippet with the NFT ID previously used in ["How to rent an NFT on-chain"](/for-developers/guides/NFT/rental-NFT/create-rental-nft):
 
 ```typescript showLineNumbers
 import { request, gql } from "graphql-request";

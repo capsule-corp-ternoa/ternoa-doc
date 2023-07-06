@@ -85,6 +85,74 @@ The media associated with NFTs, and other associated metadata, are stored off-ch
     </div>
 </details>
 
+## Rental NFT features
+
+<details className="toggle">
+  <summary>Creating Contract</summary>
+  <div>
+    Create a rental contract on the chain for an NFT.
+  </div>
+  <a to="/for-developers/guides/NFT/rental-NFT/create-rental-nft" className='button purpleBtn noUnderline my2'>
+    View code
+  </a>
+</details>
+
+<details className="toggle">
+  <summary>Revoking Contract</summary>
+  <div>
+    Revoke a running contract.
+  </div>
+</details>
+
+<details className="toggle">
+  <summary>Cancelling Contract</summary>
+  <div>
+    Cancel a contract that is not running.
+  </div>
+</details>
+
+<details className="toggle">
+  <summary>Renting</summary>
+  <div>
+    Rent an nft with automatic acceptance.
+  </div>
+</details>
+
+<details className="toggle">
+  <summary> Making Rent Offer</summary>
+  <div>
+    Make an offer for an available contract with manual acceptance.
+  </div>
+</details>
+
+<details className="toggle">
+  <summary> Accepting Rent Offer</summary>
+  <div>
+    Accept a rent offer for a manual acceptance contract.
+  </div>
+</details>
+
+<details className="toggle">
+  <summary>Retracting Rent Offer</summary>
+  <div>
+    Retract a rent offer provided to a manual acceptance contract.
+  </div>
+</details>
+
+<details className="toggle">
+  <summary>Changing Subscription Terms</summary>
+  <div>
+    Change the subscription terms for a subscription contract.
+  </div>
+</details>
+
+<details className="toggle">
+  <summary>Accepting Subscription Terms</summary>
+  <div>
+    Accept the subscription terms for a subscription contract.
+  </div>
+</details>
+
 ## NFT management features
 
 <details className="toggle">
