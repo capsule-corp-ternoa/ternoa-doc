@@ -22,7 +22,7 @@ Extending it to the Mainnet network will be as simple as changing the WebSocket 
 
 The Alphanet faucet provides you with some free test CAPS tokens to start building on Ternoa on the Alphanet network.
 
-It is accessible via the [Ternoa website](https://www.ternoa.network/alphanet).
+It is accessible via the [Ternoa website](https://faucet.ternoa.network/).
 
 Paste your fresh Ternoa account address created previously (it starts with the number `5` e.g. `5DFAg6g9n3fNT2qRUjP5sJ7R2pXKZ99PLVDSt5a1psr7BFJ1`), verify the captcha and click on the `Claim` button.
 
