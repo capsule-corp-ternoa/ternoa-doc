@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
         Ternoa is accessible, fast, scalable, and doesn't require learning a new programming language.
       </>
     ),
-    url: '/discover-ternoa/why-build-on-ternoa'
+    url: '/for-developers/why-build-on-ternoa'
   },
   {
     title: 'Builder Guides',
