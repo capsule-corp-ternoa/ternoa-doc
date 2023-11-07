@@ -24,7 +24,7 @@ function HomepageHeader() {
                 <div className={styles.btnContainer}>
                   <Link
                     className={clsx('button gradientBtn', styles.ctaBtn)}
-                    to="/discover-ternoa">
+                    to="/for-developers">
                     Start exploring
                   </Link>
                   <Link
@@ -56,7 +56,6 @@ export default function Home(): JSX.Element {
         <HomepageFeatures />
         <DiscoverMore />
         <JoinCommunity />
-        <AcceleratorProgram />
       </main>
     </Layout>
   );

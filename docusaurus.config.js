@@ -56,18 +56,18 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
-          {
-            to: "/discover-ternoa",
-            from: [
-              "/welcome",
-              "/general",
-              "/general/join-the-community",
-              "/general/contibutors",
-              "/general/ambassador-program",
-              "/general/accelerator-program",
-              "/general/code-of-conduct",
-            ],
-          },
+          // {
+          //   to: "/discover-ternoa",
+          //   from: [
+          //     "/welcome",
+          //     "/general",
+          //     "/general/join-the-community",
+          //     "/general/contibutors",
+          //     "/general/ambassador-program",
+          //     "/general/accelerator-program",
+          //     "/general/code-of-conduct",
+          //   ],
+          // },
           {
             to: "/wiki/how-to-stake-on-ternoa",
             from: "/general/how-to-stake-on-ternoa",
@@ -147,28 +147,28 @@ const config = {
           width: 40,
         },
         items: [
-          {
-            type: 'dropdown',
-            label: 'Docs',
-            position: 'left',
-            items: [
-              {
-                type: 'doc',
-                label: 'Discover Ternoa',
-                docId: 'discover-ternoa/index',
-              },
-              {
-                type: 'doc',
-                label: 'What is Ternoa',
-                docId: 'discover-ternoa/what-is-ternoa',
-              },
-              {
-                type: 'doc',
-                label: 'Explore Features',
-                docId: 'discover-ternoa/explore-ternoa-features',
-              },
-            ],
-          },
+          // {
+          //   type: 'dropdown',
+          //   label: 'Docs',
+          //   position: 'left',
+          //   items: [
+          //     {
+          //       type: 'doc',
+          //       label: 'Discover Ternoa',
+          //       docId: 'discover-ternoa/index',
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'What is Ternoa',
+          //       docId: 'discover-ternoa/what-is-ternoa',
+          //     },
+          //     {
+          //       type: 'doc',
+          //       label: 'Explore Features',
+          //       docId: 'discover-ternoa/explore-ternoa-features',
+          //     },
+          //   ],
+          // },
           {
             type: 'dropdown',
             label: 'SDK',
@@ -224,10 +224,10 @@ const config = {
           {
             title: "Documentation",
             items: [
-              {
-                label: "Welcome",
-                to: "discover-ternoa/what-is-ternoa",
-              },
+              // {
+              //   label: "Welcome",
+              //   to: "discover-ternoa/what-is-ternoa",
+              // },
               {
                 label: "Ternoa Wiki",
                 to: "/category/wiki",
