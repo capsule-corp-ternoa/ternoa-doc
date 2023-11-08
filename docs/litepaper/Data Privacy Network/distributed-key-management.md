@@ -1,23 +1,9 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
+sidebar_label: Distributed Key Management
 ---
 
-# Data Privacy Network
-
-USER WORKFLOW
-
-The user workflow is as follows: 
-
-- Users encrypt their sensitive digital asset and store it on IPFS. 
-- The encryption key is splitted and stored on a cluster of separate secure hardware (TEE) distributed around the world. There may be enterprise owners who provide their own TEE clusters.
-- Only the real owner on the blockchain can retrieve the splitted keys and reconstruct the original key to decrypt the content of secret NFT. 
-- The owner can also schedule a transfer, rent or delegate the ownership of the NFT to another user. 
-
-
-![img-desktop](./userflow.png)
-
-
-DISTRIBUTED KEY MANAGEMENT
+# Distributed Key Management
 
 Security design to prevent unauthorized access to data starts with identifying the attack vectors. Here is the list of threats identified for design:
 1. **Single point of attack/vulnerability:** Ternoa uses Shamir secret algorithm with (K, N) threshold decryption scheme, wherein the secret is split into N parts out of which K parts are needed to decrypt the secret. The split secrets called secret shares are stored across N secure enclaves running in Trusted Execution Environments, which are specialised hardware with built-in cryptographic identity and encryption capabilities.
@@ -46,7 +32,3 @@ Security design to prevent unauthorized access to data starts with identifying t
 9. **Provable secure open-source deployment:** The deployments of the Ternoa enclaves are publicly verifiable by anyone , anywhere globally. Any user can request an attestation quote from any enclave, which can be sent to an attestation server to verify if the enclave binaries are indeed running on trusted hardware from Vendor. Likewise, the authorized enclave binary measurements (MRENCLAVE) are publicly available to inspect.
 
 10. **Malicious operator can fake identity of enclave:** To prevent this, the enclave identity is established by generating key-pair inside the secure enclaves such that even the operator of the enclave will not have access to the signing key of the enclave.
-
-
-
-
