@@ -1,9 +1,9 @@
 ---
-sidebar_position: 5
-sidebar_label: Capsule Coin
+sidebar_position: 2
+sidebar_label: Architecture
 ---
 
-# Capsule Coin
+# Architecture
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';

@@ -1,9 +1,9 @@
 ---
-sidebar_position: 5
-sidebar_label: Capsule Coin
+sidebar_position: 4
+sidebar_label: Data Privacy Network
 ---
 
-# Capsule Coin
+# Data Privacy Network
 
 ```mdx-code-block
 import DocCardList from '@theme/DocCardList';
