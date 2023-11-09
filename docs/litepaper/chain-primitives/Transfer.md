@@ -29,5 +29,9 @@ The Death protocol is unique for each country and is based on the results return
 
 - Example: Alice has a car accident and passes away. She appears in the death register. The oracle becomes aware of it and transfers the capsule to its beneficiaries.
 
+# Transfer Protocol TIP
+
+[**View Transfer Protocol TIP**](https://github.com/capsule-corp-ternoa/ternoa-proposals/blob/main/TIPs/tip-540-Transmission-protocols.md) 
+
 
 
