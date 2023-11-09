@@ -12,25 +12,25 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Start building on Ternoa',
+    title: 'Explore Ternoa Ecosystem',
     imagePath: '/img/building-ternoa.png',
     description: (
       <>
-        Start exploring our Ternoa.js SDK designed to make web3 projects development easier and faster.
+        Explore Ternoa's architecture and delve into the innovative possibilities.
       </>
     ),
-    url: 'for-developers/overview '
+    url: 'litepaper/architecture'
   },
 
   {
-    title: 'Explore Ternoa features',
+    title: 'Start building on Ternoa',
     imagePath: '/img/explore-ternoa.png',
     description: (
       <>
-        From advanced NFT features, creating collections & marketplaces, explore what you can you build on Ternoa.
+        Start using our Ternoa.js SDK designed to make web3 projects development easier and faster.
       </>
     ),
-    url: '/category/features'
+    url: 'for-developers/overview'
   },
 
   {
