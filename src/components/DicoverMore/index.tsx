@@ -11,6 +11,15 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
+    title: 'Ternoa\'s Vision',
+    description: (
+      <>
+        Building and empowering secure digital ownership.
+      </>
+    ),
+    url: '/litepaper/vision-mission'
+  },
+  {
     title: 'Why build on Ternoa?',
     description: (
       <>
@@ -19,23 +28,14 @@ const FeatureList: FeatureItem[] = [
     ),
     url: '/for-developers/why-build-on-ternoa'
   },
+
   {
     title: 'Builder Guides',
     description: (
       <>
-        Ternoa offers tools that streamline and accelerate building web3 projects.
-      </>
+        Ternoa offers tools that streamline and accelerate building web3 projects.      </>
     ),
     url: '/for-developers/guides/'
-  },
-
-  {
-    title: 'Buy CAPS',
-    description: (
-      <>
-        With CAPS, Ternoa users will be able to explore dApps, NFTs and take advantage of the Ternoa infrastructure.      </>
-    ),
-    url: '/wiki/how-to-buy-caps'
   },
   {
     title: 'NFT Primitives',
@@ -44,7 +44,7 @@ const FeatureList: FeatureItem[] = [
         Discover Ternoa's core building blocks that empower the creation and management of NFTs.
       </>
     ),
-    url: '/wiki/features/nft-primitives'
+    url: '/litepaper/chain-primitives/'
   },
   {
     title: 'User Guides',
