@@ -1,9 +1,9 @@
 ---
 sidebar_position: 6
-sidebar_label: SDK references
+sidebar_label: Developer tools
 ---
 
-# SDK references
+# Developer tools
 
 ## Overview
 
