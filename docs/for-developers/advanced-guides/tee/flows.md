@@ -1,9 +1,11 @@
 ---
-sidebar_position: 2
-sidebar_label: Minting
+sidebar_position: 1
+sidebar_label: Minting & Decrypting flows
 ---
 
-# Minting a Secret NFT
+# Minting & Decrypting flows
+
+## Minting a Secret NFT
 
 ```mermaid
 		graph TD;
@@ -28,7 +30,7 @@ sidebar_label: Minting
 	  style B fill:#fff,stroke:#333,color: #000,stroke-dasharray: 5,stroke-width:2px
 ```
 
-## Custom and destructured flow
+### Custom mint and destructured flow
 
 - How to generate the Secret key
 
@@ -51,3 +53,46 @@ sidebar_label: Minting
 - How to store shares on TEE enclaves
   - Enclave health status
   - Post request
+
+# Decrypting a Secret NFT
+
+```mermaid
+		graph TD;
+		Z[Init API]-->Y;
+	  Y[Create Keyring]-->XX;
+	  CC[TEE: Enclaves health check] --> XX
+	  XX[Format TEE Payload: Data + Signature + Requester] -- payload -->X;
+	  X[TEE: Retrieve SSS]-->W;
+	  W[Construct PGP Private Key] --> F;
+
+	  V[NFT ID] --> XX
+	  V --> C
+
+	  C[On-chain storage: Retrieve Secret NFT off-chain data] -- IPFS hash --> D;
+	  D[IPFS: Get Secret metadata] -- IPFS hash --> E;
+	  E[IPFS: Get encrypted Secret file] --> F;
+	  F[Decrypt Secret file]
+
+
+	  style Z fill:#fff,stroke:#333,color: #000,stroke-dasharray: 5,stroke-width:2px
+	  style Y fill:#fff,stroke:#333,color: #000,stroke-dasharray: 5,stroke-width:2px
+	  style V fill:#fff,stroke:#333,color: #000,stroke-dasharray: 5,stroke-width:2px
+```
+
+### Custom decryption and destructured flow
+
+- How to retrieve Secret NFT assets
+
+  - Ternoa IPFS Client
+
+- How to prepare payloads for TEE enclaves
+
+  - Enclave health status
+  - Payload formatting
+  - Get request
+
+- How to retrieve Secret Key
+
+  - Shares combined
+
+- How to decrypt the secret
