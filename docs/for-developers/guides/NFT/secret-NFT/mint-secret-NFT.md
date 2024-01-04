@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 2
 sidebar_label: How to mint a Secret NFT on-chain
 ---
 
@@ -25,65 +25,59 @@ Please note that an _api-key_ is needed to store data on Ternoa IPFS gateways. V
 ```typescript showLineNumbers
 import fs from "fs";
 import {
-	getKeyringFromSeed,
-	mintSecretNFT,
-	File,
-	TernoaIPFS,
-	WaitUntil,
+  getKeyringFromSeed,
+  mintSecretNFT,
+  File,
+  TernoaIPFS,
+  WaitUntil,
 } from "ternoa-js";
 const main = async () => {
-	try {
-		const ipfsClient = new TernoaIPFS(
-			new URL("IPFS_NODE_URL"),
-			"IPFS_API_KEY"
-		);
-		const keyring = await getKeyringFromSeed("//TernoaTestAccount");
-		const CLUSTER_ID = 0; // The cluster of TEE enclaves used to store private key shares
-		const SECRET_NFT_ROYALTY = 10; // Percentage of all second sales that the secret NFT creator will receive - 10%.
-		const COLLECTION_ID = undefined; // The collection to which the secret NFT belongs. Optional Parameter: Default is undefined.
-		const IS_SOULBOUND = false; // If true, makes the Secret NFT a Soulbound token. The default is false.
-		const NFTFile = new File(
-			[await fs.promises.readFile("FILE_NAME")],
-			"FILE_NAME",
-			{
-				type: "FILE_TYPE",
-			}
-		);
-		const secretNFTFile = new File(
-			[await fs.promises.readFile("SECRET_FILE_NAME")],
-			"SECRET_FILE_NAME",
-			{
-				type: "SECRET_FILE_TYPE",
-			}
-		);
-		const nftMetadata = {
-			title: "Nice souvenir",
-			description: "This is my first Secret NFT on Ternoa.",
-		};
-		const secretNftMetadata = {
-			title: "(OPTIONAL) Something strong.",
-			description: "(OPTIONAL) This description is public.",
-		};
-		const secretNftData = await mintSecretNFT(
-			NFTFile,
-			nftMetadata,
-			secretNFTFile,
-			secretNftMetadata,
-			ipfsClient,
-			keyring,
-			CLUSTER_ID,
-			SECRET_NFT_ROYALTY,
-			COLLECTION_ID,
-			IS_SOULBOUND,
-			WaitUntil.BlockInclusion
-		);
-		console.log(
-			"The on-chain Secret NFT id is: ",
-			secretNftData.event.nftId
-		);
-	} catch (e) {
-		console.error(e);
-	}
+  try {
+    const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
+    const keyring = await getKeyringFromSeed("//TernoaTestAccount");
+    const CLUSTER_ID = 0; // The cluster of TEE enclaves used to store private key shares
+    const SECRET_NFT_ROYALTY = 10; // Percentage of all second sales that the secret NFT creator will receive - 10%.
+    const COLLECTION_ID = undefined; // The collection to which the secret NFT belongs. Optional Parameter: Default is undefined.
+    const IS_SOULBOUND = false; // If true, makes the Secret NFT a Soulbound token. The default is false.
+    const NFTFile = new File(
+      [await fs.promises.readFile("FILE_NAME")],
+      "FILE_NAME",
+      {
+        type: "FILE_TYPE",
+      }
+    );
+    const secretNFTFile = new File(
+      [await fs.promises.readFile("SECRET_FILE_NAME")],
+      "SECRET_FILE_NAME",
+      {
+        type: "SECRET_FILE_TYPE",
+      }
+    );
+    const nftMetadata = {
+      title: "Nice souvenir",
+      description: "This is my first Secret NFT on Ternoa.",
+    };
+    const secretNftMetadata = {
+      title: "(OPTIONAL) Something strong.",
+      description: "(OPTIONAL) This description is public.",
+    };
+    const secretNftData = await mintSecretNFT(
+      NFTFile,
+      nftMetadata,
+      secretNFTFile,
+      secretNftMetadata,
+      ipfsClient,
+      keyring,
+      CLUSTER_ID,
+      SECRET_NFT_ROYALTY,
+      COLLECTION_ID,
+      IS_SOULBOUND,
+      WaitUntil.BlockInclusion
+    );
+    console.log("The on-chain Secret NFT id is: ", secretNftData.event.nftId);
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 
@@ -113,7 +107,7 @@ Here are detailed the `mintSecretNFT` helper parameters:
 
 The response returned is an object promise containing:
 
--   `event` - the Secret NFT creation event (a combination of the **NFTCreatedEvent** & the **SecretAddedToNFTEvent** returned by the Ternoa blockchain) with the following data:
+- `event` - the Secret NFT creation event (a combination of the **NFTCreatedEvent** & the **SecretAddedToNFTEvent** returned by the Ternoa blockchain) with the following data:
 
 ```markdown
 `nftId`: The ID of the Secret NFT.
@@ -126,7 +120,7 @@ The response returned is an object promise containing:
 `isSoulbound`: True if the Secret NFT is soulbound. False if the NFT is not soulbound.
 ```
 
--   `clusterResponse` - the response of the TEE cluster which is an array of responses from the enclaves containing objects with the following data:
+- `clusterResponse` - the response of the TEE cluster which is an array of responses from the enclaves containing objects with the following data:
 
 ```markdown
 `status`: The enclave key share storing status.
