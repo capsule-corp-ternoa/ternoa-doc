@@ -5,6 +5,10 @@ sidebar_label: Minting & Decrypting flows
 
 # Minting & Decrypting flows
 
+:::info
+The following schemas and descriptions mention the Secret NFT as an example. Nevertheless, those schemas as also valuable for the Capsule NFT as the concept behind the two flows is the same for both of them.
+:::
+
 ## Minting a Secret NFT
 
 ```mermaid
@@ -30,7 +34,7 @@ sidebar_label: Minting & Decrypting flows
 	  style B fill:#fff,stroke:#333,color: #000,stroke-dasharray: 5,stroke-width:2px
 ```
 
-### Custom mint and destructured flow
+### Custom and destructured mint flow
 
 - How to generate the Secret key
 
@@ -79,7 +83,7 @@ sidebar_label: Minting & Decrypting flows
 	  style V fill:#fff,stroke:#333,color: #000,stroke-dasharray: 5,stroke-width:2px
 ```
 
-### Custom decryption and destructured flow
+### Custom and destructured decryption flow
 
 - How to retrieve Secret NFT assets
 
