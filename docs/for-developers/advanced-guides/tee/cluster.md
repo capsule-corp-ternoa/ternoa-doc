@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 1
 sidebar_label: Handling clusters
 ---
 
@@ -22,7 +22,7 @@ Now, let's see how to select a cluster.
 
 Unless specific use cases, data must be sent to one of the **_PUBLIC_** clusters registered on the chain. (_Private_ clusters are available for specific use cases. _Admin_ clusters should not be targeted.)
 
-It does not matter the selected public cluster id as all clusters are synced between each other. However, incase you want to implement a retry function or want to handle manually the cluster selection you can use `getPublicsClusters()`. Otherwise, the `getFirstPublicClusterAvailable()` is here for you.
+It does not matter the selected public cluster id as all clusters are synced between each other. However, in case you want to implement a retry function or want to handle manually the cluster selection you can use `getPublicsClusters()`. Otherwise, the `getFirstPublicClusterAvailable()` is here for you.
 
 ### Get all the public clusters ids
 
@@ -59,14 +59,14 @@ const getClusterId = async () => {
 };
 ```
 
-Now the cluster selected, it is needed to verify the _health status_ of the cluster.
+Now the cluster is selected, it is needed to verify the _health status_ of the cluster.
 
 ## Cluster health
 
-Before moving on the creation, the good practice is to verify the status of the selected cluster.
+Before moving on to creation, the good practice is to verify the status of the selected cluster.
 Enclave in a cluster can be not available because of being in maintenance mode. Therefore it is important to check the status of the selected cluster.
 
-In most of the cases, it is not necessary to use or store the data in a variable. Just run the promise `getEnclaveHealthStatus()` to check if any error is happening. In case you need to use the _cluster health_ data use the `getEnclaveDataAndHealth()`.
+In most cases, it is not necessary to use or store the data in a variable. Just run the promise `getEnclaveHealthStatus()` to check if any error is happening. In case you need to use the _cluster health_ data use the `getEnclaveDataAndHealth()`.
 
 ```typescript showLineNumbers
 import { getEnclaveHealthStatus, initializeApi } from "ternoa-js";
