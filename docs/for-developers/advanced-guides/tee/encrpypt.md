@@ -42,10 +42,10 @@ const getPGPKeys = async () => {
 ### Encrypt content and store it on IPFS
 
 :::info
-We assume you are familiar with the Ternoa IPFS client. Use the Ternoa IFPS node endpoint, with a key generated from our [key generator](https://ipfs-key-manager-git-dev-ternoa.vercel.app/), or your own storage provider. Read more about the [Ternoa IPFS client](/for-developers/advanced-guides/ipfs). Read more about [storage options.](/for-developers/developer-tools/ipfs-quick-guide)
+We assume you are familiar with the Ternoa IPFS client. Use the Ternoa IPFS node endpoint, with a key generated from our [key generator](https://ipfs-key-manager-git-dev-ternoa.vercel.app/), or your own storage provider. Read more about the [Ternoa IPFS client](/for-developers/advanced-guides/ipfs). Read more about [storage options.](/for-developers/developer-tools/ipfs-quick-guide)
 :::
 
-The process of encryption requires a few steps prepare your file (_do not forget to import File from the ternoa-js library_), prepare your metadata and generate your storage solution (here we use the Ternoa IPFS client).
+The process of encryption requires a few steps: preparing your file (_do not forget to import File from the ternoa-js library_), preparing your metadata and generating your storage solution (here we use the Ternoa IPFS client).
 
 Example using the `secretNftEncryptAndUploadFile()` helper, to encrypt the content of a Secret NFT.
 
@@ -114,7 +114,7 @@ const getPGPKeys = async () => {
 };
 ```
 
-Under the hood the `secretNftEncryptAndUploadFile()` does the following code. You can simply replace it:
+Under the hood the `secretNftEncryptAndUploadFile()` executes the following code. It utilizes another user-friendly atomic helper,`encryptFile()`, that you can use at your convenience to encrypt the content of your Capsule, for example. You can simply replace the helper by this piece of code:
 
 ```typescript showLineNumbers
 ...
@@ -132,7 +132,7 @@ console.log(
 ...
 ```
 
-The flow to encrypt the content of a Capsule NFT is pretty similar.
+The flow to encrypt the content of a Capsule NFT is quite similar.
 
 Depending on the kind of NFT you want to create, wether a Capsule NFT or a Secret NFT, you will find the corresponding detailed code sections here:
 
@@ -141,4 +141,4 @@ Depending on the kind of NFT you want to create, wether a Capsule NFT or a Secre
 
 Try to open the encrypted_media hash from the generated Secret NFT IPFS hash on https://ipfs-mainnet.trnnfr.com/ipfs/repalce-with-your-hash. You can see that the content is encrypted.
 
-Now you your content is stored and encrypted you can move on the last step to the last step of to [secure your NFT on the TEE](/for-developers/advanced-guides/tee/store-on-tee).
+Now that your content is stored and encrypted, you can proceed to the final step to [secure your NFT on the TEE](/for-developers/advanced-guides/tee/store-on-tee).
