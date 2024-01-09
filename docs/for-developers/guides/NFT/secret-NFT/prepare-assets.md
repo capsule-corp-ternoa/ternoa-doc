@@ -15,8 +15,8 @@ IPFS (Interplanetary File Systems) is one of the solutions we recommend to uploa
 
 Ternoa provides its own IPFS public nodes on different HTTP gateways based on the network environment:
 
--   MAINNET: **ipfs-mainnet.trnnfr.com**
--   ALPHANET: **ipfs-alphanet.trnnfr.com**
+- MAINNET: **ipfs-mainnet.trnnfr.com**
+- ALPHANET: **ipfs-dev.trnnfr.com**
 
 :::info
 
@@ -34,18 +34,18 @@ Here below is the expected format for secret NFT:
 
 ```json
 {
-	"title": "(OPTIONAL) Title of the Secret NFT",
-	"description": "(OPTIONAL) Description of the Secret NFT",
-	"properties": {
-		"encrypted_media": {
-			"hash": "CID Hash of the encrypted media",
-			"type": "Type of the encrypted media (file format)",
-			"size": "Size of the encrypted media",
-			"name": "(OPTIONAL) Name of the encrypted media",
-			"description": "(OPTIONAL) Description of the encrypted media"
-		},
-		"public_key_of_nft": "Public key associated with the Secret NFT"
-	}
+  "title": "(OPTIONAL) Title of the Secret NFT",
+  "description": "(OPTIONAL) Description of the Secret NFT",
+  "properties": {
+    "encrypted_media": {
+      "hash": "CID Hash of the encrypted media",
+      "type": "Type of the encrypted media (file format)",
+      "size": "Size of the encrypted media",
+      "name": "(OPTIONAL) Name of the encrypted media",
+      "description": "(OPTIONAL) Description of the encrypted media"
+    },
+    "public_key_of_nft": "Public key associated with the Secret NFT"
+  }
 }
 ```
 
@@ -53,9 +53,9 @@ Here below is the expected format for secret NFT:
 
 > Prerequisites:
 >
-> -   [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
-> -   Install and set up your editor of choice (for example Visual Studio Code [VSC])
-> -   [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
+> - [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
+> - Install and set up your editor of choice (for example Visual Studio Code [VSC])
+> - [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
 
 An IPFS client is available on Ternoa-JS SDK to make IPFS upload simple with only one line of code.
 
@@ -66,34 +66,34 @@ import fs from "fs";
 import { encryptFile, TernoaIPFS, File } from "ternoa-js";
 
 const main = async () => {
-	const file = new File(
-		[await fs.promises.readFile("FILE_NAME")],
-		"FILE_NAME",
-		{
-			type: "FILE_TYPE",
-		}
-	);
-	const encryptedFile = await encryptFile(file, "PUBLIC_PGP_KEY");
+  const file = new File(
+    [await fs.promises.readFile("FILE_NAME")],
+    "FILE_NAME",
+    {
+      type: "FILE_TYPE",
+    }
+  );
+  const encryptedFile = await encryptFile(file, "PUBLIC_PGP_KEY");
 
-	const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
+  const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
-	const secretNftMetadata = {
-		title: "(OPTIONAL) Something strong.",
-		description: "(OPTIONAL) This is my first Secret NFT on Ternoa.",
-	};
+  const secretNftMetadata = {
+    title: "(OPTIONAL) Something strong.",
+    description: "(OPTIONAL) This is my first Secret NFT on Ternoa.",
+  };
 
-	const secretMediaMetadata = {
-		name: "(OPTIONAL) FILE_NAME",
-	};
+  const secretMediaMetadata = {
+    name: "(OPTIONAL) FILE_NAME",
+  };
 
-	const { Hash } = await ipfsClient.storeSecretNFT(
-		encryptedFile,
-		file.type,
-		"PUBLIC_PGP_KEY",
-		secretNftMetadata,
-		secretMediaMetadata
-	);
-	console.log("The off-chain metadata CID hash is ", Hash);
+  const { Hash } = await ipfsClient.storeSecretNFT(
+    encryptedFile,
+    file.type,
+    "PUBLIC_PGP_KEY",
+    secretNftMetadata,
+    secretMediaMetadata
+  );
+  console.log("The off-chain metadata CID hash is ", Hash);
 };
 ```
 

@@ -8,7 +8,7 @@ sidebar_label: IPFS Quick Guide
 Ternoa runs an IPFS node at the following URLs:
 
 - Mainnet: https://ipfs-mainnet.trnnfr.com
-- Alphanet: https://ipfs-alphanet.trnnfr.com
+- Alphanet: https://ipfs-dev.trnnfr.com
 
 These IPFS nodes have a data size limit of 100 MB for storing files.
 

@@ -15,8 +15,8 @@ IPFS (Interplanetary File Systems) is one of the solutions we recommend to uploa
 
 Ternoa provides its own IPFS public nodes on different HTTP gateways based on the network environment:
 
--   MAINNET: **ipfs-mainnet.trnnfr.com**
--   ALPHANET: **ipfs-alphanet.trnnfr.com**
+- MAINNET: **ipfs-mainnet.trnnfr.com**
+- ALPHANET: **ipfs-dev.trnnfr.com**
 
 :::info
 
@@ -56,9 +56,9 @@ Here below is the expected format for capsule NFT:
 
 > Prerequisites:
 >
-> -   [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
-> -   Install and set up your editor of choice (for example Visual Studio Code [VSC])
-> -   [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
+> - [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
+> - Install and set up your editor of choice (for example Visual Studio Code [VSC])
+> - [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
 
 An IPFS client is available on Ternoa-JS SDK to make IPFS upload simple with only one line of code.
 
@@ -69,46 +69,46 @@ import fs from "fs";
 import { encryptFile, TernoaIPFS, File } from "ternoa-js";
 
 const main = async () => {
-	const file1 = new File(
-		[await fs.promises.readFile("FILE_NAME_1")],
-		"FILE_NAME_1",
-		{
-			type: "FILE_TYPE_1",
-		}
-	);
-	const file2 = new File(
-		[await fs.promises.readFile("FILE_NAME_2")],
-		"FILE_NAME_2",
-		{
-			type: "FILE_TYPE_2",
-		}
-	);
+  const file1 = new File(
+    [await fs.promises.readFile("FILE_NAME_1")],
+    "FILE_NAME_1",
+    {
+      type: "FILE_TYPE_1",
+    }
+  );
+  const file2 = new File(
+    [await fs.promises.readFile("FILE_NAME_2")],
+    "FILE_NAME_2",
+    {
+      type: "FILE_TYPE_2",
+    }
+  );
 
-	const encryptedFile1 = await encryptFile(file1, "PUBLIC_PGP_KEY");
-	const encryptedFile2 = await encryptFile(file2, "PUBLIC_PGP_KEY");
+  const encryptedFile1 = await encryptFile(file1, "PUBLIC_PGP_KEY");
+  const encryptedFile2 = await encryptFile(file2, "PUBLIC_PGP_KEY");
 
-	const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
+  const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
-	const capsuleMetadata = {
-		title: "(OPTIONAL) A secret stash.",
-		description: "(OPTIONAL) This is my first Capsule NFT on Ternoa.",
-	};
+  const capsuleMetadata = {
+    title: "(OPTIONAL) A secret stash.",
+    description: "(OPTIONAL) This is my first Capsule NFT on Ternoa.",
+  };
 
-	const { Hash } = await ipfsClient.storeCapsuleNFT(
-		keys.publicKey,
-		[
-			{
-				encryptedFile: encryptedFile1,
-				type: file1.type,
-			},
-			{
-				encryptedFile: encryptedFile2,
-				type: file2.type,
-			},
-		],
-		capsuleMetadata
-	);
-	console.log("The off-chain metadata CID hash is ", Hash);
+  const { Hash } = await ipfsClient.storeCapsuleNFT(
+    keys.publicKey,
+    [
+      {
+        encryptedFile: encryptedFile1,
+        type: file1.type,
+      },
+      {
+        encryptedFile: encryptedFile2,
+        type: file2.type,
+      },
+    ],
+    capsuleMetadata
+  );
+  console.log("The off-chain metadata CID hash is ", Hash);
 };
 ```
 

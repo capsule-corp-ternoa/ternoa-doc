@@ -11,8 +11,8 @@ IPFS (Interplanetary File Systems) is one of the solutions we recommend to uploa
 
 Ternoa provides its own IPFS public nodes on different HTTP gateways based on the network environment:
 
--   MAINNET: **ipfs-mainnet.trnnfr.com**
--   ALPHANET: **ipfs-alphanet.trnnfr.com**
+- MAINNET: **ipfs-mainnet.trnnfr.com**
+- ALPHANET: **ipfs-dev.trnnfr.com**
 
 :::info
 Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to get your API Key.
@@ -28,16 +28,16 @@ Here below is the expected format for basic NFT:
 
 ```json
 {
-	"title": "Title of the NFT",
-	"description": "Description of the NFT",
-	"image": "CID Hash of the media",
-	"properties": {
-		"media": {
-			"hash": "CID Hash of the media",
-			"type": "Type of the media (file format)",
-			"size": "Size of the media"
-		}
-	}
+  "title": "Title of the NFT",
+  "description": "Description of the NFT",
+  "image": "CID Hash of the media",
+  "properties": {
+    "media": {
+      "hash": "CID Hash of the media",
+      "type": "Type of the media (file format)",
+      "size": "Size of the media"
+    }
+  }
 }
 ```
 
@@ -45,9 +45,9 @@ Here below is the expected format for basic NFT:
 
 > Prerequisites:
 >
-> -   [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
-> -   Install and set up your editor of choice (for example Visual Studio Code [VSC])
-> -   [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
+> - [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
+> - Install and set up your editor of choice (for example Visual Studio Code [VSC])
+> - [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
 
 An IPFS client is available on Ternoa-JS SDK to make IPFS upload simple with only one line of code.
 
@@ -58,23 +58,23 @@ import fs from "fs";
 import { TernoaIPFS, File } from "ternoa-js";
 
 const main = async () => {
-	const file = new File(
-		[await fs.promises.readFile("FILE_NAME")],
-		"FILE_NAME",
-		{
-			type: "FILE_TYPE",
-		}
-	);
+  const file = new File(
+    [await fs.promises.readFile("FILE_NAME")],
+    "FILE_NAME",
+    {
+      type: "FILE_TYPE",
+    }
+  );
 
-	const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
+  const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
-	const nftMetadata = {
-		title: "NFT TITLE",
-		description: "NFT DESCRIPTION",
-	};
+  const nftMetadata = {
+    title: "NFT TITLE",
+    description: "NFT DESCRIPTION",
+  };
 
-	const { Hash } = await ipfsClient.storeNFT(file, nftMetadata);
-	console.log("The off-chain metadata CID hash is ", Hash);
+  const { Hash } = await ipfsClient.storeNFT(file, nftMetadata);
+  console.log("The off-chain metadata CID hash is ", Hash);
 };
 ```
 
