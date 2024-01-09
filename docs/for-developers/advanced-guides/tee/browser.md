@@ -3,9 +3,9 @@ sidebar_position: 4
 sidebar_label: Browser, wallet & extension
 ---
 
-# Creating a Secret NFT in a Browser Environment Without Keyring
+# Creating a secret NFT in a browser environment
 
-This section provides a comprehensive guide on creating a Secret NFT on the Ternoa chain without using a keyring. To successfully follow this process, it is recommended that you have a basic understanding of the concepts explained step by step in the following pages:
+This section provides a comprehensive guide on creating a Secret NFT on the Ternoa chain without using a SEED to retrieve the signer keyring. To successfully follow this process, it is recommended that you have a basic understanding of the concepts explained step by step in the following pages:
 
 - [**Introduction to TEE clusters**](/for-developers/advanced-guides/tee/cluster)
 - [**Generate keys & Encryption**](/for-developers/advanced-guides/tee/encrpypt)
