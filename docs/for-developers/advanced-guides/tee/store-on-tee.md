@@ -19,18 +19,18 @@ Depending of the use-case you are in, creating a Secret or a Capsule NFT can be 
 <details className="toggle">
     <summary>Creating a Capsule NFT with extrinsics</summary>
     <ul>
-        <li>createCapsule(): If your dApp can access the SEED of the signer to create the Capsule NFT.</li>
-        <li>createCapsuleTx(): If your dApp relies on a wallet or extension to sign and create the Capsule NFT. You will need to manually handle the signature and on-chain submission.</li>
-        <li>You can also convert an existing NFT to a Capsule NFT using one of the two following helpers: convertNftToCapsule() or convertNftToCapsuleTx(), depending on whether the signer can be provided from a SEED or through a wallet/extension.</li>
+        <li><span className="fwBold fn">createCapsule():</span> If your dApp can access the SEED of the signer to create the Capsule NFT.</li>
+        <li><span className="fwBold fn">createCapsuleTx():</span> If your dApp relies on a wallet or extension to sign and create the Capsule NFT. You will need to manually handle the signature and on-chain submission.</li>
+        <li>You can also convert an existing NFT to a Capsule NFT using one of the two following helpers: <span className="fwBold fn">convertNftToCapsule()</span> or <span className="fwBold fn">convertNftToCapsuleTx()</span>, depending on whether the signer can be provided from a SEED or through a wallet/extension.</li>
     </ul>
 </details>
 
 <details className="toggle">
     <summary>Creating a Secret NFT with extrinsics</summary>
     <ul>
-        <li>createSecretNft(): If your dApp can access the SEED of the signer to create the Secret NFT.</li>
-        <li>createSecretNftTx(): If your dApp relies on a wallet or extension to sign and create the Secret NFT. You will need to manually handle the signature and on-chain submission.</li>
-        <li>You can also convert an existing NFT to a Secret NFT using one of the two following helpers: addSecretToNft() or addSecretToNftTx(), depending on whether the signer can be provided from a SEED or through a wallet/extension.</li>
+        <li><span className="fwBold fn">createSecretNft():</span> If your dApp can access the SEED of the signer to create the Secret NFT.</li>
+        <li><span className="fwBold fn">createSecretNftTx():</span> If your dApp relies on a wallet or extension to sign and create the Secret NFT. You will need to manually handle the signature and on-chain submission.</li>
+        <li>You can also convert an existing NFT to a Secret NFT using one of the two following helpers: <span className="fwBold fn">addSecretToNft()</span> or <span className="fwBold fn">addSecretToNftTx()</span>, depending on whether the signer can be provided from a SEED or through a wallet/extension.</li>
     </ul>
 </details>
 
