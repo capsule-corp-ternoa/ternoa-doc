@@ -103,7 +103,7 @@ const encryptAndStoreContent = async () => {
         secretMediaMetadata
       );
     console.log(
-      `SECRET HASH: https://ipfs-mainnet.trnnfr.com/ipfs/${secretOffchainDataHash}`
+      `SECRET HASH: https://ipfs-dev.trnnfr.com/ipfs/${secretOffchainDataHash}`
     );
 
     // ...
@@ -117,7 +117,7 @@ const encryptAndStoreContent = async () => {
 Under the hood the `secretNftEncryptAndUploadFile()` executes the following code. It utilizes another user-friendly atomic helper,`encryptFile()`, that you can use at your convenience to encrypt the content of your Capsule, for example. You can simply replace the helper by this piece of code:
 
 ```typescript showLineNumbers
-...
+//...
 const encryptedFile = await encryptFile(secretNFTFile, keys.publicKey);
 const { Hash: secretOffchainDataHash } = await ipfsClient.storeSecretNFT(
   encryptedFile,
@@ -127,9 +127,9 @@ const { Hash: secretOffchainDataHash } = await ipfsClient.storeSecretNFT(
   secretMediaMetadata
 );
 console.log(
-    `SECRET HASH: https://ipfs-mainnet.trnnfr.com/ipfs/${secretOffchainDataHash}`
+  `SECRET HASH: https://ipfs-dev.trnnfr.com/ipfs/${secretOffchainDataHash}`
 );
-...
+//...
 ```
 
 The flow to encrypt the content of a Capsule NFT is quite similar.
@@ -139,6 +139,6 @@ Depending on the kind of NFT you want to create, wether a Capsule NFT or a Secre
 - [How to prepare Secret NFT assets](/for-developers/guides/NFT/secret-NFT/prepare-assets)
 - [How to prepare Capsule NFT assets](/for-developers/guides/NFT/capsule-NFT/prepare-assets)
 
-Try to open the encrypted_media hash from the generated Secret NFT IPFS hash on https://ipfs-mainnet.trnnfr.com/ipfs/repalce-with-your-hash. You can see that the content is encrypted.
+Try to open the encrypted_media hash from the generated Secret NFT IPFS hash on https://ipfs-dev.trnnfr.com/ipfs/repalce-with-your-hash. You can see that the content is encrypted.
 
 Now that your content is stored and encrypted, you can proceed to the final step to [secure your NFT on the TEE](/for-developers/advanced-guides/tee/store-on-tee).

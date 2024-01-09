@@ -64,7 +64,7 @@ const { Hash: offchainDataHash } = await ipfsClient.storeNFT(
   nftMetadata
 );
 console.log(
-  `PUBLIC HASH: https://ipfs-mainnet.trnnfr.com/ipfs/${offchainDataHash}`
+  `PUBLIC HASH: https://ipfs-dev.trnnfr.com/ipfs/${offchainDataHash}`
 );
 
 // RETRIEVE THE KEYRING FROM THE SEED
