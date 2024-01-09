@@ -61,7 +61,7 @@ import fs from "fs";
 import dotenv from "dotenv";
 dotenv.config();
 
-const getPGPKeys = async () => {
+const encryptAndStoreContent = async () => {
   try {
     await initializeApi();
     // IPFS
@@ -72,7 +72,7 @@ const getPGPKeys = async () => {
     // GENERATE YOUR KEYS SET
     const keys = await generatePGPKeys();
 
-    // PREPARE YOUR FILE
+    // PREPARE YOUR SECRET FILE
     // Do not forget to import File from the ternoa-js library
     const secretNFTFile = new File(
       [await fs.promises.readFile("SECRET_FILE.jpg")],
@@ -103,7 +103,7 @@ const getPGPKeys = async () => {
         secretMediaMetadata
       );
     console.log(
-      `https://ipfs-mainnet.trnnfr.com/ipfs/${secretOffchainDataHash}`
+      `SECRET HASH: https://ipfs-mainnet.trnnfr.com/ipfs/${secretOffchainDataHash}`
     );
 
     // ...
@@ -127,7 +127,7 @@ const { Hash: secretOffchainDataHash } = await ipfsClient.storeSecretNFT(
   secretMediaMetadata
 );
 console.log(
-    `https://ipfs-mainnet.trnnfr.com/ipfs/${secretOffchainDataHash}`
+    `SECRET HASH: https://ipfs-mainnet.trnnfr.com/ipfs/${secretOffchainDataHash}`
 );
 ...
 ```
