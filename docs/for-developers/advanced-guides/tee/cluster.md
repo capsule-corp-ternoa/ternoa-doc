@@ -70,12 +70,17 @@ Before moving on to creation, the good practice is to verify the status of the s
 In most cases, it's not necessary to use or store the data in a variable. Just run the promise `getEnclaveHealthStatus()` to check if any errors are occurring. In case you need to use the _cluster health_ data, use `getEnclaveDataAndHealth()`.
 
 ```typescript showLineNumbers
-import { getEnclaveHealthStatus, initializeApi } from "ternoa-js";
+import {
+  getEnclaveHealthStatus,
+  getFirstPublicClusterAvailable,
+  initializeApi,
+} from "ternoa-js";
 
 const checkClusterHealth = async () => {
   try {
     await initializeApi();
-    await getEnclaveHealthStatus(); // No output expected
+    const cluster = await getFirstPublicClusterAvailable();
+    await getEnclaveHealthStatus(cluster); // No output expected
     //...
     process.exit(0);
   } catch (error) {
@@ -85,12 +90,18 @@ const checkClusterHealth = async () => {
 ```
 
 ```typescript showLineNumbers
-import { getEnclaveHealthStatus, initializeApi } from "ternoa-js";
+import {
+  getEnclaveDataAndHealth,
+  getFirstPublicClusterAvailable,
+  initializeApi,
+} from "ternoa-js";
 
 const getClusterHealth = async () => {
   try {
     await initializeApi();
-    const healthData = await getEnclaveDataAndHealth(); // Expected output is Promise<EnclaveDataAndHealthType[]>
+    const cluster = await getFirstPublicClusterAvailable();
+    const healthData = await getEnclaveDataAndHealth(cluster); // Expected output is Promise<EnclaveDataAndHealthType[]>
+    console.log(healthData);
     //...
     process.exit(0);
   } catch (error) {
