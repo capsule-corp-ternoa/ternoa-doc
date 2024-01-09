@@ -38,7 +38,7 @@ import {
 
 export const createAndSignNFT = async (
   file: File,
-  metadata: NftMetadataType<{}>,
+  metadata: NftMetadataType,
   ipfsClient: TernoaIPFS,
   address: string
 ) => {
