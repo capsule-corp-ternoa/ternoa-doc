@@ -18,6 +18,10 @@ _The Secret or Capsule creation process involves encrypting content before uploa
 
 Now, let's see how to select a cluster.
 
+:::info
+All code snippets below and on the subsequent pages are designed to function within a Node.js environment. If you require information on how it operates in a browser environment, please consult [this section](/for-developers/advanced-guides/tee/browser).
+:::
+
 ## How to choose a cluster:
 
 Unless specific use cases, data must be sent to one of the **_PUBLIC_** clusters registered on the chain. (_Private_ clusters are available for specific use cases. _Admin_ clusters should not be targeted.)
