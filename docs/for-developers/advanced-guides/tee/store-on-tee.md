@@ -102,7 +102,7 @@ Once again copy and past the following code after the **`secretNftEvent`** respo
 
 // GET THE PUBLIC CLUSTER ID AND VERIFY CLUSTER STATUS
 const CLUSTER_ID = await getFirstPublicClusterAvailable();
-if (!CLUSTER_ID) throw new Error("CLUSTER ID IS UNDEFINED");
+if (!!CLUSTER_ID) throw new Error("CLUSTER ID IS UNDEFINED");
 
 await getEnclaveHealthStatus(CLUSTER_ID);
 
