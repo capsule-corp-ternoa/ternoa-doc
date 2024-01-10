@@ -87,7 +87,7 @@ console.log(secretNftEvent);
 
 ## Send the private key to the SGX Enclaves
 
-Now that the Secret NFT is created, and its content is encrypted and stored, the last step consists of securing the private key. We want our **private key** to be split into five Shamir shares, submitted, and stored in each of the five enclaves of an [SGX cluster.](/for-developers/advanced-guides/tee/cluster).
+Now that the Secret NFT is created, and its content is encrypted and stored, the last step consists of securing the private key. We want our **private key** to be split into five Shamir shares, submitted, and stored in each of the five enclaves of an [SGX cluster](/for-developers/advanced-guides/tee/cluster).
 
 No worries, we've got you covered again with the most user-friendly helper ever: **`prepareAndStoreKeyShares()`**
 
