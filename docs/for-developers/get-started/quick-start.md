@@ -44,7 +44,7 @@ We already installed the Ternoa-JS, you can directly run the following command:
 In the `.env.exemple` file, you will find the expected environement variables. Copy and paste them into a `.env` file at the root of the project.
 
 - `SEED_TEST_FUNDS`: Your [Ternoa account](/for-developers/get-started/create-account) _seed_ you will use to sign transactions.
-- `IPFS_API_KEY`: An IPFS KEY generated with the Ternoa [IPFS Key manager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/).
+- `IPFS_API_KEY`: An [IPFS KEY](/for-developers/advanced-guides/ipfs) generated with the Ternoa [IPFS Key manager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/). _After being generated, the IPFS key may need a few minutes to become effective for use with the Ternoa client._
 
 In the `src/basics/` folder we will find the following files:
 
