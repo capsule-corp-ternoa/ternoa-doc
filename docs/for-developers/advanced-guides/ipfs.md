@@ -16,7 +16,9 @@ Ternoa provides its own IPFS public nodes on different HTTP gateways based on th
 - MAINNET: **ipfs-mainnet.trnnfr.com**
 - ALPHANET: **ipfs-dev.trnnfr.com**
 
-Please note that an _api-key_ is needed to store data on those gateways.
+:::info
+Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to obtain your API Key. **After being generated, the key may need a few minutes to become effective for use with the Ternoa client.**
+:::
 
 ## Off-Chain Metadata
 

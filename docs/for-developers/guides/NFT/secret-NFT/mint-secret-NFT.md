@@ -19,7 +19,7 @@ Before getting started, make sure you have the following ready:
 To create an NFT on the Ternoa chain, Ternoa-JS provides you with a `mintSecretNFT` helper to do so.
 
 :::info
-Please note that an _api-key_ is needed to store data on Ternoa IPFS gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to get your API Key.
+Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to obtain your API Key. **After being generated, the key may need a few minutes to become effective for use with the Ternoa client.** Learn about the Ternoa IPFS client [here](/for-developers/advanced-guides/ipfs).
 :::
 
 ```typescript showLineNumbers
