@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 sidebar_label: How to update a Capsule NFT content
 ---
 
@@ -18,10 +18,10 @@ Before getting started, make sure you have the following ready:
 
 If you want to update the content of a Capsule NFT on the Ternoa chain by adding a new asset, follow these steps:
 
--   Retrieve the capsule off-chain data CID hash using Ternoa Indexer.
--   Prepare new asset: encryption and storage on IPFS.
--   Prepare new capsule metadata with the new encrypted media added to the content array.
--   Update the capsule off-chain data CID hash on-chain.
+- Retrieve the capsule off-chain data CID hash using Ternoa Indexer.
+- Prepare new asset: encryption and storage on IPFS.
+- Prepare new capsule metadata with the new encrypted media added to the content array.
+- Update the capsule off-chain data CID hash on-chain.
 
 ## Step 1: Retrieve the capsule off-chain data CID hash using Ternoa Indexer
 
@@ -61,36 +61,37 @@ import fs from "fs";
 import { encryptFile, TernoaIPFS, File } from "ternoa-js";
 
 const prepareAsset = async () => {
-	try {
-		const IPFS_NODE_URL = "IPFS_NODE_URL"; // The IPFS node used.
-		const IPFS_API_KEY = "IPFS_API_KEY"; // The IPFS node API KEY if required.
-		const PUBLIC_PGP_KEY = "PUBLIC_PGP_KEY"; // The public PGP key used to encrypt the new asset to add.
+  try {
+    const IPFS_NODE_URL = "IPFS_NODE_URL"; // The IPFS node used.
+    const IPFS_API_KEY = "IPFS_API_KEY"; // The IPFS node API KEY if required.
+    const PUBLIC_PGP_KEY = "PUBLIC_PGP_KEY"; // The public PGP key used to encrypt the new asset to add.
 
-		const newAsset = new File(
-			[await fs.promises.readFile("FILE_NAME_1")],
-			"FILE_NAME_1",
-			{
-				type: "FILE_TYPE_1",
-			}
-		);
+    const newAsset = new File(
+      [await fs.promises.readFile("FILE_NAME_1")],
+      "FILE_NAME_1",
+      {
+        type: "FILE_TYPE_1",
+      }
+    );
 
-		const newEncryptedAsset = await encryptFile(newAsset, "PUBLIC_PGP_KEY");
+    const newEncryptedAsset = await encryptFile(newAsset, "PUBLIC_PGP_KEY");
 
-		const ipfsClient = new TernoaIPFS(new URL(IPFS_NODE_URL), IPFS_API_KEY);
-		const { Hash: ASSET_HASH, Size: ASSET_SIZE } =
-			await ipfsClient.storeFile(newEncryptedAsset);
+    const ipfsClient = new TernoaIPFS(new URL(IPFS_NODE_URL), IPFS_API_KEY);
+    const { Hash: ASSET_HASH, Size: ASSET_SIZE } = await ipfsClient.storeFile(
+      newEncryptedAsset
+    );
 
-		// Encrypted asset ASSET_HASH & ASSET_SIZE will be used in step 3
-		// ...
-	} catch (e) {
-		console.error(e);
-	}
+    // Encrypted asset ASSET_HASH & ASSET_SIZE will be used in step 3
+    // ...
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 
 :::info
 
-Learn more about on [How to prepare Capsule NFT assets](/for-developers/advanced-guides/capsule-nft/prepare-assets).
+Learn more about on [How to prepare Capsule NFT assets](/for-developers/guides/NFT/capsule-NFT/prepare-assets).
 
 :::
 
@@ -103,49 +104,46 @@ import fs from "fs";
 import { encryptFile, TernoaIPFS, File } from "ternoa-js";
 
 const updateCapsuleMetadata = async () => {
-	try {
-		// ...
-		// fetching CAPSULE_OFFCHAIN_DATA in step 1
-		// Encrypted asset ASSET_HASH & ASSET_SIZE retrieved in step 2
+  try {
+    // ...
+    // fetching CAPSULE_OFFCHAIN_DATA in step 1
+    // Encrypted asset ASSET_HASH & ASSET_SIZE retrieved in step 2
 
-		const res = (await ipfsClient.getFile(
-			CAPSULE_OFFCHAIN_DATA
-		)) as NftMetadataType;
+    const res = (await ipfsClient.getFile(
+      CAPSULE_OFFCHAIN_DATA
+    )) as NftMetadataType;
 
-		const newAsset = {
-			hash: ASSET_HASH,
-			size: Number(ASSET_SIZE),
-			type: "text/plain",
-		};
+    const newAsset = {
+      hash: ASSET_HASH,
+      size: Number(ASSET_SIZE),
+      type: "text/plain",
+    };
 
-		const capsuleMetadata = {
-			...res,
-			properties: {
-				...res?.properties,
-				encrypted_media: [...encrypted_media, newAsset],
-			},
-		};
+    const capsuleMetadata = {
+      ...res,
+      properties: {
+        ...res?.properties,
+        encrypted_media: [...encrypted_media, newAsset],
+      },
+    };
 
-		const capsuleNFTMetadataBlob = new Blob(
-			[JSON.stringify(capsuleMetadata)],
-			{
-				type: "application/json",
-			}
-		);
-		const capsuleNFTMetadataFile = new File(
-			[capsuleNFTMetadataBlob],
-			"Capsule NFT metadata"
-		);
-		const { Hash: NEW_CAPSULE_OFFCHAIN_DATA } = await TernoaIPFS.storeFile(
-			service,
-			capsuleNFTMetadataFile
-		);
+    const capsuleNFTMetadataBlob = new Blob([JSON.stringify(capsuleMetadata)], {
+      type: "application/json",
+    });
+    const capsuleNFTMetadataFile = new File(
+      [capsuleNFTMetadataBlob],
+      "Capsule NFT metadata"
+    );
+    const { Hash: NEW_CAPSULE_OFFCHAIN_DATA } = await TernoaIPFS.storeFile(
+      service,
+      capsuleNFTMetadataFile
+    );
 
-		// NEW_CAPSULE_OFFCHAIN_DATA will be used in step 4
-		// ...
-	} catch (e) {
-		console.error(e);
-	}
+    // NEW_CAPSULE_OFFCHAIN_DATA will be used in step 4
+    // ...
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 
@@ -153,7 +151,7 @@ This function retrieves first the current capsule metadata from IPFS using the `
 
 :::info
 
-Learn more about [How to prepare Capsule NFT assets](/for-developers/advanced-guides/capsule-nft/prepare-assets).
+Learn more about [How to prepare Capsule NFT assets](/for-developers/guides/NFT/capsule-NFT/prepare-assets).
 
 :::
 
@@ -161,28 +159,28 @@ Learn more about [How to prepare Capsule NFT assets](/for-developers/advanced-gu
 
 ```typescript showLineNumbers
 import {
-	getKeyringFromSeed,
-	setCapsuleOffchaindata,
-	WaitUntil,
+  getKeyringFromSeed,
+  setCapsuleOffchaindata,
+  WaitUntil,
 } from "ternoa-js";
 
 const setCapsuleMetadata = async () => {
-	try {
-		// ...
-		// fetching NEW_CAPSULE_OFFCHAIN_DATA in step 3
+  try {
+    // ...
+    // fetching NEW_CAPSULE_OFFCHAIN_DATA in step 3
 
-		const SEED = "//TernoaTestAccount"; // The Capsule NFT owner seed phrase.
-		const keyring = await getKeyringFromSeed(SEED);
+    const SEED = "//TernoaTestAccount"; // The Capsule NFT owner seed phrase.
+    const keyring = await getKeyringFromSeed(SEED);
 
-		await setCapsuleOffchaindata(
-			NFT_ID,
-			NEW_CAPSULE_OFFCHAIN_DATA,
-			keyring,
-			WaitUntil.BlockInclusion
-		);
-	} catch (e) {
-		console.error(e);
-	}
+    await setCapsuleOffchaindata(
+      NFT_ID,
+      NEW_CAPSULE_OFFCHAIN_DATA,
+      keyring,
+      WaitUntil.BlockInclusion
+    );
+  } catch (e) {
+    console.error(e);
+  }
 };
 ```
 

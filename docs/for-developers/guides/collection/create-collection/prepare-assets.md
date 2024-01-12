@@ -11,11 +11,11 @@ IPFS (Interplanetary File Systems) is one of the solutions we recommend to uploa
 
 Ternoa provides its own IPFS public nodes on different HTTP gateways based on the network environment:
 
--   MAINNET: **ipfs-mainnet.trnnfr.com**
--   ALPHANET: **ipfs-alphanet.trnnfr.com**
+- MAINNET: **ipfs-mainnet.trnnfr.com**
+- ALPHANET: **ipfs-dev.trnnfr.com**
 
 :::info
-Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to get your API Key.
+Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to obtain your API Key. **After being generated, the key may need a few minutes to become effective for use with the Ternoa client.** Learn about the Ternoa IPFS client [here](/for-developers/advanced-guides/ipfs).
 :::
 
 ## Off-Chain Metadata
@@ -28,10 +28,10 @@ Here below is the expected format for collection:
 
 ```json
 {
-	"name": "Name of the collection",
-	"description": "Description of the collection",
-	"banner_image": "Hash of the collection's banner image",
-	"profile_image": "Hash of the collection's profile image"
+  "name": "Name of the collection",
+  "description": "Description of the collection",
+  "banner_image": "Hash of the collection's banner image",
+  "profile_image": "Hash of the collection's profile image"
 }
 ```
 
@@ -39,9 +39,9 @@ Here below is the expected format for collection:
 
 > Prerequisites:
 >
-> -   [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
-> -   Install and set up your editor of choice (for example Visual Studio Code [VSC])
-> -   [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
+> - [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
+> - Install and set up your editor of choice (for example Visual Studio Code [VSC])
+> - [Install Ternoa-JS](/for-developers/get-started/install-ternoa-js#step-1-install-ternoa-js)
 
 An IPFS client is available on Ternoa-JS SDK to make IPFS upload simple with only one line of code.
 
@@ -52,35 +52,35 @@ import fs from "fs";
 import { TernoaIPFS, File } from "ternoa-js";
 
 const main = async () => {
-	const profilePicture = new File(
-		[await fs.promises.readFile("_PROFILE_PICTURE_FILE_NAME_")],
-		"_PROFILE_PICTURE_FILE_NAME_",
-		{
-			type: "_PROFILE_PICTURE_FILE_TYPE_",
-		}
-	);
+  const profilePicture = new File(
+    [await fs.promises.readFile("_PROFILE_PICTURE_FILE_NAME_")],
+    "_PROFILE_PICTURE_FILE_NAME_",
+    {
+      type: "_PROFILE_PICTURE_FILE_TYPE_",
+    }
+  );
 
-	const bannerPicture = new File(
-		[await fs.promises.readFile("_BANNER_FILE_NAME_")],
-		"_BANNER_FILE_NAME_",
-		{
-			type: "_BANNER_FILE_TYPE_",
-		}
-	);
+  const bannerPicture = new File(
+    [await fs.promises.readFile("_BANNER_FILE_NAME_")],
+    "_BANNER_FILE_NAME_",
+    {
+      type: "_BANNER_FILE_TYPE_",
+    }
+  );
 
-	const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
+  const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
-	const collectionMetadata = {
-		name: "Collection TITLE",
-		description: "Collection DESCRIPTION",
-	};
+  const collectionMetadata = {
+    name: "Collection TITLE",
+    description: "Collection DESCRIPTION",
+  };
 
-	const { Hash } = await ipfsClient.storeCollection(
-		profilePicture,
-		bannerPicture,
-		collectionMetadata
-	);
-	console.log("The off-chain metadata CID hash is ", Hash);
+  const { Hash } = await ipfsClient.storeCollection(
+    profilePicture,
+    bannerPicture,
+    collectionMetadata
+  );
+  console.log("The off-chain metadata CID hash is ", Hash);
 };
 ```
 

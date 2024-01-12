@@ -411,3 +411,10 @@ h4 {
 .noUnderline {
   text-decoration: none;
 }
+
+.fn {
+  background: var(--ifm-code-background);
+  border-radius: 5px;
+  padding: 0.2rem;
+
+}

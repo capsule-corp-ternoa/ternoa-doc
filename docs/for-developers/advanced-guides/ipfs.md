@@ -13,10 +13,12 @@ On Ternoa NFTs are composed of two files: an asset file (e.g. image, video, musi
 
 Ternoa provides its own IPFS public nodes on different HTTP gateways based on the network environment:
 
--   MAINNET: **ipfs-mainnet.trnnfr.com**
--   ALPHANET: **ipfs-alphanet.trnnfr.com**
+- MAINNET: **ipfs-mainnet.trnnfr.com**
+- ALPHANET: **ipfs-dev.trnnfr.com**
 
-Please note that an _api-key_ is needed to store data on those gateways.
+:::info
+Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to obtain your API Key. **After being generated, the key may need a few minutes to become effective for use with the Ternoa client.**
+:::
 
 ## Off-Chain Metadata
 
@@ -28,16 +30,16 @@ Here below are listed the expected format for each feature:
 
 ```json
 {
-	"title": "Title of the NFT",
-	"description": "Description of the NFT",
-	"image": "Hash of the media",
-	"properties": {
-		"media": {
-			"hash": "Hash of the media",
-			"type": "Type of the media (file format)",
-			"size": "Size of the media"
-		}
-	}
+  "title": "Title of the NFT",
+  "description": "Description of the NFT",
+  "image": "Hash of the media",
+  "properties": {
+    "media": {
+      "hash": "Hash of the media",
+      "type": "Type of the media (file format)",
+      "size": "Size of the media"
+    }
+  }
 }
 ```
 
@@ -45,18 +47,18 @@ Here below are listed the expected format for each feature:
 
 ```json
 {
-	"title": "(OPTIONAL) Title of the Secret NFT",
-	"description": "(OPTIONAL) Description of the Secret NFT",
-	"properties": {
-		"encrypted_media": {
-			"hash": "Hash of the encrypted media",
-			"type": "Type of the encrypted media (file format)",
-			"size": "Size of the encrypted media",
-			"name": "(OPTIONAL) Name of the encrypted media",
-			"description": "(OPTIONAL) Description of the encrypted media"
-		},
-		"public_key_of_nft": "Public key associated with the Secret NFT"
-	}
+  "title": "(OPTIONAL) Title of the Secret NFT",
+  "description": "(OPTIONAL) Description of the Secret NFT",
+  "properties": {
+    "encrypted_media": {
+      "hash": "Hash of the encrypted media",
+      "type": "Type of the encrypted media (file format)",
+      "size": "Size of the encrypted media",
+      "name": "(OPTIONAL) Name of the encrypted media",
+      "description": "(OPTIONAL) Description of the encrypted media"
+    },
+    "public_key_of_nft": "Public key associated with the Secret NFT"
+  }
 }
 ```
 
@@ -64,10 +66,10 @@ Here below are listed the expected format for each feature:
 
 ```json
 {
-	"name": "Name of the collection",
-	"description": "Description of the collection",
-	"banner_image": "Hash of the collection's banner image",
-	"profile_image": "Hash of the collection's profile image"
+  "name": "Name of the collection",
+  "description": "Description of the collection",
+  "banner_image": "Hash of the collection's banner image",
+  "profile_image": "Hash of the collection's profile image"
 }
 ```
 
@@ -75,8 +77,8 @@ Here below are listed the expected format for each feature:
 
 ```json
 {
-	"name": "Name of the marketplace",
-	"logo": "Hash of the marketplace's logo"
+  "name": "Name of the marketplace",
+  "logo": "Hash of the marketplace's logo"
 }
 ```
 
@@ -90,23 +92,23 @@ Here is an example of uploading an image "shining.jpg" from the movie:
 import { TernoaIPFS, File } from "ternoa-js";
 
 const main = async () => {
-	const file = new File(
-		[await fs.promises.readFile("shining.jpg")],
-		"shining.jpg",
-		{
-			type: "image/jpg",
-		}
-	);
+  const file = new File(
+    [await fs.promises.readFile("shining.jpg")],
+    "shining.jpg",
+    {
+      type: "image/jpg",
+    }
+  );
 
-	const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
+  const ipfsClient = new TernoaIPFS(new URL("IPFS_NODE_URL"), "IPFS_API_KEY");
 
-	const nftMetadata = {
-		title: "Shining, a nice movie",
-		description: "This is (not) my first Ternoa's NFT",
-	};
+  const nftMetadata = {
+    title: "Shining, a nice movie",
+    description: "This is (not) my first Ternoa's NFT",
+  };
 
-	const { Hash } = await ipfsClient.storeNFT(file, nftMetadata);
-	console.log("The off-chain metadata hash is ", Hash);
+  const { Hash } = await ipfsClient.storeNFT(file, nftMetadata);
+  console.log("The off-chain metadata hash is ", Hash);
 };
 ```
 
