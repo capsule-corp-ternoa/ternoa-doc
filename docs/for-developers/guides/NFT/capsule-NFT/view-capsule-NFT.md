@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 sidebar_label: How to decrypt a Capsule NFT
 ---
 
@@ -141,7 +141,7 @@ const retrieveEncryptedAssets = async () => {
 This code snippet creates a new instance of `TernoaIPFS` using the IPFS node's URL and API key. It then calls the `getFile` method of the IPFS client to retrieve the metadata of a Capsule NFT with the given off-chain data retrieve in [Step 2](/for-developers/guides/NFT/capsule-NFT/view-capsule-NFT#step-2-retrieve-the-capsule-off-chain-data-cid-hash-using-ternoa-indexer). The metadata is then parsed to extract the list of encrypted media assets. The code then uses **Promise.all** and `getFile` method of the IPFS client to retrieve all of the encrypted files and stores them in an array. If there is any error during the execution, it will be logged into the console.
 
 :::info
-Please note that an _api-key_ is needed to store data on Ternoa IPFS gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to get your API Key. Learn about the Ternoa IPFS client [here](/for-developers/advanced-guides/ipfs).
+Please note that an _api-key_ is needed to store data on those gateways. Visit [IPFS Keymanager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/) to obtain your API Key. **After being generated, the key may need a few minutes to become effective for use with the Ternoa client.** Learn about the Ternoa IPFS client [here](/for-developers/advanced-guides/ipfs).
 :::
 
 The final step will be to decrypt the files.

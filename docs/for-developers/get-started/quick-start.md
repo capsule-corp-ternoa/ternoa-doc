@@ -7,23 +7,28 @@ sidebar_label: Quickstart NodeJS
 
 ## Introduction
 
-This tutorial will teach you how to set up a server-side dApp that can **mint, retrieve and sell an NFT** from any NodeJS application, by using our tools from our SDK:
+This tutorial is designed to guide you through the process of setting up a server-side dApp that enables you to **mint, retrieve and sell an NFT** from a NodeJS application. We will achieve this by leveraging the tools provided in our SDK:
 
-- **Ternoa-JS library**: An isomorphic NodeJs [package](https://www.npmjs.com/package/ternoa-js) integrating the custom Ternoa FRAMEs to interact with the chain in a seamless experience. Get more information [here](https://github.com/capsule-corp-ternoa/ternoa-js).
+- **Ternoa-JS library**: An isomorphic NodeJS [package](https://www.npmjs.com/package/ternoa-js) that seamlessly integrates custom Ternoa FRAMEs for interacting with the blockchain. Find more information about it [here](https://github.com/capsule-corp-ternoa/ternoa-js).
 
-- **Ternoa Indexer**: A GraphQL Indexer parsing Ternoa on-chain data that can be used directly into your project or from our [playground](https://indexer-mainnet.ternoa.dev/) instance.
+- **Ternoa Indexer**: A GraphQL Indexer responsible for parsing Ternoa's on-chain data, which can be directly used into your project or accessed via our [playground](https://indexer-mainnet.ternoa.dev/) instance.
 
 ## Prerequisites
 
-Before getting started, make sure you have the following ready:
+Before getting started, please ensure that you have the following prerequisites in place:
 
-1. Create a [Ternoa account](/for-developers/get-started/create-account) with [Alphanet CAPS](/for-developers/get-started/create-account#step-2-get-some-free-test-caps-tokens)
-2. Install and set up your editor of choice (we will use Visual Studio Code [VSC] in this tutorial)
-3. Install [NodeJS v.14+](https://nodejs.org/en/download/) & NPM
+1. Create a [Ternoa account](/for-developers/get-started/create-account) with [Alphanet CAPS](/for-developers/get-started/create-account#step-2-get-some-free-test-caps-tokens) from the faucet.
+2. Install and configure your preferred code editor (for this tutorial, we will be using Visual Studio Code [VSC]).
+3. Install [NodeJS v.14+](https://nodejs.org/en/download/), along with NPM.
+4. Generate an IPFS Key from the [Ternoa IPFS Key manager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/)
 
-## How to start
+:::info
+We assume you have already created a new wallet for development purposes with no CAPS on Ternoa Mainnet. It is essential you use a development wallet with NO REAL MONEY in it when learning, practicing, and testing.
+:::
 
-The easiest way to quickstart jumping into Ternoa SDK and start building on the chain, is to download the starter repository [here](https://github.com/capsule-corp-ternoa/ternoa-sdk-starter), and start our tutorial:
+## Getting Started
+
+The simplest way to quickstart jumping into Ternoa SDK and begin building on the blockchain, is to download the starter repository [here](https://github.com/capsule-corp-ternoa/ternoa-sdk-starter), and start our tutorial:
 
 ```bash showLineNumbers
   git clone https://github.com/capsule-corp-ternoa/ternoa-sdk-starter.git
@@ -36,13 +41,18 @@ We already installed the Ternoa-JS, you can directly run the following command:
   npm install
 ```
 
+In the `.env.exemple` file, you will find the expected environement variables. Copy and paste them into a `.env` file at the root of the project.
+
+- `SEED_TEST_FUNDS`: Your [Ternoa account](/for-developers/get-started/create-account) _seed_ you will use to sign transactions.
+- `IPFS_API_KEY`: An [IPFS KEY](/for-developers/advanced-guides/ipfs) generated with the Ternoa [IPFS Key manager](https://ipfs-key-manager-git-dev-ternoa.vercel.app/). _After being generated, the IPFS key may need a few minutes to become effective for use with the Ternoa client._
+
 In the `src/basics/` folder we will find the following files:
 
-- `01-mintNFT.ts`: In this 1st step, you will understand how to initialize the API and run your first on-chain transaction to create an NFT. Keep the NFT id from the log with you as you will need it later.
+- `01_mintNFT.ts`: In this 1st step, you will understand how to initialize the API and run your first on-chain transaction to create an NFT. Keep the NFT id from the log with you as you will need it later.
 
-- `02-getNFT.ts`: In the 2nd step, you will see how to use our Indexer to retrieve your NFT data.
+- `02_getNFT.ts`: In the 2nd step, you will see how to use our Indexer to retrieve your NFT data.
 
-- `03-sellNFT.ts`: In the 3rd and last step, you will learn how to list your NFT for sale on a marketplace.
+- `03_sellNFT.ts`: In the 3rd and last step, you will learn how to list your NFT for sale on a marketplace.
 
 Run the following command to execute each script once you have read carefully the comments (replace FILENAME with the correct file name):
 
@@ -50,8 +60,7 @@ Run the following command to execute each script once you have read carefully th
   npm run start src/basics/FILENAME.ts
 ```
 
-Wow! One single line of code to create an NFT? One single line of code to list an NFT on a Marketplace? Amazing right?
-Let's go! You are now ready to start building your own dApp using our toolkit.
+Impressive, isn't it? Just one line of code to create an NFT and another single line to list it on a marketplace. Exciting, isn't it? Now, you're all set to kickstart your dApp development journey using our toolkit. Let's get started!
 
 ## Looking for a more advanced use case?
 

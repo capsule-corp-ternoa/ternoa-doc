@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: How to sign a tx without keyring
+sidebar_label: Sign a tx without keyring
 ---
 
 # How to sign a transaction without keyring in a browser environment
@@ -23,56 +23,56 @@ _This code snipped is designed to work in a **Next-js environment**. According t
 
 ```typescript showLineNumbers
 import {
-	checkTransactionSuccess,
-	createNftTx,
-	Errors,
-	getRawApi,
-	NftMetadataType,
-	query,
-	submitTxBlocking,
-	TernoaIPFS,
-	WaitUntil,
-	File,
-	NFTCreatedEvent,
+  checkTransactionSuccess,
+  createNftTx,
+  Errors,
+  getRawApi,
+  NftMetadataType,
+  query,
+  submitTxBlocking,
+  TernoaIPFS,
+  WaitUntil,
+  File,
+  NFTCreatedEvent,
 } from "ternoa-js";
 
 export const createAndSignNFT = async (
-	file: File,
-	metadata: NftMetadataType<{}>,
-	ipfsClient: TernoaIPFS,
-	address: string
+  file: File,
+  metadata: NftMetadataType,
+  ipfsClient: TernoaIPFS,
+  address: string
 ) => {
-	try {
-		//1 - Store the File and Metadata on IPFS
-		const { Hash } = await ipfsClient.storeNFT(file, metadata);
-		//2 - generate tx to sign
-		const txHex = await createNftTx(Hash);
+  try {
+    //1 - Store the File and Metadata on IPFS
+    const { Hash } = await ipfsClient.storeNFT(file, metadata);
+    //2 - generate tx to sign
+    const txHex = await createNftTx(Hash);
 
-		//3.1 - Generate a nonce
-		const nonce = (
-			await query("system", "account", [address])
-		).nonce.toNumber();
-		//3.2- Connect to the extension you want to use to get an injector (here we use directly Polkadot extension)
-		const { web3FromAddress } = await import("@polkadot/extension-dapp");
-		const injector = await web3FromAddress(address);
-		const signer = injector?.signer;
+    //3.1 - Generate a nonce
+    const nonce = (
+      await query("system", "account", [address])
+    ).nonce.toNumber();
+    //3.2- Connect to the extension you want to use to get an injector (here we use directly Polkadot extension)
+    const { web3FromAddress } = await import("@polkadot/extension-dapp");
+    const injector = await web3FromAddress(address);
+    const signer = injector?.signer;
 
-		//4.1 - Retrieve Ternoa API
-		const api = getRawApi();
-		//4.2- Sign transaction using both the nonce and the signer
-		const signedTx = (
-			await api.tx(txHex).signAsync(address, { nonce, signer })
-		).toHex();
+    //4.1 - Retrieve Ternoa API
+    const api = getRawApi();
+    //4.2- Sign transaction using both the nonce and the signer
+    const signedTx = (
+      await api.tx(txHex).signAsync(address, { nonce, signer })
+    ).toHex();
 
-		//5.1 - Submit the signed transaction
-		const { events } = await submitTxBlocking(
-			signedTx,
-			WaitUntil.BlockInclusion
-		);
-		//5.2 - Return the filtered NFTCreatedEvent
-		return events.findEventOrThrow(NFTCreatedEvent);
-	} catch (error) {
-		console.log(error);
-	}
+    //5.1 - Submit the signed transaction
+    const { events } = await submitTxBlocking(
+      signedTx,
+      WaitUntil.BlockInclusion
+    );
+    //5.2 - Return the filtered NFTCreatedEvent
+    return events.findEventOrThrow(NFTCreatedEvent);
+  } catch (error) {
+    console.log(error);
+  }
 };
 ```
