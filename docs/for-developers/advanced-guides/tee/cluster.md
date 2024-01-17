@@ -24,8 +24,6 @@ All code snippets below and on the subsequent pages are designed to function wit
 
 ## How to choose a cluster:
 
-Unless specific use cases, data must be sent to one of the **_PUBLIC_** clusters registered on the chain. (_Private_ clusters are available for specific use cases. _Admin_ clusters should not be targeted.)
-
 Unless specific use cases require it, data must be sent to one of the **_PUBLIC_** clusters registered on the chain. (_Private_ clusters are available for specific use cases. _Admin_ clusters should not be targeted.)
 
 The selected public cluster ID does not matter since all clusters are synced with each other. However, in case you want to implement a retry function or want to manually handle cluster selection, you can use `getPublicsClusters()`. Otherwise, `getFirstPublicClusterAvailable()` is here for you.
