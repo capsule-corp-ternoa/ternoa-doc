@@ -4,8 +4,7 @@ sidebar_position: 3
 
 # How to run a validator node
 
-For a quickstart setup, follow instructions **[here](https://docs.ternoa.network/for-node-operators/how-to-setup-validator-node)** on how to run a validator node. For a more detailed look into running Ternoa nodes, view our video below. 
-
+For a quickstart setup, follow instructions **[here](https://docs.ternoa.network/for-node-operators/how-to-setup-validator-node)** on how to run a validator node. For a more detailed look into running Ternoa nodes, view our video below.
 
 :::info
 
@@ -14,8 +13,7 @@ Make sure to fully read the guide before you start doing anything. To follow alo
 
 <iframe width="581" height="327" src="https://www.youtube.com/embed/RhYCDSq0Pv0" title="Ternoa Coffee Break #1 - How to Become a Ternoa Node Operator" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-___
+---
 
 ## Getting the binary (node/client)
 
@@ -27,14 +25,15 @@ The second approach is to manually build the client. You can follow the how-to-b
 
 Whatever method you choose, make sure that once you have the binary that you place it in the right directory. Usually the place is `usr/bin` or `/opt/ternoa.`
 
-___
+---
 
 ## Running the node
 
 The key in correctly running the node is to use the right flags to connect to the right chain. Ternoa is currently running two networks, Ternoa Alphanet and Ternoa Mainnet, and depending if you want to deploy a test validator or a mainnet validator you need to pass either `--chain alphanet` or `--chain mainnet`, respectively.
 
 **Here is an example on what flags you can/should use:**
-```bash 
+
+```bash
 /usr/bin/ternoa --name MyFirstNode --chain alphanet --base-path /opt/node-data --validator --state-cache-size 0 --execution wasm
 ```
 
@@ -47,17 +46,25 @@ The key in correctly running the node is to use the right flags to connect to th
 - state-cache-size 0 - This fixes a bug that substrate has.
 - execution wasm - This runs the node in wasm mode. This is also used to fix a bug that is introduced in the substrate native runtime.
 
-We recommend that you create a systemd service file which will run the node in the background and start it up on every restart. Instructions for that you can find in the linked workshop presentation **[here](https://docs.google.com/presentation/d/1rjMtUB-foRfSkruRWzVbFqKS1VRVvqmk4ohxJ_lNYrk/edit#slide=id.p)**.
+**If you are looking for running an archived node with telemetry, here is an example on what flags you can/should use:**
+
+```bash
+ternoa --name MyFirstNode  --chain mainnet --base-path /block/chain/node-data --ws-max-connections 1000 --prometheus-port 9615 --validator --telemetry-url "wss://telemetry.polkadot.io/submit/ 0" --state-pruning archive
+```
+
+We recommend that you create a systemd service file which will run the node in the background and start it up on every restart.
+
+<!-- Instructions for that you can find in the linked workshop presentation **[here](https://docs.google.com/presentation/d/1rjMtUB-foRfSkruRWzVbFqKS1VRVvqmk4ohxJ_lNYrk/edit#slide=id.p)**. -->
 
 **Once the node is running, it will be visible in the telemetry UI and it will take time to sync up**
 
->**[Alphanet Telemetry UI](https://telemetry.polkadot.io/#list/0x18bcdb75a0bba577b084878db2dc2546eb21504eaad4b564bb7d47f9d02b6ace)**
+> **[Alphanet Telemetry UI](https://telemetry.polkadot.io/#list/0x18bcdb75a0bba577b084878db2dc2546eb21504eaad4b564bb7d47f9d02b6ace)**
 
->**[Mainnet Telemetry UI](https://telemetry.polkadot.io/#list/0x6859c81ca95ef624c9dfe4dc6e3381c33e5d6509e35e147092bfbc780f777c4e)**
+> **[Mainnet Telemetry UI](https://telemetry.polkadot.io/#list/0x6859c81ca95ef624c9dfe4dc6e3381c33e5d6509e35e147092bfbc780f777c4e)**
 
 While it's syncing up, you can run the following command to generate the session keys:
 
-```bash 
+```bash
 $ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys", "params":[]}' http://localhost:9933 &> session_keys.txt
 # The session keys will be stored inside the session_keys.txt file. Let’s printout that file.
 $ cat session_keys.txt
